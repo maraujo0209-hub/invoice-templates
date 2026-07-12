@@ -90,7 +90,7 @@
             position: relative;
         }
 
-        .pricing-card.featured::top {
+        .pricing-card.featured::before {
             content: "MOST POPULAR";
             position: absolute;
             top: -12px;
@@ -154,17 +154,19 @@
             content: "";
         }
 
-        /* Template Access Grid */
+        /* Section Headings */
         .section-title {
-            font-size: 18px;
+            font-size: 14px;
             font-weight: 800;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 1px;
+            color: #4a5568;
             margin: 40px 0 20px 0;
-            padding-bottom: 8px;
-            border-bottom: 1px solid #111111;
+            padding-bottom: 6px;
+            border-bottom: 1px solid #cbd5e1;
         }
 
+        /* Template Access Grid */
         .template-grid {
             display: block;
         }
@@ -212,6 +214,7 @@
 
         .badge-starter { background-color: #e2e8f0; color: #334155; }
         .badge-professional { background-color: #fee2e2; color: #991b1b; }
+        .badge-ultimate { background-color: #fae8ff; color: #701a75; }
 
         .card-desc {
             font-size: 13px;
@@ -302,11 +305,12 @@
         </div>
     </div>
 
-    <!-- Live Template Previews -->
-    <h2 class="section-title">Available Live Previews</h2>
-    
+    <!-- Live Template Previews Header -->
+    <div style="font-size: 22px; font-weight: 800; text-transform: uppercase; letter-spacing: -0.5px; margin-top: 50px;">Live Template Previews</div>
+
+    <!-- CORE FINANCIAL DOCUMENTS (STARTER) -->
+    <h2 class="section-title">Core Financial Documents</h2>
     <div class="template-grid">
-        <!-- Core Financial Documents (Starter) -->
         <a href="invoice.html" class="template-card">
             <div class="card-content">
                 <div class="card-title">1. Invoice Template <span class="tier-badge badge-starter">Starter</span></div>
@@ -338,8 +342,11 @@
             </div>
             <div class="card-action">View Live &rarr;</div>
         </a>
+    </div>
 
-        <!-- Operational Framework Documents (Professional) -->
+    <!-- OPERATIONAL FRAMEWORK DOCUMENTS (PRO) -->
+    <h2 class="section-title">Operational Framework Documents</h2>
+    <div class="template-grid">
         <a href="purchase_order.html" class="template-card">
             <div class="card-content">
                 <div class="card-title">5. Purchase Order Template <span class="tier-badge badge-professional">Pro</span></div>
@@ -376,6 +383,50 @@
             <div class="card-content">
                 <div class="card-title">9. Independent Contractor Agreement <span class="tier-badge badge-professional">Pro</span></div>
                 <p class="card-desc">Legal framework document containing service definitions, IP assignments, and formal authorization matrices.</p>
+            </div>
+            <div class="card-action">View Live &rarr;</div>
+        </a>
+    </div>
+
+    <!-- ULTIMATE BUSINESS SYSTEM TRACKERS -->
+    <h2 class="section-title">Ultimate Business System Trackers</h2>
+    <div class="template-grid">
+        <a href="business_tracker.html" class="template-card">
+            <div class="card-content">
+                <div class="card-title">10. Business Tracker Matrix <span class="tier-badge badge-ultimate">Ultimate</span></div>
+                <p class="card-desc">Operational dashboard for setting high-level strategic targets, tracking gross margins, and evaluating milestone metrics.</p>
+            </div>
+            <div class="card-action">View Live &rarr;</div>
+        </a>
+
+        <a href="invoice_ledger.html" class="template-card">
+            <div class="card-content">
+                <div class="card-title">11. Invoice Ledger Tool <span class="tier-badge badge-ultimate">Ultimate</span></div>
+                <p class="card-desc">Centralized accounting matrix built to record upcoming receivables, identify past-due accounts, and manage paid status.</p>
+            </div>
+            <div class="card-action">View Live &rarr;</div>
+        </a>
+
+        <a href="tax_estimation.html" class="template-card">
+            <div class="card-content">
+                <div class="card-title">12. Tax Estimation Sheet <span class="tier-badge badge-ultimate">Ultimate</span></div>
+                <p class="card-desc">Quarterly corporate tax forecaster configured to account for operational write-offs and projected net liabilities.</p>
+            </div>
+            <div class="card-action">View Live &rarr;</div>
+        </a>
+
+        <a href="mileage_log.html" class="template-card">
+            <div class="card-content">
+                <div class="card-title">13. Mileage Calculation Log <span class="tier-badge badge-ultimate">Ultimate</span></div>
+                <p class="card-desc">Audit-ready travel planner built to calculate dynamic odometer variations and standardize travel deductions.</p>
+            </div>
+            <div class="card-action">View Live &rarr;</div>
+        </a>
+
+        <a href="client_database.html" class="template-card">
+            <div class="card-content">
+                <div class="card-title">14. Client Database System <span class="tier-badge badge-ultimate">Ultimate</span></div>
+                <p class="card-desc">Clean data entry table tracking specialized contact details, communications, and primary billing preferences.</p>
             </div>
             <div class="card-action">View Live &rarr;</div>
         </a>

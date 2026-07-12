@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Work Order Template - WO-0001</title>
+    <style>
+        :root {
+            --primary-color: #111111; /* Deep Carbon */
+            --secondary-color: #4a5568; /* Slate Gray */
+            --accent-bg: #f8fafc; /* Warm White/Light Gray */
+            --border-color: #cbd5e1;
+            --subtle-text: #64748b;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            color: var(--primary-color);
+            line-height: 1.5;
+            margin: 0;
+            padding: 0;
+            background-color: #f1f5f9;
+        }
+
+        .invoice-container {
+            background-color: #ffffff;
+            width: 8.5in;
+            height: 11in;
+            margin: 40px auto;
+            padding: 1in;
+            box-sizing: border-box;
+            position: relative;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+
+        @media print {
+            body { background-color: #ffffff; }
+            .invoice-container { 
+                margin: 0; 
+                box-shadow: none; 
+                height: 100vh;
+            }
+        }
+
+        .invoice-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 40px;
+        }
+
+        .logo-placeholder {
+            width: 300px;
+            height: 150px;
+            background-color: #e2e8f0;
+            border: 2px dashed #cbd5e1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+        }
+
+        .logo-placeholder .main-txt {
+            font-size: 18px;
+            font-weight: 700;
+            color: #64748b;
+            letter-spacing: 2px;
+        }
+
+        .logo-placeholder .sub-txt {
+            font-size: 12px;
+            color: #94a3b8;
+            margin-top: 4px;
+        }
+
+        .invoice-title-area {
+            text-align: right;
+        }
+
+        .invoice-title-area h1 {
+            font-size: 36px;
+            font-weight: 700;
+            margin: 0 0 5px 0;
+            letter-spacing: -1px;
+            text-transform: uppercase;
+        }
+
+        .serial-number {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--secondary-color);
+            margin: 0 0 20px 0;
+        }
+
+        .meta-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            text-align: right;
+            font-size: 14px;
+        }
+
+        .meta-label {
+            font-weight: 600;
+            color: var(--subtle-text);
+        }
+
+        .meta-value {
+            font-weight: 700;
+        }
+
+        /* 3-Column operational routing configuration */
+        .wo-details-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 25px;
+            margin-bottom: 35px;
+            font-size: 13px;
+        }
+
+        .details-block h3 {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--secondary-color);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 6px;
+            margin: 0 0 12px 0;
+        }
+
+        .details-block p {
+            margin: 0 0 4px 0;
+            color: #334155;
+        }
+
+        /* Task description block style */
+        .job-scope-box {
+            background-color: var(--accent-bg);
+            border: 1px solid var(--border-color);
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+
+        .job-scope-box h4 {
+            margin: 0 0 8px 0;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--secondary-color);
+        }
+
+        .job-scope-box p {
+            margin: 0;
+            color: #334155;
+        }
+
+        .items-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+
+        .items-table th {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 10px 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .items-table th.num-col, 
+        .items-table td.num-col {
+            text-align: right;
+        }
+
+        .items-table td {
+            padding: 12px;
+            font-size: 14px;
+            border-bottom: 1px solid var(--border-color);
+            color: #334155;
+        }
+
+        .items-table tr:nth-child(even) td {
+            background-color: var(--accent-bg);
+        }
+
+        /* Signature area specific for confirming field work delivery */
+        .sign-off-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin-top: 40px;
+            margin-bottom: 50px;
+        }
+
+        .signature-line {
+            border-top: 1px solid var(--primary-color);
+            margin-top: 45px;
+            text-align: center;
+            font-size: 12px;
+            color: var(--secondary-color);
+            font-weight: 600;
+        }
+
+        .invoice-footer {
+            position: absolute;
+            bottom: 1in;
+            left: 1in;
+            right: 1in;
+            border-top: 1px solid var(--border-color);
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            color: var(--secondary-color);
+        }
+    </style>
+</head>
+<body>
+
+<div class="invoice-container">
+    <!-- Top Branding Block -->
+    <div class="invoice-header">
+        <div class="logo-placeholder">
+            <div class="main-txt">LOGO</div>
+            <div class="sub-txt">300 x 150</div>
+        </div>
+        
+        <div class="invoice-title-area">
+            <h1>Work Order</h1>
+            <div class="serial-number">WO-0001</div>
+            
+            <div class="meta-grid">
+                <span class="meta-label">Issue Date:</span>
+                <span class="meta-value">2026-07-12</span>
+                
+                <span class="meta-label">Target Date:</span>
+                <span class="meta-value">2026-07-18</span>
+                
+                <span class="meta-label">Priority:</span>
+                <span class="meta-value">Standard</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3-Way Splitting Execution Grid -->
+    <div class="wo-details-grid">
+        <div class="details-block">
+            <h3>Service Provider</h3>
+            <p class="meta-value">Your Company Name</p>
+            <p>123 Business Street</p>
+            <p>City, State, Zip Code</p>
+            <p>ops@yourcompany.com</p>
+        </div>
+        
+        <div class="details-block">
+            <h3>Job Location</h3>
+            <p class="meta-value">Client Company / Resident</p>
+            <p>456 Jobsite Boulevard</p>
+            <p>City, State, Zip Code</p>
+            <p>Contact: 555-0199</p>
+        </div>
+
+        <div class="details-block">
+            <h3>Assignment</h3>
+            <p class="meta-label">Assigned Technician:</p>
+            <p class="meta-value" style="margin-bottom: 8px;">John Doe / Team A</p>
+            <p class="meta-label">Scheduled Time:</p>
+            <p class="meta-value">08:00 AM - 12:00 PM</p>
+        </div>
+    </div>
+
+    <!-- Task Narrative Scope -->
+    <div class="job-scope-box">
+        <h4>Detailed Description of Requested Work</h4>
+        <p>Enter comprehensive instructions outlining the task expectations, specialized mechanical updates, or structural maintenance steps expected to execute this job correctly.</p>
+    </div>
+
+    <!-- Materials / Labor Accounting Tracker Ledger -->
+    <table class="items-table">
+        <thead>
+            <tr>
+                <th>Itemized Task / Material Requirements</th>
+                <th class="num-col" style="width: 80px;">Qty / Hrs</th>
+                <th class="num-col" style="width: 120px;">Rate</th>
+                <th class="num-col" style="width: 120px;">Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Standard Labor Hourly Allocation / Service Segment 1</td>
+                <td class="num-col">0.0</td>
+                <td class="num-col">$0.00</td>
+                <td class="num-col">$0.00</td>
+            </tr>
+            <tr>
+                <td>Required Maintenance Component Part / Material SKU-101</td>
+                <td class="num-col">0</td>
+                <td class="num-col">$0.00</td>
+                <td class="num-col">$0.00</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Completion Authorization Block -->
+    <div class="sign-off-container">
+        <div class="signature-line">
+            Technician Signature & Date
+        </div>
+        <div class="signature-line">
+            Client Acceptance Signature & Date
+        </div>
+    </div>
+
+    <!-- Standard Footnote System Footer -->
+    <div class="invoice-footer">
+        <div style="max-width: 70%;">
+            <p style="margin: 0; color: var(--subtle-text); line-height: 1.4;">Please review all operational assignments before sign-off. Copies are delivered electronically to the management panel.</p>
+        </div>
+        <div style="text-align: right;">
+            <p style="margin: 0; font-weight: 600;">Page 1 of 1</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

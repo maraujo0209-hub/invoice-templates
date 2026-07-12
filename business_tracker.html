@@ -1,55 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><!-- Insert this inside the <style> element of invoice.html, estimate.html, etc. -->
-<style>
-    /* 1. Print Interception Protection Layer */
-    @media print {
-        body {
-            display: none !important;
-        }
-    }
-
-    /* 2. Navigation Back Button Styles */
-    .back-button {
-        display: inline-block;
-        margin-bottom: 20px;
-        padding: 8px 14px;
-        background: #111111;
-        color: #ffffff;
-        text-decoration: none;
-        font-size: 13px;
-        font-weight: 700;
-        border-radius: 4px;
-        transition: background 0.2s;
-    }
-    .back-button:hover {
-        background: #334155;
-    }
-
-    /* 3. Diagonal Store Watermark Protection */
-    .watermark {
-        position: fixed;
-        top: 45%;
-        left: 5%;
-        right: 5%;
-        transform: rotate(-30deg);
-        font-size: 75px;
-        font-weight: 900;
-        color: rgba(0, 0, 0, 0.05);
-        pointer-events: none;
-        text-transform: uppercase;
-        text-align: center;
-        user-select: none;
-        z-index: 9999;
-    }
-</style>
-
-<!-- Insert this right after your opening <body> tag in each template file -->
-<a href="index.html#templates" class="back-button">&larr; Back to All Templates</a>
-<div class="watermark">PREVIEW ONLY</div>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business Tracker Matrix</title>
+    <title>Business Tracker Matrix - Preview</title>
     <style>
         :root {
             --primary-color: #111111;
@@ -59,15 +13,23 @@
             --subtle-text: #64748b;
         }
 
+        /* 1. Print Interception Protection Layer */
+        @media print {
+            body {
+                display: none !important;
+            }
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
             color: var(--primary-color);
             line-height: 1.5;
             margin: 0;
-            padding: 0;
+            padding: 20px;
             background-color: #f1f5f9;
         }
 
+        /* Container Layout */
         .matrix-container {
             background-color: #ffffff;
             width: 8.5in;
@@ -75,12 +37,41 @@
             padding: 0.8in;
             box-sizing: border-box;
             box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            position: relative;
         }
 
-        @media print {
-            @page { size: letter; margin: 0.5in; }
-            body { background-color: #ffffff; }
-            .matrix-container { margin: 0; padding: 0; width: 100%; box-shadow: none; }
+        /* 2. Navigation Back Button Styles */
+        .back-button {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 8px 14px;
+            background: #111111;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 700;
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+        .back-button:hover {
+            background: #334155;
+        }
+
+        /* 3. Diagonal Store Watermark Protection */
+        .watermark {
+            position: fixed;
+            top: 45%;
+            left: 5%;
+            right: 5%;
+            transform: rotate(-30deg);
+            font-size: 75px;
+            font-weight: 900;
+            color: rgba(0, 0, 0, 0.05);
+            pointer-events: none;
+            text-transform: uppercase;
+            text-align: center;
+            user-select: none;
+            z-index: 9999;
         }
 
         header {
@@ -93,6 +84,7 @@
         }
 
         h1 { font-size: 24px; font-weight: 800; text-transform: uppercase; margin: 0; letter-spacing: -0.5px; }
+        h2 { font-size: 16px; font-weight: 800; text-transform: uppercase; margin: 30px 0 15px 0; letter-spacing: 0.5px; }
         .subtitle { font-size: 12px; color: var(--secondary-color); text-transform: uppercase; letter-spacing: 2px; font-weight: 600; margin: 0; }
 
         .metric-grid {
@@ -126,6 +118,11 @@
 </head>
 <body>
 
+<!-- Global Security/Navigation Elements -->
+<a href="index.html#templates" class="back-button">&larr; Back to All Templates</a>
+<div class="watermark">PREVIEW ONLY</div>
+
+<!-- Printable Document Context -->
 <div class="matrix-container">
     <header>
         <div>

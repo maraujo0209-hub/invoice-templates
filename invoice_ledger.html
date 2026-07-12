@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Ledger Tool</title>
+    <style>
+        :root {
+            --primary-color: #111111;
+            --secondary-color: #4a5568;
+            --accent-bg: #f8fafc;
+            --border-color: #cbd5e1;
+            --subtle-text: #64748b;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            color: var(--primary-color);
+            line-height: 1.5;
+            margin: 0;
+            padding: 0;
+            background-color: #f1f5f9;
+        }
+
+        .ledger-container {
+            background-color: #ffffff;
+            width: 8.5in;
+            margin: 40px auto;
+            padding: 0.8in;
+            box-sizing: border-box;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+
+        @media print {
+            @page { size: letter; margin: 0.5in; }
+            body { background-color: #ffffff; }
+            .ledger-container { margin: 0; padding: 0; width: 100%; box-shadow: none; }
+        }
+
+        header {
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        h1 { font-size: 24px; font-weight: 800; text-transform: uppercase; margin: 0; }
+        .subtitle { font-size: 12px; color: var(--secondary-color); text-transform: uppercase; letter-spacing: 2px; font-weight: 600; margin: 0; }
+
+        table { width: 100%; border-collapse: collapse; margin-bottom: 25px; }
+        th { background-color: var(--primary-color); color: #ffffff; font-size: 11px; text-transform: uppercase; padding: 10px 12px; text-align: left; }
+        td { padding: 10px 12px; font-size: 13px; border-bottom: 1px solid var(--border-color); }
+        tr:nth-child(even) td { background-color: var(--accent-bg); }
+        
+        .num { text-align: right; }
+        .status-paid { color: #16a34a; font-weight: 700; }
+        .status-overdue { color: #dc2626; font-weight: 700; }
+
+        .summary-box { display: flex; justify-content: flex-end; margin-top: 20px; page-break-inside: avoid; }
+        .summary-table { width: 240px; border-collapse: collapse; }
+        .summary-table td { padding: 6px 12px; font-size: 13px; }
+        .grand-total { font-weight: 700; border-top: 2px solid var(--primary-color); }
+    </style>
+</head>
+<body>
+
+<div class="ledger-container">
+    <header>
+        <div>
+            <h1>Invoice Ledger Log</h1>
+            <p class="subtitle">Accounts Receivable Tracking</p>
+        </div>
+        <div style="font-size: 12px; font-weight: 600; color: var(--subtle-text);">Year: 2026</div>
+    </header>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Invoice ID</th>
+                <th>Issue Date</th>
+                <th>Client Name</th>
+                <th class="num">Amount Due</th>
+                <th style="text-align: center;">Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>INV-2026-001</td>
+                <td>2026-07-01</td>
+                <td>Global Tech Solutions Ltd</td>
+                <td class="num">$0.00</td>
+                <td style="text-align: center;" class="status-paid">PAID</td>
+            </tr>
+            <tr>
+                <td>INV-2026-002</td>
+                <td>2026-07-05</td>
+                <td>Apex Media Operations</td>
+                <td class="num">$0.00</td>
+                <td style="text-align: center;" class="status-overdue">OVERDUE</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="summary-box">
+        <table class="summary-table">
+            <tr><td>Total Outstanding:</td><td class="num">$0.00</td></tr>
+            <tr class="grand-total"><td>Total Collected:</td><td class="num">$0.00</td></tr>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>

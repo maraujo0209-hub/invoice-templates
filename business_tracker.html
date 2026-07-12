@@ -37,8 +37,14 @@
             padding: 0.8in;
             box-sizing: border-box;
             box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-            position: relative; /* Context anchor for the watermark */
-            overflow: hidden;   /* Prevents skewed watermark text from throwing off page margins */
+            position: relative; /* Context anchor for absolute watermark positioning */
+            overflow: hidden;   /* Keeps skewed watermark bounds from creating layout scrolling */
+        }
+
+        @media print {
+            @page { size: letter; margin: 0.5in; }
+            body { background-color: #ffffff; }
+            .matrix-container { margin: 0; padding: 0; width: 100%; box-shadow: none; }
         }
 
         /* 2. Navigation Back Button Styles */
@@ -58,7 +64,7 @@
             background: #334155;
         }
 
-        /* 3. Diagonal Store Watermark Protection (Absolute inside Container) */
+        /* 3. Diagonal Store Watermark Protection (Absolute inside Container Boundary) */
         .watermark {
             position: absolute;
             top: 45%;
@@ -119,13 +125,13 @@
 </head>
 <body>
 
-<!-- Global Navigation Elements -->
+<!-- Global Store Return Navigation -->
 <a href="index.html#templates" class="back-button">&larr; Back to All Templates</a>
 
-<!-- Printable Document Context -->
+<!-- Document Layout Container -->
 <div class="matrix-container">
     
-    <!-- Hard-baked internal protection overlay -->
+    <!-- Hard-baked structural preview protection overlay -->
     <div class="watermark">PREVIEW ONLY</div>
 
     <header>

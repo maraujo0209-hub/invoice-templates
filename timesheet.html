@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Timesheet Template - TS-0001</title>
+    <style>
+        :root {
+            --primary-color: #111111; /* Deep Carbon */
+            --secondary-color: #4a5568; /* Slate Gray */
+            --accent-bg: #f8fafc; /* Warm White/Light Gray */
+            --border-color: #cbd5e1;
+            --subtle-text: #64748b;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            color: var(--primary-color);
+            line-height: 1.5;
+            margin: 0;
+            padding: 0;
+            background-color: #f1f5f9;
+        }
+
+        .invoice-container {
+            background-color: #ffffff;
+            width: 8.5in;
+            height: 11in;
+            margin: 40px auto;
+            padding: 1in;
+            box-sizing: border-box;
+            position: relative;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+
+        @media print {
+            body { background-color: #ffffff; }
+            .invoice-container { 
+                margin: 0; 
+                box-shadow: none; 
+                height: 100vh;
+            }
+        }
+
+        .invoice-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 40px;
+        }
+
+        .logo-placeholder {
+            width: 300px;
+            height: 150px;
+            background-color: #e2e8f0;
+            border: 2px dashed #cbd5e1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+        }
+
+        .logo-placeholder .main-txt {
+            font-size: 18px;
+            font-weight: 700;
+            color: #64748b;
+            letter-spacing: 2px;
+        }
+
+        .logo-placeholder .sub-txt {
+            font-size: 12px;
+            color: #94a3b8;
+            margin-top: 4px;
+        }
+
+        .invoice-title-area {
+            text-align: right;
+        }
+
+        .invoice-title-area h1 {
+            font-size: 36px;
+            font-weight: 700;
+            margin: 0 0 5px 0;
+            letter-spacing: -1px;
+            text-transform: uppercase;
+        }
+
+        .serial-number {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--secondary-color);
+            margin: 0 0 20px 0;
+        }
+
+        .meta-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            text-align: right;
+            font-size: 14px;
+        }
+
+        .meta-label {
+            font-weight: 600;
+            color: var(--subtle-text);
+        }
+
+        .meta-value {
+            font-weight: 700;
+        }
+
+        .ts-details-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin-bottom: 35px;
+            font-size: 14px;
+        }
+
+        .details-block h3 {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--secondary-color);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 6px;
+            margin: 0 0 12px 0;
+        }
+
+        .details-block p {
+            margin: 0 0 4px 0;
+            color: #334155;
+        }
+
+        .items-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+
+        .items-table th {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 10px 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .items-table th.num-col, 
+        .items-table td.num-col {
+            text-align: right;
+        }
+
+        .items-table td {
+            padding: 12px;
+            font-size: 14px;
+            border-bottom: 1px solid var(--border-color);
+            color: #334155;
+        }
+
+        .items-table tr:nth-child(even) td {
+            background-color: var(--accent-bg);
+        }
+
+        .totals-container {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 50px;
+        }
+
+        .totals-table {
+            width: 300px;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+
+        .totals-table td {
+            padding: 8px 12px;
+        }
+
+        .totals-table tr.grand-total td {
+            font-size: 16px;
+            font-weight: 700;
+            border-top: 2px solid var(--primary-color);
+            padding-top: 12px;
+        }
+
+        .sign-off-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin-top: 40px;
+            margin-bottom: 50px;
+        }
+
+        .signature-line {
+            border-top: 1px solid var(--primary-color);
+            margin-top: 45px;
+            text-align: center;
+            font-size: 12px;
+            color: var(--secondary-color);
+            font-weight: 600;
+        }
+
+        .invoice-footer {
+            position: absolute;
+            bottom: 1in;
+            left: 1in;
+            right: 1in;
+            border-top: 1px solid var(--border-color);
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            color: var(--secondary-color);
+        }
+    </style>
+</head>
+<body>
+
+<div class="invoice-container">
+    <!-- Top Branding Block -->
+    <div class="invoice-header">
+        <div class="logo-placeholder">
+            <div class="main-txt">LOGO</div>
+            <div class="sub-txt">300 x 150</div>
+        </div>
+        
+        <div class="invoice-title-area">
+            <h1>Timesheet</h1>
+            <div class="serial-number">TS-0001</div>
+            
+            <div class="meta-grid">
+                <span class="meta-label">Period Start:</span>
+                <span class="meta-value">2026-07-06</span>
+                
+                <span class="meta-label">Period End:</span>
+                <span class="meta-value">2026-07-12</span>
+                
+                <span class="meta-label">Submission Date:</span>
+                <span class="meta-value">2026-07-12</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Employee & Client Relationship Details -->
+    <div class="ts-details-grid">
+        <div class="details-block">
+            <h3>Resource Information</h3>
+            <p class="meta-value">Employee / Contractor Name</p>
+            <p>Role: Senior Developer / Designer</p>
+            <p>Department: Creative Operations</p>
+            <p>email@resource.com</p>
+        </div>
+        
+        <div class="details-block">
+            <h3>Assigned Assignment / Client</h3>
+            <p class="meta-value">Client Company Name</p>
+            <p>Project Assignment: Master Suite Integration</p>
+            <p>Manager / Approver: Account Supervisor</p>
+            <p>billing@clientcompany.com</p>
+        </div>
+    </div>
+
+    <!-- Weekly Log Breakdown Ledger -->
+    <table class="items-table">
+        <thead>
+            <tr>
+                <th>Date / Day</th>
+                <th>Project Task Description & Milestone Code</th>
+                <th class="num-col" style="width: 100px;">Regular Hrs</th>
+                <th class="num-col" style="width: 100px;">Overtime Hrs</th>
+                <th class="num-col" style="width: 100px;">Total Hrs</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Monday, Jul 06</td>
+                <td>Refining application database configurations and layout routing.</td>
+                <td class="num-col">8.0</td>
+                <td class="num-col">0.0</td>
+                <td class="num-col">8.0</td>
+            </tr>
+            <tr>
+                <td>Tuesday, Jul 07</td>
+                <td>Optimizing asset performance pipelines and modular CSS parameters.</td>
+                <td class="num-col">8.0</td>
+                <td class="num-col">0.0</td>
+                <td class="num-col">8.0</td>
+            </tr>
+            <tr>
+                <td>Wednesday, Jul 08</td>
+                <td>Client review milestone presentation and structure refinement.</td>
+                <td class="num-col">8.0</td>
+                <td class="num-col">1.5</td>
+                <td class="num-col">9.5</td>
+            </tr>
+            <tr>
+                <td>Thursday, Jul 09</td>
+                <td>Deploying staging systems and resolving integration bugs.</td>
+                <td class="num-col">8.0</td>
+                <td class="num-col">0.0</td>
+                <td class="num-col">8.0</td>
+            </tr>
+            <tr>
+                <td>Friday, Jul 10</td>
+                <td>Final code verification logs, system backups, and documentation.</td>
+                <td class="num-col">8.0</td>
+                <td class="num-col">0.0</td>
+                <td class="num-col">8.0</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Calculated Total Hours Tracker -->
+    <div class="totals-container">
+        <table class="totals-table">
+            <tr>
+                <td class="meta-label">Total Regular Hours:</td>
+                <td class="num-col">40.0</td>
+            </tr>
+            <tr>
+                <td class="meta-label">Total Overtime Hours:</td>
+                <td class="num-col">1.5</td>
+            </tr>
+            <tr class="grand-total">
+                <td>Cumulative Logged Hours:</td>
+                <td class="num-col">41.5</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Authorization Verification Signatures -->
+    <div class="sign-off-container">
+        <div class="signature-line">
+            Resource / Employee Signature
+        </div>
+        <div class="signature-line">
+            Authorized Manager Approval Sign-Off
+        </div>
+    </div>
+
+    <!-- Standard System Footnote Footer -->
+    <div class="invoice-footer">
+        <div style="max-width: 70%;">
+            <p style="margin: 0; color: var(--subtle-text); line-height: 1.4;">Submitted hours are subject to final auditing checks against logged ticketing systems before payment distribution.</p>
+        </div>
+        <div style="text-align: right;">
+            <p style="margin: 0; font-weight: 600;">Page 1 of 1</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

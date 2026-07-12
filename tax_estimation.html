@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Estimation Sheet</title>
+    <style>
+        :root {
+            --primary-color: #111111;
+            --secondary-color: #4a5568;
+            --accent-bg: #f8fafc;
+            --border-color: #cbd5e1;
+            --subtle-text: #64748b;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            color: var(--primary-color);
+            line-height: 1.5;
+            margin: 0;
+            padding: 0;
+            background-color: #f1f5f9;
+        }
+
+        .tax-container {
+            background-color: #ffffff;
+            width: 8.5in;
+            margin: 40px auto;
+            padding: 0.8in;
+            box-sizing: border-box;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+
+        @media print {
+            @page { size: letter; margin: 0.5in; }
+            body { background-color: #ffffff; }
+            .tax-container { margin: 0; padding: 0; width: 100%; box-shadow: none; }
+        }
+
+        header {
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        h1 { font-size: 24px; font-weight: 800; text-transform: uppercase; margin: 0; }
+        .subtitle { font-size: 12px; color: var(--secondary-color); text-transform: uppercase; letter-spacing: 2px; font-weight: 600; margin: 0; }
+
+        .tax-section-title { font-size: 12px; text-transform: uppercase; font-weight: 700; color: var(--secondary-color); border-bottom: 1px solid var(--border-color); padding-bottom: 4px; margin-top: 25px; margin-bottom: 15px; }
+
+        .calc-row { display: flex; justify-content: space-between; padding: 8px 12px; font-size: 13px; border-bottom: 1px solid var(--border-color); }
+        .calc-row.total { font-weight: 700; background-color: var(--accent-bg); border-top: 1px solid var(--primary-color); border-bottom: 2px solid var(--primary-color); }
+        .value { font-weight: 600; }
+    </style>
+</head>
+<body>
+
+<div class="tax-container">
+    <header>
+        <h1>Tax Estimation Sheet</h1>
+        <p class="subtitle">Quarterly Filings & Liability Forecast</p>
+    </header>
+
+    <div class="tax-section-title">Income & Write-Off Aggregations</div>
+    <div class="calc-row"><span>Gross Estimated Annual Receipts</span><span class="value">$0.00</span></div>
+    <div class="calc-row"><span>Less: Deductible Business Expenditures</span><span class="value">-$0.00</span></div>
+    <div class="calc-row total"><span>Adjusted Net Taxable Income</span><span class="value">$0.00</span></div>
+
+    <div class="tax-section-title">Liability Breakdown Calculations</div>
+    <div class="calc-row"><span>Estimated Self-Employment Burden Allocation</span><span class="value">$0.00</span></div>
+    <div class="calc-row"><span>Income Tax Bracket Base Reserve</span><span class="value">$0.00</span></div>
+    <div class="calc-row total"><span>Total Estimated Quarterly Installment Due</span><span class="value">$0.00</span></div>
+</div>
+
+</body>
+</html>

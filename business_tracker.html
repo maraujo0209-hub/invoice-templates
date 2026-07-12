@@ -37,7 +37,8 @@
             padding: 0.8in;
             box-sizing: border-box;
             box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-            position: relative;
+            position: relative; /* Context anchor for the watermark */
+            overflow: hidden;   /* Prevents skewed watermark text from throwing off page margins */
         }
 
         /* 2. Navigation Back Button Styles */
@@ -57,16 +58,16 @@
             background: #334155;
         }
 
-        /* 3. Diagonal Store Watermark Protection */
+        /* 3. Diagonal Store Watermark Protection (Absolute inside Container) */
         .watermark {
-            position: fixed;
+            position: absolute;
             top: 45%;
-            left: 5%;
-            right: 5%;
+            left: -10%;
+            right: -10%;
             transform: rotate(-30deg);
-            font-size: 75px;
+            font-size: 85px;
             font-weight: 900;
-            color: rgba(0, 0, 0, 0.05);
+            color: rgba(0, 0, 0, 0.04);
             pointer-events: none;
             text-transform: uppercase;
             text-align: center;
@@ -118,12 +119,15 @@
 </head>
 <body>
 
-<!-- Global Security/Navigation Elements -->
+<!-- Global Navigation Elements -->
 <a href="index.html#templates" class="back-button">&larr; Back to All Templates</a>
-<div class="watermark">PREVIEW ONLY</div>
 
 <!-- Printable Document Context -->
 <div class="matrix-container">
+    
+    <!-- Hard-baked internal protection overlay -->
+    <div class="watermark">PREVIEW ONLY</div>
+
     <header>
         <div>
             <h1>Business Tracker Matrix</h1>

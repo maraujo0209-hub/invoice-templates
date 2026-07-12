@@ -25,7 +25,7 @@
         }
 
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 40px auto;
             padding: 0 20px;
         }
@@ -67,6 +67,104 @@
             color: #334155;
         }
 
+        /* Pricing Grid Layout */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .pricing-card {
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            background-color: #ffffff;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .pricing-card.featured {
+            border: 2px solid #111111;
+            position: relative;
+        }
+
+        .pricing-card.featured::top {
+            content: "MOST POPULAR";
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            background: #111111;
+            color: #ffffff;
+            font-size: 10px;
+            font-weight: 800;
+            padding: 2px 8px;
+            letter-spacing: 1px;
+            border-radius: 2px;
+        }
+
+        .tier-name {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #4a5568;
+            margin: 0 0 8px 0;
+        }
+
+        .tier-price {
+            font-size: 32px;
+            font-weight: 800;
+            color: #111111;
+            margin: 0 0 16px 0;
+        }
+
+        .tier-features {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-size: 13px;
+            color: #334155;
+            flex-grow: 1;
+        }
+
+        .tier-features li {
+            margin-bottom: 8px;
+            padding-left: 18px;
+            position: relative;
+        }
+
+        .tier-features li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #111111;
+            font-weight: bold;
+        }
+
+        .tier-features li.plus-items {
+            font-weight: 600;
+            color: #111111;
+            padding-left: 0;
+            margin-top: 12px;
+            margin-bottom: 4px;
+        }
+        .tier-features li.plus-items::before {
+            content: "";
+        }
+
+        /* Template Access Grid */
+        .section-title {
+            font-size: 18px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin: 40px 0 20px 0;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #111111;
+        }
+
         .template-grid {
             display: block;
         }
@@ -98,7 +196,22 @@
             font-weight: 700;
             margin: 0 0 4px 0;
             color: #111111;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
+
+        .tier-badge {
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 2px 6px;
+            border-radius: 3px;
+            letter-spacing: 0.5px;
+        }
+
+        .badge-starter { background-color: #e2e8f0; color: #334155; }
+        .badge-professional { background-color: #fee2e2; color: #991b1b; }
 
         .card-desc {
             font-size: 13px;
@@ -141,14 +254,62 @@
     </header>
 
     <div class="intro-box">
-        <p>Select a document template below to open the corresponding live HTML preview. Each file is fully optimized with print-ready css boundaries, responsive structural grids, and minimalist typography.</p>
+        <p>Explore our structural toolkit catalog below. Select a document template from your bundle tier to open the corresponding live HTML preview. All assets are fully responsive and optimized with print-ready container boundaries.</p>
     </div>
 
+    <!-- Pricing Section -->
+    <div class="pricing-grid">
+        <!-- Starter Tier -->
+        <div class="pricing-card">
+            <h3 class="tier-name">Starter Bundle</h3>
+            <div class="tier-price">$9.99</div>
+            <ul class="tier-features">
+                <li>Invoice Template</li>
+                <li>Estimate Template</li>
+                <li>Quote Template</li>
+                <li>Receipt Template</li>
+            </ul>
+        </div>
+
+        <!-- Professional Tier -->
+        <div class="pricing-card featured">
+            <h3 class="tier-name">Professional Bundle</h3>
+            <div class="tier-price">$24.99</div>
+            <ul class="tier-features">
+                <li>Includes all Starter files</li>
+                <li>Purchase Order</li>
+                <li>Work Order</li>
+                <li>Timesheet Log</li>
+                <li>Expense Report</li>
+                <li>Contractor Agreement</li>
+            </ul>
+        </div>
+
+        <!-- Ultimate Tier -->
+        <div class="pricing-card">
+            <h3 class="tier-name">Ultimate Business</h3>
+            <div class="tier-price">$49.99</div>
+            <ul class="tier-features">
+                <li>Includes all Pro files</li>
+                <li class="plus-items">Plus System Trackers:</li>
+                <li>Business Tracker Matrix</li>
+                <li>Invoice Ledger Tool</li>
+                <li>Tax Estimation Sheet</li>
+                <li>Mileage Calculation Log</li>
+                <li>Client Database System</li>
+                <li>50+ Advanced Layouts</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Live Template Previews -->
+    <h2 class="section-title">Available Live Previews</h2>
+    
     <div class="template-grid">
-        <!-- Core Financial Documents -->
+        <!-- Core Financial Documents (Starter) -->
         <a href="invoice.html" class="template-card">
             <div class="card-content">
-                <div class="card-title">1. Invoice Template</div>
+                <div class="card-title">1. Invoice Template <span class="tier-badge badge-starter">Starter</span></div>
                 <p class="card-desc">Standard billing statement with structured client mapping and line-item financial calculation matrices.</p>
             </div>
             <div class="card-action">View Live &rarr;</div>
@@ -156,7 +317,7 @@
 
         <a href="estimate.html" class="template-card">
             <div class="card-content">
-                <div class="card-title">2. Estimate Template</div>
+                <div class="card-title">2. Estimate Template <span class="tier-badge badge-starter">Starter</span></div>
                 <p class="card-desc">Project cost bidding document designed for preliminary scope pricing and service breakdowns.</p>
             </div>
             <div class="card-action">View Live &rarr;</div>
@@ -164,7 +325,7 @@
 
         <a href="quote.html" class="template-card">
             <div class="card-content">
-                <div class="card-title">3. Quote Template</div>
+                <div class="card-title">3. Quote Template <span class="tier-badge badge-starter">Starter</span></div>
                 <p class="card-desc">Formal cost lock authorization layout featuring itemized pricing grids and corporate validation tags.</p>
             </div>
             <div class="card-action">View Live &rarr;</div>
@@ -172,24 +333,24 @@
 
         <a href="receipt.html" class="template-card">
             <div class="card-content">
-                <div class="card-title">4. Receipt Template</div>
+                <div class="card-title">4. Receipt Template <span class="tier-badge badge-starter">Starter</span></div>
                 <p class="card-desc">Post-transaction proof of payment tracking confirmation featuring minimal clear transaction logs.</p>
             </div>
             <div class="card-action">View Live &rarr;</div>
         </a>
 
+        <!-- Operational Framework Documents (Professional) -->
         <a href="purchase_order.html" class="template-card">
             <div class="card-content">
-                <div class="card-title">5. Purchase Order Template</div>
+                <div class="card-title">5. Purchase Order Template <span class="tier-badge badge-professional">Pro</span></div>
                 <p class="card-desc">B2B procurement document formatted to authorize vendor supply allocations and inventory tracking.</p>
             </div>
             <div class="card-action">View Live &rarr;</div>
         </a>
 
-        <!-- Operational Framework Documents -->
         <a href="work_order.html" class="template-card">
             <div class="card-content">
-                <div class="card-title">6. Work Order Template</div>
+                <div class="card-title">6. Work Order Template <span class="tier-badge badge-professional">Pro</span></div>
                 <p class="card-desc">Field service instruction layout optimized for scheduling, assignment logs, and client completion sign-offs.</p>
             </div>
             <div class="card-action">View Live &rarr;</div>
@@ -197,7 +358,7 @@
 
         <a href="timesheet.html" class="template-card">
             <div class="card-content">
-                <div class="card-title">7. Timesheet Template</div>
+                <div class="card-title">7. Timesheet Template <span class="tier-badge badge-professional">Pro</span></div>
                 <p class="card-desc">Weekly labor hours tracking log optimized for monitoring regular and overtime allocation metrics.</p>
             </div>
             <div class="card-action">View Live &rarr;</div>
@@ -205,7 +366,7 @@
 
         <a href="expense_report.html" class="template-card">
             <div class="card-content">
-                <div class="card-title">8. Expense Report Template</div>
+                <div class="card-title">8. Expense Report Template <span class="tier-badge badge-professional">Pro</span></div>
                 <p class="card-desc">Corporate tracking sheet for merchant categories, receipt audit logs, and reimbursement calculation flags.</p>
             </div>
             <div class="card-action">View Live &rarr;</div>
@@ -213,7 +374,7 @@
 
         <a href="independent_contractor_agreement.html" class="template-card">
             <div class="card-content">
-                <div class="card-title">9. Independent Contractor Agreement</div>
+                <div class="card-title">9. Independent Contractor Agreement <span class="tier-badge badge-professional">Pro</span></div>
                 <p class="card-desc">Legal framework document containing service definitions, IP assignments, and formal authorization matrices.</p>
             </div>
             <div class="card-action">View Live &rarr;</div>

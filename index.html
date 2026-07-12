@@ -3,330 +3,227 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Small Business Document Bundle - Cover & Instructions</title>
+    <title>Professional Document Templates Bundle</title>
     <style>
-        :root {
-            --primary-color: #111111; /* Deep Carbon */
-            --secondary-color: #4a5568; /* Slate Gray */
-            --accent-bg: #f8fafc; /* Warm White/Light Gray */
-            --border-color: #cbd5e1;
-            --success-color: #10b981; /* Premium Checkmark Green */
+        @page {
+            size: A4;
+            margin: 20mm 15mm;
+            background-color: #ffffff;
+        }
+        
+        * {
+            box-sizing: border-box;
         }
 
         body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            color: var(--primary-color);
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f1f5f9;
-        }
-
-        /* Page Layout & Print Optimization */
-        .page {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: #111111;
             background-color: #ffffff;
-            width: 8.5in;
-            height: 11in;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
             margin: 40px auto;
-            padding: 2in 1in 1in 1in;
-            box-sizing: border-box;
-            position: relative;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-            page-break-after: always;
+            padding: 0 20px;
         }
 
-        @media print {
-            body { background-color: #ffffff; }
-            .page { 
-                margin: 0; 
-                box-shadow: none; 
-                page-break-after: always;
-                height: 100vh;
-            }
-        }
-
-        /* ------------------------------------
-           PAGE 1: COVER PAGE STYLING
-           ------------------------------------ */
-        .cover-header {
-            border-left: 6px solid var(--primary-color);
-            padding-left: 25px;
-            margin-bottom: 80px;
-        }
-
-        .cover-subtitle {
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            color: var(--secondary-color);
-            margin: 0 0 10px 0;
-            font-weight: 600;
-        }
-
-        .cover-title {
-            font-size: 42px;
-            font-weight: 700;
-            line-height: 1.1;
-            margin: 0;
-            letter-spacing: -0.5px;
-        }
-
-        .cover-grid {
-            display: grid;
-            grid-template-columns: 1.2fr 1fr;
-            gap: 50px;
-            margin-bottom: 80px;
-        }
-
-        .section-title {
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--secondary-color);
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 8px;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-
-        .checklist {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .checklist li {
-            font-size: 15px;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: #334155;
-        }
-
-        .checkmark {
-            color: var(--success-color);
-            font-weight: bold;
-        }
-
-        .badge-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .badge-list li {
-            font-size: 14px;
-            font-weight: 600;
-            background: var(--accent-bg);
-            border: 1px solid var(--border-color);
-            padding: 8px 12px;
-            margin-bottom: 8px;
-            border-radius: 4px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .badge-tag {
-            font-size: 10px;
-            text-transform: uppercase;
-            background: #e2e8f0;
-            padding: 2px 6px;
-            border-radius: 3px;
-            letter-spacing: 0.5px;
-        }
-
-        .cover-footer {
-            position: absolute;
-            bottom: 1in;
-            left: 1in;
-            right: 1in;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-top: 1px solid var(--border-color);
-            padding-top: 20px;
-            font-size: 12px;
-            color: var(--secondary-color);
-        }
-
-        /* ------------------------------------
-           PAGE 2: INSTRUCTIONS STYLING
-           ------------------------------------ */
-        .instruction-page {
-            padding-top: 1in !important;
-        }
-
-        .page-title {
-            font-size: 28px;
-            font-weight: 700;
-            margin: 0 0 30px 0;
-            border-bottom: 2px solid var(--primary-color);
-            padding-bottom: 15px;
-        }
-
-        .steps-container {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
+        header {
+            border-bottom: 2px solid #111111;
+            padding-bottom: 20px;
             margin-bottom: 40px;
         }
 
-        .step-card {
-            display: flex;
-            gap: 20px;
-            background: var(--accent-bg);
+        h1 {
+            font-size: 28px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+            margin: 0 0 10px 0;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            color: #4a5568;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .intro-box {
+            background-color: #f8fafc;
+            border: 1px solid #cbd5e1;
             padding: 20px;
-            border-radius: 6px;
-            border: 1px solid #e2e8f0;
+            border-radius: 4px;
+            margin-bottom: 40px;
         }
 
-        .step-number {
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--secondary-color);
-            line-height: 1;
-        }
-
-        .step-content h3 {
-            margin: 0 0 5px 0;
-            font-size: 16px;
-            font-weight: 700;
-        }
-
-        .step-content p {
+        .intro-box p {
             margin: 0;
             font-size: 14px;
-            color: #475569;
+            color: #334155;
         }
 
-        /* Standardized Logo Placeholder Graphic */
-        .logo-placeholder-spec {
-            width: 300px;
-            height: 150px;
-            background-color: #e2e8f0;
-            border: 2px dashed #cbd5e1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+        .template-grid {
+            display: block;
+        }
+
+        .template-card {
+            display: table;
+            width: 100%;
+            border: 1px solid #cbd5e1;
             border-radius: 4px;
-            margin: 20px auto;
+            margin-bottom: 15px;
+            padding: 15px 20px;
+            text-decoration: none;
+            color: inherit;
+            transition: background-color 0.2s, border-color 0.2s;
         }
 
-        .logo-placeholder-spec .main-txt {
-            font-size: 18px;
+        .template-card:hover {
+            background-color: #f8fafc;
+            border-color: #111111;
+        }
+
+        .card-content {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .card-title {
+            font-size: 16px;
             font-weight: 700;
-            color: #64748b;
-            letter-spacing: 2px;
+            margin: 0 0 4px 0;
+            color: #111111;
         }
 
-        .logo-placeholder-spec .sub-txt {
+        .card-desc {
+            font-size: 13px;
+            color: #64748b;
+            margin: 0;
+        }
+
+        .card-action {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: right;
+            width: 100px;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #4a5568;
+        }
+
+        .template-card:hover .card-action {
+            color: #111111;
+        }
+
+        footer {
+            margin-top: 60px;
+            border-top: 1px solid #cbd5e1;
+            padding-top: 20px;
             font-size: 12px;
-            color: #94a3b8;
-            margin-top: 4px;
+            color: #64748b;
+            text-align: center;
         }
     </style>
 </head>
 <body>
 
-<!-- PAGE 1: COVER PAGE -->
-<div class="page">
-    <div class="cover-header">
-        <p class="cover-subtitle">Premium Template Suite</p>
-        <h1 class="cover-title">Small Business<br>Document Bundle</h1>
+<div class="container">
+    <header>
+        <h1>Professional Bundle Portal</h1>
+        <p class="subtitle">Document & Operations Toolkit</p>
+    </header>
+
+    <div class="intro-box">
+        <p>Select a document template below to open the corresponding live HTML preview. Each file is fully optimized with print-ready css boundaries, responsive structural grids, and minimalist typography.</p>
     </div>
 
-    <div class="cover-grid">
-        <div>
-            <h2 class="section-title">Includes</h2>
-            <ul class="checklist">
-                <li><span class="checkmark">✔</span> Invoice</li>
-                <li><span class="checkmark">✔</span> Estimate</li>
-                <li><span class="checkmark">✔</span> Quote</li>
-                <li><span class="checkmark">✔</span> Receipt</li>
-                <li><span class="checkmark">✔</span> Purchase Order</li>
-                <li><span class="checkmark">✔</span> Work Order</li>
-                <li><span class="checkmark">✔</span> Timesheet</li>
-                <li><span class="checkmark">✔</span> Expense Report</li>
-                <li><span class="checkmark">✔</span> Independent Contractor Agreement</li>
-            </ul>
-        </div>
-        
-        <div>
-            <h2 class="section-title">Compatible With</h2>
-            <ul class="badge-list">
-                <li>Microsoft Word <span class="badge-tag">.docx</span></li>
-                <li>Google Docs <span class="badge-tag">Doc</span></li>
-                <li>Canva <span class="badge-tag">Link</span></li>
-                <li>Microsoft Excel <span class="badge-tag">.xlsx</span></li>
-                <li>Google Sheets <span class="badge-tag">Sheet</span></li>
-                <li>Fillable PDF <span class="badge-tag">.pdf</span></li>
-            </ul>
-        </div>
+    <div class="template-grid">
+        <!-- Core Financial Documents -->
+        <a href="invoice.html" class="template-card">
+            <div class="card-content">
+                <div class="card-title">1. Invoice Template</div>
+                <p class="card-desc">Standard billing statement with structured client mapping and line-item financial calculation matrices.</p>
+            </div>
+            <div class="card-action">View Live &rarr;</div>
+        </a>
+
+        <a href="estimate.html" class="template-card">
+            <div class="card-content">
+                <div class="card-title">2. Estimate Template</div>
+                <p class="card-desc">Project cost bidding document designed for preliminary scope pricing and service breakdowns.</p>
+            </div>
+            <div class="card-action">View Live &rarr;</div>
+        </a>
+
+        <a href="quote.html" class="template-card">
+            <div class="card-content">
+                <div class="card-title">3. Quote Template</div>
+                <p class="card-desc">Formal cost lock authorization layout featuring itemized pricing grids and corporate validation tags.</p>
+            </div>
+            <div class="card-action">View Live &rarr;</div>
+        </a>
+
+        <a href="receipt.html" class="template-card">
+            <div class="card-content">
+                <div class="card-title">4. Receipt Template</div>
+                <p class="card-desc">Post-transaction proof of payment tracking confirmation featuring minimal clear transaction logs.</p>
+            </div>
+            <div class="card-action">View Live &rarr;</div>
+        </a>
+
+        <a href="purchase_order.html" class="template-card">
+            <div class="card-content">
+                <div class="card-title">5. Purchase Order Template</div>
+                <p class="card-desc">B2B procurement document formatted to authorize vendor supply allocations and inventory tracking.</p>
+            </div>
+            <div class="card-action">View Live &rarr;</div>
+        </a>
+
+        <!-- Operational Framework Documents -->
+        <a href="work_order.html" class="template-card">
+            <div class="card-content">
+                <div class="card-title">6. Work Order Template</div>
+                <p class="card-desc">Field service instruction layout optimized for scheduling, assignment logs, and client completion sign-offs.</p>
+            </div>
+            <div class="card-action">View Live &rarr;</div>
+        </a>
+
+        <a href="timesheet.html" class="template-card">
+            <div class="card-content">
+                <div class="card-title">7. Timesheet Template</div>
+                <p class="card-desc">Weekly labor hours tracking log optimized for monitoring regular and overtime allocation metrics.</p>
+            </div>
+            <div class="card-action">View Live &rarr;</div>
+        </a>
+
+        <a href="expense_report.html" class="template-card">
+            <div class="card-content">
+                <div class="card-title">8. Expense Report Template</div>
+                <p class="card-desc">Corporate tracking sheet for merchant categories, receipt audit logs, and reimbursement calculation flags.</p>
+            </div>
+            <div class="card-action">View Live &rarr;</div>
+        </a>
+
+        <a href="independent_contractor_agreement.html" class="template-card">
+            <div class="card-content">
+                <div class="card-title">9. Independent Contractor Agreement</div>
+                <p class="card-desc">Legal framework document containing service definitions, IP assignments, and formal authorization matrices.</p>
+            </div>
+            <div class="card-action">View Live &rarr;</div>
+        </a>
     </div>
 
-    <div class="cover-footer">
-        <span>© 2026 Professional Document Systems</span>
-        <span>Ultimate Edition</span>
-    </div>
-</div>
-
-<!-- PAGE 2: STEP-BY-STEP USER INSTRUCTIONS -->
-<div class="page instruction-page">
-    <h2 class="page-title">How to Use Your Templates</h2>
-    
-    <div class="steps-container">
-        <div class="step-card">
-            <div class="step-number">01</div>
-            <div class="step-content">
-                <h3>Replace the Branding Placeholder</h3>
-                <p>Locate the standard 300x150 gray box at the top of your document. Delete it and upload your corporate or personal business logo image in its place.</p>
-            </div>
-        </div>
-
-        <div class="step-card">
-            <div class="step-number">02</div>
-            <div class="step-content">
-                <h3>Add Your Permanent Company Details</h3>
-                <p>Input your company name, physical address, phone numbers, tax IDs, and digital payment links into the primary configuration areas.</p>
-            </div>
-        </div>
-
-        <div class="step-card">
-            <div class="step-number">03</div>
-            <div class="step-content">
-                <h3>Save Your Master Copy</h3>
-                <p>Save this personalized file cleanly as your <strong>Master Copy</strong>. Do not edit this file directly for future daily transactions.</p>
-            </div>
-        </div>
-
-        <div class="step-card">
-            <div class="step-number">04</div>
-            <div class="step-content">
-                <h3>Duplicate for New Transactions</h3>
-                <p>Whenever a client requires a new invoice, estimate, or receipt, open your master copy and select "Save As" or "Duplicate". Update the serial identifier digits (e.g., changing <code>INV-0001</code> to <code>INV-0002</code>) along with the specific line items.</p>
-            </div>
-        </div>
-
-        <div class="step-card">
-            <div class="step-number">05</div>
-            <div class="step-content">
-                <h3>Export as PDF Before Sending</h3>
-                <p>Once editing is complete, always export or print your final document safely as a static PDF file. This locks your formatting securely in place before transmission to your customer.</p>
-            </div>
-        </div>
-    </div>
-
-    <h2 class="section-title" style="margin-top: 40px;">Standard Logo Placeholder Specification</h2>
-    <div class="logo-placeholder-spec">
-        <div class="main-txt">LOGO</div>
-        <div class="sub-txt">300 x 150</div>
-    </div>
+    <footer>
+        <p>&copy; 2026 Operations Portal. All templates are designed with native print layouts built in.</p>
+    </footer>
 </div>
 
 </body>
 </html>
-  </v0-tabs>
-</v0-canvas>

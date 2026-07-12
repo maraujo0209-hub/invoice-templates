@@ -1,6 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head><!-- Insert this inside the <style> element of invoice.html, estimate.html, etc. -->
+<style>
+    /* 1. Print Interception Protection Layer */
+    @media print {
+        body {
+            display: none !important;
+        }
+    }
+
+    /* 2. Navigation Back Button Styles */
+    .back-button {
+        display: inline-block;
+        margin-bottom: 20px;
+        padding: 8px 14px;
+        background: #111111;
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 700;
+        border-radius: 4px;
+        transition: background 0.2s;
+    }
+    .back-button:hover {
+        background: #334155;
+    }
+
+    /* 3. Diagonal Store Watermark Protection */
+    .watermark {
+        position: fixed;
+        top: 45%;
+        left: 5%;
+        right: 5%;
+        transform: rotate(-30deg);
+        font-size: 75px;
+        font-weight: 900;
+        color: rgba(0, 0, 0, 0.05);
+        pointer-events: none;
+        text-transform: uppercase;
+        text-align: center;
+        user-select: none;
+        z-index: 9999;
+    }
+</style>
+
+<!-- Insert this right after your opening <body> tag in each template file -->
+<a href="index.html#templates" class="back-button">&larr; Back to All Templates</a>
+<div class="watermark">PREVIEW ONLY</div>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Business Tracker Matrix</title>

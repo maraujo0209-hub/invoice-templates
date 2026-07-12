@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Document Templates Portal</title>
+    <title>Professional Document Templates Store</title>
     <style>
         * {
             box-sizing: border-box;
@@ -35,18 +35,15 @@
         h1 {
             font-size: 36px;
             font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: -0.5px;
-            margin: 0 0 10px 0;
+            margin: 0 0 15px 0;
+            line-height: 1.2;
         }
 
-        .subtitle {
-            font-size: 14px;
+        .hero-p {
+            font-size: 16px;
             color: #4a5568;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: 600;
-            margin: 0 0 25px 0;
+            max-width: 700px;
+            margin: 0 auto 25px auto;
         }
 
         .main-button {
@@ -66,12 +63,112 @@
             background: #334155;
         }
 
-        /* Information and Specs Panels */
+        /* Pricing Grid Layout */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 40px 0 60px 0;
+        }
+
+        .pricing-card {
+            border: 1px solid #cbd5e1;
+            border-radius: 12px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+
+        .pricing-card.featured {
+            border: 2px solid #111111;
+        }
+
+        .pricing-card.featured::before {
+            content: "BEST VALUE";
+            position: absolute;
+            top: -12px;
+            left: 30px;
+            background: #111111;
+            color: #ffffff;
+            font-size: 10px;
+            font-weight: 800;
+            padding: 2px 10px;
+            letter-spacing: 1px;
+            border-radius: 4px;
+        }
+
+        .tier-name {
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #4a5568;
+            margin: 0 0 8px 0;
+        }
+
+        .tier-price {
+            font-size: 36px;
+            font-weight: 800;
+            color: #111111;
+            margin: 0 0 20px 0;
+        }
+
+        .tier-features {
+            margin: 0 0 30px 0;
+            padding: 0;
+            list-style: none;
+            font-size: 14px;
+            color: #334155;
+            flex-grow: 1;
+        }
+
+        .tier-features li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .tier-features li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #111111;
+            font-weight: bold;
+        }
+
+        .buy-button {
+            display: block;
+            text-align: center;
+            padding: 12px;
+            background: #111111;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 14px;
+            transition: background 0.2s ease;
+        }
+
+        .buy-button:hover {
+            background: #334155;
+        }
+
+        .pricing-card.featured .buy-button {
+            background: #16a34a;
+        }
+        .pricing-card.featured .buy-button:hover {
+            background: #15803d;
+        }
+
+        /* Information Panels */
         .info-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
-            margin-bottom: 40px;
+            margin-bottom: 60px;
         }
 
         .info-panel {
@@ -83,7 +180,7 @@
 
         .info-panel h3 {
             margin-top: 0;
-            font-size: 16px;
+            font-size: 15px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
             border-bottom: 2px solid #111111;
@@ -108,11 +205,11 @@
         }
 
         .template-section h2 {
-            font-size: 24px;
+            font-size: 26px;
             font-weight: 800;
             text-transform: uppercase;
             letter-spacing: -0.5px;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
         }
 
         .section-divider {
@@ -145,7 +242,7 @@
             border-radius: 12px;
             text-decoration: none;
             color: #111111;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.04);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
             transition: 0.2s ease;
             text-align: center;
         }
@@ -173,19 +270,21 @@
         .template-card span {
             display: inline-block;
             padding: 8px 16px;
-            background: #111111;
-            color: white;
+            background: #f1f5f9;
+            color: #111111;
+            border: 1px solid #cbd5e1;
             border-radius: 6px;
             font-size: 13px;
             font-weight: bold;
-            transition: background 0.2s ease;
+            transition: all 0.2s ease;
         }
 
         .template-card:hover span {
-            background: #334155;
+            background: #111111;
+            color: white;
+            border-color: #111111;
         }
 
-        /* Tier Badges inside Cards */
         .card-badge {
             font-size: 9px;
             font-weight: 800;
@@ -198,28 +297,6 @@
         .badge-starter { background-color: #e2e8f0; color: #334155; }
         .badge-pro { background-color: #fee2e2; color: #991b1b; }
         .badge-ultimate { background-color: #fae8ff; color: #701a75; }
-
-        /* Checkout Infrastructure Callout */
-        .checkout-box {
-            background: #ffffff;
-            border: 2px dashed #111111;
-            border-radius: 8px;
-            padding: 30px;
-            text-align: center;
-            margin-top: 60px;
-        }
-
-        .checkout-box h2 {
-            margin-top: 0;
-            text-transform: uppercase;
-            font-size: 20px;
-        }
-
-        .price-tag {
-            font-size: 36px;
-            font-weight: 800;
-            margin: 15px 0;
-        }
 
         footer {
             margin-top: 60px;
@@ -236,36 +313,86 @@
 <div class="container">
     <!-- Hero Area -->
     <header>
-        <h1>Operations Dashboard Portal</h1>
-        <p class="subtitle">Premium Print-Ready Layout Templates</p>
-        <a href="#templates" class="main-button">View Live Previews</a>
+        <h1>Professional Business Templates That Save You Time</h1>
+        <p class="hero-p">
+            Create polished invoices, estimates, quotes, receipts, work orders, and business records without starting from scratch. Choose your bundle, preview the templates below, and download fully editable files instantly after purchase.
+        </p>
+        <a href="#templates" class="main-button">Preview Templates</a>
     </header>
+
+    <!-- Pricing Section with Buy Buttons -->
+    <div class="pricing-grid">
+        <!-- Starter Tier -->
+        <div class="pricing-card">
+            <h3 class="tier-name">Starter Bundle</h3>
+            <div class="tier-price">$9.99</div>
+            <ul class="tier-features">
+                <li>Professional Invoice</li>
+                <li>Project Estimate Sheet</li>
+                <li>Fixed Price Quote</li>
+                <li>Payment Receipt Form</li>
+                <li>Fully editable formats delivered on checkout</li>
+            </ul>
+            <a href="YOUR-PAYHIP-OR-GUMROAD-LINK" class="buy-button">Buy Starter Bundle</a>
+        </div>
+
+        <!-- Professional Tier -->
+        <div class="pricing-card">
+            <h3 class="tier-name">Professional Bundle</h3>
+            <div class="tier-price">$24.99</div>
+            <ul class="tier-features">
+                <li>Includes all 4 Starter files</li>
+                <li>Purchase Order</li>
+                <li>Field Work Order</li>
+                <li>Hourly Timesheet Log</li>
+                <li>Expense Report</li>
+                <li>Independent Contractor Agreement</li>
+            </ul>
+            <a href="YOUR-PAYHIP-OR-GUMROAD-LINK" class="buy-button">Buy Pro Bundle</a>
+        </div>
+
+        <!-- Ultimate Tier -->
+        <div class="pricing-card featured">
+            <h3 class="tier-name">Ultimate Business</h3>
+            <div class="tier-price">$49.99</div>
+            <ul class="tier-features">
+                <li>Includes all 9 Pro & Starter files</li>
+                <li>Quarterly Business Matrix</li>
+                <li>A/R Invoice Ledger Tool</li>
+                <li>Tax Estimation Sheet</li>
+                <li>Travel Mileage Log Register</li>
+                <li>Client Master Database</li>
+                <li><strong>Plus: 50+ Advanced Extra Layouts</strong></li>
+            </ul>
+            <a href="YOUR-PAYHIP-OR-GUMROAD-LINK" class="buy-button">Buy Ultimate Bundle</a>
+        </div>
+    </div>
 
     <!-- Product Details and Disclosures -->
     <div class="info-grid">
         <div class="info-panel">
-            <h3>Product Specifications</h3>
+            <h3>What You Get After Purchase</h3>
             <ul>
-                <li><strong>Deliverables:</strong> Full asset access dashboard links + developer source packages.</li>
-                <li><strong>Design Layouts:</strong> Engineered with explicit structural boundaries optimized for standard 8.5" x 11" and A4 rendering frameworks.</li>
-                <li><strong>Automation:</strong> Clean, semantic architecture ready for downstream data integration piping.</li>
+                <li><strong>Instantly Editable:</strong> Complete download archive folder packed with your chosen assets.</li>
+                <li><strong>Print-Ready Optimization:</strong> Designed to fit standard A4 and Letter printing configurations perfectly without layout shifting.</li>
+                <li><strong>Preview Policy:</strong> Online previews are static layout views only. Fully unlocked files are delivered immediately after checkout.</li>
             </ul>
         </div>
         <div class="info-panel">
-            <h3>Licensing & Terms</h3>
+            <h3>Store Information & Support</h3>
             <ul>
-                <li><strong>Commercial Terms:</strong> Full commercial utilization rights authorized for individual operations or professional client management.</li>
-                <li><strong>Refund Policy:</strong> Due to the instantaneous nature of digital file deployment, all asset access sales are definitive.</li>
-                <li><strong>Technical Help Contact:</strong> support@yourdomain.com</li>
+                <li><strong>Commercial Use:</strong> Permitted for personal operations or managing your small business client workflows.</li>
+                <li><strong>Refunds:</strong> Due to the immediate delivery of digital source materials, all bundle purchases are final.</li>
+                <li><strong>Support:</strong> support@yourdomain.com</li>
             </ul>
         </div>
     </div>
 
     <!-- Interactive Workspace Grid -->
     <section class="template-section" id="templates">
-        <h2>Choose a Template Live Preview</h2>
+        <h2>Interactive Preview Library</h2>
         <p style="color: #64748b; max-width: 600px; margin: 0 auto 30px auto; font-size: 14px;">
-            Select a toolkit card below to view the active, responsive layout engine structure. 
+            Click on any item below to view its layout architecture. Previews are watermarked and printing is restricted to protect digital content.
         </p>
 
         <!-- STARTER DOCUMENTS -->
@@ -275,36 +402,36 @@
                 <div>
                     <span class="card-badge badge-starter">Starter</span>
                     <h3>Invoice</h3>
-                    <p>Create a professional customer invoice statement.</p>
+                    <p>Create professional invoices with client details, itemized charges, taxes, and payment terms.</p>
                 </div>
-                <span>Open Template</span>
+                <span>Preview Layout &rarr;</span>
             </a>
 
             <a href="estimate.html" class="template-card">
                 <div>
                     <span class="card-badge badge-starter">Starter</span>
                     <h3>Estimate</h3>
-                    <p>Prepare an estimated project cost overview matrix.</p>
+                    <p>Prepare estimated project costs and resource breakdowns for potential clients.</p>
                 </div>
-                <span>Open Template</span>
+                <span>Preview Layout &rarr;</span>
             </a>
 
             <a href="quote.html" class="template-card">
                 <div>
                     <span class="card-badge badge-starter">Starter</span>
                     <h3>Price Quote</h3>
-                    <p>Provide a fixed-price lock verification quote to a client.</p>
+                    <p>Provide formal fixed-price quotes and service scopes to customers.</p>
                 </div>
-                <span>Open Template</span>
+                <span>Preview Layout &rarr;</span>
             </a>
 
             <a href="receipt.html" class="template-card">
                 <div>
                     <span class="card-badge badge-starter">Starter</span>
                     <h3>Receipt</h3>
-                    <p>Confirm and document that a customer payment transaction was completed.</p>
+                    <p>Confirm and document that a client transaction or invoice payment was completed.</p>
                 </div>
-                <span>Open Template</span>
+                <span>Preview Layout &rarr;</span>
             </a>
         </div>
 
@@ -315,45 +442,45 @@
                 <div>
                     <span class="card-badge badge-pro">Professional</span>
                     <h3>Purchase Order</h3>
-                    <p>Order specialized products and logistical materials from third-party suppliers.</p>
+                    <p>Order custom products, raw materials, or hardware stock cleanly from suppliers.</p>
                 </div>
-                <span>Open Template</span>
+                <span>Preview Layout &rarr;</span>
             </a>
 
             <a href="work_order.html" class="template-card">
                 <div>
                     <span class="card-badge badge-pro">Professional</span>
                     <h3>Work Order</h3>
-                    <p>Assign tasks, schedule labor configurations, and track statuses at a job site.</p>
+                    <p>Assign field work, plan job site shifts, and track project execution details.</p>
                 </div>
-                <span>Open Template</span>
+                <span>Preview Layout &rarr;</span>
             </a>
 
             <a href="timesheet.html" class="template-card">
                 <div>
                     <span class="card-badge badge-pro">Professional</span>
                     <h3>Timesheet</h3>
-                    <p>Log employee or contractor hourly metrics for systematic payroll export.</p>
+                    <p>Log employee or independent contractor shifts and hours for simple payroll processing.</p>
                 </div>
-                <span>Open Template</span>
+                <span>Preview Layout &rarr;</span>
             </a>
 
             <a href="expense_report.html" class="template-card">
                 <div>
                     <span class="card-badge badge-pro">Professional</span>
                     <h3>Expense Report</h3>
-                    <p>Record business expenditures, category assignments, and reimbursement parameters.</p>
+                    <p>Record company purchases, track categories, and calculate reimbursement fields.</p>
                 </div>
-                <span>Open Template</span>
+                <span>Preview Layout &rarr;</span>
             </a>
 
             <a href="independent_contractor_agreement.html" class="template-card">
                 <div>
                     <span class="card-badge badge-pro">Professional</span>
                     <h3>Contractor Agreement</h3>
-                    <p>Formal legal layout defining service boundaries, protections, and terms.</p>
+                    <p>Draft binding parameters defining contract worker project lines and financial arrangements.</p>
                 </div>
-                <span>Open Template</span>
+                <span>Preview Layout &rarr;</span>
             </a>
         </div>
 
@@ -364,59 +491,51 @@
                 <div>
                     <span class="card-badge badge-ultimate">Ultimate</span>
                     <h3>Business Matrix</h3>
-                    <p>Operational overview dashboard tracking quarterly goals and gross parameters.</p>
+                    <p>Monitor high-level goals, performance margins, and core business milestones.</p>
                 </div>
-                <span>Open Template</span>
+                <span>Preview Layout &rarr;</span>
             </a>
 
             <a href="invoice_ledger.html" class="template-card">
                 <div>
                     <span class="card-badge badge-ultimate">Ultimate</span>
                     <h3>Invoice Ledger</h3>
-                    <p>Central spreadsheet system monitoring receivables and outstanding balances.</p>
+                    <p>Track all client accounts receivable, outstanding balances, and incoming revenue histories.</p>
                 </div>
-                <span>Open Template</span>
+                <span>Preview Layout &rarr;</span>
             </a>
 
             <a href="tax_estimation.html" class="template-card">
                 <div>
                     <span class="card-badge badge-ultimate">Ultimate</span>
                     <h3>Tax Estimation Sheet</h3>
-                    <p>Quarterly corporate forecaster mapping adjustments and liability allocations.</p>
+                    <p>Map out upcoming quarterly deductions and projected internal tax obligations.</p>
                 </div>
-                <span>Open Template</span>
+                <span>Preview Layout &rarr;</span>
             </a>
 
             <a href="mileage_log.html" class="template-card">
                 <div>
                     <span class="card-badge badge-ultimate">Ultimate</span>
                     <h3>Mileage Log</h3>
-                    <p>Audit-ready transit ledger calculating standard mileage write-off metrics.</p>
+                    <p>Log vehicle trip parameters and route lengths to generate audit-ready business tax write-offs.</p>
                 </div>
-                <span>Open Template</span>
+                <span>Preview Layout &rarr;</span>
             </a>
 
             <a href="client_database.html" class="template-card">
                 <div>
                     <span class="card-badge badge-ultimate">Ultimate</span>
                     <h3>Client Database</h3>
-                    <p>Master communication directory tracking individual entity configurations.</p>
+                    <p>Keep records of main company stakeholders, phone configurations, and billing preferences.</p>
                 </div>
-                <span>Open Template</span>
+                <span>Preview Layout &rarr;</span>
             </a>
         </div>
     </section>
 
-    <!-- Commercial Vault Pipeline Option -->
-    <div class="checkout-box">
-        <h2>Acquire Complete Offline Code Package Source Files</h2>
-        <p style="color: #4a5568; font-size: 14px; max-width: 600px; margin: 0 auto;"> Get instant access to clean standalone templates without navigation frames, bundled in a pristine ZIP delivery archive including our expanded 50+ Advanced Business Layouts checklist system.</p>
-        <div class="price-tag">$49.99</div>
-        <a href="#" class="main-button" onclick="alert('Connect your external Gumroad, Payhip, or Etsy product listing checkout integration hook here.'); return false;">Unlock Complete Source Library Bundle</a>
-    </div>
-
     <footer>
-        <p>&copy; 2026 Production Operations System. Built using clean CSS Container Standards.</p>
+        <p>&copy; 2026 Template Distribution Hub. All rights reserved.</p>
     </footer>
 </div>
 

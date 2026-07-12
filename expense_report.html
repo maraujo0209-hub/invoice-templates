@@ -6,9 +6,9 @@
     <title>Master Expense Report Template - EXP-0001</title>
     <style>
         :root {
-            --primary-color: #111111; /* Deep Carbon */
-            --secondary-color: #4a5568; /* Slate Gray */
-            --accent-bg: #f8fafc; /* Warm White/Light Gray */
+            --primary-color: #111111;
+            --secondary-color: #4a5568;
+            --accent-bg: #f8fafc;
             --border-color: #cbd5e1;
             --subtle-text: #64748b;
         }
@@ -25,20 +25,31 @@
         .invoice-container {
             background-color: #ffffff;
             width: 8.5in;
-            height: 11in;
             margin: 40px auto;
-            padding: 1in;
+            padding: 0.8in;
             box-sizing: border-box;
-            position: relative;
             box-shadow: 0 4px 20px rgba(0,0,0,0.05);
         }
 
         @media print {
-            body { background-color: #ffffff; }
+            @page {
+                size: letter;
+                margin: 0.5in;
+            }
+            body { 
+                background-color: #ffffff; 
+            }
             .invoice-container { 
                 margin: 0; 
+                padding: 0;
+                width: 100%;
                 box-shadow: none; 
-                height: 100vh;
+            }
+            .invoice-footer {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
             }
         }
 
@@ -46,12 +57,12 @@
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            margin-bottom: 40px;
+            margin-bottom: 35px;
         }
 
         .logo-placeholder {
-            width: 300px;
-            height: 150px;
+            width: 260px;
+            height: 120px;
             background-color: #e2e8f0;
             border: 2px dashed #cbd5e1;
             display: flex;
@@ -62,14 +73,14 @@
         }
 
         .logo-placeholder .main-txt {
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 700;
             color: #64748b;
             letter-spacing: 2px;
         }
 
         .logo-placeholder .sub-txt {
-            font-size: 12px;
+            font-size: 11px;
             color: #94a3b8;
             margin-top: 4px;
         }
@@ -79,7 +90,7 @@
         }
 
         .invoice-title-area h1 {
-            font-size: 36px;
+            font-size: 32px;
             font-weight: 700;
             margin: 0 0 5px 0;
             letter-spacing: -1px;
@@ -87,18 +98,18 @@
         }
 
         .serial-number {
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 600;
             color: var(--secondary-color);
-            margin: 0 0 20px 0;
+            margin: 0 0 15px 0;
         }
 
         .meta-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 8px;
+            gap: 6px;
             text-align: right;
-            font-size: 14px;
+            font-size: 13px;
         }
 
         .meta-label {
@@ -113,9 +124,9 @@
         .exp-details-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            margin-bottom: 35px;
-            font-size: 14px;
+            gap: 40px;
+            margin-bottom: 30px;
+            font-size: 13px;
         }
 
         .details-block h3 {
@@ -125,7 +136,7 @@
             color: var(--secondary-color);
             border-bottom: 1px solid var(--border-color);
             padding-bottom: 6px;
-            margin: 0 0 12px 0;
+            margin: 0 0 10px 0;
         }
 
         .details-block p {
@@ -136,13 +147,13 @@
         .items-table {
             width: 100%;
             border-collapse: collapse;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
 
         .items-table th {
             background-color: var(--primary-color);
             color: #ffffff;
-            font-size: 12px;
+            font-size: 11px;
             text-transform: uppercase;
             letter-spacing: 1px;
             padding: 10px 12px;
@@ -156,7 +167,7 @@
         }
 
         .items-table td {
-            padding: 12px;
+            padding: 10px 12px;
             font-size: 13px;
             border-bottom: 1px solid var(--border-color);
             color: #334155;
@@ -169,62 +180,61 @@
         .totals-container {
             display: flex;
             justify-content: flex-end;
-            margin-bottom: 50px;
+            margin-bottom: 35px;
+            page-break-inside: avoid;
         }
 
         .totals-table {
-            width: 320px;
+            width: 300px;
             border-collapse: collapse;
-            font-size: 14px;
+            font-size: 13px;
         }
 
         .totals-table td {
-            padding: 8px 12px;
+            padding: 6px 12px;
         }
 
         .totals-table tr.grand-total td {
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 700;
             border-top: 2px solid var(--primary-color);
-            padding-top: 12px;
+            padding-top: 10px;
         }
 
         .sign-off-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            margin-top: 40px;
-            margin-bottom: 50px;
+            gap: 40px;
+            margin-top: 30px;
+            margin-bottom: 40px;
+            page-break-inside: avoid;
         }
 
         .signature-line {
             border-top: 1px solid var(--primary-color);
-            margin-top: 45px;
+            margin-top: 40px;
             text-align: center;
-            font-size: 12px;
+            font-size: 11px;
             color: var(--secondary-color);
             font-weight: 600;
         }
 
         .invoice-footer {
-            position: absolute;
-            bottom: 1in;
-            left: 1in;
-            right: 1in;
+            margin-top: 40px;
             border-top: 1px solid var(--border-color);
-            padding-top: 20px;
+            padding-top: 15px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-size: 12px;
+            font-size: 11px;
             color: var(--secondary-color);
+            page-break-inside: avoid;
         }
     </style>
 </head>
 <body>
 
 <div class="invoice-container">
-    <!-- Top Branding Block -->
     <div class="invoice-header">
         <div class="logo-placeholder">
             <div class="main-txt">LOGO</div>
@@ -248,7 +258,6 @@
         </div>
     </div>
 
-    <!-- Claimant & Approver Identification details -->
     <div class="exp-details-grid">
         <div class="details-block">
             <h3>Claimant Information</h3>
@@ -267,7 +276,6 @@
         </div>
     </div>
 
-    <!-- Itemized Expense Accounting Ledger -->
     <table class="items-table">
         <thead>
             <tr>
@@ -310,7 +318,6 @@
         </tbody>
     </table>
 
-    <!-- Calculated Financial Summary Matrix -->
     <div class="totals-container">
         <table class="totals-table">
             <tr>
@@ -328,17 +335,11 @@
         </table>
     </div>
 
-    <!-- Review Authorization Sign-offs -->
     <div class="sign-off-container">
-        <div class="signature-line">
-            Claimant Employee Signature & Date
-        </div>
-        <div class="signature-line">
-            Authorized Executive Approval & Date
-        </div>
+        <div class="signature-line">Claimant Employee Signature & Date</div>
+        <div class="signature-line">Authorized Executive Approval & Date</div>
     </div>
 
-    <!-- Standard Fixed Footnote System Footer -->
     <div class="invoice-footer">
         <div style="max-width: 75%;">
             <p style="margin: 0; color: var(--subtle-text); line-height: 1.4;">All reimbursement claims require explicit validation against corresponding tax receipts or verified transaction log history.</p>

@@ -3,7 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Document Templates Store</title>
+    <!-- SEO & Metadata Optimization -->
+    <title>Professional Business Templates Store | Editable Invoices, POs & Trackers</title>
+    <meta name="description" content="Download professionally designed, print-ready document templates for small business operations. Fully editable Word & LibreOffice formats for invoices, estimates, POs, and financial ledgers.">
+    <meta name="keywords" content="invoice templates, business document templates, word invoice, LibreOffice receipt, project estimate sheet, contractor agreement template">
+    
+    <!-- Product Schema for Search Engines -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "Professional Business Document Template Bundles",
+      "description": "Instant download archive of fully editable business templates including invoices, receipts, estimates, and operational tracksheets.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Template Distribution Hub"
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "USD",
+        "lowPrice": "9.99",
+        "highPrice": "49.99",
+        "offerCount": "3"
+      }
+    }
+    </script>
+
     <style>
         * {
             box-sizing: border-box;
@@ -63,12 +88,36 @@
             background: #334155;
         }
 
+        /* Value & Trust Bar */
+        .trust-banner {
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 13px;
+            font-weight: 600;
+            color: #334155;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
         /* Pricing Grid Layout */
         .pricing-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 25px;
-            margin: 40px 0 60px 0;
+            margin: 20px 0 60px 0;
         }
 
         .pricing-card {
@@ -87,7 +136,7 @@
         }
 
         .pricing-card.featured::before {
-            content: "BEST VALUE";
+            content: "BEST VALUE (SAVE OVER 75%)";
             position: absolute;
             top: -12px;
             left: 30px;
@@ -106,14 +155,28 @@
             text-transform: uppercase;
             letter-spacing: 1.5px;
             color: #4a5568;
-            margin: 0 0 8px 0;
+            margin: 0 0 4px 0;
+        }
+
+        .value-badge {
+            font-size: 12px;
+            color: #64748b;
+            text-decoration: line-through;
+            font-weight: 600;
         }
 
         .tier-price {
             font-size: 36px;
             font-weight: 800;
             color: #111111;
-            margin: 0 0 20px 0;
+            margin: 0 0 4px 0;
+        }
+
+        .per-unit-cost {
+            font-size: 12px;
+            color: #16a34a;
+            font-weight: 700;
+            margin-bottom: 20px;
         }
 
         .tier-features {
@@ -198,7 +261,7 @@
             margin-bottom: 8px;
         }
 
-        /* Template Interactive Cards Section */
+        /* Interactive Workspace Grid */
         .template-section {
             margin: 50px auto;
             text-align: center;
@@ -267,7 +330,7 @@
             line-height: 1.4;
         }
 
-        .template-card span {
+        .template-card span.btn-preview {
             display: inline-block;
             padding: 8px 16px;
             background: #f1f5f9;
@@ -279,7 +342,7 @@
             transition: all 0.2s ease;
         }
 
-        .template-card:hover span {
+        .template-card:hover span.btn-preview {
             background: #111111;
             color: white;
             border-color: #111111;
@@ -315,56 +378,72 @@
     <header>
         <h1>Professional Business Templates That Save You Time</h1>
         <p class="hero-p">
-            Create polished invoices, estimates, quotes, receipts, work orders, and business records without starting from scratch. Choose your bundle, preview the templates below, and download fully editable files instantly after purchase.
+            Create polished invoices, estimates, quotes, receipts, work orders, and business records without starting from scratch. Choose your bundle, preview the interactive layouts below, and download fully editable Word & LibreOffice files instantly after purchase.
         </p>
         <a href="#templates" class="main-button">Preview Templates</a>
     </header>
+
+    <!-- Value & Trust Banner -->
+    <div class="trust-banner">
+        <div class="trust-item">⚡ <strong>Instant Delivery:</strong> Unlocked ZIP package delivered on checkout</div>
+        <div class="trust-item">📄 <strong>Fully Compatible:</strong> Opens cleanly in MS Word & LibreOffice</div>
+        <div class="trust-item">🛡️ <strong>Format Guarantee:</strong> File corrupt or won't open? We fix it or refund you</div>
+    </div>
 
     <!-- Pricing Section with Buy Buttons -->
     <div class="pricing-grid">
         <!-- Starter Tier -->
         <div class="pricing-card">
             <h3 class="tier-name">Starter Bundle</h3>
+            <div class="value-badge">Total Value: $40</div>
             <div class="tier-price">$9.99</div>
+            <div class="per-unit-cost">Just $2.50 per template</div>
             <ul class="tier-features">
                 <li>Professional Invoice</li>
                 <li>Project Estimate Sheet</li>
                 <li>Fixed Price Quote</li>
                 <li>Payment Receipt Form</li>
-                <li>Fully editable formats delivered on checkout</li>
+                <li>Fully editable `.docx` files delivered immediately</li>
             </ul>
-            <a href="YOUR-PAYHIP-OR-GUMROAD-LINK" class="buy-button">Buy Starter Bundle</a>
+            <!-- UPDATE: Replace with your actual Payhip/Gumroad/Stripe link -->
+            <a href="https://payhip.com/b/YOUR-STARTER-LINK" class="buy-button">Buy Starter Bundle</a>
         </div>
 
         <!-- Professional Tier -->
         <div class="pricing-card">
             <h3 class="tier-name">Professional Bundle</h3>
+            <div class="value-badge">Total Value: $90</div>
             <div class="tier-price">$24.99</div>
+            <div class="per-unit-cost">Just $2.77 per template</div>
             <ul class="tier-features">
-                <li>Includes all 4 Starter files</li>
+                <li><strong>Includes all 4 Starter files</strong></li>
                 <li>Purchase Order</li>
                 <li>Field Work Order</li>
                 <li>Hourly Timesheet Log</li>
                 <li>Expense Report</li>
                 <li>Independent Contractor Agreement</li>
             </ul>
-            <a href="YOUR-PAYHIP-OR-GUMROAD-LINK" class="buy-button">Buy Pro Bundle</a>
+            <!-- UPDATE: Replace with your actual Payhip/Gumroad/Stripe link -->
+            <a href="https://payhip.com/b/YOUR-PRO-LINK" class="buy-button">Buy Pro Bundle</a>
         </div>
 
         <!-- Ultimate Tier -->
         <div class="pricing-card featured">
             <h3 class="tier-name">Ultimate Business</h3>
+            <div class="value-badge">Total Value: $200+</div>
             <div class="tier-price">$49.99</div>
+            <div class="per-unit-cost">Less than $1.00 per template</div>
             <ul class="tier-features">
-                <li>Includes all 9 Pro & Starter files</li>
+                <li><strong>Includes all 9 Pro & Starter files</strong></li>
                 <li>Quarterly Business Matrix</li>
                 <li>A/R Invoice Ledger Tool</li>
                 <li>Tax Estimation Sheet</li>
                 <li>Travel Mileage Log Register</li>
                 <li>Client Master Database</li>
-                <li><strong>Plus: 50+ Advanced Extra Layouts</strong></li>
+                <li><strong>Plus: 50+ Advanced Layout Variations</strong></li>
             </ul>
-            <a href="YOUR-PAYHIP-OR-GUMROAD-LINK" class="buy-button">Buy Ultimate Bundle</a>
+            <!-- UPDATE: Replace with your actual Payhip/Gumroad/Stripe link -->
+            <a href="https://payhip.com/b/YOUR-ULTIMATE-LINK" class="buy-button">Buy Ultimate Bundle</a>
         </div>
     </div>
 
@@ -373,17 +452,17 @@
         <div class="info-panel">
             <h3>What You Get After Purchase</h3>
             <ul>
-                <li><strong>Instantly Editable:</strong> Complete download archive folder packed with your chosen assets.</li>
+                <li><strong>Instantly Editable:</strong> Complete ZIP archive folder delivered immediately to your email.</li>
                 <li><strong>Print-Ready Optimization:</strong> Designed to fit standard A4 and Letter printing configurations perfectly without layout shifting.</li>
-                <li><strong>Preview Policy:</strong> Online previews are static layout views only. Fully unlocked files are delivered immediately after checkout.</li>
+                <li><strong>Interactive Previews:</strong> Online previews are static layout representations. Fully editable files are unlocked upon purchase.</li>
             </ul>
         </div>
         <div class="info-panel">
             <h3>Store Information & Support</h3>
             <ul>
-                <li><strong>Commercial Use:</strong> Permitted for personal operations or managing your small business client workflows.</li>
-                <li><strong>Refunds:</strong> Due to the immediate delivery of digital source materials, all bundle purchases are final.</li>
-                <li><strong>Support:</strong> support@yourdomain.com</li>
+                <li><strong>Commercial License:</strong> Permitted for personal operations or managing your small business workflows.</li>
+                <li><strong>Format Compatibility Guarantee:</strong> If any file fails to open or layout shifts in standard editors, our support team will resolve it or process a refund.</li>
+                <li><strong>Support Email:</strong> contact.shatteredoaths@gmail.com</li>
             </ul>
         </div>
     </div>
@@ -392,7 +471,7 @@
     <section class="template-section" id="templates">
         <h2>Interactive Preview Library</h2>
         <p style="color: #64748b; max-width: 600px; margin: 0 auto 30px auto; font-size: 14px;">
-            Click on any item below to view its layout architecture. Previews are watermarked and printing is restricted to protect digital content.
+            Click on any item below to inspect its exact structural architecture and design framework.
         </p>
 
         <!-- STARTER DOCUMENTS -->
@@ -404,7 +483,7 @@
                     <h3>Invoice</h3>
                     <p>Create professional invoices with client details, itemized charges, taxes, and payment terms.</p>
                 </div>
-                <span>Preview Layout &rarr;</span>
+                <span class="btn-preview">Preview Layout &rarr;</span>
             </a>
 
             <a href="estimate.html" class="template-card">
@@ -413,7 +492,7 @@
                     <h3>Estimate</h3>
                     <p>Prepare estimated project costs and resource breakdowns for potential clients.</p>
                 </div>
-                <span>Preview Layout &rarr;</span>
+                <span class="btn-preview">Preview Layout &rarr;</span>
             </a>
 
             <a href="quote.html" class="template-card">
@@ -422,7 +501,7 @@
                     <h3>Price Quote</h3>
                     <p>Provide formal fixed-price quotes and service scopes to customers.</p>
                 </div>
-                <span>Preview Layout &rarr;</span>
+                <span class="btn-preview">Preview Layout &rarr;</span>
             </a>
 
             <a href="receipt.html" class="template-card">
@@ -431,7 +510,7 @@
                     <h3>Receipt</h3>
                     <p>Confirm and document that a client transaction or invoice payment was completed.</p>
                 </div>
-                <span>Preview Layout &rarr;</span>
+                <span class="btn-preview">Preview Layout &rarr;</span>
             </a>
         </div>
 
@@ -444,7 +523,7 @@
                     <h3>Purchase Order</h3>
                     <p>Order custom products, raw materials, or hardware stock cleanly from suppliers.</p>
                 </div>
-                <span>Preview Layout &rarr;</span>
+                <span class="btn-preview">Preview Layout &rarr;</span>
             </a>
 
             <a href="work_order.html" class="template-card">
@@ -453,7 +532,7 @@
                     <h3>Work Order</h3>
                     <p>Assign field work, plan job site shifts, and track project execution details.</p>
                 </div>
-                <span>Preview Layout &rarr;</span>
+                <span class="btn-preview">Preview Layout &rarr;</span>
             </a>
 
             <a href="timesheet.html" class="template-card">
@@ -462,7 +541,7 @@
                     <h3>Timesheet</h3>
                     <p>Log employee or independent contractor shifts and hours for simple payroll processing.</p>
                 </div>
-                <span>Preview Layout &rarr;</span>
+                <span class="btn-preview">Preview Layout &rarr;</span>
             </a>
 
             <a href="expense_report.html" class="template-card">
@@ -471,7 +550,7 @@
                     <h3>Expense Report</h3>
                     <p>Record company purchases, track categories, and calculate reimbursement fields.</p>
                 </div>
-                <span>Preview Layout &rarr;</span>
+                <span class="btn-preview">Preview Layout &rarr;</span>
             </a>
 
             <a href="independent_contractor_agreement.html" class="template-card">
@@ -480,7 +559,7 @@
                     <h3>Contractor Agreement</h3>
                     <p>Draft binding parameters defining contract worker project lines and financial arrangements.</p>
                 </div>
-                <span>Preview Layout &rarr;</span>
+                <span class="btn-preview">Preview Layout &rarr;</span>
             </a>
         </div>
 
@@ -493,7 +572,7 @@
                     <h3>Business Matrix</h3>
                     <p>Monitor high-level goals, performance margins, and core business milestones.</p>
                 </div>
-                <span>Preview Layout &rarr;</span>
+                <span class="btn-preview">Preview Layout &rarr;</span>
             </a>
 
             <a href="invoice_ledger.html" class="template-card">
@@ -502,7 +581,7 @@
                     <h3>Invoice Ledger</h3>
                     <p>Track all client accounts receivable, outstanding balances, and incoming revenue histories.</p>
                 </div>
-                <span>Preview Layout &rarr;</span>
+                <span class="btn-preview">Preview Layout &rarr;</span>
             </a>
 
             <a href="tax_estimation.html" class="template-card">
@@ -511,7 +590,7 @@
                     <h3>Tax Estimation Sheet</h3>
                     <p>Map out upcoming quarterly deductions and projected internal tax obligations.</p>
                 </div>
-                <span>Preview Layout &rarr;</span>
+                <span class="btn-preview">Preview Layout &rarr;</span>
             </a>
 
             <a href="mileage_log.html" class="template-card">
@@ -520,7 +599,7 @@
                     <h3>Mileage Log</h3>
                     <p>Log vehicle trip parameters and route lengths to generate audit-ready business tax write-offs.</p>
                 </div>
-                <span>Preview Layout &rarr;</span>
+                <span class="btn-preview">Preview Layout &rarr;</span>
             </a>
 
             <a href="client_database.html" class="template-card">
@@ -529,7 +608,7 @@
                     <h3>Client Database</h3>
                     <p>Keep records of main company stakeholders, phone configurations, and billing preferences.</p>
                 </div>
-                <span>Preview Layout &rarr;</span>
+                <span class="btn-preview">Preview Layout &rarr;</span>
             </a>
         </div>
     </section>

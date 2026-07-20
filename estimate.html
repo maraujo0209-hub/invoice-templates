@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Master Estimate Template - EST-0001</title>
+    <title>Project Estimate - EST-0001</title>
     <style>
         :root {
-            --primary-color: #111111; /* Deep Carbon */
-            --secondary-color: #4a5568; /* Slate Gray */
-            --accent-bg: #f8fafc; /* Warm White/Light Gray */
+            --primary-color: #111111;
+            --secondary-color: #4a5568;
+            --accent-bg: #f8fafc;
             --border-color: #cbd5e1;
             --subtle-text: #64748b;
         }
@@ -25,21 +25,32 @@
         .invoice-container {
             background-color: #ffffff;
             width: 8.5in;
-            height: 11in;
+            min-height: 11in;
             margin: 40px auto;
             padding: 1in;
             box-sizing: border-box;
             position: relative;
             box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+
+        .invoice-container::after {
+            content: "WATERMARKED PREVIEW - NOT FOR COMMERCIAL USE";
+            position: absolute;
+            top: 40%;
+            left: 5%;
+            right: 5%;
+            font-size: 28px;
+            font-weight: 900;
+            color: rgba(220, 38, 38, 0.18);
+            transform: rotate(-30deg);
+            text-align: center;
+            pointer-events: none;
+            letter-spacing: 2px;
         }
 
         @media print {
-            body { background-color: #ffffff; }
-            .invoice-container { 
-                margin: 0; 
-                box-shadow: none; 
-                height: 100vh;
-            }
+            body { display: none !important; }
         }
 
         .invoice-header {
@@ -68,12 +79,6 @@
             letter-spacing: 2px;
         }
 
-        .logo-placeholder .sub-txt {
-            font-size: 12px;
-            color: #94a3b8;
-            margin-top: 4px;
-        }
-
         .invoice-title-area {
             text-align: right;
         }
@@ -82,7 +87,6 @@
             font-size: 40px;
             font-weight: 700;
             margin: 0 0 5px 0;
-            letter-spacing: -1px;
             text-transform: uppercase;
         }
 
@@ -101,14 +105,8 @@
             font-size: 14px;
         }
 
-        .meta-label {
-            font-weight: 600;
-            color: var(--subtle-text);
-        }
-
-        .meta-value {
-            font-weight: 700;
-        }
+        .meta-label { font-weight: 600; color: var(--subtle-text); }
+        .meta-value { font-weight: 700; }
 
         .details-grid {
             display: grid;
@@ -128,10 +126,7 @@
             margin: 0 0 12px 0;
         }
 
-        .details-block p {
-            margin: 0 0 4px 0;
-            color: #334155;
-        }
+        .details-block p { margin: 0 0 4px 0; color: #334155; }
 
         .items-table {
             width: 100%;
@@ -150,10 +145,7 @@
             font-weight: 600;
         }
 
-        .items-table th.num-col, 
-        .items-table td.num-col {
-            text-align: right;
-        }
+        .items-table th.num-col, .items-table td.num-col { text-align: right; }
 
         .items-table td {
             padding: 12px;
@@ -162,9 +154,7 @@
             color: #334155;
         }
 
-        .items-table tr:nth-child(even) td {
-            background-color: var(--accent-bg);
-        }
+        .items-table tr:nth-child(even) td { background-color: var(--accent-bg); }
 
         .totals-container {
             display: flex;
@@ -178,9 +168,7 @@
             font-size: 14px;
         }
 
-        .totals-table td {
-            padding: 8px 12px;
-        }
+        .totals-table td { padding: 8px 12px; }
 
         .totals-table tr.grand-total td {
             font-size: 16px;
@@ -203,23 +191,14 @@
             color: var(--secondary-color);
         }
 
-        .terms-block {
-            max-width: 60%;
-        }
-
         .terms-block h4 {
             margin: 0 0 4px 0;
             font-size: 12px;
             text-transform: uppercase;
-            letter-spacing: 1px;
             color: var(--primary-color);
         }
 
-        .terms-block p {
-            margin: 0;
-            line-height: 1.4;
-            color: var(--subtle-text);
-        }
+        .terms-block p { margin: 0; color: var(--subtle-text); }
     </style>
 </head>
 <body>
@@ -238,30 +217,26 @@
             <div class="meta-grid">
                 <span class="meta-label">Date:</span>
                 <span class="meta-value">2026-07-12</span>
-                
                 <span class="meta-label">Valid Until:</span>
-                <span class="meta-value">2026-08-11</span>
-                
-                <span class="meta-label">Prepared By:</span>
-                <span class="meta-value">Sales Team</span>
+                <span class="meta-value">2026-08-12</span>
+                <span class="meta-label">Project Ref:</span>
+                <span class="meta-value">____________</span>
             </div>
         </div>
     </div>
 
     <div class="details-grid">
         <div class="details-block">
-            <h3>Our Information</h3>
+            <h3>Prepared By</h3>
             <p class="meta-value">Your Company Name</p>
             <p>123 Business Street Suite 100</p>
-            <p>City, State, Zip Code</p>
-            <p>sales@yourcompany.com</p>
+            <p>contact@yourcompany.com</p>
         </div>
         
         <div class="details-block">
-            <h3>Estimated For</h3>
+            <h3>Prepared For</h3>
             <p class="meta-value">Client Company / Name</p>
             <p>456 Client Avenue</p>
-            <p>City, State, Zip Code</p>
             <p>client@email.com</p>
         </div>
     </div>
@@ -269,28 +244,22 @@
     <table class="items-table">
         <thead>
             <tr>
-                <th>Proposed Project / Scope Details</th>
-                <th class="num-col" style="width: 80px;">Est Qty</th>
-                <th class="num-col" style="width: 120px;">Unit Rate</th>
-                <th class="num-col" style="width: 120px;">Est Total</th>
+                <th>Scope Description</th>
+                <th class="num-col" style="width: 80px;">Est. Hrs</th>
+                <th class="num-col" style="width: 120px;">Rate</th>
+                <th class="num-col" style="width: 120px;">Est. Total</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>Estimated Service / Resource Material Requirement 1</td>
-                <td class="num-col">1</td>
+                <td>Initial Project Assessment & Setup</td>
+                <td class="num-col">10</td>
                 <td class="num-col">$0.00</td>
                 <td class="num-col">$0.00</td>
             </tr>
             <tr>
-                <td>Estimated Service / Resource Material Requirement 2</td>
-                <td class="num-col">1</td>
-                <td class="num-col">$0.00</td>
-                <td class="num-col">$0.00</td>
-            </tr>
-            <tr>
-                <td>Estimated Service / Resource Material Requirement 3</td>
-                <td class="num-col">1</td>
+                <td>Implementation Phase</td>
+                <td class="num-col">20</td>
                 <td class="num-col">$0.00</td>
                 <td class="num-col">$0.00</td>
             </tr>
@@ -299,16 +268,8 @@
 
     <div class="totals-container">
         <table class="totals-table">
-            <tr>
-                <td class="meta-label">Estimated Subtotal:</td>
-                <td class="num-col">$0.00</td>
-            </tr>
-            <tr>
-                <td class="meta-label">Estimated Tax (0%):</td>
-                <td class="num-col">$0.00</td>
-            </tr>
             <tr class="grand-total">
-                <td>Total Estimated Cost:</td>
+                <td>Estimated Total:</td>
                 <td class="num-col">$0.00</td>
             </tr>
         </table>
@@ -316,12 +277,10 @@
 
     <div class="invoice-footer">
         <div class="terms-block">
-            <h4>Estimate Scope & Conditions</h4>
-            <p>This document provides an approximation of costs. Actual totals may shift once final project specifications are completely authorized.</p>
+            <h4>Estimate Disclaimer</h4>
+            <p>This estimate is non-binding and valid for 30 days from date of issue.</p>
         </div>
-        <div style="text-align: right;">
-            <p style="margin: 0; font-weight: 600;">Page 1 of 1</p>
-        </div>
+        <div>Page 1 of 1</div>
     </div>
 </div>
 

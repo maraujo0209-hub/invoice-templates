@@ -3,14 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Independent Contractor Agreement - ICA-0001</title>
+    <title>Contractor Agreement - Preview</title>
     <style>
         :root {
-            --primary-color: #111111; /* Deep Carbon */
-            --secondary-color: #4a5568; /* Slate Gray */
-            --accent-bg: #f8fafc; /* Warm White/Light Gray */
+            --primary-color: #111111;
+            --secondary-color: #4a5568;
             --border-color: #cbd5e1;
-            --subtle-text: #64748b;
         }
 
         body {
@@ -22,7 +20,7 @@
             background-color: #f1f5f9;
         }
 
-        .contract-container {
+        .invoice-container {
             background-color: #ffffff;
             width: 8.5in;
             min-height: 11in;
@@ -31,204 +29,65 @@
             box-sizing: border-box;
             position: relative;
             box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            overflow: hidden;
         }
 
-        @media print {
-            body { background-color: #ffffff; }
-            .contract-container { 
-                margin: 0; 
-                box-shadow: none; 
-                height: auto;
-            }
-        }
-
-        .contract-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 40px;
-            border-bottom: 2px solid var(--primary-color);
-            padding-bottom: 20px;
-        }
-
-        .title-area h1 {
+        .invoice-container::after {
+            content: "WATERMARKED PREVIEW - NOT FOR COMMERCIAL USE";
+            position: absolute;
+            top: 40%;
+            left: 5%;
+            right: 5%;
             font-size: 28px;
-            font-weight: 700;
-            margin: 0 0 5px 0;
-            letter-spacing: -0.5px;
-            text-transform: uppercase;
+            font-weight: 900;
+            color: rgba(220, 38, 38, 0.18);
+            transform: rotate(-30deg);
+            text-align: center;
+            pointer-events: none;
+            letter-spacing: 2px;
         }
 
-        .serial-number {
-            font-size: 16px;
-            font-weight: 600;
-            color: var(--secondary-color);
-        }
+        @media print { body { display: none !important; } }
 
-        .date-badge {
-            text-align: right;
-            font-size: 14px;
-            font-weight: 700;
-            color: var(--secondary-color);
-        }
+        h1 { font-size: 24px; text-transform: uppercase; border-bottom: 2px solid var(--primary-color); padding-bottom: 10px; }
+        p { font-size: 13px; color: #334155; }
+        .sig-block { display: flex; justify-content: space-between; margin-top: 80px; font-size: 13px; }
+        .sig-line { width: 220px; border-top: 1px solid var(--primary-color); padding-top: 5px; }
 
-        .preamble-box {
-            background-color: var(--accent-bg);
-            border: 1px solid var(--border-color);
-            padding: 20px;
-            border-radius: 4px;
-            margin-bottom: 30px;
-            font-size: 14px;
-        }
-
-        .preamble-box p {
-            margin: 0 0 10px 0;
-        }
-
-        .preamble-box p:last-child {
-            margin-bottom: 0;
-        }
-
-        .legal-clause {
-            margin-bottom: 25px;
-            font-size: 14px;
-            color: #334155;
-            text-align: justify;
-        }
-
-        .legal-clause h3 {
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--primary-color);
-            margin: 0 0 8px 0;
-            font-weight: 700;
-        }
-
-        .legal-clause p {
-            margin: 0;
-        }
-
-        .signature-matrix {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            margin-top: 50px;
-            page-break-inside: avoid;
-        }
-
-        .sig-block h4 {
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin: 0 0 5px 0;
-            color: var(--secondary-color);
-        }
-
-        .signature-line {
-            border-top: 1px solid var(--primary-color);
-            margin-top: 55px;
-            padding-top: 5px;
-            font-size: 13px;
-            color: var(--primary-color);
-        }
-
-        .sig-details {
-            font-size: 12px;
-            color: var(--subtle-text);
-            margin-top: 4px;
-        }
-
-        .contract-footer {
-            margin-top: 60px;
+        .invoice-footer {
+            position: absolute;
+            bottom: 1in;
+            left: 1in;
+            right: 1in;
             border-top: 1px solid var(--border-color);
             padding-top: 15px;
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            font-size: 11px;
+            font-size: 12px;
             color: var(--secondary-color);
         }
     </style>
 </head>
 <body>
 
-<div class="contract-container">
-    <!-- Header Block -->
-    <div class="contract-header">
-        <div class="title-area">
-            <h1>Independent Contractor Agreement</h1>
-            <div class="serial-number">Document Ref: ICA-0001</div>
-        </div>
-        <div class="date-badge">
-            Effective Date: 2026-07-12
-        </div>
+<div class="invoice-container">
+    <h1>Independent Contractor Agreement</h1>
+    <p>This Independent Contractor Agreement ("Agreement") is made effective as of _____________________, by and between <strong>Client Company Name</strong> and <strong>Contractor Name</strong>.</p>
+    
+    <h3>1. Services Rendered</h3>
+    <p>Contractor agrees to perform the operational and project management tasks outlined in Exhibit A.</p>
+    
+    <h3>2. Compensation</h3>
+    <p>Client agrees to pay Contractor according to the terms specified upon project completion or milestone delivery.</p>
+
+    <div class="sig-block">
+        <div class="sig-line">Client Signature</div>
+        <div class="sig-line">Contractor Signature</div>
     </div>
 
-    <!-- Preamble / Party Declaration Block -->
-    <div class="preamble-box">
-        <p>This Independent Contractor Agreement ("Agreement") is entered into and made effective as of the date written above, by and between the following parties:</p>
-        <p><strong>Company:</strong> [Your Company Name], located at [123 Business Street, Suite 100, City, State, Zip Code] ("Client").</p>
-        <p><strong>Contractor:</strong> [Independent Contractor / Entity Name], located at [Contractor Street Address, City, State, Zip Code] ("Contractor").</p>
-    </div>
-
-    <!-- Legal Terms and Clauses -->
-    <div class="legal-clause">
-        <h3>1. Services to be Performed</h3>
-        <p>Contractor agrees to perform the specialized professional consulting, development, operational design, or deployment services as outlined explicitly in corresponding statement of work addendums authorized by both parties.</p>
-    </div>
-
-    <div class="legal-clause">
-        <h3>2. Compensation & Terms</h3>
-        <p>The Client agrees to compensate the Contractor according to the fixed milestones or hourly rate parameter structures explicitly detailed in accepted project terms. Contractor is solely responsible for processing all personal or corporate income taxes, withholdings, and operational overhead expenditures.</p>
-    </div>
-
-    <div class="legal-clause">
-        <h3>3. Independent Contractor Status</h3>
-        <p>The parties intend that Contractor’s relationship to Client under this Agreement is that of an independent contractor. Neither party has the authority to bind or obligate the other in any manner whatsoever. Contractor is not entitled to any medical, holiday, retirement, or operational insurance benefits provided by the Client.</p>
-    </div>
-
-    <div class="legal-clause">
-        <h3>4. Intellectual Property & Confidentiality</h3>
-        <p>All work products, digital designs, code components, scripts, or operational collateral produced by the Contractor under this contract belong exclusively to the Client upon successful compensation distribution. Contractor agrees to safeguard all proprietary system metadata, code repositories, or operational workflows accessed during execution.</p>
-    </div>
-
-    <div class="legal-clause">
-        <h3>5. Termination</h3>
-        <p>Either party may terminate this active arrangement upon providing [14] calendar days written notice to the other party. In the event of early termination, Client shall compensate Contractor for all verified milestones successfully completed up to the termination effective date.</p>
-    </div>
-
-    <!-- Dual Signature Matrix Block -->
-    <div class="signature-matrix">
-        <div class="sig-block">
-            <h4>For the Client:</h4>
-            <div class="signature-line">Authorized Representative Signature</div>
-            <div class="sig-details">
-                Name: ______________________<br>
-                Title: _______________________<br>
-                Date: _______________________
-            </div>
-        </div>
-        
-        <div class="sig-block">
-            <h4>For the Contractor:</h4>
-            <div class="signature-line">Independent Contractor Signature</div>
-            <div class="sig-details">
-                Name: ______________________<br>
-                Title: _______________________<br>
-                Date: _______________________
-            </div>
-        </div>
-    </div>
-
-    <!-- Fixed Family Standard Footer -->
-    <div class="contract-footer">
-        <div>
-            <p style="margin: 0; color: var(--subtle-text);">This template serves as a standard foundational outline. Review with legal counsel to verify compliance with local regional labor structures.</p>
-        </div>
-        <div style="text-align: right; min-width: 70px;">
-            <p style="margin: 0; font-weight: 600;">Page 1 of 1</p>
-        </div>
+    <div class="invoice-footer">
+        <div>Legal Template Reference: ICA-2026</div>
+        <div>Page 1 of 1</div>
     </div>
 </div>
 

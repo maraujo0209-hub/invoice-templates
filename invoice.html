@@ -162,6 +162,26 @@
         }
 
         .items-table td {
+          /* Stronger, semi-transparent watermark across the entire sheet */
+.invoice-sheet::after {
+    content: "WATERMARKED PREVIEW - NOT FOR COMMERCIAL USE";
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    right: 5%;
+    font-size: 28px;
+    font-weight: 900;
+    color: rgba(220, 38, 38, 0.18);
+    transform: rotate(-30deg);
+    text-align: center;
+    pointer-events: none;
+    letter-spacing: 2px;
+}
+
+/* Disable browser printing */
+@media print {
+    body { display: none !important; }
+}  
             padding: 12px;
             font-size: 14px;
             border-bottom: 1px solid var(--border-color);

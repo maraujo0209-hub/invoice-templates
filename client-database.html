@@ -2,11 +2,11 @@
 <div class="template-nav-bar">
   <div class="nav-left">
     <a href="../index.html" class="nav-btn btn-back">← Back to All Templates</a>
-    <span class="tier-tag tier-ultimate">Ultimate Template</span>
+    <span class="tier-tag tier-professional">Professional Template</span>
   </div>
   <div class="nav-right">
     <button onclick="window.print()" class="nav-btn btn-secondary">🖨️ Print / Save PDF</button>
-    <a href="https://yourstore.gumroad.com/l/ultimate" class="nav-btn btn-primary">Get This Template</a>
+    <a href="https://yourstore.gumroad.com/l/professional" class="nav-btn btn-primary">Get Professional Bundle</a>
   </div>
 </div>
 
@@ -16,77 +16,68 @@
   .template-nav-bar { display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 1.5rem; background: #0f172a; color: #ffffff; font-family: system-ui, -apple-system, sans-serif; }
   .nav-left, .nav-right { display: flex; align-items: center; gap: 0.75rem; }
   .tier-tag { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; padding: 0.25rem 0.5rem; border-radius: 4px; }
-  .tier-ultimate { background: #9333ea; color: #fff; }
+  .tier-professional { background: #7c3aed; color: #fff; }
   .nav-btn { color: #ffffff; text-decoration: none; font-size: 0.875rem; font-weight: 600; padding: 0.5rem 1rem; border-radius: 4px; border: none; cursor: pointer; }
   .btn-back { background: #1e293b; }
   .btn-secondary { background: #334155; }
-  .btn-primary { background: #9333ea; }
+  .btn-primary { background: #7c3aed; }
   .preview-watermark { position: fixed; bottom: 20px; right: 20px; background: rgba(15, 23, 42, 0.9); color: #f8fafc; padding: 0.6rem 1rem; border-radius: 6px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em; pointer-events: none; z-index: 9999; }
   @media print { .template-nav-bar, .preview-watermark { display: none !important; } }
 </style>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Client Database</title>
+  <title>Client Directory Database</title>
   <style>
     * { box-sizing: border-box; }
     body { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; padding: 2rem; background: #f8fafc; color: #0f172a; }
-    .document-container { max-width: 800px; margin: 0 auto; background: #ffffff; padding: 2.5rem; border-radius: 8px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-    .header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 2rem; border-bottom: 2px solid #e2e8f0; padding-bottom: 1.5rem; }
-    .brand-details h2 { margin: 0 0 0.25rem 0; font-size: 1.15rem; color: #0f172a; }
-    .brand-details p { margin: 0.15rem 0; font-size: 0.85rem; color: #64748b; }
-    .meta-details { text-align: right; }
-    .meta-details h1 { margin: 0 0 0.5rem 0; font-size: 1.75rem; color: #9333ea; text-transform: uppercase; }
-    .meta-details p { margin: 0.25rem 0; font-size: 0.875rem; color: #475569; }
-    table { width: 100%; border-collapse: collapse; margin-bottom: 2rem; }
-    th, td { padding: 0.75rem 0.5rem; text-align: left; border-bottom: 1px solid #e2e8f0; font-size: 0.85rem; }
-    th { background: #f8fafc; font-weight: 600; color: #475569; }
+    .document-container { max-width: 900px; margin: 0 auto; background: #ffffff; padding: 2.5rem; border-radius: 8px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+    .header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5rem; border-bottom: 2px solid #e2e8f0; padding-bottom: 1rem; }
+    .header h1 { margin: 0; font-size: 1.5rem; color: #7c3aed; }
+    table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+    th, td { padding: 0.65rem 0.5rem; text-align: left; border-bottom: 1px solid #e2e8f0; font-size: 0.8rem; }
+    th { background: #f8fafc; font-weight: 600; color: #475569; text-transform: uppercase; font-size: 0.7rem; }
+    .status { display: inline-block; padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.7rem; font-weight: 600; }
+    .status-active { background: #dcfce7; color: #166534; }
     @media print { body { background: #ffffff; padding: 0; } .document-container { border: none; box-shadow: none; } }
   </style>
 </head>
 <body>
   <div class="document-container">
     <div class="header">
-      <div class="brand-details">
-        <h2>Your Business Name, LLC</h2>
-        <p>123 Business Rd, Suite 100 • City, State 12345</p>
-        <p>contact@yourbusiness.com • (555) 019-2831</p>
-      </div>
-      <div class="meta-details">
-        <h1>Client Directory</h1>
-        <p><strong>Total Accounts:</strong> 3 Active</p>
+      <div>
+        <h1>Client Directory & History</h1>
+        <p style="margin: 0.25rem 0 0 0; font-size: 0.85rem; color: #64748b;">Master Database Record</p>
       </div>
     </div>
 
     <table>
       <thead>
         <tr>
-          <th>ID</th>
-          <th>Company Name</th>
-          <th>Primary Contact</th>
-          <th>Contact Info</th>
+          <th>Client Name</th>
+          <th>Contact Person</th>
+          <th>Phone / Email</th>
+          <th>Service Schedule</th>
+          <th>Status</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>CLT-001</td>
-          <td>Acme Corporation</td>
+          <td>Acme Property Mgmt</td>
           <td>Jane Smith</td>
-          <td>jane@acme.com • (555) 234-5678</td>
+          <td>(555) 019-2831<br>jane@acme.com</td>
+          <td>Bi-Weekly</td>
+          <td><span class="status status-active">Active</span></td>
         </tr>
         <tr>
-          <td>CLT-002</td>
-          <td>Apex Logistics</td>
-          <td>Robert Johnson</td>
-          <td>r.johnson@apex.com • (555) 876-5432</td>
-        </tr>
-        <tr>
-          <td>CLT-003</td>
-          <td>Bright Star Media</td>
-          <td>Elena Rostova</td>
-          <td>elena@brightstar.io • (555) 345-6789</td>
+          <td>Bright Path Learning</td>
+          <td>Mark Davis</td>
+          <td>(555) 012-9944<br>mdavis@brightpath.org</td>
+          <td>Weekly</td>
+          <td><span class="status status-active">Active</span></td>
         </tr>
       </tbody>
     </table>

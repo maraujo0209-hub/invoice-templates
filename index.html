@@ -1,210 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Business Template Marketplace</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Business Document Templates & Ultimate Bundle</title>
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f1f5f9;
+      color: #0f172a;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+    .hero {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .hero h1 {
+      font-size: 2.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .hero p {
+      color: #64748b;
+      font-size: 1.1rem;
+    }
+
+    /* Card Library Grid */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+    .card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+    .card-badge {
+      display: inline-block;
+      padding: 0.25rem 0.5rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      border-radius: 4px;
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+    }
+    .badge-starter { background: #e0f2fe; color: #0369a1; }
+    .badge-pro { background: #fef3c7; color: #b45309; }
+    .badge-ultimate { background: #f3e8ff; color: #6b21a8; }
+    
+    .card h3 {
+      margin: 0 0 0.5rem 0;
+      font-size: 1.15rem;
+    }
+    .card p {
+      color: #64748b;
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+    .card-btn {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      padding: 0.6rem;
+      background: #0f172a;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 0.875rem;
+      font-weight: 600;
+    }
+  </style>
 </head>
-<body style="margin:0; padding:0; background-color:#f8fafc; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color:#0f172a; line-height:1.5;">
+<body>
 
-  <!-- Global Header -->
-  <header style="background-color:#ffffff; border-bottom:1px solid #e2e8f0; padding:0.75rem 1.5rem; position:sticky; top:0; z-index:100;">
-    <div style="max-width:1200px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
-      <a href="index.html" style="font-size:1.125rem; font-weight:700; color:#2563eb; text-decoration:none; display:flex; align-items:center; gap:0.5rem;">
-        <i class="fa-solid fa-layer-group"></i> Business Template Suite
-      </a>
-      <span style="font-size:0.85rem; color:#64748b; font-weight:500;">Cumulative Tiered Bundles</span>
-    </div>
-  </header>
-
-  <main style="max-width:1200px; margin:2rem auto; padding:0 1rem;">
+  <div class="container">
 
     <!-- Hero Header -->
-    <div style="background-color:#ffffff; border:1px solid #e2e8f0; border-radius:12px; padding:2rem; margin-bottom:2.5rem; box-shadow:0 4px 6px -1px rgba(0,0,0,0.05); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1.5rem;">
-      <div>
-        <div style="width:160px; height:45px; border:2px dashed #cbd5e1; border-radius:6px; display:flex; align-items:center; justify-content:center; color:#64748b; font-size:0.85rem; background-color:#f8fafc; margin-bottom:1rem;">
-          <i class="fa-solid fa-image" style="margin-right:0.5rem;"></i> Business Logo
-        </div>
-        <h1 style="font-size:2rem; font-weight:800; color:#0f172a; margin:0 0 0.5rem 0;">Professional Business Templates</h1>
-        <p style="font-size:1rem; color:#64748b; margin:0;">Select a bundle or click any preview below to test the full editable document template.</p>
-      </div>
-    </div>
+    <header class="hero">
+      <h1>Business Document Templates</h1>
+      <p>Explore individual templates or unlock full access with the Ultimate Bundle.</p>
+    </header>
 
-    <!-- TIER 1: STARTER PACK -->
-    <section style="margin-bottom:3rem;">
-      <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:1rem; border-bottom:2px solid #2563eb; padding-bottom:0.5rem;">
-        <div>
-          <span style="background:#dbeafe; color:#1e40af; font-size:0.75rem; font-weight:700; text-transform:uppercase; padding:0.2rem 0.5rem; border-radius:4px;">Tier 1</span>
-          <h2 style="font-size:1.5rem; font-weight:700; margin:0.25rem 0 0 0; color:#0f172a;">Starter Pack (4 Templates)</h2>
-        </div>
-        <span style="color:#64748b; font-size:0.875rem;">Core Sales & Billing Essentials</span>
+    <!-- Card Library Section -->
+    <section class="card-grid">
+      <!-- Starter Tier Card -->
+      <div class="card">
+        <span class="card-badge badge-starter">Starter</span>
+        <h3>Standard Invoice Template</h3>
+        <p>Clean, professional standard commercial invoice with line items, tax calculations, and print layout.</p>
+        <a href="#" class="card-btn">View Template</a>
       </div>
 
-      <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(260px, 1fr)); gap:1.25rem;">
-        <div style="background:#fff; border:1px solid #e2e8f0; border-radius:8px; padding:1.25rem; display:flex; flex-direction:column; justify-content:space-between;">
-          <div>
-            <i class="fa-solid fa-file-invoice-dollar" style="color:#2563eb; font-size:1.5rem; margin-bottom:0.5rem;"></i>
-            <h3 style="font-size:1.1rem; margin:0 0 0.4rem 0;">Starter Invoice</h3>
-            <p style="font-size:0.85rem; color:#64748b; margin:0 0 1rem 0;">Itemized customer billing statement.</p>
-          </div>
-          <a href="invoice.html" style="display:block; text-align:center; background:#2563eb; color:#fff; text-decoration:none; padding:0.5rem; border-radius:6px; font-weight:600; font-size:0.85rem;">Preview Invoice</a>
+      <!-- Professional Tier Card -->
+      <div class="card">
+        <span class="card-badge badge-pro">Professional</span>
+        <h3>Estimates & Scope of Work</h3>
+        <p>Fixed-price project estimate and milestone scope-of-work layout designed for client approvals.</p>
+        <a href="#" class="card-btn">View Template</a>
+      </div>
+
+      <!-- Ultimate Tier Card -->
+      <div class="card">
+        <span class="card-badge badge-ultimate">Ultimate</span>
+        <h3>Ledgers & Mileage Trackers</h3>
+        <p>Comprehensive tracking for accounts receivable aging, business KPIs, and IRS-compliant mileage logs.</p>
+        <a href="#" class="card-btn">View Template</a>
+      </div>
+    </section>
+
+    <!-- Ultimate Bundle 50+ Layout Variations Showcase -->
+    <section style="max-width:1100px; margin:3rem auto; padding:2rem; background:#ffffff; border:1px solid #e2e8f0; border-radius:8px;">
+      <div style="margin-bottom:1.5rem;">
+        <h2 style="font-size:1.25rem; font-weight:700; color:#0f172a; margin:0 0 0.5rem 0;">50+ Advanced Layout Variations Included</h2>
+        <p style="font-size:0.875rem; color:#64748b; margin:0;">The Ultimate Bundle includes full access to tailored variations across 6 specialized business categories:</p>
+      </div>
+
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:1.5rem;">
+        <!-- Invoicing -->
+        <div style="background:#f8fafc; padding:1rem; border-radius:6px; border:1px solid #e2e8f0;">
+          <h3 style="font-size:0.9rem; font-weight:700; color:#0f172a; margin:0 0 0.5rem 0;">
+            <i class="fa-solid fa-file-invoice" style="color:#2563eb; margin-right:0.35rem;"></i> Invoicing (10 Variations)
+          </h3>
+          <ul style="font-size:0.8rem; color:#334155; padding-left:1.2rem; margin:0; line-height:1.6;">
+            <li>Standard Commercial Invoice</li>
+            <li>Hourly Service / Time-Log Invoice</li>
+            <li>Recurring Subscription / Retainer</li>
+            <li>Itemized Product Inventory Invoice</li>
+            <li>International / Multi-Currency Invoice</li>
+          </ul>
         </div>
 
-        <div style="background:#fff; border:1px solid #e2e8f0; border-radius:8px; padding:1.25rem; display:flex; flex-direction:column; justify-content:space-between;">
-          <div>
-            <i class="fa-solid fa-calculator" style="color:#2563eb; font-size:1.5rem; margin-bottom:0.5rem;"></i>
-            <h3 style="font-size:1.1rem; margin:0 0 0.4rem 0;">Job Estimate</h3>
-            <p style="font-size:0.85rem; color:#64748b; margin:0 0 1rem 0;">Project cost estimate breakdown.</p>
-          </div>
-          <a href="estimate.html" style="display:block; text-align:center; background:#2563eb; color:#fff; text-decoration:none; padding:0.5rem; border-radius:6px; font-weight:600; font-size:0.85rem;">Preview Estimate</a>
+        <!-- Estimates & Quotes -->
+        <div style="background:#f8fafc; padding:1rem; border-radius:6px; border:1px solid #e2e8f0;">
+          <h3 style="font-size:0.9rem; font-weight:700; color:#0f172a; margin:0 0 0.5rem 0;">
+            <i class="fa-solid fa-calculator" style="color:#059669; margin-right:0.35rem;"></i> Estimates & Quotes (8 Variations)
+          </h3>
+          <ul style="font-size:0.8rem; color:#334155; padding-left:1.2rem; margin:0; line-height:1.6;">
+            <li>Fixed-Price Project Estimate</li>
+            <li>Itemized Unit-Cost Price Quote</li>
+            <li>Good-Better-Best Tiered Proposal</li>
+            <li>Scope of Work & Milestone Estimate</li>
+          </ul>
         </div>
 
-        <div style="background:#fff; border:1px solid #e2e8f0; border-radius:8px; padding:1.25rem; display:flex; flex-direction:column; justify-content:space-between;">
-          <div>
-            <i class="fa-solid fa-file-signature" style="color:#2563eb; font-size:1.5rem; margin-bottom:0.5rem;"></i>
-            <h3 style="font-size:1.1rem; margin:0 0 0.4rem 0;">Service Quote</h3>
-            <p style="font-size:0.85rem; color:#64748b; margin:0 0 1rem 0;">Formal service agreement proposal.</p>
-          </div>
-          <a href="quote.html" style="display:block; text-align:center; background:#2563eb; color:#fff; text-decoration:none; padding:0.5rem; border-radius:6px; font-weight:600; font-size:0.85rem;">Preview Quote</a>
-        </div>
-
-        <div style="background:#fff; border:1px solid #e2e8f0; border-radius:8px; padding:1.25rem; display:flex; flex-direction:column; justify-content:space-between;">
-          <div>
-            <i class="fa-solid fa-circle-check" style="color:#2563eb; font-size:1.5rem; margin-bottom:0.5rem;"></i>
-            <h3 style="font-size:1.1rem; margin:0 0 0.4rem 0;">Payment Receipt</h3>
-            <p style="font-size:0.85rem; color:#64748b; margin:0 0 1rem 0;">Paid payment confirmation receipt.</p>
-          </div>
-          <a href="receipt.html" style="display:block; text-align:center; background:#2563eb; color:#fff; text-decoration:none; padding:0.5rem; border-radius:6px; font-weight:600; font-size:0.85rem;">Preview Receipt</a>
+        <!-- Trackers & Ledgers -->
+        <div style="background:#f8fafc; padding:1rem; border-radius:6px; border:1px solid #e2e8f0;">
+          <h3 style="font-size:0.9rem; font-weight:700; color:#0f172a; margin:0 0 0.5rem 0;">
+            <i class="fa-solid fa-chart-line" style="color:#d97706; margin-right:0.35rem;"></i> Trackers & Ledgers (12 Variations)
+          </h3>
+          <ul style="font-size:0.8rem; color:#334155; padding-left:1.2rem; margin:0; line-height:1.6;">
+            <li>Accounts Receivable Aging Ledger</li>
+            <li>Business Performance & KPI Matrix</li>
+            <li>IRS Mileage Log with Reimbursements</li>
+            <li>Quarterly Estimated Tax Reserve Sheet</li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <!-- TIER 2: PRO SUITE -->
-    <section style="margin-bottom:3rem;">
-      <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:1rem; border-bottom:2px solid #7c3aed; padding-bottom:0.5rem;">
-        <div>
-          <span style="background:#f3e8ff; color:#6b21a8; font-size:0.75rem; font-weight:700; text-transform:uppercase; padding:0.2rem 0.5rem; border-radius:4px;">Tier 2</span>
-          <h2 style="font-size:1.5rem; font-weight:700; margin:0.25rem 0 0 0; color:#0f172a;">Pro Suite (9 Templates Total)</h2>
-        </div>
-        <span style="color:#64748b; font-size:0.875rem;"><strong>Includes Tier 1</strong> + Field & Staff Operations</span>
-      </div>
+  </div>
 
-      <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(260px, 1fr)); gap:1.25rem;">
-        <div style="background:#fff; border:1px solid #e2e8f0; border-radius:8px; padding:1.25rem; display:flex; flex-direction:column; justify-content:space-between;">
-          <div>
-            <i class="fa-solid fa-clipboard-check" style="color:#7c3aed; font-size:1.5rem; margin-bottom:0.5rem;"></i>
-            <h3 style="font-size:1.1rem; margin:0 0 0.4rem 0;">Work Order</h3>
-            <p style="font-size:0.85rem; color:#64748b; margin:0 0 1rem 0;">Job details & field checklist.</p>
-          </div>
-          <a href="work_order.html" style="display:block; text-align:center; background:#7c3aed; color:#fff; text-decoration:none; padding:0.5rem; border-radius:6px; font-weight:600; font-size:0.85rem;">Preview Work Order</a>
-        </div>
-
-        <div style="background:#fff; border:1px solid #e2e8f0; border-radius:8px; padding:1.25rem; display:flex; flex-direction:column; justify-content:space-between;">
-          <div>
-            <i class="fa-solid fa-cart-shopping" style="color:#7c3aed; font-size:1.5rem; margin-bottom:0.5rem;"></i>
-            <h3 style="font-size:1.1rem; margin:0 0 0.4rem 0;">Purchase Order</h3>
-            <p style="font-size:0.85rem; color:#64748b; margin:0 0 1rem 0;">Supplier & inventory purchasing form.</p>
-          </div>
-          <a href="purchase_order.html" style="display:block; text-align:center; background:#7c3aed; color:#fff; text-decoration:none; padding:0.5rem; border-radius:6px; font-weight:600; font-size:0.85rem;">Preview PO</a>
-        </div>
-
-        <div style="background:#fff; border:1px solid #e2e8f0; border-radius:8px; padding:1.25rem; display:flex; flex-direction:column; justify-content:space-between;">
-          <div>
-            <i class="fa-solid fa-clock" style="color:#7c3aed; font-size:1.5rem; margin-bottom:0.5rem;"></i>
-            <h3 style="font-size:1.1rem; margin:0 0 0.4rem 0;">Timesheet</h3>
-            <p style="font-size:0.85rem; color:#64748b; margin:0 0 1rem 0;">Employee worked hours logger.</p>
-          </div>
-          <a href="timesheet.html" style="display:block; text-align:center; background:#7c3aed; color:#fff; text-decoration:none; padding:0.5rem; border-radius:6px; font-weight:600; font-size:0.85rem;">Preview Timesheet</a>
-        </div>
-
-        <div style="background:#fff; border:1px solid #e2e8f0; border-radius:8px; padding:1.25rem; display:flex; flex-direction:column; justify-content:space-between;">
-          <div>
-            <i class="fa-solid fa-wallet" style="color:#7c3aed; font-size:1.5rem; margin-bottom:0.5rem;"></i>
-            <h3 style="font-size:1.1rem; margin:0 0 0.4rem 0;">Expense Report</h3>
-            <p style="font-size:0.85rem; color:#64748b; margin:0 0 1rem 0;">Business expense & reimbursement tracker.</p>
-          </div>
-          <a href="expense_report.html" style="display:block; text-align:center; background:#7c3aed; color:#fff; text-decoration:none; padding:0.5rem; border-radius:6px; font-weight:600; font-size:0.85rem;">Preview Expense</a>
-        </div>
-
-        <div style="background:#fff; border:1px solid #e2e8f0; border-radius:8px; padding:1.25rem; display:flex; flex-direction:column; justify-content:space-between;">
-          <div>
-            <i class="fa-solid fa-users" style="color:#7c3aed; font-size:1.5rem; margin-bottom:0.5rem;"></i>
-            <h3 style="font-size:1.1rem; margin:0 0 0.4rem 0;">Client Database</h3>
-            <p style="font-size:0.85rem; color:#64748b; margin:0 0 1rem 0;">Client contact & address CRM.</p>
-          </div>
-          <a href="client_database.html" style="display:block; text-align:center; background:#7c3aed; color:#fff; text-decoration:none; padding:0.5rem; border-radius:6px; font-weight:600; font-size:0.85rem;">Preview Directory</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- TIER 3: ULTIMATE BUNDLE -->
-    <section style="margin-bottom:3rem;">
-      <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:1rem; border-bottom:2px solid #059669; padding-bottom:0.5rem;">
-        <div>
-          <span style="background:#d1fae5; color:#065f46; font-size:0.75rem; font-weight:700; text-transform:uppercase; padding:0.2rem 0.5rem; border-radius:4px;">Tier 3</span>
-          <h2 style="font-size:1.5rem; font-weight:700; margin:0.25rem 0 0 0; color:#0f172a;">Ultimate Suite (All 16 Templates)</h2>
-        </div>
-        <span style="color:#64748b; font-size:0.875rem;"><strong>Includes Tiers 1 & 2</strong> + Complete Legal & Financial Management</span>
-      </div>
-
-      <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(260px, 1fr)); gap:1.25rem;">
-        <div style="background:#fff; border:1px solid #e2e8f0; border-radius:8px; padding:1.25rem; display:flex; flex-direction:column; justify-content:space-between;">
-          <div>
-            <i class="fa-solid fa-gauge" style="color:#059669; font-size:1.5rem; margin-bottom:0.5rem;"></i>
-            <h3 style="font-size:1.1rem; margin:0 0 0.4rem 0;">Business Tracker</h3>
-            <p style="font-size:0.85rem; color:#64748b; margin:0 0 1rem 0;">Executive operational dashboard.</p>
-          </div>
-          <a href="business_tracker.html" style="display:block; text-align:center; background:#059669; color:#fff; text-decoration:none; padding:0.5rem; border-radius:6px; font-weight:600; font-size:0.85rem;">Preview Dashboard</a>
-        </div>
-
-        <div style="background:#fff; border:1px solid #e2e8f0; border-radius:8px; padding:1.25rem; display:flex; flex-direction:column; justify-content:space-between;">
-          <div>
-            <i class="fa-solid fa-book-bookmark" style="color:#059669; font-size:1.5rem; margin-bottom:0.5rem;"></i>
-            <h3 style="font-size:1.1rem; margin:0 0 0.4rem 0;">Invoice Ledger</h3>
-            <p style="font-size:0.85rem; color:#64748b; margin:0 0 1rem 0;">Full Accounts Receivable tracking ledger.</p>
-          </div>
-          <a href="invoice_ledger.html" style="display:block; text-align:center; background:#059669; color:#fff; text-decoration:none; padding:0.5rem; border-radius:6px; font-weight:600; font-size:0.85rem;">Preview Ledger</a>
-        </div>
-
-        <div style="background:#fff; border:1px solid #e2e8f0; border-radius:8px; padding:1.25rem; display:flex; flex-direction:column; justify-content:space-between;">
-          <div>
-            <i class="fa-solid fa-receipt" style="color:#059669; font-size:1.5rem; margin-bottom:0.5rem;"></i>
-            <h3 style="font-size:1.1rem; margin:0 0 0.4rem 0;">Credit Memo</h3>
-            <p style="font-size:0.85rem; color:#64748b; margin:0 0 1rem 0;">Customer refunds and balance adjustments.</p>
-          </div>
-          <a href="credit_memo.html" style="display:block; text-align:center; background:#059669; color:#fff; text-decoration:none; padding:0.5rem; border-radius:6px; font-weight:600; font-size:0.85rem;">Preview Credit Memo</a>
-        </div>
-
-        <div style="background:#fff; border:1px solid #e2e8f0; border-radius:8px; padding:1.25rem; display:flex; flex-direction:column; justify-content:space-between;">
-          <div>
-            <i class="fa-solid fa-percent" style="color:#059669; font-size:1.5rem; margin-bottom:0.5rem;"></i>
-            <h3 style="font-size:1.1rem; margin:0 0 0.4rem 0;">Tax Estimation</h3>
-            <p style="font-size:0.85rem; color:#64748b; margin:0 0 1rem 0;">Quarterly estimated tax calculation sheet.</p>
-          </div>
-          <a href="tax_estimation.html" style="display:block; text-align:center; background:#059669; color:#fff; text-decoration:none; padding:0.5rem; border-radius:6px; font-weight:600; font-size:0.85rem;">Preview Tax Sheet</a>
-        </div>
-
-        <div style="background:#fff; border:1px solid #e2e8f0; border-radius:8px; padding:1.25rem; display:flex; flex-direction:column; justify-content:space-between;">
-          <div>
-            <i class="fa-solid fa-car" style="color:#059669; font-size:1.5rem; margin-bottom:0.5rem;"></i>
-            <h3 style="font-size:1.1rem; margin:0 0 0.4rem 0;">Mileage Log</h3>
-            <p style="font-size:0.85rem; color:#64748b; margin:0 0 1rem 0;">Vehicle travel & business distance log.</p>
-          </div>
-          <a href="mileage_log.html" style="display:block; text-align:center; background:#059669; color:#fff; text-decoration:none; padding:0.5rem; border-radius:6px; font-weight:600; font-size:0.85rem;">Preview Mileage</a>
-        </div>
-
-        <div style="background:#fff; border:1px solid #e2e8f0; border-radius:8px; padding:1.25rem; display:flex; flex-direction:column; justify-content:space-between;">
-          <div>
-            <i class="fa-solid fa-file-contract" style="color:#059669; font-size:1.5rem; margin-bottom:0.5rem;"></i>
-            <h3 style="font-size:1.1rem; margin:0 0 0.4rem 0;">Contractor Agreement</h3>
-            <p style="font-size:0.85rem; color:#64748b; margin:0 0 1rem 0;">Independent contractor legal agreement.</p>
-          </div>
-          <a href="independent_contractor_agreement.html" style="display:block; text-align:center; background:#059669; color:#fff; text-decoration:none; padding:0.5rem; border-radius:6px; font-weight:600; font-size:0.85rem;">Preview Agreement</a>
-        </div>
-      </div>
-    </section>
-
-  </main>
 </body>
 </html>

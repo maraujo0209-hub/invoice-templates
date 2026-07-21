@@ -1,167 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expense Report - Preview</title>
-    <style>
-        :root {
-            --primary-color: #111111;
-            --secondary-color: #4a5568;
-            --accent-bg: #f8fafc;
-            --border-color: #cbd5e1;
-            --subtle-text: #64748b;
-        }
-
-        body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            color: var(--primary-color);
-            margin: 0;
-            padding: 0;
-            background-color: #f1f5f9;
-        }
-
-        .invoice-container {
-            background-color: #ffffff;
-            width: 8.5in;
-            min-height: 11in;
-            margin: 40px auto;
-            padding: 1in;
-            box-sizing: border-box;
-            position: relative;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-            overflow: hidden;
-        }
-
-        .invoice-container::after {
-            content: "WATERMARKED PREVIEW - NOT FOR COMMERCIAL USE";
-            position: absolute;
-            top: 40%;
-            left: 5%;
-            right: 5%;
-            font-size: 28px;
-            font-weight: 900;
-            color: rgba(220, 38, 38, 0.18);
-            transform: rotate(-30deg);
-            text-align: center;
-            pointer-events: none;
-            letter-spacing: 2px;
-        }
-
-        @media print { body { display: none !important; } }
-
-        .invoice-header {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 40px;
-        }
-
-        .invoice-title-area h1 {
-            font-size: 32px;
-            font-weight: 700;
-            margin: 0;
-            text-transform: uppercase;
-        }
-
-        .items-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 30px;
-        }
-
-        .items-table th {
-            background-color: var(--primary-color);
-            color: #ffffff;
-            font-size: 11px;
-            text-transform: uppercase;
-            padding: 10px;
-            text-align: left;
-        }
-
-        .items-table td {
-            padding: 10px;
-            font-size: 13px;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .items-table tr:nth-child(even) td { background-color: var(--accent-bg); }
-
-        .totals-container {
-            display: flex;
-            justify-content: flex-end;
-        }
-
-        .totals-table { width: 250px; font-size: 14px; }
-        .totals-table td { padding: 6px 12px; }
-        .grand-total { font-weight: 700; border-top: 2px solid var(--primary-color); }
-
-        .invoice-footer {
-            position: absolute;
-            bottom: 1in;
-            left: 1in;
-            right: 1in;
-            border-top: 1px solid var(--border-color);
-            padding-top: 15px;
-            display: flex;
-            justify-content: space-between;
-            font-size: 12px;
-            color: var(--secondary-color);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Report - Tier 2 Pro</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
+<body style="margin:0; padding:0; background-color:#f8fafc; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color:#0f172a; line-height:1.5;">
 
-<div class="invoice-container">
-    <div class="invoice-header">
-        <div>
-            <h2>Company Name</h2>
-            <p style="margin:0; font-size:13px; color:#64748b;">Employee: Jane Doe | Department: Operations</p>
-        </div>
-        <div class="invoice-title-area" style="text-align: right;">
-            <h1>Expense Report</h1>
-            <p style="margin:0; font-size:13px; color:#64748b;">Period: July 2026</p>
-        </div>
+  <header style="background-color:#ffffff; border-bottom:1px solid #e2e8f0; padding:0.75rem 1.5rem; position:sticky; top:0; z-index:100;">
+    <div style="max-width:1100px; margin:0 auto; display:flex; justify-content:space-between; align-items:center;">
+      <a href="index.html" style="font-size:1rem; font-weight:700; color:#7c3aed; text-decoration:none;"><i class="fa-solid fa-arrow-left"></i> Back to Hub</a>
+      <span style="background:#f3e8ff; color:#6b21a8; font-size:0.75rem; font-weight:700; padding:0.25rem 0.5rem; border-radius:4px;">Tier 2 Pro Template</span>
+    </div>
+  </header>
+
+  <main style="max-width:850px; margin:2rem auto; padding:0 1rem;">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem;">
+      <h1 style="font-size:1.5rem; font-weight:700; margin:0;">Expense Reimbursement Log</h1>
+      <button type="button" onclick="window.print()" style="background:#7c3aed; color:#fff; border:none; padding:0.5rem 1rem; border-radius:6px; font-weight:600; cursor:pointer;"><i class="fa-solid fa-print"></i> Print / Save PDF</button>
     </div>
 
-    <table class="items-table">
+    <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:2.5rem; box-shadow:0 4px 6px -1px rgba(0,0,0,0.05);">
+      <table style="width:100%; border-collapse:collapse; margin-bottom:2rem; border-bottom:2px solid #e2e8f0; padding-bottom:1.5rem;">
+        <tr>
+          <td style="vertical-align:top; width:60%;">
+            <div style="width:160px; height:50px; border:2px dashed #cbd5e1; border-radius:6px; display:flex; align-items:center; justify-content:center; color:#64748b; font-size:0.85rem; background-color:#f8fafc; margin-bottom:1rem;">
+              <i class="fa-solid fa-image" style="margin-right:0.5rem;"></i> Business Logo
+            </div>
+            <div style="font-size:0.875rem; color:#64748b;">
+              <strong style="font-size:1.125rem; color:#0f172a; display:block;" contenteditable="true">Your Business Name</strong>
+              <span contenteditable="true">Finance & Reimbursements</span>
+            </div>
+          </td>
+          <td style="vertical-align:top; text-align:right; width:40%;">
+            <h1 style="font-size:2rem; font-weight:800; color:#7c3aed; margin:0 0 0.5rem 0;">EXPENSE REPORT</h1>
+            <p style="font-size:0.875rem; color:#334155; margin:0 0 0.25rem 0;"><strong>Submitted By:</strong> <span contenteditable="true">John Smith</span></p>
+            <p style="font-size:0.875rem; color:#334155; margin:0;"><strong>Date:</strong> <span contenteditable="true">2026-07-21</span></p>
+          </td>
+        </tr>
+      </table>
+
+      <table style="width:100%; border-collapse:collapse; margin-bottom:2rem;">
         <thead>
-            <tr>
-                <th>Date</th>
-                <th>Category</th>
-                <th>Description</th>
-                <th style="text-align: right;">Amount</th>
-            </tr>
+          <tr style="background-color:#f1f5f9; border-bottom:2px solid #cbd5e1;">
+            <th style="text-align:left; padding:0.75rem; font-size:0.875rem; width:100px;">Date</th>
+            <th style="text-align:left; padding:0.75rem; font-size:0.875rem; width:130px;">Category</th>
+            <th style="text-align:left; padding:0.75rem; font-size:0.875rem;">Description / Vendor</th>
+            <th style="text-align:right; padding:0.75rem; font-size:0.875rem; width:100px;">Amount</th>
+          </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>2026-07-02</td>
-                <td>Travel</td>
-                <td>Client Onsite Travel Parking</td>
-                <td style="text-align: right;">$0.00</td>
-            </tr>
-            <tr>
-                <td>2026-07-10</td>
-                <td>Supplies</td>
-                <td>Office Printing Paper Pack</td>
-                <td style="text-align: right;">$0.00</td>
-            </tr>
+          <tr style="border-bottom:1px solid #e2e8f0;">
+            <td contenteditable="true" style="padding:0.75rem; font-size:0.875rem;">2026-07-19</td>
+            <td contenteditable="true" style="padding:0.75rem; font-size:0.875rem;">Fuel / Travel</td>
+            <td contenteditable="true" style="padding:0.75rem; font-size:0.875rem;">Service Vehicle Refuel - Gas Station</td>
+            <td contenteditable="true" style="padding:0.75rem; font-size:0.875rem; text-align:right;">$48.50</td>
+          </tr>
         </tbody>
-    </table>
+      </table>
 
-    <div class="totals-container">
-        <table class="totals-table">
-            <tr class="grand-total">
-                <td>Total Reimbursement:</td>
-                <td style="text-align: right;">$0.00</td>
-            </tr>
-        </table>
+      <table style="width:100%; border-collapse:collapse;">
+        <tr>
+          <td style="width:50%;"></td>
+          <td style="width:50%;">
+            <table style="width:100%; font-size:0.875rem;">
+              <tr style="border-top:2px solid #0f172a; font-weight:700; font-size:1.1rem;">
+                <td style="padding:0.5rem 0 0 0;">Total Reimbursement:</td>
+                <td style="padding:0.5rem 0 0 0; text-align:right;">$48.50</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
     </div>
-
-    <div class="invoice-footer">
-        <div>Approved By: ___________________________</div>
-        <div>Page 1 of 1</div>
-    </div>
-</div>
-
+  </main>
 </body>
 </html>

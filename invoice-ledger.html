@@ -6,23 +6,57 @@
   </div>
   <div class="nav-right">
     <button onclick="window.print()" class="nav-btn btn-secondary">🖨️ Print / Save PDF</button>
-    <a href="https://yourstore.gumroad.com/l/ultimate" class="nav-btn btn-primary">Get Ultimate Bundle</a>
+    <a href="https://yourstore.gumroad.com/l/ultimate" class="nav-btn btn-primary">🟢 Buy Now — Instant Download</a>
   </div>
 </div>
 
 <div class="preview-watermark">PREVIEW VERSION — EDITABLE FILE INCLUDED WITH PURCHASE</div>
 
 <style>
+  * { box-sizing: border-box; }
+  body { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; padding: 2rem; background: #f8fafc; color: #0f172a; padding-bottom: 90px; }
+  
+  /* Navigation Bar */
   .template-nav-bar { display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 1.5rem; background: #0f172a; color: #ffffff; font-family: system-ui, -apple-system, sans-serif; }
   .nav-left, .nav-right { display: flex; align-items: center; gap: 0.75rem; }
   .tier-tag { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; padding: 0.25rem 0.5rem; border-radius: 4px; }
   .tier-ultimate { background: #d97706; color: #fff; }
-  .nav-btn { color: #ffffff; text-decoration: none; font-size: 0.875rem; font-weight: 600; padding: 0.5rem 1rem; border-radius: 4px; border: none; cursor: pointer; }
+  .nav-btn { color: #ffffff; text-decoration: none; font-size: 0.875rem; font-weight: 600; padding: 0.5rem 1rem; border-radius: 4px; border: none; cursor: pointer; display: inline-flex; align-items: center; gap: 0.35rem; }
   .btn-back { background: #1e293b; }
   .btn-secondary { background: #334155; }
-  .btn-primary { background: #d97706; }
+  .btn-primary { background: #10b981; }
+  .btn-primary:hover { background: #059669; }
   .preview-watermark { position: fixed; bottom: 20px; right: 20px; background: rgba(15, 23, 42, 0.9); color: #f8fafc; padding: 0.6rem 1rem; border-radius: 6px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em; pointer-events: none; z-index: 9999; }
-  @media print { .template-nav-bar, .preview-watermark { display: none !important; } }
+
+  /* Metadata Header */
+  .pdp-meta-bar { max-width: 850px; margin: 0 auto 1.5rem auto; display: flex; justify-content: space-between; align-items: center; background: #ffffff; padding: 0.85rem 1.25rem; border-radius: 8px; border: 1px solid #e2e8f0; }
+  .format-tags { display: flex; gap: 0.5rem; }
+  .tag { font-size: 0.75rem; font-weight: 600; padding: 0.2rem 0.5rem; border-radius: 4px; background: #f1f5f9; color: #475569; }
+  .tag-excel { background: #dcfce7; color: #166534; }
+  .tag-word { background: #dbeafe; color: #1e40af; }
+  .card-rating { font-size: 0.85rem; color: #d97706; font-weight: 600; display: flex; align-items: center; gap: 0.25rem; }
+
+  /* Document Table */
+  .document-container { max-width: 850px; margin: 0 auto; background: #ffffff; padding: 2.5rem; border-radius: 8px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+  .header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 2rem; border-bottom: 2px solid #e2e8f0; padding-bottom: 1.5rem; }
+  .header h1 { margin: 0; font-size: 1.75rem; color: #d97706; text-transform: uppercase; }
+  table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; }
+  th, td { padding: 0.75rem 0.5rem; text-align: left; border-bottom: 1px solid #e2e8f0; font-size: 0.85rem; }
+  th { background: #f8fafc; font-weight: 600; color: #475569; text-transform: uppercase; font-size: 0.75rem; }
+  .status { display: inline-block; padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.7rem; font-weight: 600; }
+  .status-paid { background: #dcfce7; color: #166534; }
+  .status-pending { background: #fef3c7; color: #92400e; }
+  .text-right { text-align: right; }
+
+  /* Sticky Mobile CTA */
+  @media (max-width: 768px) {
+    .pdp-meta-bar { flex-direction: column; gap: 0.5rem; align-items: flex-start; }
+    .sticky-mobile-cta { position: fixed; bottom: 0; left: 0; right: 0; background: #ffffff; padding: 0.75rem 1rem; border-top: 1px solid #e2e8f0; box-shadow: 0 -4px 12px rgba(0,0,0,0.1); z-index: 10000; display: block !important; }
+    .sticky-mobile-cta a { display: block; width: 100%; text-align: center; background: #10b981; color: #fff; padding: 0.85rem; border-radius: 6px; font-weight: 700; text-decoration: none; }
+  }
+  .sticky-mobile-cta { display: none; }
+
+  @media print { .template-nav-bar, .preview-watermark, .pdp-meta-bar, .sticky-mobile-cta { display: none !important; } body { background: #ffffff; padding: 0; } .document-container { border: none; box-shadow: none; } }
 </style>
 
 <!DOCTYPE html>
@@ -30,24 +64,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Invoice Ledger Tracking</title>
-  <style>
-    * { box-sizing: border-box; }
-    body { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; padding: 2rem; background: #f8fafc; color: #0f172a; }
-    .document-container { max-width: 850px; margin: 0 auto; background: #ffffff; padding: 2.5rem; border-radius: 8px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-    .header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 2rem; border-bottom: 2px solid #e2e8f0; padding-bottom: 1.5rem; }
-    .header h1 { margin: 0; font-size: 1.75rem; color: #d97706; text-transform: uppercase; }
-    table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; }
-    th, td { padding: 0.75rem 0.5rem; text-align: left; border-bottom: 1px solid #e2e8f0; font-size: 0.85rem; }
-    th { background: #f8fafc; font-weight: 600; color: #475569; text-transform: uppercase; font-size: 0.75rem; }
-    .status { display: inline-block; padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.7rem; font-weight: 600; }
-    .status-paid { background: #dcfce7; color: #166534; }
-    .status-pending { background: #fef3c7; color: #92400e; }
-    .text-right { text-align: right; }
-    @media print { body { background: #ffffff; padding: 0; } .document-container { border: none; box-shadow: none; } }
-  </style>
+  <title>Accounts Receivable Invoice Ledger | Tracking Template</title>
 </head>
 <body>
+
+  <!-- Format Tags Header -->
+  <div class="pdp-meta-bar">
+    <div class="format-tags">
+      <span class="tag tag-excel">Excel (.xlsx)</span>
+      <span class="tag tag-word">Word (.docx)</span>
+      <span class="tag">Google Sheets</span>
+      <span class="tag">Fully Editable</span>
+    </div>
+    <div class="card-rating">
+      ★★★★★ <span>5.0</span> <span style="color: #64748b; font-weight: normal;">(88 Reviews)</span>
+    </div>
+  </div>
+
   <div class="document-container">
     <div class="header">
       <div>
@@ -90,6 +123,11 @@
         </tr>
       </tbody>
     </table>
+  </div>
+
+  <!-- Mobile Floating Checkout CTA -->
+  <div class="sticky-mobile-cta">
+    <a href="https://yourstore.gumroad.com/l/ultimate">🟢 Buy Now — Instant Download</a>
   </div>
 </body>
 </html>

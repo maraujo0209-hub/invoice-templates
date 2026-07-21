@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Expense Report</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background: #f8fafc;
+      color: #0f172a;
+    }
+    .document-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 2.5rem;
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 2rem;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 1.5rem;
+    }
+    .logo-placeholder {
+      width: 200px;
+      height: 80px;
+      background: #f1f5f9;
+      border: 2px dashed #cbd5e1;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #64748b;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+    .meta-details { text-align: right; }
+    .meta-details h1 {
+      margin: 0 0 0.5rem 0;
+      font-size: 1.75rem;
+      color: #2563eb;
+      text-transform: uppercase;
+    }
+    .meta-details p { margin: 0.25rem 0; font-size: 0.875rem; color: #475569; }
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+    .info-block h3 {
+      margin: 0 0 0.5rem 0;
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      color: #64748b;
+    }
+    .info-block p { margin: 0.2rem 0; font-size: 0.9rem; color: #1e293b; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 2rem;
+    }
+    th, td {
+      padding: 0.75rem 0.5rem;
+      text-align: left;
+      border-bottom: 1px solid #e2e8f0;
+      font-size: 0.85rem;
+    }
+    th { background: #f8fafc; font-weight: 600; color: #475569; }
+    .text-right { text-align: right; }
+    .totals {
+      width: 320px;
+      margin-left: auto;
+      margin-bottom: 2rem;
+    }
+    .totals-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.4rem 0;
+      font-size: 0.875rem;
+    }
+    .totals-row.grand-total {
+      border-top: 2px solid #0f172a;
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: #0f172a;
+    }
+    .auth-section {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #e2e8f0;
+    }
+    .signature-block { width: 45%; }
+    .signature-line {
+      border-bottom: 1px solid #0f172a;
+      margin-top: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    .signature-label { font-size: 0.8rem; color: #64748b; text-transform: uppercase; }
+    @media print {
+      body { background: #ffffff; padding: 0; }
+      .document-container { border: none; box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="document-container">
+    <div class="header">
+      <div class="logo-placeholder">BUSINESS LOGO</div>
+      <div class="meta-details">
+        <h1>Expense Report</h1>
+        <p><strong>Report #:</strong> EXP-2026-042</p>
+        <p><strong>Date:</strong> July 21, 2026</p>
+      </div>
+    </div>
+
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>Employee Details</h3>
+        <p><strong>Employee Name:</strong> Alex Johnson</p>
+        <p><strong>Department:</strong> Operations</p>
+        <p><strong>Email:</strong> alex@company.com</p>
+      </div>
+      <div class="info-block">
+        <h3>Reimbursement Info</h3>
+        <p><strong>Payment Method:</strong> Direct Deposit</p>
+        <p><strong>Period Covered:</strong> July 10 – July 20, 2026</p>
+      </div>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Category</th>
+          <th>Description</th>
+          <th>Receipt Attached?</th>
+          <th class="text-right">Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>07/12/2026</td>
+          <td>Supplies</td>
+          <td>Field Cleaning Solvents</td>
+          <td>Yes</td>
+          <td class="text-right">$85.40</td>
+        </tr>
+        <tr>
+          <td>07/15/2026</td>
+          <td>Travel</td>
+          <td>Client Site Tolls & Parking</td>
+          <td>Yes</td>
+          <td class="text-right">$24.00</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="totals">
+      <div class="totals-row">
+        <span>Total Expenses:</span>
+        <span>$109.40</span>
+      </div>
+      <div class="totals-row">
+        <span>Less Advance Provided:</span>
+        <span>-$30.00</span>
+      </div>
+      <div class="totals-row grand-total">
+        <span>Total Amount Due:</span>
+        <span>$79.40</span>
+      </div>
+    </div>
+
+    <div class="auth-section">
+      <div class="signature-block">
+        <div class="signature-line"></div>
+        <div class="signature-label">Employee Signature</div>
+      </div>
+      <div class="signature-block">
+        <div class="signature-line"></div>
+        <div class="signature-label">Supervisor Approval</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

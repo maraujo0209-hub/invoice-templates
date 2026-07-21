@@ -1,0 +1,150 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Business Performance Tracker</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background: #f8fafc;
+      color: #0f172a;
+    }
+    .document-container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 2.5rem;
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 2rem;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 1.5rem;
+    }
+    .logo-placeholder {
+      width: 200px;
+      height: 80px;
+      background: #f1f5f9;
+      border: 2px dashed #cbd5e1;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #64748b;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+    .meta-details { text-align: right; }
+    .meta-details h1 {
+      margin: 0 0 0.5rem 0;
+      font-size: 1.75rem;
+      color: #6b21a8;
+      text-transform: uppercase;
+    }
+    .meta-details p { margin: 0.25rem 0; font-size: 0.875rem; color: #475569; }
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .kpi-card {
+      background: #f8fafc;
+      padding: 1rem;
+      border-radius: 6px;
+      border: 1px solid #e2e8f0;
+      text-align: center;
+    }
+    .kpi-card span { font-size: 0.75rem; color: #64748b; text-transform: uppercase; display: block; }
+    .kpi-card strong { font-size: 1.25rem; color: #0f172a; margin-top: 0.25rem; display: block; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 2rem;
+    }
+    th, td {
+      padding: 0.75rem 0.5rem;
+      text-align: left;
+      border-bottom: 1px solid #e2e8f0;
+      font-size: 0.85rem;
+    }
+    th { background: #f8fafc; font-weight: 600; color: #475569; }
+    .text-right { text-align: right; }
+    @media print {
+      body { background: #ffffff; padding: 0; }
+      .document-container { border: none; box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="document-container">
+    <div class="header">
+      <div class="logo-placeholder">BUSINESS LOGO</div>
+      <div class="meta-details">
+        <h1>Performance Dashboard</h1>
+        <p><strong>Quarterly Performance Tracker</strong></p>
+        <p><strong>Year:</strong> 2026</p>
+      </div>
+    </div>
+
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <span>YTD Revenue</span>
+        <strong>$124,500</strong>
+      </div>
+      <div class="kpi-card">
+        <span>YTD Expenses</span>
+        <strong>$68,200</strong>
+      </div>
+      <div class="kpi-card">
+        <span>Net Profit</span>
+        <strong style="color: #166534;">$56,300</strong>
+      </div>
+      <div class="kpi-card">
+        <span>Profit Margin</span>
+        <strong>45.2%</strong>
+      </div>
+    </div>
+
+    <h3>Quarterly Target vs. Actual</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Quarter</th>
+          <th class="text-right">Revenue Target</th>
+          <th class="text-right">Actual Revenue</th>
+          <th class="text-right">Actual Expenses</th>
+          <th class="text-right">Variance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Q1 2026</td>
+          <td class="text-right">$60,000.00</td>
+          <td class="text-right">$62,100.00</td>
+          <td class="text-right">$33,400.00</td>
+          <td class="text-right" style="color:#166534;">+$2,100.00</td>
+        </tr>
+        <tr>
+          <td>Q2 2026</td>
+          <td class="text-right">$60,000.00</td>
+          <td class="text-right">$62,400.00</td>
+          <td class="text-right">$34,800.00</td>
+          <td class="text-right" style="color:#166534;">+$2,400.00</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>

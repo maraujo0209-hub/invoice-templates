@@ -3,169 +3,698 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Business Template Hub</title>
+  <title>Professional Business Templates — Clean, Print-Ready & Customizable</title>
   <style>
     :root {
       --slate-900: #0f172a;
       --slate-800: #1e293b;
+      --slate-700: #334155;
       --slate-600: #475569;
+      --slate-100: #f1f5f9;
+      --slate-50: #f8fafc;
       --purple-600: #9333ea;
+      --purple-700: #7e22ce;
+      --purple-50: #faf5ff;
       --blue-600: #2563eb;
       --emerald-600: #059669;
-      --gray-100: #f1f5f9;
+      --amber-500: #f59e0b;
+      --border-color: #e2e8f0;
     }
-    body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0; color: #334155; line-height: 1.5; }
-    header { background: var(--slate-900); color: white; padding: 4rem 2rem; text-align: center; }
-    header h1 { margin: 0 0 1rem 0; font-size: 2.5rem; }
-    header p { color: #94a3b8; font-size: 1.25rem; max-width: 600px; margin: 0 auto; }
-    
-    .container { max-width: 1100px; margin: 0 auto; padding: 3rem 1.5rem; }
-    
-    /* Delivery Info Section */
-    .delivery-info { margin-bottom: 4rem; text-align: center; }
-    .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
-    .info-card { background: var(--gray-100); padding: 1.5rem; border-radius: 8px; text-align: left; }
-    .info-card .icon { font-size: 2rem; margin-bottom: 0.5rem; }
-    .info-card h4 { margin: 0 0 0.5rem 0; color: var(--slate-900); }
-    .info-card p { margin: 0; font-size: 0.9rem; color: var(--slate-600); }
 
-    /* Pricing Section */
-    .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem; }
-    .pricing-card { border: 1px solid #e2e8f0; border-radius: 12px; padding: 2rem; position: relative; background: white; display: flex; flex-direction: column; }
-    .pricing-card.featured { border: 2px solid var(--purple-600); box-shadow: 0 10px 25px -5px rgba(147, 51, 234, 0.1); }
-    .badge { position: absolute; top: -12px; right: 20px; background: var(--purple-600); color: white; font-size: 0.75rem; font-weight: 700; padding: 0.25rem 0.75rem; border-radius: 12px; text-transform: uppercase; }
-    .price { font-size: 2.5rem; font-weight: 800; color: var(--slate-900); margin: 1rem 0; }
-    .price span { font-size: 1rem; font-weight: 400; color: var(--slate-600); }
-    .pricing-card ul { list-style: none; padding: 0; margin: 0 0 2rem 0; flex-grow: 1; }
-    .pricing-card li { margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative; }
-    .pricing-card li::before { content: "✓"; position: absolute; left: 0; color: var(--emerald-600); font-weight: bold; }
+    * { box-sizing: border-box; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: var(--slate-700);
+      background-color: #ffffff;
+      line-height: 1.6;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      background: linear-gradient(135deg, var(--slate-900) 0%, #1e1b4b 100%);
+      color: white;
+      padding: 5rem 1.5rem 4rem 1.5rem;
+      text-align: center;
+    }
+    .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(147, 51, 234, 0.2);
+      border: 1px solid rgba(168, 85, 247, 0.4);
+      color: #c084fc;
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 0.35rem 1rem;
+      border-radius: 20px;
+      margin-bottom: 1.5rem;
+    }
+    .hero h1 {
+      font-size: 2.75rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin: 0 0 1.25rem 0;
+      letter-spacing: -0.02em;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      color: #cbd5e1;
+      margin: 0 0 2rem 0;
+      line-height: 1.6;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+    }
     
-    .btn { display: inline-block; width: 100%; text-align: center; padding: 0.85rem; border-radius: 6px; font-weight: 600; text-decoration: none; box-sizing: border-box; cursor: pointer; border: none; }
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.85rem 1.75rem;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      border: none;
+    }
     .btn-primary { background: var(--purple-600); color: white; }
-    .btn-primary:hover { opacity: 0.95; }
-    .btn-blue { background: var(--blue-600); color: white; }
+    .btn-primary:hover { background: var(--purple-700); transform: translateY(-1px); }
+    .btn-secondary { background: var(--slate-800); color: white; border: 1px solid var(--slate-600); }
+    .btn-secondary:hover { background: var(--slate-700); }
+    .btn-outline { background: transparent; color: white; border: 1px solid #475569; }
+    .btn-outline:hover { background: rgba(255, 255, 255, 0.05); }
 
-    /* Variations Accordion */
-    .variations-accordion { margin: 3rem 0; background: var(--gray-100); border-radius: 8px; padding: 1rem 1.5rem; }
-    .variations-accordion summary { font-size: 1.1rem; cursor: pointer; padding: 0.5rem 0; }
-    .accordion-content { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #cbd5e1; }
-    .accordion-content ul { margin: 0; padding-left: 1.25rem; }
-    .accordion-content li { margin-bottom: 0.5rem; }
+    /* TRUST SIGNALS */
+    .trust-bar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 0.9rem;
+      color: #94a3b8;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .stars { color: var(--amber-500); }
 
-    /* Footer */
-    .store-footer { background: var(--slate-900); color: #94a3b8; padding: 4rem 2rem 2rem 2rem; margin-top: 5rem; }
-    .footer-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
-    .footer-grid h4 { color: white; margin: 0 0 1rem 0; }
-    .footer-grid a { color: #cbd5e1; }
-    .footer-bottom { max-width: 1100px; margin: 3rem auto 0 auto; padding-top: 1.5rem; border-top: 1px solid var(--slate-800); text-align: center; font-size: 0.875rem; }
+    /* FEATURE BADGES BAR */
+    .features-strip {
+      background: var(--slate-50);
+      border-bottom: 1px solid var(--border-color);
+      padding: 1.25rem 0;
+    }
+    .strip-grid {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 1rem;
+      text-align: center;
+    }
+    .strip-item {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--slate-700);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* WHAT'S INCLUDED SECTION */
+    .section { padding: 4.5rem 0; }
+    .section-title { text-align: center; margin-bottom: 3rem; }
+    .section-title h2 { font-size: 2rem; font-weight: 800; color: var(--slate-900); margin: 0 0 0.5rem 0; }
+    .section-title p { color: var(--slate-600); font-size: 1.1rem; margin: 0; }
+
+    .included-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+    }
+    .included-card {
+      background: white;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 1.75rem;
+      display: flex;
+      gap: 1.25rem;
+      align-items: flex-start;
+      transition: box-shadow 0.2s ease;
+    }
+    .included-card:hover { box-shadow: 0 10px 20px -5px rgba(0,0,0,0.05); }
+    .icon-box {
+      background: var(--purple-50);
+      color: var(--purple-600);
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+    .included-card h4 { margin: 0 0 0.35rem 0; color: var(--slate-900); font-size: 1.1rem; }
+    .included-card p { margin: 0; font-size: 0.925rem; color: var(--slate-600); }
+
+    /* TEMPLATE GALLERY GRID */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+    .template-card {
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      overflow: hidden;
+      background: white;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .template-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px -6px rgba(0,0,0,0.1);
+    }
+    .preview-thumb {
+      height: 180px;
+      background: var(--slate-100);
+      position: relative;
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    /* Simulated document UI for thumbnails */
+    .doc-mockup {
+      width: 75%;
+      height: 85%;
+      background: white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      border-radius: 4px;
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .mock-line { height: 6px; background: #e2e8f0; border-radius: 3px; }
+    .mock-title { height: 10px; background: #cbd5e1; width: 60%; border-radius: 3px; }
+    .mock-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px; }
+    .mock-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+
+    .template-info {
+      padding: 1.25rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .template-tag {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--purple-600);
+      margin-bottom: 0.35rem;
+      letter-spacing: 0.05em;
+    }
+    .template-info h3 { font-size: 1.1rem; margin: 0 0 0.5rem 0; color: var(--slate-900); }
+    .template-info p { font-size: 0.875rem; color: var(--slate-600); margin: 0 0 1rem 0; flex-grow: 1; }
+    .view-link {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--blue-600);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+    .view-link:hover { text-decoration: underline; }
+
+    /* PRICING SECTION */
+    .pricing-bg { background: var(--slate-50); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      align-items: stretch;
+    }
+    .pricing-card {
+      background: white;
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 2.5rem 2rem;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+    .pricing-card.featured {
+      border: 2px solid var(--purple-600);
+      box-shadow: 0 20px 30px -10px rgba(147, 51, 234, 0.15);
+    }
+    .popular-badge {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--purple-600);
+      color: white;
+      font-size: 0.75rem;
+      font-weight: 800;
+      padding: 0.35rem 1rem;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .pricing-card h3 { font-size: 1.35rem; margin: 0 0 0.5rem 0; color: var(--slate-900); }
+    .pricing-card .desc { font-size: 0.9rem; color: var(--slate-600); min-height: 42px; }
+    .price-wrap { margin: 1.5rem 0; }
+    .price-amount { font-size: 2.75rem; font-weight: 800; color: var(--slate-900); }
+    .price-period { font-size: 0.9rem; color: var(--slate-600); font-weight: 500; }
+
+    .feature-list { list-style: none; padding: 0; margin: 0 0 2rem 0; flex-grow: 1; }
+    .feature-list li {
+      padding: 0.5rem 0;
+      font-size: 0.925rem;
+      color: var(--slate-700);
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+    }
+    .check-icon { color: var(--emerald-600); font-weight: bold; }
+
+    /* PERSISTENT CTA SECTION */
+    .cta-banner {
+      background: linear-gradient(135deg, var(--slate-900) 0%, #1e1b4b 100%);
+      color: white;
+      padding: 4.5rem 1.5rem;
+      text-align: center;
+      border-radius: 20px;
+      margin: 4rem auto;
+      max-width: 1100px;
+    }
+    .cta-banner h2 { font-size: 2.25rem; margin: 0 0 1rem 0; font-weight: 800; }
+    .cta-banner p { font-size: 1.15rem; color: #cbd5e1; max-width: 600px; margin: 0 auto 2rem auto; }
+
+    /* FOOTER */
+    .footer {
+      background: var(--slate-900);
+      color: #94a3b8;
+      padding: 4rem 0 2rem 0;
+      font-size: 0.9rem;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2.5rem;
+      margin-bottom: 3rem;
+    }
+    .footer-col h4 { color: white; font-size: 1rem; margin: 0 0 1.25rem 0; }
+    .footer-links { list-style: none; padding: 0; margin: 0; }
+    .footer-links li { margin-bottom: 0.75rem; }
+    .footer-links a { color: #94a3b8; text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: white; }
+    .footer-bottom {
+      border-top: 1px solid var(--slate-800);
+      padding-top: 2rem;
+      text-align: center;
+      color: #64748b;
+      font-size: 0.85rem;
+    }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Professional Business Templates</h1>
-    <p>Clean, customizable, print-ready HTML & CSS documents for instant deployment.</p>
-  </header>
-
-  <div class="container">
-    <!-- How it works -->
-    <section class="delivery-info">
-      <h2>What You Get & How to Edit</h2>
-      <div class="info-grid">
-        <div class="info-card">
-          <div class="icon">📦</div>
-          <h4>Instant ZIP Delivery</h4>
-          <p>Receive your complete file bundle immediately after purchase via email download link.</p>
-        </div>
-        <div class="info-card">
-          <div class="icon">🌐</div>
-          <h4>Standalone HTML & CSS</h4>
-          <p>Works in any browser with zero setup. Simply open, edit your text, or save as PDF.</p>
-        </div>
-        <div class="info-card">
-          <div class="icon">🖨️</div>
-          <h4>1-Click Print to PDF</h4>
-          <p>Integrated print controls automatically strip out buttons and headers for crisp, pixel-perfect exports.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Pricing Tiers -->
-    <h2 style="text-align: center;">Choose Your Tier</h2>
-    <div class="pricing-grid">
-      <!-- Starter Tier -->
-      <div class="pricing-card">
-        <h3>Starter Bundle</h3>
-        <div class="price">$19 <span>one-time</span></div>
-        <p>Essential business documents to launch your brand.</p>
-        <ul>
-          <li>5 Starter Templates</li>
-          <li>Clean, Print-Ready Layouts</li>
-          <li>Lifetime Document Updates</li>
-        </ul>
-        <a href="https://yourstore.gumroad.com/l/starter" class="btn btn-blue">Buy Starter Bundle</a>
+  <!-- 1. HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">⚡ Instant Download & Easy Customization</div>
+      <h1>Professional Business Templates That Save You Hours</h1>
+      <p>Ready-to-use invoice, estimate, receipt, proposal, and administrative templates designed specifically for freelancers, contractors, and small businesses.</p>
+      
+      <div class="hero-actions">
+        <a href="#pricing" class="btn btn-primary">Get the Ultimate Bundle</a>
+        <a href="#templates" class="btn btn-outline">Browse 16 Templates</a>
       </div>
 
-      <!-- Professional Tier -->
-      <div class="pricing-card featured">
-        <div class="badge">Most Popular</div>
-        <h3>Professional Bundle</h3>
-        <div class="price">$39 <span>one-time</span></div>
-        <p>Complete suite of admin & operational tools.</p>
-        <ul>
-          <li>11 Professional Templates</li>
-          <li>Priority Customer Support</li>
-          <li>Fully Customizable CSS</li>
-        </ul>
-        <a href="https://yourstore.gumroad.com/l/professional" class="btn btn-primary">Buy Professional Bundle</a>
-      </div>
-
-      <!-- Ultimate Tier -->
-      <div class="pricing-card">
-        <h3>Ultimate Suite</h3>
-        <div class="price">$69 <span>one-time</span></div>
-        <p>All 16 templates + 50+ layout variations.</p>
-        <ul>
-          <li>All 16 Complete Templates</li>
-          <li>50+ Specialized Layout Variations</li>
-          <li>Commercial Usage License</li>
-        </ul>
-        <a href="https://yourstore.gumroad.com/l/ultimate" class="btn btn-primary">Buy Ultimate Suite</a>
+      <!-- 2. TRUST SIGNALS IN HERO -->
+      <div class="trust-bar">
+        <div class="trust-item">
+          <span class="stars">★★★★★</span>
+          <span><strong>4.9/5</strong> (500+ Freelancers & Contractors)</span>
+        </div>
+        <div class="trust-item">⚡ Instant File Access</div>
+        <div class="trust-item">🛡️ 14-Day Refund Guarantee</div>
       </div>
     </div>
+  </section>
 
-    <!-- 50+ Variations Breakdown -->
-    <details class="variations-accordion">
-      <summary><strong>View All 50+ Layout Variations Included in Ultimate Suite</strong></summary>
-      <div class="accordion-content">
-        <ul>
-          <li><strong>Invoices:</strong> Modern Minimal, Corporate Bold, Dark Mode Print, Hourly Billing, Itemized Unit Cost</li>
-          <li><strong>Receipts:</strong> Pocket Slip, Detailed Service Proof, Multi-tax Line, Digital Order Confirmation</li>
-          <li><strong>Proposals:</strong> Single-page Scope, Tiered Milestone, Annual Retainer, Graphic Header Variant</li>
-          <li><strong>Trackers & Logs:</strong> Monthly Cashflow, Quarterly Variance, Multi-department Breakdown, Mileage Log</li>
-          <li><em>+ 35 additional CSS themes and structural variants inside the source folder!</em></li>
-        </ul>
-      </div>
-    </details>
+  <!-- FEATURE STRIP -->
+  <div class="features-strip">
+    <div class="container strip-grid">
+      <div class="strip-item">✓ Works in Any Web Browser</div>
+      <div class="strip-item">✓ 1-Click Print & Save to PDF</div>
+      <div class="strip-item">✓ Fully Editable HTML / CSS</div>
+      <div class="strip-item">✓ Commercial Usage Rights</div>
+    </div>
   </div>
 
-  <footer class="store-footer">
-    <div class="footer-grid">
-      <div>
-        <h4>Customer Support</h4>
-        <p>Need help or have questions? Contact us anytime at <a href="mailto:support@yourdomain.com">support@yourdomain.com</a></p>
+  <!-- 3. WHAT'S INCLUDED SECTION -->
+  <section class="section container">
+    <div class="section-title">
+      <h2>Everything You Need to Run Your Business Paperwork</h2>
+      <p>Stop wasting time formatting spreadsheets and Word docs. Get clean, modern business documents in seconds.</p>
+    </div>
+
+    <div class="included-grid">
+      <div class="included-card">
+        <div class="icon-box">📁</div>
+        <div>
+          <h4>16 Core Business Templates</h4>
+          <p>Invoices, receipts, proposals, client databases, time tracking sheets, agreements, and mileage logs.</p>
+        </div>
       </div>
-      <div>
-        <h4>Licensing & Usage</h4>
-        <p>Includes a Commercial License. Use for your personal business or client projects (raw file redistribution forbidden).</p>
+
+      <div class="included-card">
+        <div class="icon-box">🎨</div>
+        <div>
+          <h4>50+ Premium Layout Variations</h4>
+          <p>Multiple color palettes, typography styles, dark mode print layouts, and itemized structural presets.</p>
+        </div>
       </div>
-      <div>
-        <h4>Refund Policy</h4>
-        <p>14-Day Satisfaction Guarantee. If these templates don't fit your workflow, contact us for a full refund.</p>
+
+      <div class="included-card">
+        <div class="icon-box">🖨️</div>
+        <div>
+          <h4>1-Click Print / Save PDF</h4>
+          <p>Built-in print stylesheets automatically clean up buttons and headers for crisp, perfect exports every time.</p>
+        </div>
+      </div>
+
+      <div class="included-card">
+        <div class="icon-box">✏️</div>
+        <div>
+          <h4>Fully Editable Files</h4>
+          <p>Open and edit directly in your browser. Complete HTML, CSS, and source text included for full control.</p>
+        </div>
+      </div>
+
+      <div class="included-card">
+        <div class="icon-box">⚡</div>
+        <div>
+          <h4>Instant Download Access</h4>
+          <p>Receive your complete ZIP package in your inbox immediately after payment. No waiting or subscriptions.</p>
+        </div>
+      </div>
+
+      <div class="included-card">
+        <div class="icon-box">🔄</div>
+        <div>
+          <h4>Lifetime Updates & Support</h4>
+          <p>Free updates whenever tax guidelines, rates, or template layout formats are updated.</p>
+        </div>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 Your Business Name. All rights reserved.</p>
+  </section>
+
+  <!-- 6. TEMPLATE PREVIEWS GRID -->
+  <section id="templates" class="section container" style="padding-top: 0;">
+    <div class="section-title">
+      <h2>Explore the Template Library</h2>
+      <p>Click any preview to test the interactive layout and print functionality.</p>
+    </div>
+
+    <div class="gallery-grid">
+      <!-- Card 1 -->
+      <div class="template-card">
+        <div class="preview-thumb">
+          <div class="doc-mockup">
+            <div class="mock-header"><div class="mock-title"></div><div class="mock-line" style="width:20%"></div></div>
+            <div class="mock-line"></div><div class="mock-line"></div>
+            <div class="mock-grid" style="margin-top:auto;"><div class="mock-line"></div><div class="mock-line"></div></div>
+          </div>
+        </div>
+        <div class="template-info">
+          <span class="template-tag">Starter Template</span>
+          <h3>Standard Billing Invoice</h3>
+          <p>Clean, itemized invoice with built-in subtotal and tax calculation rows.</p>
+          <a href="templates/invoice.html" class="view-link">Preview Template →</a>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="template-card">
+        <div class="preview-thumb">
+          <div class="doc-mockup">
+            <div class="mock-header"><div class="mock-title" style="width:40%"></div><div class="mock-title" style="width:30%"></div></div>
+            <div class="mock-line"></div><div class="mock-line"></div><div class="mock-line"></div>
+          </div>
+        </div>
+        <div class="template-info">
+          <span class="template-tag">Starter Template</span>
+          <h3>Official Payment Receipt</h3>
+          <p>Instant proof-of-payment document for cash, card, or bank transfers.</p>
+          <a href="templates/receipt.html" class="view-link">Preview Template →</a>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="template-card">
+        <div class="preview-thumb">
+          <div class="doc-mockup">
+            <div class="mock-title" style="width:70%; margin-bottom:6px;"></div>
+            <div class="mock-line"></div><div class="mock-line"></div><div class="mock-line"></div><div class="mock-line"></div>
+          </div>
+        </div>
+        <div class="template-info">
+          <span class="template-tag">Professional Template</span>
+          <h3>Client Project Proposal</h3>
+          <p>Executive summary, deliverables roadmap, timeline, and pricing breakdown.</p>
+          <a href="templates/proposal.html" class="view-link">Preview Template →</a>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="template-card">
+        <div class="preview-thumb">
+          <div class="doc-mockup">
+            <div class="mock-header"><div class="mock-title"></div></div>
+            <div class="mock-line"></div><div class="mock-line"></div><div class="mock-line"></div>
+          </div>
+        </div>
+        <div class="template-info">
+          <span class="template-tag">Professional Template</span>
+          <h3>Independent Contractor Agreement</h3>
+          <p>Formal service contract template outlining scope, terms, and payment terms.</p>
+          <a href="templates/contractor-agreement.html" class="view-link">Preview Template →</a>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="template-card">
+        <div class="preview-thumb">
+          <div class="doc-mockup">
+            <div class="mock-title" style="width:50%;"></div>
+            <div class="mock-grid" style="margin-top:8px;"><div class="mock-line"></div><div class="mock-line"></div><div class="mock-line"></div><div class="mock-line"></div></div>
+          </div>
+        </div>
+        <div class="template-info">
+          <span class="template-tag">Starter Template</span>
+          <h3>Weekly Employee Timesheet</h3>
+          <p>Log hours worked, overtime, and break times for weekly payroll.</p>
+          <a href="templates/timesheet.html" class="view-link">Preview Template →</a>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="template-card">
+        <div class="preview-thumb">
+          <div class="doc-mockup">
+            <div class="mock-header"><div class="mock-title"></div><div class="mock-line" style="width:30%"></div></div>
+            <div class="mock-line"></div><div class="mock-line"></div>
+          </div>
+        </div>
+        <div class="template-info">
+          <span class="template-tag">Starter Template</span>
+          <h3>Vehicle Mileage Tracker</h3>
+          <p>Tax-ready mileage record sheet with adjustable IRS mileage rates.</p>
+          <a href="templates/mileage-log.html" class="view-link">Preview Template →</a>
+        </div>
+      </div>
+
+      <!-- Card 7 -->
+      <div class="template-card">
+        <div class="preview-thumb">
+          <div class="doc-mockup">
+            <div class="mock-title" style="width:80%;"></div>
+            <div class="mock-line"></div><div class="mock-line"></div><div class="mock-line"></div>
+          </div>
+        </div>
+        <div class="template-info">
+          <span class="template-tag">Ultimate Template</span>
+          <h3>Client CRM & Database Log</h3>
+          <p>Keep track of active clients, contact information, projects, and billing status.</p>
+          <a href="templates/client-database.html" class="view-link">Preview Template →</a>
+        </div>
+      </div>
+
+      <!-- Card 8 -->
+      <div class="template-card">
+        <div class="preview-thumb">
+          <div class="doc-mockup">
+            <div class="mock-header"><div class="mock-title"></div></div>
+            <div class="mock-grid"><div class="mock-line"></div><div class="mock-line"></div></div>
+          </div>
+        </div>
+        <div class="template-info">
+          <span class="template-tag">Ultimate Template</span>
+          <h3>Profit & Loss Summary Sheet</h3>
+          <p>Monthly income and expense overview for financial health tracking.</p>
+          <a href="templates/profit-loss.html" class="view-link">Preview Template →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. IMPROVED PRICING CARDS -->
+  <section id="pricing" class="section pricing-bg">
+    <div class="container">
+      <div class="section-title">
+        <h2>Simple, Transparent Pricing</h2>
+        <p>One-time payment. Instant access. No recurring subscriptions.</p>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- Starter Tier -->
+        <div class="pricing-card">
+          <h3>Starter Bundle</h3>
+          <div class="desc">Essential templates to handle day-to-day business billing.</div>
+          <div class="price-wrap">
+            <span class="price-amount">$19</span>
+            <span class="price-period"> / one-time</span>
+          </div>
+          <ul class="feature-list">
+            <li><span class="check-icon">✓</span> 5 Core Starter Templates</li>
+            <li><span class="check-icon">✓</span> Invoice, Receipt & Timesheets</li>
+            <li><span class="check-icon">✓</span> Print to PDF Functionality</li>
+            <li><span class="check-icon">✓</span> Standard Customer Support</li>
+          </ul>
+          <a href="https://yourstore.gumroad.com/l/starter" class="btn btn-secondary">Buy Starter Bundle</a>
+        </div>
+
+        <!-- Ultimate Tier (FEATURED) -->
+        <div class="pricing-card featured">
+          <div class="popular-badge">⭐ Most Popular</div>
+          <h3>Ultimate Suite</h3>
+          <div class="desc">The complete toolkit with all templates and 50+ layout variations.</div>
+          <div class="price-wrap">
+            <span class="price-amount">$69</span>
+            <span class="price-period"> / one-time</span>
+          </div>
+          <ul class="feature-list">
+            <li><span class="check-icon">✓</span> <strong>All 16 Complete Templates</strong></li>
+            <li><span class="check-icon">✓</span> <strong>50+ Layout & Color Variations</strong></li>
+            <li><span class="check-icon">✓</span> Commercial Usage License</li>
+            <li><span class="check-icon">✓</span> Raw Source Code (HTML/CSS)</li>
+            <li><span class="check-icon">✓</span> Priority Customer Support</li>
+            <li><span class="check-icon">✓</span> Lifetime Template Updates</li>
+          </ul>
+          <a href="https://yourstore.gumroad.com/l/ultimate" class="btn btn-primary">Buy Ultimate Suite</a>
+        </div>
+
+        <!-- Professional Tier -->
+        <div class="pricing-card">
+          <h3>Professional Bundle</h3>
+          <div class="desc">For growing businesses needing contracts and proposals.</div>
+          <div class="price-wrap">
+            <span class="price-amount">$39</span>
+            <span class="price-period"> / one-time</span>
+          </div>
+          <ul class="feature-list">
+            <li><span class="check-icon">✓</span> 11 Professional Templates</li>
+            <li><span class="check-icon">✓</span> Includes Proposals & Contracts</li>
+            <li><span class="check-icon">✓</span> Customizable CSS Files</li>
+            <li><span class="check-icon">✓</span> Standard Customer Support</li>
+          </ul>
+          <a href="https://yourstore.gumroad.com/l/professional" class="btn btn-secondary">Buy Professional Bundle</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. PERSISTENT CALL TO ACTION BANNER -->
+  <div class="container">
+    <div class="cta-banner">
+      <h2>Ready to save hours on paperwork?</h2>
+      <p>Get instant access to all 16 templates and 50+ layout variations with a 14-day money-back guarantee.</p>
+      <a href="#pricing" class="btn btn-primary" style="font-size: 1.1rem; padding: 1rem 2.25rem;">Get the Ultimate Template Bundle</a>
+    </div>
+  </div>
+
+  <!-- 5. PROFESSIONAL FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4 style="font-size: 1.1rem; margin-bottom: 0.75rem;">Business Templates</h4>
+          <p style="color: #64748b; margin-top: 0;">Modern, clean, and customizable HTML/CSS documents designed for small businesses and freelancers.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Template Bundles</h4>
+          <ul class="footer-links">
+            <li><a href="#pricing">Starter Bundle ($19)</a></li>
+            <li><a href="#pricing">Professional Bundle ($39)</a></li>
+            <li><a href="#pricing">Ultimate Suite ($69)</a></li>
+            <li><a href="#templates">All 16 Templates</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Customer Support</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:support@yourdomain.com">Contact Support</a></li>
+            <li><a href="#pricing">FAQ & Licensing</a></li>
+            <li><a href="mailto:support@yourdomain.com">Custom Template Design</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Legal & Policies</h4>
+          <ul class="footer-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Refund Policy</a></li>
+            <li><a href="#">Licensing Terms</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Business Template Hub. All rights reserved.</p>
+      </div>
     </div>
   </footer>
 

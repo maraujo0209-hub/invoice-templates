@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Service Quote</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background: #f8fafc;
+      color: #0f172a;
+    }
+    .document-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 2.5rem;
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 2rem;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 1.5rem;
+    }
+    .logo-placeholder {
+      width: 200px;
+      height: 80px;
+      background: #f1f5f9;
+      border: 2px dashed #cbd5e1;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #64748b;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+    .meta-details {
+      text-align: right;
+    }
+    .meta-details h1 {
+      margin: 0 0 0.5rem 0;
+      font-size: 1.75rem;
+      color: #059669;
+      text-transform: uppercase;
+    }
+    .meta-details p {
+      margin: 0.25rem 0;
+      font-size: 0.875rem;
+      color: #475569;
+    }
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+    .info-block h3 {
+      margin: 0 0 0.5rem 0;
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      color: #64748b;
+    }
+    .info-block p {
+      margin: 0.2rem 0;
+      font-size: 0.9rem;
+      color: #1e293b;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 2rem;
+    }
+    th, td {
+      padding: 0.75rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid #e2e8f0;
+      font-size: 0.875rem;
+    }
+    th {
+      background: #f8fafc;
+      font-weight: 600;
+      color: #475569;
+    }
+    .text-right { text-align: right; }
+    .totals {
+      width: 300px;
+      margin-left: auto;
+      margin-bottom: 2rem;
+    }
+    .totals-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5rem 0;
+      font-size: 0.875rem;
+    }
+    .totals-row.grand-total {
+      border-top: 2px solid #0f172a;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #0f172a;
+    }
+    .notes-section {
+      background: #f8fafc;
+      padding: 1rem;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      color: #475569;
+      border: 1px solid #e2e8f0;
+    }
+    @media print {
+      body { background: #ffffff; padding: 0; }
+      .document-container { border: none; box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="document-container">
+    <div class="header">
+      <div class="logo-placeholder">BUSINESS LOGO</div>
+      <div class="meta-details">
+        <h1>Service Quote</h1>
+        <p><strong>Quote #:</strong> QT-2026-001</p>
+        <p><strong>Date Issued:</strong> July 21, 2026</p>
+        <p><strong>Valid Until:</strong> August 20, 2026</p>
+      </div>
+    </div>
+
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>Prepared By</h3>
+        <p><strong>Company Name LLC</strong></p>
+        <p>123 Business Way, Suite 100</p>
+        <p>City, State, ZIP</p>
+        <p>info@company.com | (555) 019-2834</p>
+      </div>
+      <div class="info-block">
+        <h3>Prepared For</h3>
+        <p><strong>Client / Business Name</strong></p>
+        <p>456 Client Avenue</p>
+        <p>City, State, ZIP</p>
+        <p>client@example.com | (555) 987-6543</p>
+      </div>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Service Description</th>
+          <th class="text-right">Qty / Hours</th>
+          <th class="text-right">Rate</th>
+          <th class="text-right">Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Initial Deep Cleaning & Sanitization</td>
+          <td class="text-right">8.0</td>
+          <td class="text-right">$45.00</td>
+          <td class="text-right">$360.00</td>
+        </tr>
+        <tr>
+          <td>Floor Maintenance & Polish Treatment</td>
+          <td class="text-right">1.0</td>
+          <td class="text-right">$150.00</td>
+          <td class="text-right">$150.00</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="totals">
+      <div class="totals-row">
+        <span>Subtotal:</span>
+        <span>$510.00</span>
+      </div>
+      <div class="totals-row">
+        <span>Estimated Tax (7%):</span>
+        <span>$35.70</span>
+      </div>
+      <div class="totals-row grand-total">
+        <span>Total Estimate:</span>
+        <span>$545.70</span>
+      </div>
+    </div>
+
+    <div class="notes-section">
+      <strong>Terms & Conditions:</strong>
+      <p style="margin:0.25rem 0 0 0;">This quote is valid until the date specified above. To accept this estimate, please sign and return via email. Work will be scheduled upon receipt of confirmation.</p>
+    </div>
+  </div>
+
+</body>
+</html>

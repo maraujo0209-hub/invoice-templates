@@ -1,100 +1,44 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>IRS Mileage Log</title>
+  <meta charset="UTF-8">
+  <title>Mileage Log Template</title>
   <style>
-    * { box-sizing: border-box; }
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      margin: 0;
-      padding: 2rem;
-      background: #f8fafc;
-      color: #0f172a;
-    }
-    .document-container {
-      max-width: 900px;
-      margin: 0 auto;
-      background: #ffffff;
-      padding: 2.5rem;
-      border-radius: 8px;
-      border: 1px solid #e2e8f0;
-      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
-    }
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: 2rem;
-      border-bottom: 2px solid #e2e8f0;
-      padding-bottom: 1.5rem;
-    }
-    .logo-placeholder {
-      width: 200px;
-      height: 80px;
-      background: #f1f5f9;
-      border: 2px dashed #cbd5e1;
-      border-radius: 6px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #64748b;
-      font-size: 0.85rem;
-      font-weight: 600;
-    }
-    .meta-details { text-align: right; }
-    .meta-details h1 {
-      margin: 0 0 0.5rem 0;
-      font-size: 1.75rem;
-      color: #6b21a8;
-      text-transform: uppercase;
-    }
-    .meta-details p { margin: 0.25rem 0; font-size: 0.875rem; color: #475569; }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-bottom: 2rem;
-    }
-    th, td {
-      padding: 0.75rem 0.5rem;
-      text-align: left;
-      border-bottom: 1px solid #e2e8f0;
-      font-size: 0.8rem;
-    }
-    th { background: #f8fafc; font-weight: 600; color: #475569; }
-    .text-right { text-align: right; }
-    .totals {
-      width: 320px;
-      margin-left: auto;
-    }
-    .totals-row {
-      display: flex;
-      justify-content: space-between;
-      padding: 0.4rem 0;
-      font-size: 0.875rem;
-    }
-    .totals-row.grand-total {
-      border-top: 2px solid #0f172a;
-      font-weight: 700;
-      font-size: 1.05rem;
-      color: #0f172a;
-    }
-    @media print {
-      body { background: #ffffff; padding: 0; }
-      .document-container { border: none; box-shadow: none; }
-    }
+    body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0; color: #1e293b; }
+    .doc-container { max-width: 900px; margin: 2rem auto; padding: 2rem; }
+    .header-block { display: flex; justify-content: space-between; margin-bottom: 2rem; border-bottom: 2px solid #e2e8f0; padding-bottom: 1rem; }
+    table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+    th, td { border: 1px solid #cbd5e1; padding: 0.5rem; text-align: left; font-size: 0.9rem; }
+    th { background: #f8fafc; }
   </style>
 </head>
 <body>
 
-  <div class="document-container">
-    <div class="header">
-      <div class="logo-placeholder">BUSINESS LOGO</div>
-      <div class="meta-details">
-        <h1>Mileage Log</h1>
-        <p><strong>IRS Reimbursement Log</strong></p>
-        <p><strong>Standard Rate:</strong> $0.67 / Mile</p>
+  <!-- GLOBAL NAV BAR -->
+  <div class="template-nav-bar">
+    <div class="nav-left">
+      <a href="../index.html" class="nav-btn btn-back">← Back to All Templates</a>
+      <span class="tier-tag tier-starter">Starter Template</span>
+    </div>
+    <div class="nav-right">
+      <button onclick="window.print()" class="nav-btn btn-secondary">🖨️ Print / Save PDF</button>
+      <a href="https://yourstore.gumroad.com/l/starter" class="nav-btn btn-primary">Get This Template</a>
+    </div>
+  </div>
+
+  <div class="preview-watermark">PREVIEW VERSION — EDITABLE FILE INCLUDED WITH PURCHASE</div>
+
+  <div class="doc-container">
+    <div class="header-block">
+      <div>
+        <h2>Business Mileage Log</h2>
+        <p><strong>Driver Name:</strong> ________________________</p>
+        <p><strong>Vehicle Model/Year:</strong> ________________________</p>
+      </div>
+      <div>
+        <p><strong>Tax Year:</strong> 20____</p>
+        <!-- UPDATED IRS RATE FIELD -->
+        <p><strong>Standard Mileage Rate:</strong> $____ / Mile (Applicable IRS Rate)</p>
       </div>
     </div>
 
@@ -103,42 +47,31 @@
         <tr>
           <th>Date</th>
           <th>Destination / Purpose</th>
-          <th class="text-right">Odometer Start</th>
-          <th class="text-right">Odometer End</th>
-          <th class="text-right">Total Miles</th>
-          <th class="text-right">Reimbursement</th>
+          <th>Start Odometer</th>
+          <th>End Odometer</th>
+          <th>Total Miles</th>
+          <th>Notes</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>07/10/2026</td>
-          <td>Client Site Visit - Supply Delivery</td>
-          <td class="text-right">45,100</td>
-          <td class="text-right">45,142</td>
-          <td class="text-right">42.0</td>
-          <td class="text-right">$28.14</td>
+          <td>2026-05-10</td>
+          <td>Client Site Visit - Project Brief</td>
+          <td>12,450</td>
+          <td>12,482</td>
+          <td>32</td>
+          <td>Roundtrip</td>
         </tr>
         <tr>
-          <td>07/14/2026</td>
-          <td>Vendor Office - Parts Pickup</td>
-          <td class="text-right">45,142</td>
-          <td class="text-right">45,160</td>
-          <td class="text-right">18.0</td>
-          <td class="text-right">$12.06</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
         </tr>
       </tbody>
     </table>
-
-    <div class="totals">
-      <div class="totals-row">
-        <span>Total Miles Tracked:</span>
-        <span>60.0 Miles</span>
-      </div>
-      <div class="totals-row grand-total">
-        <span>Total Reimbursement:</span>
-        <span>$40.20</span>
-      </div>
-    </div>
   </div>
 
 </body>

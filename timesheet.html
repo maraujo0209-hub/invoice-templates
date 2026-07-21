@@ -1,57 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Timesheet Log - Preview</title>
-    <style>
-        :root { --primary-color: #111111; --secondary-color: #4a5568; --accent-bg: #f8fafc; --border-color: #cbd5e1; --subtle-text: #64748b; }
-        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: var(--primary-color); margin: 0; padding: 0 20px 40px 20px; background-color: #f1f5f9; }
-        .preview-nav-bar { display: flex; justify-content: space-between; align-items: center; max-width: 8.5in; margin: 20px auto 0 auto; }
-        .back-link { color: var(--secondary-color); text-decoration: none; font-size: 14px; font-weight: 600; }
-        .preview-badge { background-color: #fee2e2; color: #dc2626; font-size: 11px; font-weight: 800; padding: 4px 10px; border-radius: 9999px; letter-spacing: 1px; }
-        .invoice-container { background-color: #ffffff; width: 8.5in; min-height: 11in; margin: 20px auto; padding: 1in; box-sizing: border-box; position: relative; box-shadow: 0 4px 20px rgba(0,0,0,0.05); overflow: hidden; }
-        .invoice-container::after { content: "WATERMARKED PREVIEW - NOT FOR COMMERCIAL USE"; position: absolute; top: 40%; left: 5%; right: 5%; font-size: 28px; font-weight: 900; color: rgba(220, 38, 38, 0.18); transform: rotate(-30deg); text-align: center; pointer-events: none; }
-        @media print { body { display: none !important; } }
-        .invoice-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 40px; }
-        .logo-placeholder { width: 250px; height: 100px; background-color: #e2e8f0; border: 2px dashed #cbd5e1; display: flex; flex-direction: column; align-items: center; justify-content: center; border-radius: 4px; font-size: 14px; font-weight: 700; color: #64748b; }
-        .invoice-title-area { text-align: right; }
-        .invoice-title-area h1 { font-size: 32px; font-weight: 700; margin: 0 0 5px 0; text-transform: uppercase; }
-        .meta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; text-align: right; font-size: 13px; }
-        .details-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 30px; font-size: 13px; }
-        .details-block h3 { font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--secondary-color); border-bottom: 1px solid var(--border-color); padding-bottom: 4px; margin: 0 0 8px 0; }
-        .details-block p { margin: 0 0 4px 0; color: #334155; }
-        .items-table { width: 100%; border-collapse: collapse; margin-bottom: 30px; }
-        .items-table th { background-color: var(--primary-color); color: #ffffff; font-size: 11px; text-transform: uppercase; padding: 10px; text-align: left; }
-        .items-table td { padding: 10px; font-size: 13px; border-bottom: 1px solid var(--border-color); color: #334155; }
-        .items-table tr:nth-child(even) td { background-color: var(--accent-bg); }
-        .invoice-footer { position: absolute; bottom: 1in; left: 1in; right: 1in; border-top: 1px solid var(--border-color); padding-top: 15px; display: flex; justify-content: space-between; font-size: 12px; color: var(--secondary-color); }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Timesheet - Tier 2 Pro</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-<div class="preview-nav-bar"><a href="./#templates" class="back-link">← Back to All Templates</a><div class="preview-badge">PREVIEW ONLY</div></div>
-<div class="invoice-container">
-    <div class="invoice-header">
-        <div class="logo-placeholder"><div>LOGO</div><div style="font-size: 10px; font-weight: normal; color: #94a3b8;">250 x 100</div></div>
-        <div class="invoice-title-area">
-            <h1>Timesheet Log</h1>
-            <div class="meta-grid" style="margin-top: 10px;">
-                <span style="font-weight:600;color:var(--subtle-text)">Pay Period:</span><span style="font-weight:700">July 16 – July 31</span>
-                <span style="font-weight:600;color:var(--subtle-text)">Total Hours:</span><span style="font-weight:700">24.0 Hrs</span>
+<body style="margin:0; padding:0; background-color:#f8fafc; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color:#0f172a; line-height:1.5;">
+
+  <header style="background-color:#ffffff; border-bottom:1px solid #e2e8f0; padding:0.75rem 1.5rem; position:sticky; top:0; z-index:100;">
+    <div style="max-width:1100px; margin:0 auto; display:flex; justify-content:space-between; align-items:center;">
+      <a href="index.html" style="font-size:1rem; font-weight:700; color:#7c3aed; text-decoration:none;"><i class="fa-solid fa-arrow-left"></i> Back to Hub</a>
+      <span style="background:#f3e8ff; color:#6b21a8; font-size:0.75rem; font-weight:700; padding:0.25rem 0.5rem; border-radius:4px;">Tier 2 Pro Template</span>
+    </div>
+  </header>
+
+  <main style="max-width:850px; margin:2rem auto; padding:0 1rem;">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem;">
+      <h1 style="font-size:1.5rem; font-weight:700; margin:0;">Employee Timesheet Log</h1>
+      <button type="button" onclick="window.print()" style="background:#7c3aed; color:#fff; border:none; padding:0.5rem 1rem; border-radius:6px; font-weight:600; cursor:pointer;"><i class="fa-solid fa-print"></i> Print / Save PDF</button>
+    </div>
+
+    <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:2.5rem; box-shadow:0 4px 6px -1px rgba(0,0,0,0.05);">
+      <table style="width:100%; border-collapse:collapse; margin-bottom:2rem; border-bottom:2px solid #e2e8f0; padding-bottom:1.5rem;">
+        <tr>
+          <td style="vertical-align:top; width:60%;">
+            <div style="width:160px; height:50px; border:2px dashed #cbd5e1; border-radius:6px; display:flex; align-items:center; justify-content:center; color:#64748b; font-size:0.85rem; background-color:#f8fafc; margin-bottom:1rem;">
+              <i class="fa-solid fa-image" style="margin-right:0.5rem;"></i> Business Logo
             </div>
-        </div>
-    </div>
-    <div class="details-grid">
-        <div class="details-block"><h3>Company / Employer</h3><p style="font-weight:700">Your Business Name</p><p>123 Business Street Suite 100</p><p>hr@yourcompany.com</p></div>
-        <div class="details-block"><h3>Employee Details</h3><p style="font-weight:700">Jane Doe</p><p>ID: EMP-042</p><p>Department: Operations & Services</p></div>
-    </div>
-    <table class="items-table">
-        <thead><tr><th>Date</th><th>Task / Project Description</th><th>Time In</th><th>Time Out</th><th style="text-align: right;">Total Hours</th></tr></thead>
+            <div style="font-size:0.875rem; color:#64748b;">
+              <strong style="font-size:1.125rem; color:#0f172a; display:block;" contenteditable="true">Your Business Name</strong>
+              <span contenteditable="true">Payroll Department | HR Operations</span>
+            </div>
+          </td>
+          <td style="vertical-align:top; text-align:right; width:40%;">
+            <h1 style="font-size:2rem; font-weight:800; color:#7c3aed; margin:0 0 0.5rem 0;">TIMESHEET</h1>
+            <p style="font-size:0.875rem; color:#334155; margin:0 0 0.25rem 0;"><strong>Employee:</strong> <span contenteditable="true">Jane Doe</span></p>
+            <p style="font-size:0.875rem; color:#334155; margin:0 0 0.25rem 0;"><strong>Pay Period:</strong> <span contenteditable="true">Jul 14 - Jul 21, 2026</span></p>
+          </td>
+        </tr>
+      </table>
+
+      <table style="width:100%; border-collapse:collapse; margin-bottom:2rem;">
+        <thead>
+          <tr style="background-color:#f1f5f9; border-bottom:2px solid #cbd5e1;">
+            <th style="text-align:left; padding:0.75rem; font-size:0.875rem;">Date</th>
+            <th style="text-align:left; padding:0.75rem; font-size:0.875rem;">Project / Job Location</th>
+            <th style="text-align:center; padding:0.75rem; font-size:0.875rem; width:90px;">Time In</th>
+            <th style="text-align:center; padding:0.75rem; font-size:0.875rem; width:90px;">Time Out</th>
+            <th style="text-align:right; padding:0.75rem; font-size:0.875rem; width:80px;">Hours</th>
+          </tr>
+        </thead>
         <tbody>
-            <tr><td>2026-07-20</td><td>Client Site Sanitation & Setup</td><td>08:00 AM</td><td>04:00 PM</td><td style="text-align: right;">8.0</td></tr>
-            <tr><td>2026-07-21</td><td>Scheduled Commercial Service Work</td><td>08:00 AM</td><td>04:00 PM</td><td style="text-align: right;">8.0</td></tr>
-            <tr><td>2026-07-22</td><td>Deep Facility Treatment</td><td>08:00 AM</td><td>04:00 PM</td><td style="text-align: right;">8.0</td></tr>
+          <tr style="border-bottom:1px solid #e2e8f0;">
+            <td contenteditable="true" style="padding:0.75rem; font-size:0.875rem;">2026-07-20</td>
+            <td contenteditable="true" style="padding:0.75rem; font-size:0.875rem;">Commercial Office Site A</td>
+            <td contenteditable="true" style="padding:0.75rem; font-size:0.875rem; text-align:center;">08:00 AM</td>
+            <td contenteditable="true" style="padding:0.75rem; font-size:0.875rem; text-align:center;">04:30 PM</td>
+            <td contenteditable="true" style="padding:0.75rem; font-size:0.875rem; text-align:right;">8.0</td>
+          </tr>
         </tbody>
-    </table>
-    <div class="invoice-footer"><div>Supervisor Signature: ___________________________</div><div>Page 1 of 1</div></div>
-</div>
+      </table>
+
+      <div style="display:flex; justify-content:space-between; align-items:center; background-color:#f8fafc; border:1px solid #e2e8f0; border-radius:6px; padding:1rem; margin-bottom:2rem;">
+        <span style="font-size:0.875rem; font-weight:700; color:#0f172a;">Total Hours Worked:</span>
+        <span contenteditable="true" style="font-size:1.25rem; font-weight:800; color:#7c3aed;">8.0 Hrs</span>
+      </div>
+
+      <div style="border-top:1px solid #e2e8f0; padding-top:1.5rem; display:flex; justify-content:space-between; gap:2rem;">
+        <div style="flex:1;">
+          <p style="font-size:0.85rem; font-weight:600; color:#0f172a; margin:0 0 0.5rem 0;">Employee Signature:</p>
+          <div style="border-bottom:1px solid #cbd5e1; height:35px;"></div>
+        </div>
+        <div style="flex:1;">
+          <p style="font-size:0.85rem; font-weight:600; color:#0f172a; margin:0 0 0.5rem 0;">Supervisor Approval:</p>
+          <div style="border-bottom:1px solid #cbd5e1; height:35px;"></div>
+        </div>
+      </div>
+    </div>
+  </main>
 </body>
 </html>

@@ -3,829 +3,851 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Business Template Hub | Preview Dashboard</title>
+  
+  <!-- SEO METADATA -->
+  <title>Professional Business Document Templates | Complete Library</title>
+  <meta name="description" content="All-in-one professional business document library: invoices, receipts, proposals, P&L statements, client databases, contracts, and tracking tools." />
+  <meta name="keywords" content="business templates, invoice template, profit and loss template, proposal template, client database, business tracker" />
+  <link rel="canonical" href="https://maraujo0209-hub.github.io/invoice-templates/" />
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Professional Business Document Library" />
+  <meta property="og:description" content="Everything you need to run your business professionally. Invoices, contracts, P&L trackers, proposals, and operational tools." />
+
   <style>
+    /* CSS VARIABLES & THEMING */
     :root {
-      --bg-dark: #0f172a;
-      --bg-sidebar: #1e293b;
-      --bg-card: #334155;
-      --bg-light: #f8fafc;
-      --accent-blue: #2563eb;
-      --accent-blue-hover: #1d4ed8;
+      --bg-main: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-hero: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --border-color: #e2e8f0;
+      --primary: #10b981;
+      --primary-dark: #059669;
+      --accent: #3b82f6;
+    }
+
+    body.dark-mode {
+      --bg-main: #0f172a;
+      --bg-card: #1e293b;
       --text-main: #f8fafc;
       --text-muted: #94a3b8;
       --border-color: #334155;
-      --accent-green: #10b981;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
+    /* BASE RESET */
+    * { box-sizing: border-box; transition: background-color 0.2s, color 0.2s, border-color 0.2s; }
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background-color: var(--bg-dark);
+      margin: 0; padding: 0;
+      background-color: var(--bg-main);
       color: var(--text-main);
-      display: flex;
-      height: 100vh;
-      overflow: hidden;
-    }
-
-    /* ================= SIDEBAR ================= */
-    aside {
-      width: 320px;
-      background-color: var(--bg-sidebar);
-      border-right: 1px solid var(--border-color);
-      display: flex;
-      flex-direction: column;
-      z-index: 10;
-    }
-
-    .sidebar-header {
-      padding: 1.25rem;
-      border-bottom: 1px solid var(--border-color);
-    }
-
-    .brand {
-      font-size: 1.2rem;
-      font-weight: 800;
-      color: var(--text-main);
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      letter-spacing: -0.02em;
-    }
-
-    .brand-tag {
-      font-size: 0.7rem;
-      background: var(--accent-blue);
-      color: #fff;
-      padding: 0.15rem 0.4rem;
-      border-radius: 4px;
-      text-transform: uppercase;
-      font-weight: 700;
-    }
-
-    .search-box {
-      margin-top: 1rem;
-      position: relative;
-    }
-
-    .search-input {
-      width: 100%;
-      padding: 0.6rem 0.8rem 0.6rem 2.2rem;
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: 6px;
-      color: var(--text-main);
-      font-size: 0.85rem;
-      outline: none;
-    }
-
-    .search-input::placeholder {
-      color: var(--text-muted);
-    }
-
-    .search-icon {
-      position: absolute;
-      left: 0.75rem;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 14px;
-      height: 14px;
-      stroke: var(--text-muted);
-    }
-
-    .category-filter {
-      display: flex;
-      gap: 0.5rem;
-      padding: 0.75rem 1.25rem;
-      border-bottom: 1px solid var(--border-color);
-      overflow-x: auto;
-    }
-
-    .cat-btn {
-      background: transparent;
-      border: 1px solid var(--border-color);
-      color: var(--text-muted);
-      padding: 0.35rem 0.65rem;
-      border-radius: 20px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      cursor: pointer;
-      white-space: nowrap;
-      transition: all 0.2s ease;
-    }
-
-    .cat-btn.active, .cat-btn:hover {
-      background: var(--accent-blue);
-      color: #fff;
-      border-color: var(--accent-blue);
-    }
-
-    .template-list {
-      flex: 1;
-      overflow-y: auto;
-      padding: 1rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-
-    .template-item {
-      padding: 0.85rem;
-      border-radius: 8px;
-      background: transparent;
-      border: 1px solid transparent;
-      cursor: pointer;
-      display: flex;
-      align-items: flex-start;
-      gap: 0.75rem;
-      transition: all 0.2s ease;
-    }
-
-    .template-item:hover {
-      background: var(--bg-card);
-    }
-
-    .template-item.active {
-      background: var(--bg-card);
-      border-color: var(--accent-blue);
-    }
-
-    .item-icon {
-      width: 32px;
-      height: 32px;
-      border-radius: 6px;
-      background: rgba(37, 99, 235, 0.1);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-
-    .template-item.active .item-icon {
-      background: var(--accent-blue);
-    }
-
-    .item-icon svg {
-      width: 16px;
-      height: 16px;
-      stroke: var(--accent-blue);
-    }
-
-    .template-item.active .item-icon svg {
-      stroke: #fff;
-    }
-
-    .item-details {
-      display: flex;
-      flex-direction: column;
-      gap: 0.2rem;
-    }
-
-    .item-title {
-      font-size: 0.875rem;
-      font-weight: 600;
-      color: var(--text-main);
-    }
-
-    .item-category {
-      font-size: 0.725rem;
-      color: var(--text-muted);
-    }
-
-    /* Sidebar Footer Promo */
-    .sidebar-footer {
-      padding: 1rem;
-      border-top: 1px solid var(--border-color);
-      background: rgba(15, 23, 42, 0.5);
-    }
-
-    .promo-card {
-      background: linear-gradient(135deg, #1e1b4b 0%, #311b92 100%);
-      border: 1px solid #4338ca;
-      padding: 1rem;
-      border-radius: 8px;
-      text-align: center;
-    }
-
-    .promo-title {
-      font-size: 0.85rem;
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 0.35rem;
-    }
-
-    .promo-desc {
-      font-size: 0.725rem;
-      color: #c7d2fe;
-      margin-bottom: 0.75rem;
-      line-height: 1.3;
-    }
-
-    .btn-promo {
-      width: 100%;
-      background: var(--accent-blue);
-      color: #fff;
-      border: none;
-      padding: 0.5rem;
-      border-radius: 6px;
-      font-size: 0.775rem;
-      font-weight: 700;
-      cursor: pointer;
-      transition: background 0.2s ease;
-    }
-
-    .btn-promo:hover {
-      background: var(--accent-blue-hover);
-    }
-
-    /* ================= MAIN CONTENT AREA ================= */
-    .main-wrapper {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      height: 100vh;
-      overflow: hidden;
-      background: #f1f5f9;
-    }
-
-    /* Top Control Bar */
-    header {
-      background: #ffffff;
-      border-bottom: 1px solid #e2e8f0;
-      padding: 0.85rem 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-      z-index: 5;
-    }
-
-    .header-info {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-
-    .active-title {
-      font-size: 1.1rem;
-      font-weight: 800;
-      color: var(--bg-dark);
-    }
-
-    .status-badge {
-      background: #fef3c7;
-      color: #b45309;
-      font-size: 0.7rem;
-      font-weight: 800;
-      padding: 0.2rem 0.5rem;
-      border-radius: 4px;
-      text-transform: uppercase;
-      letter-spacing: 0.03em;
-    }
-
-    .header-actions {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-
-    /* Replaced Unlock Button */
-    .btn-unlock {
-      background-color: var(--accent-blue);
-      color: #ffffff;
-      border: none;
-      padding: 0.6rem 1.25rem;
-      border-radius: 6px;
-      font-size: 0.875rem;
-      font-weight: 700;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
-      transition: all 0.2s ease;
-    }
-
-    .btn-unlock:hover {
-      background-color: var(--accent-blue-hover);
-      transform: translateY(-1px);
-    }
-
-    .btn-unlock:active {
-      transform: translateY(0);
-    }
-
-    /* CSS Guard: Strip any legacy print or download triggers */
-    .btn-print,
-    .btn-download,
-    .action-buttons,
-    button[onclick*="print"],
-    button[onclick*="download"] {
-      display: none !important;
-      visibility: hidden !important;
-      pointer-events: none !important;
-    }
-
-    /* Preview Iframe Container */
-    .iframe-container {
-      flex: 1;
-      width: 100%;
-      height: calc(100vh - 65px);
-      background: #cbd5e1;
-      position: relative;
-    }
-
-    iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-
-    /* Unlock Modal Overlay */
-    .modal-backdrop {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: rgba(15, 23, 42, 0.75);
-      backdrop-filter: blur(4px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.25s ease;
-      z-index: 999;
-    }
-
-    .modal-backdrop.open {
-      opacity: 1;
-      pointer-events: auto;
-    }
-
-    .modal-box {
-      background: #ffffff;
-      border-radius: 12px;
-      padding: 2.5rem;
-      max-width: 520px;
-      width: 90%;
-      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-      text-align: center;
-      color: var(--bg-dark);
-    }
-
-    .modal-icon-wrap {
-      width: 56px;
-      height: 56px;
-      background: rgba(37, 99, 235, 0.1);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 1.25rem auto;
-    }
-
-    .modal-icon-wrap svg {
-      width: 28px;
-      height: 28px;
-      stroke: var(--accent-blue);
-    }
-
-    .modal-heading {
-      font-size: 1.5rem;
-      font-weight: 800;
-      margin-bottom: 0.75rem;
-      color: var(--bg-dark);
-    }
-
-    .modal-text {
-      font-size: 0.925rem;
-      color: #64748b;
       line-height: 1.5;
-      margin-bottom: 1.75rem;
     }
 
-    .modal-features {
-      text-align: left;
-      background: #f8fafc;
-      padding: 1rem 1.25rem;
-      border-radius: 8px;
-      margin-bottom: 1.75rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-      font-size: 0.85rem;
-      color: #334155;
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 1.25rem; }
+    .text-center { text-align: center; }
+    .section-title { font-size: 2.25rem; font-weight: 800; margin-bottom: 0.5rem; text-align: center; letter-spacing: -0.02em; }
+    .section-subtitle { text-align: center; color: var(--text-muted); max-width: 680px; margin: 0 auto 2.5rem auto; font-size: 1.1rem; }
+
+    /* HEADER & NAV */
+    .top-nav {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1rem 0; border-bottom: 1px solid var(--border-color); background: var(--bg-card);
+    }
+    .brand-logo { font-weight: 800; font-size: 1.3rem; color: var(--text-main); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; }
+    .brand-logo span { background: var(--primary); color: #fff; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.8rem; text-transform: uppercase; }
+    .nav-actions { display: flex; gap: 1rem; align-items: center; }
+    .theme-toggle {
+      background: none; border: 1px solid var(--border-color); color: var(--text-main);
+      padding: 0.4rem 0.8rem; border-radius: 6px; cursor: pointer; font-weight: 600;
     }
 
-    .feat-item {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
+    /* HERO SECTION */
+    .hero-section {
+      background: var(--bg-hero); color: #ffffff;
+      padding: 5rem 1rem 4rem 1rem; text-align: center;
+    }
+    .hero-section h1 { font-size: 3rem; font-weight: 800; margin: 0 0 1.25rem 0; letter-spacing: -0.03em; line-height: 1.15; }
+    .hero-subtitle { font-size: 1.25rem; color: #94a3b8; max-width: 780px; margin: 0 auto 2.25rem auto; line-height: 1.6; }
+    .hero-actions { display: flex; justify-content: center; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap; }
+    .btn-hero-primary {
+      background: var(--primary); color: #ffffff; padding: 0.95rem 1.85rem;
+      border-radius: 8px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; font-size: 1.05rem;
+    }
+    .btn-hero-primary:hover { background: var(--primary-dark); }
+    .btn-hero-secondary {
+      background: #334155; color: #ffffff; padding: 0.95rem 1.85rem;
+      border-radius: 8px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; font-size: 1.05rem;
     }
 
-    .feat-item svg {
-      width: 16px;
-      height: 16px;
-      stroke: var(--accent-green);
-      flex-shrink: 0;
+    /* TRUST BADGES BAR */
+    .trust-badges { background: var(--bg-card); border-bottom: 1px solid var(--border-color); padding: 1.5rem 0; }
+    .trust-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; text-align: center; }
+    .trust-item h4 { margin: 0.25rem 0 0 0; font-size: 0.95rem; color: var(--text-main); }
+    .trust-item p { margin: 0; font-size: 0.8rem; color: var(--text-muted); }
+    .trust-icon { font-size: 1.5rem; }
+
+    /* SECTION BLOCK */
+    .section-block { padding: 4.5rem 0; border-bottom: 1px solid var(--border-color); }
+
+    /* PRICING CARDS */
+    .pricing-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;
+      align-items: stretch; margin-top: 1.5rem;
+    }
+    .price-card {
+      background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 14px;
+      padding: 2.25rem; display: flex; flex-direction: column; position: relative;
+    }
+    .price-card.ultimate-card {
+      border: 2px solid var(--primary);
+      box-shadow: 0 15px 35px -5px rgba(16, 185, 129, 0.2);
+      background: linear-gradient(180deg, var(--bg-card) 0%, rgba(16, 185, 129, 0.03) 100%);
+    }
+    .badge-ultimate {
+      position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+      background: var(--primary); color: #fff; font-size: 0.8rem; font-weight: 800;
+      padding: 0.3rem 0.85rem; border-radius: 50px; text-transform: uppercase; letter-spacing: 0.05em;
+    }
+    .price-card h3 { font-size: 1.6rem; margin: 0 0 0.25rem 0; }
+    .price-target { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.25rem; font-weight: 600; }
+    .price-amount { font-size: 2.75rem; font-weight: 800; margin-bottom: 1.25rem; display: flex; align-items: baseline; gap: 0.25rem; }
+    .price-amount span { font-size: 0.9rem; font-weight: 500; color: var(--text-muted); }
+    
+    .included-list-title { font-size: 0.8rem; font-weight: 800; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.05em; margin-bottom: 0.75rem; }
+    .price-features { list-style: none; padding: 0; margin: 0 0 2rem 0; flex: 1; }
+    .price-features li { padding: 0.45rem 0; border-bottom: 1px dashed var(--border-color); font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; color: var(--text-main); }
+    .price-features li strong { font-weight: 700; }
+    
+    .btn-price {
+      width: 100%; text-align: center; padding: 0.9rem; border-radius: 8px; font-weight: 700;
+      text-decoration: none; cursor: pointer; display: block; border: none; font-size: 1rem;
+    }
+    .btn-price-primary { background: var(--primary); color: #ffffff; }
+    .btn-price-primary:hover { background: var(--primary-dark); }
+    .btn-price-secondary { background: var(--text-main); color: var(--bg-card); }
+
+    /* CATEGORY GALLERY & CARDS */
+    .category-title {
+      font-size: 1.5rem; font-weight: 800; margin: 2.5rem 0 1.25rem 0; display: flex; align-items: center; gap: 0.6rem;
+      border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;
+    }
+    .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; }
+    
+    .template-card {
+      background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px;
+      overflow: hidden; display: flex; flex-direction: column; position: relative;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .template-card:hover { transform: translateY(-3px); box-shadow: 0 10px 20px -5px rgba(0,0,0,0.08); }
+    
+    .card-preview-thumb {
+      background: #f1f5f9; height: 160px; padding: 1rem; border-bottom: 1px solid var(--border-color);
+      display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
+      position: relative;
+    }
+    body.dark-mode .card-preview-thumb { background: #0b1329; }
+    
+    .thumb-icon { font-size: 2.25rem; margin-bottom: 0.25rem; }
+    .card-tier-badge {
+      position: absolute; top: 10px; right: 10px; font-size: 0.7rem; font-weight: 800;
+      padding: 0.2rem 0.5rem; border-radius: 4px; text-transform: uppercase;
+    }
+    .tier-starter { background: #e2e8f0; color: #334155; }
+    .tier-pro { background: #dbeafe; color: #1e40af; }
+    .tier-ultimate { background: #d1fae5; color: #065f46; }
+
+    .card-body { padding: 1.25rem; flex: 1; display: flex; flex-direction: column; }
+    .card-title { font-size: 1.15rem; font-weight: 700; margin: 0 0 0.4rem 0; color: var(--text-main); }
+    .card-desc { font-size: 0.875rem; color: var(--text-muted); margin-bottom: 1rem; line-height: 1.4; flex: 1; }
+    
+    .card-actions { display: flex; gap: 0.5rem; margin-top: auto; }
+    .btn-card {
+      flex: 1; text-align: center; padding: 0.65rem; border-radius: 6px; font-weight: 600;
+      font-size: 0.85rem; text-decoration: none; cursor: pointer; display: inline-flex; align-items: center; justify-content: center;
+    }
+    .btn-preview-card { background: var(--bg-main); color: var(--text-main); border: 1px solid var(--border-color); }
+    .btn-preview-card:hover { border-color: var(--text-main); }
+    .btn-use-card { background: var(--text-main); color: var(--bg-card); border: none; }
+    .btn-use-card:hover { opacity: 0.9; }
+
+    /* WHY BUY VS FREE TABLE/CARDS */
+    .vs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+    .vs-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 1.75rem; }
+    .vs-card.paid { border: 2px solid var(--primary); background: linear-gradient(180deg, var(--bg-card) 0%, rgba(16, 185, 129, 0.02) 100%); }
+    .vs-card h3 { margin-top: 0; font-size: 1.3rem; }
+    .vs-list { list-style: none; padding: 0; margin: 0; }
+    .vs-list li { padding: 0.6rem 0; border-bottom: 1px solid var(--border-color); font-size: 0.925rem; display: flex; align-items: center; gap: 0.5rem; }
+
+    /* MODAL PREVIEW */
+    .modal {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(15, 23, 42, 0.85); z-index: 20000;
+      display: flex; align-items: center; justify-content: center; padding: 1rem;
+    }
+    .modal-content {
+      background: var(--bg-card); width: 100%; max-width: 1050px; height: 92vh;
+      border-radius: 12px; overflow: hidden; display: flex; flex-direction: column;
+    }
+    .modal-header {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1rem 1.5rem; background: #0f172a; color: #ffffff;
+    }
+    .modal-actions { display: flex; gap: 0.5rem; }
+    .btn-modal-action {
+      background: #1e293b; color: #fff; border: 1px solid #475569;
+      padding: 0.4rem 0.85rem; border-radius: 6px; font-size: 0.85rem; cursor: pointer;
+      text-decoration: none; display: inline-flex; align-items: center;
+    }
+    .modal-body { flex: 1; border: none; width: 100%; height: 100%; background: #fff; }
+
+    /* ROADMAP BOX */
+    .roadmap-box {
+      background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 14px; padding: 2.5rem;
+      max-width: 900px; margin: 0 auto;
+    }
+    .upcoming-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.75rem; margin-top: 1.5rem; text-align: left;
+    }
+    .upcoming-item {
+      background: var(--bg-main); padding: 0.75rem 1rem; border-radius: 6px; border: 1px solid var(--border-color);
+      font-size: 0.875rem; font-weight: 600; display: flex; align-items: center; gap: 0.5rem; color: var(--text-muted);
     }
 
-    .modal-btn-group {
-      display: flex;
-      gap: 0.75rem;
-      justify-content: center;
-    }
+    /* FAQ SECTION */
+    .faq-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; }
+    .faq-item { background: var(--bg-card); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--border-color); }
+    .faq-item h4 { margin: 0 0 0.5rem 0; font-size: 1.05rem; }
+    .faq-item p { margin: 0; font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; }
 
-    .btn-cancel {
-      background: #f1f5f9;
-      color: #64748b;
-      border: 1px solid #cbd5e1;
-      padding: 0.65rem 1.25rem;
-      border-radius: 6px;
-      font-weight: 600;
-      font-size: 0.875rem;
-      cursor: pointer;
-    }
-
-    .btn-cancel:hover {
-      background: #e2e8f0;
-    }
-
-    /* Mobile Responsive Toggle */
-    .mobile-menu-toggle {
-      display: none;
-      background: transparent;
-      border: none;
-      cursor: pointer;
-      color: var(--bg-dark);
-    }
+    /* FOOTER */
+    .site-footer { background: #0f172a; color: #94a3b8; padding: 4rem 0 2rem 0; font-size: 0.9rem; }
+    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 2rem; margin-bottom: 2.5rem; }
+    .footer-grid h4 { color: #ffffff; margin-bottom: 1rem; margin-top: 0; }
+    .footer-grid a { color: #94a3b8; text-decoration: none; display: block; margin-bottom: 0.5rem; }
+    .footer-grid a:hover { color: #ffffff; }
 
     @media (max-width: 768px) {
-      body {
-        flex-direction: column;
-      }
-      aside {
-        width: 100%;
-        height: auto;
-        max-height: 40vh;
-      }
-      .mobile-menu-toggle {
-        display: block;
-      }
+      .hero-section h1 { font-size: 2.25rem; }
+      .hero-actions { flex-direction: column; }
     }
   </style>
 </head>
 <body>
 
-  <!-- ================= SIDEBAR ================= -->
-  <aside>
-    <div class="sidebar-header">
-      <div class="brand">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-        <span>BizTemplates</span>
-        <span class="brand-tag">Pro</span>
-      </div>
+  <!-- TOP NAVIGATION BAR -->
+  <header style="background: var(--bg-card);">
+    <div class="container">
+      <nav class="top-nav">
+        <a href="#" class="brand-logo">BizTemplates <span>Pro Toolkit</span></a>
+        <div class="nav-actions">
+          <button class="theme-toggle" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+        </div>
+      </nav>
+    </div>
+  </header>
 
-      <div class="search-box">
-        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        <input type="text" id="searchInput" class="search-input" placeholder="Search 16 templates..." onkeyup="filterTemplates()" />
+  <!-- HERO SECTION -->
+  <section class="hero-section">
+    <div class="container">
+      <h1>Professional Business Document Library</h1>
+      <p class="hero-subtitle">Everything you need to run your business professionally—from invoices and receipts to purchase orders, proposals, P&L reports, contracts, and tracking logs.</p>
+      <div class="hero-actions">
+        <a href="#pricing" class="btn-hero-primary">View Pricing & Plans</a>
+        <a href="#collection" class="btn-hero-secondary">Explore All 18 Templates</a>
       </div>
     </div>
+  </section>
 
-    <div class="category-filter">
-      <button class="cat-btn active" onclick="filterCategory('all', this)">All (16)</button>
-      <button class="cat-btn" onclick="filterCategory('Financial', this)">Financial</button>
-      <button class="cat-btn" onclick="filterCategory('Operations', this)">Operations</button>
-      <button class="cat-btn" onclick="filterCategory('HR', this)">HR & Legal</button>
-    </div>
-
-    <!-- Template Options List -->
-    <div class="template-list" id="templateList">
-      
-      <!-- 1. Employee Timesheet -->
-      <div class="template-item active" data-category="HR" data-file="timesheet.html" data-title="Employee Timesheet" onclick="selectTemplate(this)">
-        <div class="item-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+  <!-- TRUST BADGES BAR -->
+  <div class="trust-badges">
+    <div class="container">
+      <div class="trust-grid">
+        <div class="trust-item">
+          <div class="trust-icon">💳</div>
+          <h4>One-Time Purchase</h4>
+          <p>No monthly subscriptions</p>
         </div>
-        <div class="item-details">
-          <span class="item-title">Employee Timesheet</span>
-          <span class="item-category">HR & Payroll</span>
+        <div class="trust-item">
+          <div class="trust-icon">♾️</div>
+          <h4>Lifetime Access</h4>
+          <p>Download files anytime</p>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">💼</div>
+          <h4>Commercial Use</h4>
+          <p>Unlimited business use</p>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">🖨️</div>
+          <h4>Print-Ready</h4>
+          <p>Formatted Letter & A4</p>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">⚡</div>
+          <h4>Instant Download</h4>
+          <p>HTML, Word, Excel & PDF</p>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">🎁</div>
+          <h4>Future Releases</h4>
+          <p>Included with Ultimate</p>
         </div>
       </div>
-
-      <!-- 2. Tax Estimation -->
-      <div class="template-item" data-category="Financial" data-file="tax_estimation.html" data-title="Tax Estimation Sheet" onclick="selectTemplate(this)">
-        <div class="item-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-        </div>
-        <div class="item-details">
-          <span class="item-title">Tax Estimation Sheet</span>
-          <span class="item-category">Financial</span>
-        </div>
-      </div>
-
-      <!-- 3. Service Invoice -->
-      <div class="template-item" data-category="Financial" data-file="service_invoice.html" data-title="Service Invoice" onclick="selectTemplate(this)">
-        <div class="item-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><line x1="6" y1="8" x2="18" y2="8"/><line x1="6" y1="12" x2="12" y2="12"/></svg>
-        </div>
-        <div class="item-details">
-          <span class="item-title">Service Invoice</span>
-          <span class="item-category">Financial</span>
-        </div>
-      </div>
-
-      <!-- 4. Client Proposal & Quote -->
-      <div class="template-item" data-category="Operations" data-file="client_proposal.html" data-title="Client Proposal & Quote" onclick="selectTemplate(this)">
-        <div class="item-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-        </div>
-        <div class="item-details">
-          <span class="item-title">Client Proposal & Quote</span>
-          <span class="item-category">Operations</span>
-        </div>
-      </div>
-
-      <!-- 5. Work Order -->
-      <div class="template-item" data-category="Operations" data-file="work_order.html" data-title="Service Work Order" onclick="selectTemplate(this)">
-        <div class="item-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-        </div>
-        <div class="item-details">
-          <span class="item-title">Service Work Order</span>
-          <span class="item-category">Operations</span>
-        </div>
-      </div>
-
-      <!-- 6. Expense Report -->
-      <div class="template-item" data-category="Financial" data-file="expense_report.html" data-title="Monthly Expense Report" onclick="selectTemplate(this)">
-        <div class="item-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-        </div>
-        <div class="item-details">
-          <span class="item-title">Expense Report</span>
-          <span class="item-category">Financial</span>
-        </div>
-      </div>
-
-      <!-- 7. Subcontractor Agreement -->
-      <div class="template-item" data-category="HR" data-file="subcontractor_agreement.html" data-title="Subcontractor Agreement" onclick="selectTemplate(this)">
-        <div class="item-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><polyline points="17 11 19 13 23 9"/></svg>
-        </div>
-        <div class="item-details">
-          <span class="item-title">Subcontractor Agreement</span>
-          <span class="item-category">HR & Legal</span>
-        </div>
-      </div>
-
-      <!-- 8. Cleaning Inspection Checklist -->
-      <div class="template-item" data-category="Operations" data-file="inspection_checklist.html" data-title="Site Inspection Checklist" onclick="selectTemplate(this)">
-        <div class="item-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-        </div>
-        <div class="item-details">
-          <span class="item-title">Inspection Checklist</span>
-          <span class="item-category">Operations</span>
-        </div>
-      </div>
-
-      <!-- 9. Receipt Template -->
-      <div class="template-item" data-category="Financial" data-file="payment_receipt.html" data-title="Payment Receipt" onclick="selectTemplate(this)">
-        <div class="item-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1z"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="12" y2="14"/></svg>
-        </div>
-        <div class="item-details">
-          <span class="item-title">Payment Receipt</span>
-          <span class="item-category">Financial</span>
-        </div>
-      </div>
-
-      <!-- 10. Incident Report -->
-      <div class="template-item" data-category="Operations" data-file="incident_report.html" data-title="Incident & Damage Report" onclick="selectTemplate(this)">
-        <div class="item-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-        </div>
-        <div class="item-details">
-          <span class="item-title">Incident Report</span>
-          <span class="item-category">Operations</span>
-        </div>
-      </div>
-
-      <!-- 11. Customer Onboarding Form -->
-      <div class="template-item" data-category="HR" data-file="customer_onboarding.html" data-title="Client Intake Form" onclick="selectTemplate(this)">
-        <div class="item-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg>
-        </div>
-        <div class="item-details">
-          <span class="item-title">Client Intake Form</span>
-          <span class="item-category">HR & Legal</span>
-        </div>
-      </div>
-
-      <!-- 12. Equipment Maintenance Log -->
-      <div class="template-item" data-category="Operations" data-file="equipment_log.html" data-title="Equipment Log" onclick="selectTemplate(this)">
-        <div class="item-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
-        </div>
-        <div class="item-details">
-          <span class="item-title">Equipment Log</span>
-          <span class="item-category">Operations</span>
-        </div>
-      </div>
-
-      <!-- 13. Job Safety Analysis (JSA) -->
-      <div class="template-item" data-category="Operations" data-file="job_safety_analysis.html" data-title="Job Safety Analysis" onclick="selectTemplate(this)">
-        <div class="item-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        </div>
-        <div class="item-details">
-          <span class="item-title">Job Safety Analysis</span>
-          <span class="item-category">Operations</span>
-        </div>
-      </div>
-
-      <!-- 14. Profit & Loss Summary -->
-      <div class="template-item" data-category="Financial" data-file="profit_loss_summary.html" data-title="Monthly P&L Statement" onclick="selectTemplate(this)">
-        <div class="item-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-        </div>
-        <div class="item-details">
-          <span class="item-title">Profit & Loss Summary</span>
-          <span class="item-category">Financial</span>
-        </div>
-      </div>
-
-      <!-- 15. Employee Performance Review -->
-      <div class="template-item" data-category="HR" data-file="performance_review.html" data-title="Staff Evaluation Form" onclick="selectTemplate(this)">
-        <div class="item-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        </div>
-        <div class="item-details">
-          <span class="item-title">Performance Review</span>
-          <span class="item-category">HR & Legal</span>
-        </div>
-      </div>
-
-      <!-- 16. Service Cancellation Form -->
-      <div class="template-item" data-category="HR" data-file="service_cancellation.html" data-title="Service Cancellation Form" onclick="selectTemplate(this)">
-        <div class="item-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
-        </div>
-        <div class="item-details">
-          <span class="item-title">Service Cancellation</span>
-          <span class="item-category">HR & Legal</span>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="sidebar-footer">
-      <div class="promo-card">
-        <div class="promo-title">Ultimate Template Bundle</div>
-        <p class="promo-desc">Unlock all 16 editable HTML templates, CSS source code, and print-ready files.</p>
-        <button class="btn-promo" onclick="triggerUnlockModal()">Unlock All (Lifetime Access)</button>
-      </div>
-    </div>
-  </aside>
-
-  <!-- ================= MAIN DISPLAY ================= -->
-  <div class="main-wrapper">
-    <header>
-      <div class="header-info">
-        <button class="mobile-menu-toggle" onclick="toggleSidebar()">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-        </button>
-        <span class="active-title" id="activeDocTitle">Employee Timesheet</span>
-        <span class="status-badge">Protected Preview</span>
-      </div>
-
-      <div class="header-actions">
-        <button class="btn-unlock" onclick="triggerUnlockModal()">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-            <path d="M7 11V7a5 5 0 0 1 9.9-1"></path>
-          </svg>
-          Unlock Full Template
-        </button>
-      </div>
-    </header>
-
-    <div class="iframe-container">
-      <iframe id="docPreviewFrame" src="timesheet.html" title="Business Document Template Preview"></iframe>
     </div>
   </div>
 
-  <!-- ================= UNLOCK MODAL ================= -->
-  <div class="modal-backdrop" id="unlockModal">
-    <div class="modal-box">
-      <div class="modal-icon-wrap">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-          <path d="M7 11V7a5 5 0 0 1 9.9-1"></path>
-        </svg>
+  <main class="container">
+
+    <!-- PRICING PLANS -->
+    <section id="pricing" class="section-block">
+      <h2 class="section-title">Simple, Transparent Ownership</h2>
+      <p class="section-subtitle">Select the tier that matches your current scale. Pay once with zero recurring billing.</p>
+
+      <div class="pricing-grid">
+        
+        <!-- STARTER CARD -->
+        <div class="price-card">
+          <h3>Starter Pass</h3>
+          <div class="price-target">Essential billing tools for freelancers</div>
+          <div class="price-amount">$19 <span>one-time</span></div>
+          
+          <div class="included-list-title">Includes 4 Essential Templates:</div>
+          <ul class="price-features">
+            <li>✅ <strong>Invoice Template</strong></li>
+            <li>✅ <strong>Receipt Template</strong></li>
+            <li>✅ <strong>Purchase Order</strong></li>
+            <li>✅ <strong>Service Quote</strong></li>
+            <li style="color:var(--text-muted);">🔒 Instant file download</li>
+            <li style="color:var(--text-muted);">🔒 Commercial license included</li>
+          </ul>
+          <a href="#" class="btn-price btn-price-secondary">Get Starter Pass</a>
+        </div>
+
+        <!-- PROFESSIONAL CARD -->
+        <div class="price-card">
+          <h3>Professional Pass</h3>
+          <div class="price-target">Complete operational toolkit for small teams</div>
+          <div class="price-amount">$39 <span>one-time</span></div>
+          
+          <div class="included-list-title">Includes 10 Core Templates:</div>
+          <ul class="price-features">
+            <li>✅ <strong>Everything in Starter (4)</strong></li>
+            <li>✅ <strong>Project Proposal</strong></li>
+            <li>✅ <strong>Contractor Agreement</strong></li>
+            <li>✅ <strong>Work Order</strong></li>
+            <li>✅ <strong>Credit Memo</strong></li>
+            <li>✅ <strong>Expense Report</strong></li>
+            <li>✅ <strong>Timesheet Log</strong></li>
+            <li style="color:var(--text-muted);">🔒 Commercial license included</li>
+          </ul>
+          <a href="#" class="btn-price btn-price-secondary">Get Professional Pass</a>
+        </div>
+
+        <!-- ULTIMATE CARD -->
+        <div class="price-card ultimate-card">
+          <span class="badge-ultimate">⭐ Everything We Create</span>
+          <h3>Ultimate Library Pass</h3>
+          <div class="price-target">Complete document vault + every future release</div>
+          <div class="price-amount">$69 <span>one-time</span></div>
+          
+          <div class="included-list-title">Complete Unrestricted Access:</div>
+          <ul class="price-features">
+            <li>✅ <strong>Everything in Professional</strong></li>
+            <li>✅ <strong>All Current Templates (18 Total)</strong></li>
+            <li>✅ <strong>Every Future Template Release</strong></li>
+            <li>✅ <strong>Lifetime Library Updates</strong></li>
+            <li>🚀 <strong>66+ Total Templates Planned</strong></li>
+            <li>🔒 <strong>Unlimited Commercial License</strong></li>
+            <li>⚡ <strong>Priority Design Requests</strong></li>
+          </ul>
+          <a href="#" class="btn-price btn-price-primary">Unlock Everything. Forever.</a>
+        </div>
+
       </div>
-      <h2 class="modal-heading">Unlock Editable Source Code</h2>
-      <p class="modal-text">
-        Upgrade to the full business package to strip watermarks, edit HTML/CSS source code, insert custom logos, and export print-ready PDFs.
+    </section>
+
+    <!-- BROWSE THE COLLECTION (CATEGORIZED TEMPLATE GALLERY) -->
+    <section id="collection" class="section-block">
+      <h2 class="section-title">Browse the Collection</h2>
+      <p class="section-subtitle">Inspect every document in our library. Click any preview button to view the actual template live.</p>
+
+      <!-- CATEGORY 1: INVOICES & BILLING -->
+      <div class="category-title">💳 Invoices & Billing</div>
+      <div class="card-grid">
+        
+        <div class="template-card">
+          <div class="card-preview-thumb">
+            <span class="card-tier-badge tier-starter">Starter</span>
+            <div class="thumb-icon">📄</div>
+            <strong>Invoice</strong>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Professional Invoice</h3>
+            <p class="card-desc">Send polished invoices that strengthen your brand and ensure prompt payments.</p>
+            <div class="card-actions">
+              <button onclick="openPreview('./previews/invoice.html', 'Professional Invoice')" class="btn-card btn-preview-card">Preview Document</button>
+              <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="template-card">
+          <div class="card-preview-thumb">
+            <span class="card-tier-badge tier-starter">Starter</span>
+            <div class="thumb-icon">🧾</div>
+            <strong>Receipt</strong>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Payment Receipt</h3>
+            <p class="card-desc">Issue official payment confirmations to clients upon completion of sales or services.</p>
+            <div class="card-actions">
+              <button onclick="openPreview('./previews/receipt.html', 'Payment Receipt')" class="btn-card btn-preview-card">Preview Document</button>
+              <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="template-card">
+          <div class="card-preview-thumb">
+            <span class="card-tier-badge tier-starter">Starter</span>
+            <div class="thumb-icon">📦</div>
+            <strong>Purchase Order</strong>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Purchase Order (PO)</h3>
+            <p class="card-desc">Standardize vendor purchases and material requisitions for smooth operations.</p>
+            <div class="card-actions">
+              <button onclick="openPreview('./previews/purchase-order.html', 'Purchase Order')" class="btn-card btn-preview-card">Preview Document</button>
+              <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="template-card">
+          <div class="card-preview-thumb">
+            <span class="card-tier-badge tier-pro">Professional</span>
+            <div class="thumb-icon">💳</div>
+            <strong>Credit Memo</strong>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Credit Memo</h3>
+            <p class="card-desc">Issue formal billing adjustments, refunds, or service credits to customer accounts.</p>
+            <div class="card-actions">
+              <button onclick="openPreview('./previews/credit_memo.html', 'Credit Memo')" class="btn-card btn-preview-card">Preview Document</button>
+              <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="template-card">
+          <div class="card-preview-thumb">
+            <span class="card-tier-badge tier-starter">Starter</span>
+            <div class="thumb-icon">💬</div>
+            <strong>Service Quote</strong>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Service Quote</h3>
+            <p class="card-desc">Provide accurate cost estimates before commencing work to lock in client agreements.</p>
+            <div class="card-actions">
+              <button onclick="openPreview('./previews/service-quote.html', 'Service Quote')" class="btn-card btn-preview-card">Preview Document</button>
+              <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CATEGORY 2: BUSINESS DOCUMENTS -->
+      <div class="category-title">📝 Business Documents</div>
+      <div class="card-grid">
+
+        <div class="template-card">
+          <div class="card-preview-thumb">
+            <span class="card-tier-badge tier-pro">Professional</span>
+            <div class="thumb-icon">📋</div>
+            <strong>Project Proposal</strong>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Project Proposal</h3>
+            <p class="card-desc">Win more clients with structured, professional project scopes and deliverables.</p>
+            <div class="card-actions">
+              <button onclick="openPreview('./previews/project-proposal.html', 'Project Proposal')" class="btn-card btn-preview-card">Preview Document</button>
+              <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="template-card">
+          <div class="card-preview-thumb">
+            <span class="card-tier-badge tier-pro">Professional</span>
+            <div class="thumb-icon">🤝</div>
+            <strong>Contractor Agreement</strong>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Contractor Agreement</h3>
+            <p class="card-desc">Protect your business with straightforward subcontractor and freelance terms of service.</p>
+            <div class="card-actions">
+              <button onclick="openPreview('./previews/contractor-agreement.html', 'Contractor Agreement')" class="btn-card btn-preview-card">Preview Document</button>
+              <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="template-card">
+          <div class="card-preview-thumb">
+            <span class="card-tier-badge tier-pro">Professional</span>
+            <div class="thumb-icon">🛠️</div>
+            <strong>Work Order</strong>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Work Order</h3>
+            <p class="card-desc">Authorize field tasks, labor, and job site requirements cleanly for crews and technicians.</p>
+            <div class="card-actions">
+              <button onclick="openPreview('./previews/work-order.html', 'Work Order')" class="btn-card btn-preview-card">Preview Document</button>
+              <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="template-card">
+          <div class="card-preview-thumb">
+            <span class="card-tier-badge tier-ultimate">Ultimate</span>
+            <div class="thumb-icon">📐</div>
+            <strong>Estimating Sheet</strong>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Estimating Sheet</h3>
+            <p class="card-desc">Calculate labor, materials, and overhead costs to ensure profitable job pricing.</p>
+            <div class="card-actions">
+              <button onclick="openPreview('./previews/estimating-sheet.html', 'Estimating Sheet')" class="btn-card btn-preview-card">Preview Document</button>
+              <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CATEGORY 3: ACCOUNTING -->
+      <div class="category-title">📊 Accounting</div>
+      <div class="card-grid">
+
+        <div class="template-card">
+          <div class="card-preview-thumb">
+            <span class="card-tier-badge tier-ultimate">Ultimate</span>
+            <div class="thumb-icon">📈</div>
+            <strong>Profit & Loss</strong>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Profit & Loss Statement</h3>
+            <p class="card-desc">Track business performance with clear income and expenditure financial reports.</p>
+            <div class="card-actions">
+              <button onclick="openPreview('./previews/profit-and-loss.html', 'Profit & Loss')" class="btn-card btn-preview-card">Preview Document</button>
+              <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="template-card">
+          <div class="card-preview-thumb">
+            <span class="card-tier-badge tier-pro">Professional</span>
+            <div class="thumb-icon">💸</div>
+            <strong>Expense Report</strong>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Expense Report</h3>
+            <p class="card-desc">Log and categorize employee business expenses for quick reimbursement.</p>
+            <div class="card-actions">
+              <button onclick="openPreview('./previews/expense-report.html', 'Expense Report')" class="btn-card btn-preview-card">Preview Document</button>
+              <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="template-card">
+          <div class="card-preview-thumb">
+            <span class="card-tier-badge tier-ultimate">Ultimate</span>
+            <div class="thumb-icon">🧮</div>
+            <strong>Tax Estimation</strong>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Tax Estimation Sheet</h3>
+            <p class="card-desc">Estimate quarterly tax set-asides and avoid end-of-year tax surprises.</p>
+            <div class="card-actions">
+              <button onclick="openPreview('./previews/tax_estimation.html', 'Tax Estimation')" class="btn-card btn-preview-card">Preview Document</button>
+              <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CATEGORY 4: BUSINESS MANAGEMENT -->
+      <div class="category-title">⚙️ Business Management</div>
+      <div class="card-grid">
+
+        <div class="template-card">
+          <div class="card-preview-thumb">
+            <span class="card-tier-badge tier-ultimate">Ultimate</span>
+            <div class="thumb-icon">👥</div>
+            <strong>Client Database</strong>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Client Database</h3>
+            <p class="card-desc">Organize client contacts, communication history, and account notes in one place.</p>
+            <div class="card-actions">
+              <button onclick="openPreview('./previews/client-database.html', 'Client Database')" class="btn-card btn-preview-card">Preview Document</button>
+              <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="template-card">
+          <div class="card-preview-thumb">
+            <span class="card-tier-badge tier-ultimate">Ultimate</span>
+            <div class="thumb-icon">🎯</div>
+            <strong>Business Tracker</strong>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Business Tracker</h3>
+            <p class="card-desc">Monitor monthly revenue targets, sales pipelines, and key growth metrics.</p>
+            <div class="card-actions">
+              <button onclick="openPreview('./previews/business-tracker.html', 'Business Tracker')" class="btn-card btn-preview-card">Preview Document</button>
+              <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="template-card">
+          <div class="card-preview-thumb">
+            <span class="card-tier-badge tier-pro">Professional</span>
+            <div class="thumb-icon">⏱️</div>
+            <strong>Timesheet</strong>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Hourly Timesheet</h3>
+            <p class="card-desc">Record hourly work, project tasks, and billable client hours accurately.</p>
+            <div class="card-actions">
+              <button onclick="openPreview('./previews/timesheet.html', 'Timesheet')" class="btn-card btn-preview-card">Preview Document</button>
+              <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="template-card">
+          <div class="card-preview-thumb">
+            <span class="card-tier-badge tier-ultimate">Ultimate</span>
+            <div class="thumb-icon">🚗</div>
+            <strong>Mileage Log</strong>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Mileage Log</h3>
+            <p class="card-desc">Log travel miles for tax deductions and client travel expense claims.</p>
+            <div class="card-actions">
+              <button onclick="openPreview('./previews/mileage-log.html', 'Mileage Log')" class="btn-card btn-preview-card">Preview Document</button>
+              <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CATEGORY 5: REPORTS -->
+      <div class="category-title">📂 Reports & Account Summaries</div>
+      <div class="card-grid">
+
+        <div class="template-card">
+          <div class="card-preview-thumb">
+            <span class="card-tier-badge tier-ultimate">Ultimate</span>
+            <div class="thumb-icon">🏛️</div>
+            <strong>Account Statement</strong>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Account Statement</h3>
+            <p class="card-desc">Provide clients with detailed monthly summaries of outstanding balances and billing history.</p>
+            <div class="card-actions">
+              <button onclick="openPreview('./previews/account-statement.html', 'Account Statement')" class="btn-card btn-preview-card">Preview Document</button>
+              <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="template-card">
+          <div class="card-preview-thumb">
+            <span class="card-tier-badge tier-ultimate">Ultimate</span>
+            <div class="thumb-icon">📚</div>
+            <strong>Invoice Ledger</strong>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Invoice Ledger</h3>
+            <p class="card-desc">Maintain a centralized view of sent invoices, paid status, and outstanding receivables.</p>
+            <div class="card-actions">
+              <button onclick="openPreview('./previews/invoice-ledger.html', 'Invoice Ledger')" class="btn-card btn-preview-card">Preview Document</button>
+              <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- WHY BUY VS FREE TEMPLATES -->
+    <section class="section-block">
+      <h2 class="section-title">Why Buy Instead of Using Free Templates?</h2>
+      <p class="section-subtitle">Free web templates often cost you hours in broken layouts and unprofessional branding.</p>
+
+      <div class="vs-grid">
+        <div class="vs-card">
+          <h3 style="color: #ef4444;">❌ Free Web Templates</h3>
+          <ul class="vs-list">
+            <li>⚠️ Cluttered with external logos & watermarks</li>
+            <li>⚠️ Broken print stylesheets and page breaks</li>
+            <li>⚠️ Inconsistent design styles across documents</li>
+            <li>⚠️ Wastes hours fixing formulas & CSS alignment</li>
+            <li>⚠️ No ongoing updates or new form releases</li>
+          </ul>
+        </div>
+
+        <div class="vs-card paid">
+          <h3 style="color: var(--primary);">✅ BizTemplates Pro Library</h3>
+          <ul class="vs-list">
+            <li>✨ <strong>100% Brandable:</strong> Completely clean with your logo</li>
+            <li>✨ <strong>Print & PDF Ready:</strong> Perfectly calibrated layouts</li>
+            <li>✨ <strong>Consistent Branding:</strong> Uniform design system</li>
+            <li>✨ <strong>Saves Hours:</strong> Pre-built formulas & clean structure</li>
+            <li>✨ <strong>One-Time Purchase:</strong> Pay once, own for life</li>
+            <li>✨ <strong>Lifetime Access:</strong> Ongoing releases with Ultimate</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- GROWING ROADMAP SECTION -->
+    <section class="section-block">
+      <div class="roadmap-box text-center">
+        <h2 style="margin-top:0;">🚀 Active Development Roadmap</h2>
+        <p style="color:var(--text-muted); margin-bottom:1rem;">
+          Ultimate pass holders receive instant access to all 18 current templates today plus lifetime access to our upcoming pipeline as designs release toward our 66+ document goal.
+        </p>
+        
+        <div class="upcoming-grid">
+          <div class="upcoming-item"><span>🔄</span> Delivery Note</div>
+          <div class="upcoming-item"><span>🔄</span> Packing Slip</div>
+          <div class="upcoming-item"><span>🔄</span> Inventory Tracker</div>
+          <div class="upcoming-item"><span>🔄</span> Cash Flow Statement</div>
+          <div class="upcoming-item"><span>🔄</span> Sales Pipeline Report</div>
+          <div class="upcoming-item"><span>🔄</span> Subcontractor Scope</div>
+          <div class="upcoming-item"><span>🔄</span> Balance Sheet</div>
+          <div class="upcoming-item"><span>🔄</span> Commercial Lease Memo</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FREQUENTLY ASKED QUESTIONS -->
+    <section class="section-block">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <p class="section-subtitle">Clear answers regarding licensing, file types, and updates.</p>
+
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h4>Are these templates only invoices?</h4>
+          <p>No! Our collection covers the full spectrum of operational business needs: financial reports, proposals, client databases, timesheets, and contractor agreements.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Are there recurring monthly fees?</h4>
+          <p>No. All purchases are strict one-time payments granting lifetime ownership of the included files.</p>
+        </div>
+        <div class="faq-item">
+          <h4>How do Ultimate members receive new templates?</h4>
+          <p>Whenever a new document or tracker is designed and added to the pipeline, it automatically unlocks inside your Ultimate member download area at no extra cost.</p>
+        </div>
+        <div class="faq-item">
+          <h4>What file formats do I receive?</h4>
+          <p>You receive clean, customizable source files tailored to the template function—including print-ready HTML, Word (.docx), Excel (.xlsx), and PDF formats.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- LIVE PREVIEW MODAL -->
+  <div id="preview-modal" class="modal" style="display:none;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="modal-title" style="margin:0; font-size:1.1rem;">Template Live Preview</h3>
+        <div class="modal-actions">
+          <button class="btn-modal-action" onclick="printFrame()">🖨️ Print</button>
+          <a id="modal-download" href="#" download class="btn-modal-action">📥 Download</a>
+          <button class="btn-modal-action" style="background:#ef4444; border-color:#dc2626;" onclick="closePreview()">✕ Return to Collection</button>
+        </div>
+      </div>
+      <iframe id="preview-frame" class="modal-body" src=""></iframe>
+    </div>
+  </div>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>BizTemplates Pro</h4>
+          <p>Complete business document library designed for independent professionals, contractors, and small business operators.</p>
+        </div>
+        <div>
+          <h4>Collection</h4>
+          <a href="#collection">Invoices & Billing</a>
+          <a href="#collection">Business Documents</a>
+          <a href="#collection">Accounting</a>
+          <a href="#collection">Business Management</a>
+          <a href="#collection">Reports</a>
+        </div>
+        <div>
+          <h4>Plans & Access</h4>
+          <a href="#pricing">Starter Pass ($19)</a>
+          <a href="#pricing">Professional Pass ($39)</a>
+          <a href="#pricing">Ultimate Pass ($69)</a>
+        </div>
+        <div>
+          <h4>Support & Legal</h4>
+          <a href="/contact">Support Center</a>
+          <a href="/license">Commercial License</a>
+          <a href="/privacy">Privacy Policy</a>
+        </div>
+      </div>
+      <p class="text-center" style="margin:0; border-top: 1px solid #1e293b; padding-top: 1.5rem; font-size: 0.8rem;">
+        &copy; 2026 BizTemplates. All rights reserved.
       </p>
-
-      <div class="modal-features">
-        <div class="feat-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-          <span>16 Unlocked, Production-Ready HTML Templates</span>
-        </div>
-        <div class="feat-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-          <span>Remove Watermarks & Printing Restrictions</span>
-        </div>
-        <div class="feat-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-          <span>Custom Branding & Logo Upload Support</span>
-        </div>
-        <div class="feat-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-          <span>Lifetime Updates & Commercial License</span>
-        </div>
-      </div>
-
-      <div class="modal-btn-group">
-        <button class="btn-cancel" onclick="closeUnlockModal()">Continue Previewing</button>
-        <button class="btn-unlock" onclick="proceedToCheckout()">Get Lifetime Access</button>
-      </div>
     </div>
-  </div>
+  </footer>
 
-  <!-- ================= JAVASCRIPT LOGIC ================= -->
   <script>
-    function selectTemplate(element) {
-      const fileName = element.getAttribute('data-file');
-      const title = element.getAttribute('data-title');
-
-      document.getElementById('docPreviewFrame').src = fileName;
-      document.getElementById('activeDocTitle').innerText = title;
-
-      document.querySelectorAll('.template-item').forEach(item => {
-        item.classList.remove('active');
-      });
-      element.classList.add('active');
+    // PREVIEW MODAL LOGIC WITH 1-TO-1 FILE MAPPING
+    function openPreview(fileUrl, title) {
+      document.getElementById('modal-title').innerText = title + ' (Document Preview)';
+      document.getElementById('preview-frame').src = fileUrl;
+      document.getElementById('modal-download').href = fileUrl;
+      document.getElementById('preview-modal').style.display = 'flex';
+      document.body.style.overflow = 'hidden';
     }
 
-    function filterCategory(category, button) {
-      document.querySelectorAll('.cat-btn').forEach(btn => btn.classList.remove('active'));
-      button.classList.add('active');
-
-      const items = document.querySelectorAll('.template-item');
-      items.forEach(item => {
-        const itemCat = item.getAttribute('data-category');
-        if (category === 'all' || itemCat === category) {
-          item.style.display = 'flex';
-        } else {
-          item.style.display = 'none';
-        }
-      });
+    function closePreview() {
+      document.getElementById('preview-modal').style.display = 'none';
+      document.getElementById('preview-frame').src = '';
+      document.body.style.overflow = 'auto';
     }
 
-    function filterTemplates() {
-      const query = document.getElementById('searchInput').value.toLowerCase();
-      const items = document.querySelectorAll('.template-item');
-
-      items.forEach(item => {
-        const title = item.getAttribute('data-title').toLowerCase();
-        const cat = item.getAttribute('data-category').toLowerCase();
-        if (title.includes(query) || cat.includes(query)) {
-          item.style.display = 'flex';
-        } else {
-          item.style.display = 'none';
-        }
-      });
+    function printFrame() {
+      const frame = document.getElementById('preview-frame');
+      if (frame.contentWindow) frame.contentWindow.print();
     }
 
-    function triggerUnlockModal() {
-      document.getElementById('unlockModal').classList.add('open');
-    }
-
-    function closeUnlockModal() {
-      document.getElementById('unlockModal').classList.remove('open');
-    }
-
-    function proceedToCheckout() {
-      alert('Redirecting to checkout page...');
-      // window.location.href = 'https://yourcheckouturl.com';
-    }
-
-    function toggleSidebar() {
-      const aside = document.querySelector('aside');
-      aside.style.display = (aside.style.display === 'none' || !aside.style.display) ? 'flex' : 'none';
+    // THEME TOGGLE
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
     }
   </script>
-
 </body>
 </html>

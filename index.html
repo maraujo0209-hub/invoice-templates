@@ -1,622 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- SEO & Metadata Optimization -->
-    <title>Professional Business Templates Store | Editable Invoices, POs & Trackers</title>
-    <meta name="description" content="Download professionally designed, print-ready document templates for small business operations. Fully editable Word & LibreOffice formats for invoices, estimates, POs, and financial ledgers.">
-    <meta name="keywords" content="invoice templates, business document templates, word invoice, LibreOffice receipt, project estimate sheet, contractor agreement template">
-    
-    <!-- Product Schema for Search Engines -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org/",
-      "@type": "Product",
-      "name": "Professional Business Document Template Bundles",
-      "description": "Instant download archive of fully editable business templates including invoices, receipts, estimates, and operational tracksheets.",
-      "brand": {
-        "@type": "Brand",
-        "name": "Template Distribution Hub"
-      },
-      "offers": {
-        "@type": "AggregateOffer",
-        "priceCurrency": "USD",
-        "lowPrice": "9.99",
-        "highPrice": "49.99",
-        "offerCount": "3"
-      }
-    }
-    </script>
-
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            color: #111111;
-            background-color: #f8fafc;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
-        /* Hero Header Section */
-        header {
-            text-align: center;
-            border-bottom: 2px solid #111111;
-            padding-bottom: 40px;
-            margin-bottom: 40px;
-        }
-
-        h1 {
-            font-size: 36px;
-            font-weight: 800;
-            margin: 0 0 15px 0;
-            line-height: 1.2;
-        }
-
-        .hero-p {
-            font-size: 16px;
-            color: #4a5568;
-            max-width: 700px;
-            margin: 0 auto 25px auto;
-        }
-
-        .main-button {
-            display: inline-block;
-            padding: 12px 28px;
-            background: #111111;
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            transition: background 0.2s ease;
-        }
-
-        .main-button:hover {
-            background: #334155;
-        }
-
-        /* Value & Trust Bar */
-        .trust-banner {
-            background: #ffffff;
-            border: 1px solid #cbd5e1;
-            border-radius: 8px;
-            padding: 15px 20px;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-bottom: 30px;
-            text-align: center;
-            font-size: 13px;
-            font-weight: 600;
-            color: #334155;
-        }
-
-        .trust-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        /* Pricing Grid Layout */
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin: 20px 0 60px 0;
-        }
-
-        .pricing-card {
-            border: 1px solid #cbd5e1;
-            border-radius: 12px;
-            padding: 30px;
-            display: flex;
-            flex-direction: column;
-            background-color: #ffffff;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-            position: relative;
-        }
-
-        .pricing-card.featured {
-            border: 2px solid #111111;
-        }
-
-        .pricing-card.featured::before {
-            content: "BEST VALUE (SAVE OVER 75%)";
-            position: absolute;
-            top: -12px;
-            left: 30px;
-            background: #111111;
-            color: #ffffff;
-            font-size: 10px;
-            font-weight: 800;
-            padding: 2px 10px;
-            letter-spacing: 1px;
-            border-radius: 4px;
-        }
-
-        .tier-name {
-            font-size: 14px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: #4a5568;
-            margin: 0 0 4px 0;
-        }
-
-        .value-badge {
-            font-size: 12px;
-            color: #64748b;
-            text-decoration: line-through;
-            font-weight: 600;
-        }
-
-        .tier-price {
-            font-size: 36px;
-            font-weight: 800;
-            color: #111111;
-            margin: 0 0 4px 0;
-        }
-
-        .per-unit-cost {
-            font-size: 12px;
-            color: #16a34a;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-
-        .tier-features {
-            margin: 0 0 30px 0;
-            padding: 0;
-            list-style: none;
-            font-size: 14px;
-            color: #334155;
-            flex-grow: 1;
-        }
-
-        .tier-features li {
-            margin-bottom: 10px;
-            padding-left: 20px;
-            position: relative;
-        }
-
-        .tier-features li::before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #111111;
-            font-weight: bold;
-        }
-
-        .buy-button {
-            display: block;
-            text-align: center;
-            padding: 12px;
-            background: #111111;
-            color: #ffffff;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: bold;
-            font-size: 14px;
-            transition: background 0.2s ease;
-        }
-
-        .buy-button:hover {
-            background: #334155;
-        }
-
-        .pricing-card.featured .buy-button {
-            background: #16a34a;
-        }
-        .pricing-card.featured .buy-button:hover {
-            background: #15803d;
-        }
-
-        /* Information Panels */
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin-bottom: 60px;
-        }
-
-        .info-panel {
-            background: white;
-            border: 1px solid #cbd5e1;
-            border-radius: 8px;
-            padding: 24px;
-        }
-
-        .info-panel h3 {
-            margin-top: 0;
-            font-size: 15px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            border-bottom: 2px solid #111111;
-            padding-bottom: 8px;
-        }
-
-        .info-panel ul {
-            margin: 0;
-            padding-left: 20px;
-            font-size: 14px;
-            color: #334155;
-        }
-
-        .info-panel ul li {
-            margin-bottom: 8px;
-        }
-
-        /* Interactive Workspace Grid */
-        .template-section {
-            margin: 50px auto;
-            text-align: center;
-        }
-
-        .template-section h2 {
-            font-size: 26px;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: -0.5px;
-            margin-bottom: 5px;
-        }
-
-        .section-divider {
-            font-size: 13px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: #64748b;
-            margin: 40px 0 20px 0;
-            text-align: left;
-            border-bottom: 1px solid #cbd5e1;
-            padding-bottom: 6px;
-        }
-
-        .template-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .template-card {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            padding: 24px;
-            background: white;
-            border: 1px solid #dbe2ea;
-            border-radius: 12px;
-            text-decoration: none;
-            color: #111111;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
-            transition: 0.2s ease;
-            text-align: center;
-        }
-
-        .template-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-            border-color: #111111;
-        }
-
-        .template-card h3 {
-            margin: 0 0 10px 0;
-            font-size: 18px;
-            font-weight: 700;
-        }
-
-        .template-card p {
-            color: #64748b;
-            font-size: 13px;
-            margin: 0 0 16px 0;
-            min-height: 40px;
-            line-height: 1.4;
-        }
-
-        .template-card span.btn-preview {
-            display: inline-block;
-            padding: 8px 16px;
-            background: #f1f5f9;
-            color: #111111;
-            border: 1px solid #cbd5e1;
-            border-radius: 6px;
-            font-size: 13px;
-            font-weight: bold;
-            transition: all 0.2s ease;
-        }
-
-        .template-card:hover span.btn-preview {
-            background: #111111;
-            color: white;
-            border-color: #111111;
-        }
-
-        .card-badge {
-            font-size: 9px;
-            font-weight: 800;
-            text-transform: uppercase;
-            padding: 2px 6px;
-            border-radius: 3px;
-            letter-spacing: 0.5px;
-            margin-bottom: 12px;
-        }
-        .badge-starter { background-color: #e2e8f0; color: #334155; }
-        .badge-pro { background-color: #fee2e2; color: #991b1b; }
-        .badge-ultimate { background-color: #fae8ff; color: #701a75; }
-
-        footer {
-            margin-top: 60px;
-            border-top: 1px solid #cbd5e1;
-            padding-top: 20px;
-            font-size: 12px;
-            color: #64748b;
-            text-align: center;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Business Template Hub & Marketplace</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
+<body style="margin:0; padding:0; background-color:#f8fafc; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color:#0f172a; line-height:1.5;">
 
-<div class="container">
-    <!-- Hero Area -->
-    <header>
-        <h1>Professional Business Templates That Save You Time</h1>
-        <p class="hero-p">
-            Create polished invoices, estimates, quotes, receipts, work orders, and business records without starting from scratch. Choose your bundle, preview the interactive layouts below, and download fully editable Word & LibreOffice files instantly after purchase.
-        </p>
-        <a href="#templates" class="main-button">Preview Templates</a>
-    </header>
+  <!-- Global Header Navigation -->
+  <header style="background-color:#ffffff; border-bottom:1px solid #e2e8f0; padding:0.75rem 1.5rem; position:sticky; top:0; z-index:100;">
+    <div style="max-width:1100px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+      <a href="index.html" style="font-size:1.125rem; font-weight:700; color:#2563eb; text-decoration:none; display:flex; align-items:center; gap:0.5rem;">
+        <i class="fa-solid fa-chart-line"></i> Business Tracker Hub
+      </a>
+      <nav style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+        <a href="index.html" style="color:#2563eb; background-color:#eff6ff; text-decoration:none; font-size:0.875rem; font-weight:600; padding:0.5rem 0.75rem; border-radius:6px;">Templates</a>
+        <a href="client_database.html" style="color:#64748b; text-decoration:none; font-size:0.875rem; font-weight:500; padding:0.5rem 0.75rem; border-radius:6px;">Clients</a>
+        <a href="quote.html" style="color:#64748b; text-decoration:none; font-size:0.875rem; font-weight:500; padding:0.5rem 0.75rem; border-radius:6px;">Quotes</a>
+        <a href="estimate.html" style="color:#64748b; text-decoration:none; font-size:0.875rem; font-weight:500; padding:0.5rem 0.75rem; border-radius:6px;">Estimates</a>
+        <a href="work_order.html" style="color:#64748b; text-decoration:none; font-size:0.875rem; font-weight:500; padding:0.5rem 0.75rem; border-radius:6px;">Work Orders</a>
+        <a href="invoice.html" style="color:#64748b; text-decoration:none; font-size:0.875rem; font-weight:500; padding:0.5rem 0.75rem; border-radius:6px;">Invoices</a>
+        <a href="invoice_ledger.html" style="color:#64748b; text-decoration:none; font-size:0.875rem; font-weight:500; padding:0.5rem 0.75rem; border-radius:6px;">Ledger</a>
+      </nav>
+    </div>
+  </header>
 
-    <!-- Value & Trust Banner -->
-    <div class="trust-banner">
-        <div class="trust-item">⚡ <strong>Instant Delivery:</strong> Unlocked ZIP package delivered on checkout</div>
-        <div class="trust-item">📄 <strong>Fully Compatible:</strong> Opens cleanly in MS Word & LibreOffice</div>
-        <div class="trust-item">🛡️ <strong>Format Guarantee:</strong> File corrupt or won't open? We fix it or refund you</div>
+  <!-- Page Body -->
+  <main style="max-width:1100px; margin:2rem auto; padding:0 1rem;">
+    
+    <!-- Hero / Header Section -->
+    <div style="background-color:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:2rem; margin-bottom:2rem; box-shadow:0 4px 6px -1px rgba(0,0,0,0.05); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1.5rem;">
+      <div style="max-width:600px;">
+        <!-- Logo Placeholder Area -->
+        <div style="width:160px; height:50px; border:2px dashed #cbd5e1; border-radius:6px; display:flex; align-items:center; justify-content:center; color:#64748b; font-size:0.875rem; background-color:#f8fafc; margin-bottom:1rem;">
+          <i class="fa-solid fa-image" style="margin-right:0.5rem;"></i> Business Logo
+        </div>
+        <h1 style="font-size:1.875rem; font-weight:800; color:#0f172a; margin:0 0 0.5rem 0;">Business Documents & Templates</h1>
+        <p style="font-size:1rem; color:#64748b; margin:0;">Select a template preview card below to view, edit, or test document structures.</p>
+      </div>
     </div>
 
-    <!-- Pricing Section with Buy Buttons -->
-    <div class="pricing-grid">
-        <!-- Starter Tier -->
-        <div class="pricing-card">
-            <h3 class="tier-name">Starter Bundle</h3>
-            <div class="value-badge">Total Value: $40</div>
-            <div class="tier-price">$9.99</div>
-            <div class="per-unit-cost">Just $2.50 per template</div>
-            <ul class="tier-features">
-                <li>Professional Invoice</li>
-                <li>Project Estimate Sheet</li>
-                <li>Fixed Price Quote</li>
-                <li>Payment Receipt Form</li>
-                <li>Fully editable `.docx` files delivered immediately</li>
-            </ul>
-            <!-- UPDATE: Replace with your actual Payhip/Gumroad/Stripe link -->
-            <a href="https://payhip.com/b/YOUR-STARTER-LINK" class="buy-button">Buy Starter Bundle</a>
-        </div>
+    <!-- Template Cards Grid (13 Documents) -->
+    <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(300px, 1fr)); gap:1.5rem;">
 
-        <!-- Professional Tier -->
-        <div class="pricing-card">
-            <h3 class="tier-name">Professional Bundle</h3>
-            <div class="value-badge">Total Value: $90</div>
-            <div class="tier-price">$24.99</div>
-            <div class="per-unit-cost">Just $2.77 per template</div>
-            <ul class="tier-features">
-                <li><strong>Includes all 4 Starter files</strong></li>
-                <li>Purchase Order</li>
-                <li>Field Work Order</li>
-                <li>Hourly Timesheet Log</li>
-                <li>Expense Report</li>
-                <li>Independent Contractor Agreement</li>
-            </ul>
-            <!-- UPDATE: Replace with your actual Payhip/Gumroad/Stripe link -->
-            <a href="https://payhip.com/b/YOUR-PRO-LINK" class="buy-button">Buy Pro Bundle</a>
+      <!-- 1. Starter Invoice (Customer Billing) -->
+      <div style="background-color:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:1.5rem; box-shadow:0 2px 4px rgba(0,0,0,0.05); display:flex; flex-direction:column; justify-content:space-between;">
+        <div>
+          <div style="color:#2563eb; font-size:1.5rem; margin-bottom:0.75rem;"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+          <h3 style="font-size:1.125rem; font-weight:700; margin:0 0 0.5rem 0; color:#0f172a;">Starter Invoice</h3>
+          <p style="font-size:0.875rem; color:#64748b; margin:0 0 1.25rem 0;">Standard customer billing statement for completed jobs with line items and total balances.</p>
         </div>
+        <a href="invoice.html" style="display:block; text-align:center; background-color:#2563eb; color:#ffffff; text-decoration:none; padding:0.6rem 1rem; border-radius:6px; font-weight:600; font-size:0.875rem;">Preview Template</a>
+      </div>
 
-        <!-- Ultimate Tier -->
-        <div class="pricing-card featured">
-            <h3 class="tier-name">Ultimate Business</h3>
-            <div class="value-badge">Total Value: $200+</div>
-            <div class="tier-price">$49.99</div>
-            <div class="per-unit-cost">Less than $1.00 per template</div>
-            <ul class="tier-features">
-                <li><strong>Includes all 9 Pro & Starter files</strong></li>
-                <li>Quarterly Business Matrix</li>
-                <li>A/R Invoice Ledger Tool</li>
-                <li>Tax Estimation Sheet</li>
-                <li>Travel Mileage Log Register</li>
-                <li>Client Master Database</li>
-                <li><strong>Plus: 50+ Advanced Layout Variations</strong></li>
-            </ul>
-            <!-- UPDATE: Replace with your actual Payhip/Gumroad/Stripe link -->
-            <a href="https://payhip.com/b/YOUR-ULTIMATE-LINK" class="buy-button">Buy Ultimate Bundle</a>
+      <!-- 2. Ultimate Invoice Ledger (AR Tracking) -->
+      <div style="background-color:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:1.5rem; box-shadow:0 2px 4px rgba(0,0,0,0.05); display:flex; flex-direction:column; justify-content:space-between;">
+        <div>
+          <div style="color:#2563eb; font-size:1.5rem; margin-bottom:0.75rem;"><i class="fa-solid fa-book-bookmark"></i></div>
+          <h3 style="font-size:1.125rem; font-weight:700; margin:0 0 0.5rem 0; color:#0f172a;">Ultimate Invoice Ledger</h3>
+          <p style="font-size:0.875rem; color:#64748b; margin:0 0 1.25rem 0;">Accounts receivable tracking table showing invoice numbers, payment status, and due dates.</p>
         </div>
+        <a href="invoice_ledger.html" style="display:block; text-align:center; background-color:#2563eb; color:#ffffff; text-decoration:none; padding:0.6rem 1rem; border-radius:6px; font-weight:600; font-size:0.875rem;">Preview Template</a>
+      </div>
+
+      <!-- 3. Estimate -->
+      <div style="background-color:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:1.5rem; box-shadow:0 2px 4px rgba(0,0,0,0.05); display:flex; flex-direction:column; justify-content:space-between;">
+        <div>
+          <div style="color:#2563eb; font-size:1.5rem; margin-bottom:0.75rem;"><i class="fa-solid fa-calculator"></i></div>
+          <h3 style="font-size:1.125rem; font-weight:700; margin:0 0 0.5rem 0; color:#0f172a;">Job Estimate</h3>
+          <p style="font-size:0.875rem; color:#64748b; margin:0 0 1.25rem 0;">Itemized project cost estimation sheet for pending customer approvals.</p>
+        </div>
+        <a href="estimate.html" style="display:block; text-align:center; background-color:#2563eb; color:#ffffff; text-decoration:none; padding:0.6rem 1rem; border-radius:6px; font-weight:600; font-size:0.875rem;">Preview Template</a>
+      </div>
+
+      <!-- 4. Quote -->
+      <div style="background-color:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:1.5rem; box-shadow:0 2px 4px rgba(0,0,0,0.05); display:flex; flex-direction:column; justify-content:space-between;">
+        <div>
+          <div style="color:#2563eb; font-size:1.5rem; margin-bottom:0.75rem;"><i class="fa-solid fa-file-signature"></i></div>
+          <h3 style="font-size:1.125rem; font-weight:700; margin:0 0 0.5rem 0; color:#0f172a;">Service Quote</h3>
+          <p style="font-size:0.875rem; color:#64748b; margin:0 0 1.25rem 0;">Formal price quote document for potential clients and long-term service agreements.</p>
+        </div>
+        <a href="quote.html" style="display:block; text-align:center; background-color:#2563eb; color:#ffffff; text-decoration:none; padding:0.6rem 1rem; border-radius:6px; font-weight:600; font-size:0.875rem;">Preview Template</a>
+      </div>
+
+      <!-- 5. Work Order -->
+      <div style="background-color:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:1.5rem; box-shadow:0 2px 4px rgba(0,0,0,0.05); display:flex; flex-direction:column; justify-content:space-between;">
+        <div>
+          <div style="color:#2563eb; font-size:1.5rem; margin-bottom:0.75rem;"><i class="fa-solid fa-clipboard-list"></i></div>
+          <h3 style="font-size:1.125rem; font-weight:700; margin:0 0 0.5rem 0; color:#0f172a;">Work Order</h3>
+          <p style="font-size:0.875rem; color:#64748b; margin:0 0 1.25rem 0;">Operational checklist and job detail form for staff and field workers.</p>
+        </div>
+        <a href="work_order.html" style="display:block; text-align:center; background-color:#2563eb; color:#ffffff; text-decoration:none; padding:0.6rem 1rem; border-radius:6px; font-weight:600; font-size:0.875rem;">Preview Template</a>
+      </div>
+
+      <!-- 6. Client Database -->
+      <div style="background-color:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:1.5rem; box-shadow:0 2px 4px rgba(0,0,0,0.05); display:flex; flex-direction:column; justify-content:space-between;">
+        <div>
+          <div style="color:#2563eb; font-size:1.5rem; margin-bottom:0.75rem;"><i class="fa-solid fa-users"></i></div>
+          <h3 style="font-size:1.125rem; font-weight:700; margin:0 0 0.5rem 0; color:#0f172a;">Client Database</h3>
+          <p style="font-size:0.875rem; color:#64748b; margin:0 0 1.25rem 0;">Central directory to track client contact info, service addresses, and customer profiles.</p>
+        </div>
+        <a href="client_database.html" style="display:block; text-align:center; background-color:#2563eb; color:#ffffff; text-decoration:none; padding:0.6rem 1rem; border-radius:6px; font-weight:600; font-size:0.875rem;">Preview Template</a>
+      </div>
+
     </div>
-
-    <!-- Product Details and Disclosures -->
-    <div class="info-grid">
-        <div class="info-panel">
-            <h3>What You Get After Purchase</h3>
-            <ul>
-                <li><strong>Instantly Editable:</strong> Complete ZIP archive folder delivered immediately to your email.</li>
-                <li><strong>Print-Ready Optimization:</strong> Designed to fit standard A4 and Letter printing configurations perfectly without layout shifting.</li>
-                <li><strong>Interactive Previews:</strong> Online previews are static layout representations. Fully editable files are unlocked upon purchase.</li>
-            </ul>
-        </div>
-        <div class="info-panel">
-            <h3>Store Information & Support</h3>
-            <ul>
-                <li><strong>Commercial License:</strong> Permitted for personal operations or managing your small business workflows.</li>
-                <li><strong>Format Compatibility Guarantee:</strong> If any file fails to open or layout shifts in standard editors, our support team will resolve it or process a refund.</li>
-                <li><strong>Support Email:</strong> contact.shatteredoaths@gmail.com</li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- Interactive Workspace Grid -->
-    <section class="template-section" id="templates">
-        <h2>Interactive Preview Library</h2>
-        <p style="color: #64748b; max-width: 600px; margin: 0 auto 30px auto; font-size: 14px;">
-            Click on any item below to inspect its exact structural architecture and design framework.
-        </p>
-
-        <!-- STARTER DOCUMENTS -->
-        <div class="section-divider">Core Financial Templates (Starter Tier)</div>
-        <div class="template-grid">
-            <a href="invoice.html" class="template-card">
-                <div>
-                    <span class="card-badge badge-starter">Starter</span>
-                    <h3>Invoice</h3>
-                    <p>Create professional invoices with client details, itemized charges, taxes, and payment terms.</p>
-                </div>
-                <span class="btn-preview">Preview Layout &rarr;</span>
-            </a>
-
-            <a href="estimate.html" class="template-card">
-                <div>
-                    <span class="card-badge badge-starter">Starter</span>
-                    <h3>Estimate</h3>
-                    <p>Prepare estimated project costs and resource breakdowns for potential clients.</p>
-                </div>
-                <span class="btn-preview">Preview Layout &rarr;</span>
-            </a>
-
-            <a href="quote.html" class="template-card">
-                <div>
-                    <span class="card-badge badge-starter">Starter</span>
-                    <h3>Price Quote</h3>
-                    <p>Provide formal fixed-price quotes and service scopes to customers.</p>
-                </div>
-                <span class="btn-preview">Preview Layout &rarr;</span>
-            </a>
-
-            <a href="receipt.html" class="template-card">
-                <div>
-                    <span class="card-badge badge-starter">Starter</span>
-                    <h3>Receipt</h3>
-                    <p>Confirm and document that a client transaction or invoice payment was completed.</p>
-                </div>
-                <span class="btn-preview">Preview Layout &rarr;</span>
-            </a>
-        </div>
-
-        <!-- PROFESSIONAL OPERATIONS -->
-        <div class="section-divider">Operational Frameworks (Professional Tier)</div>
-        <div class="template-grid">
-            <a href="purchase_order.html" class="template-card">
-                <div>
-                    <span class="card-badge badge-pro">Professional</span>
-                    <h3>Purchase Order</h3>
-                    <p>Order custom products, raw materials, or hardware stock cleanly from suppliers.</p>
-                </div>
-                <span class="btn-preview">Preview Layout &rarr;</span>
-            </a>
-
-            <a href="work_order.html" class="template-card">
-                <div>
-                    <span class="card-badge badge-pro">Professional</span>
-                    <h3>Work Order</h3>
-                    <p>Assign field work, plan job site shifts, and track project execution details.</p>
-                </div>
-                <span class="btn-preview">Preview Layout &rarr;</span>
-            </a>
-
-            <a href="timesheet.html" class="template-card">
-                <div>
-                    <span class="card-badge badge-pro">Professional</span>
-                    <h3>Timesheet</h3>
-                    <p>Log employee or independent contractor shifts and hours for simple payroll processing.</p>
-                </div>
-                <span class="btn-preview">Preview Layout &rarr;</span>
-            </a>
-
-            <a href="expense_report.html" class="template-card">
-                <div>
-                    <span class="card-badge badge-pro">Professional</span>
-                    <h3>Expense Report</h3>
-                    <p>Record company purchases, track categories, and calculate reimbursement fields.</p>
-                </div>
-                <span class="btn-preview">Preview Layout &rarr;</span>
-            </a>
-
-            <a href="independent_contractor_agreement.html" class="template-card">
-                <div>
-                    <span class="card-badge badge-pro">Professional</span>
-                    <h3>Contractor Agreement</h3>
-                    <p>Draft binding parameters defining contract worker project lines and financial arrangements.</p>
-                </div>
-                <span class="btn-preview">Preview Layout &rarr;</span>
-            </a>
-        </div>
-
-        <!-- ULTIMATE ACCOUNTING TRACKERS -->
-        <div class="section-divider">System Trackers & Data Ledgers (Ultimate Tier)</div>
-        <div class="template-grid">
-            <a href="business_tracker.html" class="template-card">
-                <div>
-                    <span class="card-badge badge-ultimate">Ultimate</span>
-                    <h3>Business Matrix</h3>
-                    <p>Monitor high-level goals, performance margins, and core business milestones.</p>
-                </div>
-                <span class="btn-preview">Preview Layout &rarr;</span>
-            </a>
-
-            <a href="invoice_ledger.html" class="template-card">
-                <div>
-                    <span class="card-badge badge-ultimate">Ultimate</span>
-                    <h3>Invoice Ledger</h3>
-                    <p>Track all client accounts receivable, outstanding balances, and incoming revenue histories.</p>
-                </div>
-                <span class="btn-preview">Preview Layout &rarr;</span>
-            </a>
-
-            <a href="tax_estimation.html" class="template-card">
-                <div>
-                    <span class="card-badge badge-ultimate">Ultimate</span>
-                    <h3>Tax Estimation Sheet</h3>
-                    <p>Map out upcoming quarterly deductions and projected internal tax obligations.</p>
-                </div>
-                <span class="btn-preview">Preview Layout &rarr;</span>
-            </a>
-
-            <a href="mileage_log.html" class="template-card">
-                <div>
-                    <span class="card-badge badge-ultimate">Ultimate</span>
-                    <h3>Mileage Log</h3>
-                    <p>Log vehicle trip parameters and route lengths to generate audit-ready business tax write-offs.</p>
-                </div>
-                <span class="btn-preview">Preview Layout &rarr;</span>
-            </a>
-
-            <a href="client_database.html" class="template-card">
-                <div>
-                    <span class="card-badge badge-ultimate">Ultimate</span>
-                    <h3>Client Database</h3>
-                    <p>Keep records of main company stakeholders, phone configurations, and billing preferences.</p>
-                </div>
-                <span class="btn-preview">Preview Layout &rarr;</span>
-            </a>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 Template Distribution Hub. All rights reserved.</p>
-    </footer>
-</div>
+  </main>
 
 </body>
 </html>

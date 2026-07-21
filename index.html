@@ -1,19 +1,19 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <!-- SEO METADATA -->
-  <title>Professional Invoice & Business Templates | Free Download</title>
-  <meta name="description" content="Free HTML, Word, Excel & PDF invoice templates for freelancers, contractors, and small businesses. Print-ready and commercial license included." />
-  <meta name="keywords" content="invoice template, business templates, printable invoice, estimate template, receipt, billing" />
+  <title>Professional Invoice & Business Templates | Free & Premium Library</title>
+  <meta name="description" content="Instant access to professional, print-ready HTML, Word, Excel, and PDF invoice templates for freelancers and growing businesses. Unlimited lifetime updates available." />
+  <meta name="keywords" content="invoice template, business templates, printable invoice, estimate template, receipt, billing, invoice software" />
   <link rel="canonical" href="https://maraujo0209-hub.github.io/invoice-templates/" />
 
   <!-- Open Graph / Social Media -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Professional Invoice Templates for Freelancers & Small Businesses" />
-  <meta property="og:description" content="Download beautiful, printable invoice templates in Word, Excel, PDF, and HTML." />
+  <meta property="og:title" content="Professional Invoice Templates for Freelancers & Businesses" />
+  <meta property="og:description" content="Download beautiful, printable invoice templates or unlock the complete lifetime library." />
 
   <style>
     /* CSS VARIABLES & THEMING */
@@ -29,7 +29,6 @@
       --accent: #3b82f6;
     }
 
-    /* DARK MODE OVERRIDES */
     body.dark-mode {
       --bg-main: #0f172a;
       --bg-card: #1e293b;
@@ -38,429 +37,154 @@
       --border-color: #334155;
     }
 
-    /* BASE & RESET */
-    * { 
-      box-sizing: border-box; 
-      transition: background-color 0.2s, color 0.2s, border-color 0.2s; 
-    }
+    /* BASE RESET */
+    * { box-sizing: border-box; transition: background-color 0.2s, color 0.2s, border-color 0.2s; }
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      margin: 0;
-      padding: 0;
+      margin: 0; padding: 0;
       background-color: var(--bg-main);
       color: var(--text-main);
       line-height: 1.5;
     }
 
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1.25rem;
-    }
-
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 1.25rem; }
     .text-center { text-align: center; }
+    .section-title { font-size: 2rem; font-weight: 800; margin-bottom: 0.5rem; text-align: center; }
+    .section-subtitle { text-align: center; color: var(--text-muted); max-width: 600px; margin: 0 auto 2.5rem auto; font-size: 1.05rem; }
 
     /* HEADER & NAV */
     .top-nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 0;
-      border-bottom: 1px solid var(--border-color);
-      background: var(--bg-card);
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1rem 0; border-bottom: 1px solid var(--border-color); background: var(--bg-card);
     }
-
-    .brand-logo {
-      font-weight: 800;
-      font-size: 1.25rem;
-      color: var(--text-main);
-      text-decoration: none;
-    }
-
-    .nav-actions {
-      display: flex;
-      gap: 1rem;
-      align-items: center;
-    }
-
+    .brand-logo { font-weight: 800; font-size: 1.25rem; color: var(--text-main); text-decoration: none; }
+    .nav-actions { display: flex; gap: 1rem; align-items: center; }
     .theme-toggle {
-      background: none;
-      border: 1px solid var(--border-color);
-      color: var(--text-main);
-      padding: 0.4rem 0.8rem;
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: 600;
-    }
-
-    .theme-toggle:hover {
-      border-color: var(--text-main);
+      background: none; border: 1px solid var(--border-color); color: var(--text-main);
+      padding: 0.4rem 0.8rem; border-radius: 6px; cursor: pointer; font-weight: 600;
     }
 
     /* HERO SECTION */
     .hero-section {
-      background: var(--bg-hero);
-      color: #ffffff;
-      padding: 4.5rem 1rem 3.5rem 1rem;
-      text-align: center;
+      background: var(--bg-hero); color: #ffffff;
+      padding: 4.5rem 1rem 3.5rem 1rem; text-align: center;
     }
-
-    .hero-section h1 {
-      font-size: 2.75rem;
-      font-weight: 800;
-      margin: 0 0 1rem 0;
-      letter-spacing: -0.02em;
-    }
-
-    .hero-subtitle {
-      font-size: 1.2rem;
-      color: #94a3b8;
-      max-width: 720px;
-      margin: 0 auto 2rem auto;
-    }
-
-    .hero-actions {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-bottom: 2rem;
-      flex-wrap: wrap;
-    }
-
+    .hero-section h1 { font-size: 2.75rem; font-weight: 800; margin: 0 0 1rem 0; letter-spacing: -0.02em; }
+    .hero-subtitle { font-size: 1.2rem; color: #94a3b8; max-width: 720px; margin: 0 auto 2rem auto; }
+    .hero-actions { display: flex; justify-content: center; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap; }
     .btn-hero-primary {
-      background: var(--primary);
-      color: #ffffff;
-      padding: 0.9rem 1.75rem;
-      border-radius: 8px;
-      font-weight: 700;
-      text-decoration: none;
-      min-height: 44px;
-      display: inline-flex;
-      align-items: center;
+      background: var(--primary); color: #ffffff; padding: 0.9rem 1.75rem;
+      border-radius: 8px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center;
     }
-
-    .btn-hero-primary:hover {
-      background: var(--primary-dark);
-    }
-
+    .btn-hero-primary:hover { background: var(--primary-dark); }
     .btn-hero-secondary {
-      background: #334155;
-      color: #ffffff;
-      padding: 0.9rem 1.75rem;
-      border-radius: 8px;
-      font-weight: 700;
-      text-decoration: none;
-      min-height: 44px;
-      display: inline-flex;
-      align-items: center;
+      background: #334155; color: #ffffff; padding: 0.9rem 1.75rem;
+      border-radius: 8px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center;
     }
 
-    .btn-hero-secondary:hover {
-      background: #475569;
+    /* TRUST BADGES BAR */
+    .trust-badges {
+      background: var(--bg-card); border-bottom: 1px solid var(--border-color); padding: 1.5rem 0;
     }
-
-    /* TRUST INDICATORS */
-    .trust-bar {
-      background: var(--bg-card);
-      border-bottom: 1px solid var(--border-color);
-      padding: 1.5rem 0;
+    .trust-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; text-align: center;
     }
+    .trust-item h4 { margin: 0.25rem 0 0 0; font-size: 0.95rem; color: var(--text-main); }
+    .trust-item p { margin: 0; font-size: 0.8rem; color: var(--text-muted); }
+    .trust-icon { font-size: 1.5rem; }
 
-    .trust-bar .container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 1rem;
-      text-align: center;
+    /* SECTION BLOCK */
+    .section-block { padding: 4rem 0; border-bottom: 1px solid var(--border-color); }
+
+    /* PRICING CARDS */
+    .pricing-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;
+      align-items: stretch; margin-top: 1.5rem;
     }
-
-    .trust-item h3 { margin: 0; font-size: 1.4rem; color: var(--text-main); }
-    .trust-item p { margin: 0; font-size: 0.85rem; color: var(--text-muted); }
-
-    /* FILTERS & SEARCH */
-    .filter-wrapper {
-      background: var(--bg-card);
-      border-radius: 12px;
-      padding: 1.25rem;
-      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
-      margin: 2rem 0;
-      border: 1px solid var(--border-color);
+    .price-card {
+      background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px;
+      padding: 2rem; display: flex; flex-direction: column; position: relative;
     }
-
-    .search-box input {
-      width: 100%;
-      padding: 0.85rem 1rem;
-      border-radius: 6px;
-      border: 1px solid var(--border-color);
-      background: var(--bg-main);
-      color: var(--text-main);
-      font-size: 1rem;
-      margin-bottom: 1rem;
-      outline: none;
+    .price-card.featured {
+      border: 2px solid var(--primary);
+      box-shadow: 0 10px 30px -5px rgba(16, 185, 129, 0.15);
     }
-
-    .search-box input:focus {
-      border-color: var(--accent);
+    .badge-featured {
+      position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+      background: var(--primary); color: #fff; font-size: 0.75rem; font-weight: 700;
+      padding: 0.25rem 0.75rem; border-radius: 50px; text-transform: uppercase;
     }
-
-    .filter-group {
-      margin-bottom: 0.75rem;
+    .price-card h3 { font-size: 1.5rem; margin: 0 0 0.25rem 0; }
+    .price-target { font-size: 0.875rem; color: var(--text-muted); margin-bottom: 1.5rem; font-weight: 600; }
+    .price-amount { font-size: 2.5rem; font-weight: 800; margin-bottom: 1.5rem; }
+    .price-features { list-style: none; padding: 0; margin: 0 0 2rem 0; flex: 1; }
+    .price-features li { padding: 0.5rem 0; border-bottom: 1px dashed var(--border-color); font-size: 0.95rem; display: flex; align-items: center; gap: 0.5rem; }
+    .btn-price {
+      width: 100%; text-align: center; padding: 0.85rem; border-radius: 8px; font-weight: 700;
+      text-decoration: none; cursor: pointer; display: block; border: none;
     }
+    .btn-price-primary { background: var(--primary); color: #ffffff; }
+    .btn-price-primary:hover { background: var(--primary-dark); }
+    .btn-price-secondary { background: var(--text-main); color: var(--bg-card); }
 
-    .filter-group:last-child {
-      margin-bottom: 0;
+    /* WHY ULTIMATE BANNER */
+    .ultimate-banner {
+      background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
+      color: #ffffff; border-radius: 16px; padding: 3rem 2rem; margin-top: 3rem; text-align: center;
     }
-
-    .filter-group label {
-      font-size: 0.8rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      display: block;
-      margin-bottom: 0.4rem;
+    .ultimate-banner h3 { font-size: 2rem; margin: 0 0 1rem 0; }
+    .ultimate-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 2rem; text-align: left;
     }
-
-    .filter-chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-    }
-
-    .chip {
-      background: var(--bg-main);
-      color: var(--text-main);
-      border: 1px solid var(--border-color);
-      padding: 0.35rem 0.75rem;
-      border-radius: 50px;
-      font-size: 0.825rem;
-      font-weight: 600;
-      cursor: pointer;
-    }
-
-    .chip.active {
-      background: var(--text-main);
-      color: var(--bg-card);
-      border-color: var(--text-main);
-    }
-
-    /* CARD GRID & CARDS */
-    .section-block { margin: 3rem 0; }
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .template-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: 12px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .template-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.1);
-    }
-
-    /* VISUAL THUMBNAIL MOCK */
-    .card-preview-thumb {
-      background: #f1f5f9;
-      height: 200px;
-      padding: 1rem;
-      position: relative;
-      border-bottom: 1px solid var(--border-color);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    body.dark-mode .card-preview-thumb {
-      background: #0b1329;
-    }
-
-    .invoice-mock {
-      width: 100%;
-      height: 100%;
-      background: #ffffff;
-      border-radius: 4px;
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-      padding: 0.75rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      font-size: 0.6rem;
-      color: #334155;
-    }
-
-    .mock-header { display: flex; justify-content: space-between; border-bottom: 2px solid #0f172a; padding-bottom: 0.4rem; }
-    .mock-lines { margin: 0.5rem 0; }
-    .mock-line { height: 6px; background: #e2e8f0; border-radius: 2px; margin-bottom: 0.3rem; }
-    .mock-footer { display: flex; justify-content: space-between; font-weight: bold; border-top: 1px solid #cbd5e1; padding-top: 0.3rem; }
-
-    .fav-btn {
-      position: absolute;
-      top: 12px;
-      right: 12px;
-      background: rgba(255, 255, 255, 0.9);
-      border: none;
-      border-radius: 50%;
-      width: 32px;
-      height: 32px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      z-index: 2;
-    }
-
-    .card-badge {
-      position: absolute;
-      top: 12px;
-      left: 12px;
-      background: var(--primary);
-      color: #fff;
-      font-size: 0.7rem;
-      font-weight: 700;
-      padding: 0.2rem 0.5rem;
-      border-radius: 4px;
-      z-index: 2;
-    }
-
-    .card-body { padding: 1.25rem; flex: 1; display: flex; flex-direction: column; }
-    .card-title { font-size: 1.15rem; font-weight: 700; margin: 0 0 0.25rem 0; color: var(--text-main); }
-    .card-rating { font-size: 0.85rem; color: #f59e0b; margin-bottom: 0.5rem; }
-    
-    .card-meta { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.75rem; }
-    .tag { font-size: 0.7rem; background: var(--bg-main); border: 1px solid var(--border-color); padding: 0.15rem 0.4rem; border-radius: 4px; color: var(--text-muted); font-weight: 600; }
-
-    .card-footer-info {
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      margin-top: auto;
-      padding-top: 0.75rem;
-      border-top: 1px dashed var(--border-color);
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .card-actions { display: flex; gap: 0.5rem; margin-top: 1rem; }
-    .btn-card {
-      flex: 1;
-      text-align: center;
-      padding: 0.6rem;
-      border-radius: 6px;
-      font-weight: 600;
-      font-size: 0.85rem;
-      min-height: 44px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      text-decoration: none;
-    }
-    .btn-preview-card { background: var(--bg-main); color: var(--text-main); border: 1px solid var(--border-color); }
-    .btn-preview-card:hover { border-color: var(--text-main); }
-    .btn-use-card { background: var(--text-main); color: var(--bg-card); border: none; }
-    .btn-use-card:hover { opacity: 0.9; }
+    .ultimate-feature { background: rgba(255, 255, 255, 0.08); padding: 1.25rem; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.1); }
+    .ultimate-feature h4 { margin: 0 0 0.3rem 0; font-size: 1rem; color: #a5b4fc; }
+    .ultimate-feature p { margin: 0; font-size: 0.85rem; color: #c7d2fe; }
 
     /* COMPARISON TABLE */
-    .table-container {
-      width: 100%;
-      overflow-x: auto;
-    }
-
-    .comparison-table {
-      width: 100%;
-      border-collapse: collapse;
-      background: var(--bg-card);
-      border-radius: 8px;
-      overflow: hidden;
-      border: 1px solid var(--border-color);
-    }
-
-    .comparison-table th, .comparison-table td {
-      padding: 1rem;
-      text-align: left;
-      border-bottom: 1px solid var(--border-color);
-    }
-
+    .table-container { width: 100%; overflow-x: auto; margin-top: 2rem; }
+    .comparison-table { width: 100%; border-collapse: collapse; background: var(--bg-card); border-radius: 8px; overflow: hidden; border: 1px solid var(--border-color); }
+    .comparison-table th, .comparison-table td { padding: 1rem; text-align: center; border-bottom: 1px solid var(--border-color); }
     .comparison-table th { background: #0f172a; color: #ffffff; }
+    .comparison-table td:first-child, .comparison-table th:first-child { text-align: left; font-weight: 600; }
+    .check-yes { color: var(--primary); font-weight: bold; font-size: 1.1rem; }
+    .check-no { color: #94a3b8; }
 
-    /* MODAL PREVIEW */
-    .modal {
-      position: fixed;
-      top: 0; left: 0; width: 100%; height: 100%;
-      background: rgba(15, 23, 42, 0.8);
-      z-index: 20000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 1rem;
+    /* ROADMAP SECTION */
+    .roadmap-box {
+      background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 2rem;
+      max-width: 800px; margin: 0 auto;
     }
+    .roadmap-list { list-style: none; padding: 0; margin: 1.5rem 0 0 0; }
+    .roadmap-list li { display: flex; align-items: flex-start; gap: 0.75rem; padding: 0.75rem 0; border-bottom: 1px solid var(--border-color); }
+    .roadmap-list li:last-child { border-bottom: none; }
 
-    .modal-content {
-      background: var(--bg-card);
-      width: 100%;
-      max-width: 1000px;
-      height: 90vh;
-      border-radius: 12px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-    }
+    /* GALLERY CARDS */
+    .filter-wrapper { background: var(--bg-card); border-radius: 12px; padding: 1.25rem; margin-bottom: 2rem; border: 1px solid var(--border-color); }
+    .search-box input { width: 100%; padding: 0.85rem 1rem; border-radius: 6px; border: 1px solid var(--border-color); background: var(--bg-main); color: var(--text-main); font-size: 1rem; margin-bottom: 1rem; }
+    .filter-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .chip { background: var(--bg-main); color: var(--text-main); border: 1px solid var(--border-color); padding: 0.35rem 0.75rem; border-radius: 50px; font-size: 0.825rem; font-weight: 600; cursor: pointer; }
+    .chip.active { background: var(--text-main); color: var(--bg-card); border-color: var(--text-main); }
+    .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; }
+    .template-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; }
+    .card-preview-thumb { background: #f1f5f9; height: 180px; padding: 1rem; border-bottom: 1px solid var(--border-color); display: flex; align-items: center; justify-content: center; }
+    .card-body { padding: 1.25rem; flex: 1; display: flex; flex-direction: column; }
+    .card-title { font-size: 1.1rem; font-weight: 700; margin: 0 0 0.5rem 0; }
+    .card-actions { display: flex; gap: 0.5rem; margin-top: auto; padding-top: 1rem; }
+    .btn-card { flex: 1; text-align: center; padding: 0.6rem; border-radius: 6px; font-weight: 600; font-size: 0.85rem; text-decoration: none; cursor: pointer; }
+    .btn-preview-card { background: var(--bg-main); color: var(--text-main); border: 1px solid var(--border-color); }
+    .btn-use-card { background: var(--text-main); color: var(--bg-card); border: none; }
 
-    .modal-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 1.5rem;
-      background: #0f172a;
-      color: #ffffff;
-    }
+    /* FAQ SECTION */
+    .faq-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; }
+    .faq-item { background: var(--bg-card); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--border-color); }
+    .faq-item h4 { margin: 0 0 0.5rem 0; font-size: 1.05rem; }
+    .faq-item p { margin: 0; font-size: 0.9rem; color: var(--text-muted); }
 
-    .modal-actions { display: flex; gap: 0.5rem; }
-    .btn-modal-action {
-      background: #1e293b;
-      color: #fff;
-      border: 1px solid #475569;
-      padding: 0.4rem 0.88rem;
-      border-radius: 6px;
-      font-size: 0.85rem;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-    }
-
-    .btn-modal-action:hover {
-      background: #334155;
-    }
-
-    .modal-body { flex: 1; border: none; width: 100%; height: 100%; background: #fff; }
-
-    /* SITE FOOTER */
-    .site-footer {
-      background: #0f172a;
-      color: #94a3b8;
-      padding: 3.5rem 0 2rem 0;
-      margin-top: 4rem;
-      font-size: 0.9rem;
-    }
+    /* FOOTER */
+    .site-footer { background: #0f172a; color: #94a3b8; padding: 3.5rem 0 2rem 0; font-size: 0.9rem; }
     .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 2rem; margin-bottom: 2.5rem; }
     .footer-grid h4 { color: #ffffff; margin-bottom: 1rem; margin-top: 0; }
     .footer-grid a { color: #94a3b8; text-decoration: none; display: block; margin-bottom: 0.5rem; }
-    .footer-grid a:hover { color: #ffffff; }
-
-    @media (max-width: 768px) {
-      .hero-section h1 { font-size: 2rem; }
-      .hero-actions { flex-direction: column; }
-      .card-actions { flex-direction: column; }
-    }
   </style>
 </head>
 <body>
@@ -477,305 +201,309 @@
     </div>
   </header>
 
-  <!-- HERO SECTION -->
+  <!-- 1. HERO SECTION -->
   <section class="hero-section">
     <div class="container">
-      <h1>Professional Invoice Templates</h1>
-      <p class="hero-subtitle">Free HTML, Word, Excel & PDF templates for freelancers, contractors, and small businesses. Print-ready, customizable, and instantly accessible.</p>
+      <h1>Professional Invoice & Business Templates</h1>
+      <p class="hero-subtitle">16 premium templates available today. Ultimate includes lifetime access to 50+ future templates as they're released.</p>
       <div class="hero-actions">
-        <a href="#templates" class="btn-hero-primary">Browse Templates</a>
-        <a href="#templates" class="btn-hero-secondary">Most Popular</a>
+        <a href="#pricing" class="btn-hero-primary">View Plans & Pricing</a>
+        <a href="#gallery" class="btn-hero-secondary">Browse Template Library</a>
       </div>
     </div>
   </section>
 
-  <!-- TRUST SIGNALS BAR -->
-  <div class="trust-bar">
+  <!-- TRUST BADGES SECTION -->
+  <div class="trust-badges">
     <div class="container">
-      <div class="trust-item">
-        <h3>250+</h3>
-        <p>Templates Available</p>
-      </div>
-      <div class="trust-item">
-        <h3>50,000+</h3>
-        <p>Total Downloads</p>
-      </div>
-      <div class="trust-item">
-        <h3>100% Free</h3>
-        <p>Commercial License</p>
-      </div>
-      <div class="trust-item">
-        <h3>Letter & A4</h3>
-        <p>Print Ready</p>
-      </div>
-      <div class="trust-item">
-        <h3>No Sign-up</h3>
-        <p>Instant Access</p>
+      <div class="trust-grid">
+        <div class="trust-item">
+          <div class="trust-icon">💳</div>
+          <h4>One-Time Purchase</h4>
+          <p>No monthly subscriptions</p>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">♾️</div>
+          <h4>Lifetime Access</h4>
+          <p>Download whenever needed</p>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">💼</div>
+          <h4>Commercial License</h4>
+          <p>Use for clients & business</p>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">🖨️</div>
+          <h4>Print Ready</h4>
+          <p>Formated for Letter & A4</p>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">⚡</div>
+          <h4>Instant Download</h4>
+          <p>Get HTML, Word & PDF</p>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">🎁</div>
+          <h4>Free Future Updates</h4>
+          <p>Included with Ultimate</p>
+        </div>
       </div>
     </div>
   </div>
 
   <main class="container">
 
-    <!-- FILTERS & SEARCH -->
-    <div class="filter-wrapper">
-      <div class="search-box">
-        <input type="text" id="templateSearch" placeholder="Search by business type (e.g. Cleaning, Construction, Freelancer, HVAC)..." />
-      </div>
+    <!-- 2. PRICING PLANS -->
+    <section id="pricing" class="section-block">
+      <h2 class="section-title">Simple, Transparent Pricing</h2>
+      <p class="section-subtitle">Pick the tier that matches your business growth. Pay once, own forever.</p>
 
-      <div class="filter-group">
-        <label>Business Type</label>
-        <div class="filter-chips">
-          <button class="chip active">All</button>
-          <button class="chip">Cleaning</button>
-          <button class="chip">Construction</button>
-          <button class="chip">Freelancer</button>
-          <button class="chip">HVAC</button>
-          <button class="chip">Medical</button>
-          <button class="chip">Landscaping</button>
-          <button class="chip">Photography</button>
-          <button class="chip">Consultant</button>
-          <button class="chip">Auto Repair</button>
+      <div class="pricing-grid">
+        <!-- STARTER CARD -->
+        <div class="price-card">
+          <h3>Starter</h3>
+          <div class="price-target">Perfect for freelancers</div>
+          <div class="price-amount">$19</div>
+          <ul class="price-features">
+            <li>✅ <strong>4 professional templates</strong></li>
+            <li>✅ Instant file download</li>
+            <li>✅ Commercial use license</li>
+            <li>✅ Lifetime access to files</li>
+            <li>❌ Future template releases</li>
+          </ul>
+          <a href="#" class="btn-price btn-price-secondary">Get Starter Pass</a>
+        </div>
+
+        <!-- PROFESSIONAL CARD -->
+        <div class="price-card featured">
+          <span class="badge-featured">⭐ Most Popular</span>
+          <h3>Professional</h3>
+          <div class="price-target">For growing businesses</div>
+          <div class="price-amount">$39</div>
+          <ul class="price-features">
+            <li>✅ Everything in Starter</li>
+            <li>✅ <strong>+6 premium templates</strong> (10 total)</li>
+            <li>✅ Word, Excel, PDF & HTML formats</li>
+            <li>✅ Priority customer support</li>
+            <li>❌ Future template releases</li>
+          </ul>
+          <a href="#" class="btn-price btn-price-primary">Get Professional Pass</a>
+        </div>
+
+        <!-- ULTIMATE CARD -->
+        <div class="price-card">
+          <h3>Ultimate</h3>
+          <div class="price-target">Complete Lifetime Library</div>
+          <div class="price-amount">$69</div>
+          <ul class="price-features">
+            <li>✅ Everything in Professional</li>
+            <li>✅ <strong>+6 exclusive Ultimate templates</strong></li>
+            <li>✅ <strong>+50 future templates included</strong></li>
+            <li>✅ 66+ templates over time</li>
+            <li>✅ Lifetime updates & releases</li>
+          </ul>
+          <a href="#" class="btn-price btn-price-primary">Unlock Ultimate Pass</a>
         </div>
       </div>
 
-      <div class="filter-group">
-        <label>Design Style</label>
-        <div class="filter-chips">
-          <button class="chip">Minimal</button>
-          <button class="chip">Corporate</button>
-          <button class="chip">Luxury</button>
-          <button class="chip">Classic</button>
-          <button class="chip">Modern</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- FEATURED TEMPLATES GRID -->
-    <section id="templates" class="section-block">
-      <h2>⭐ Featured & Popular Templates</h2>
-      <div class="card-grid">
-
-        <!-- Card 1: Modern Invoice -->
-        <div class="template-card">
-          <div class="card-preview-thumb">
-            <span class="card-badge">Popular</span>
-            <button class="fav-btn" onclick="toggleFav(this)" aria-label="Favorite">❤️</button>
-            <div class="invoice-mock">
-              <div class="mock-header">
-                <div><strong>INVOICE</strong><br><span style="font-size:0.5rem; color:#64748b;">#INV-2026-01</span></div>
-                <div style="text-align:right;">Modern Co.</div>
-              </div>
-              <div class="mock-lines">
-                <div class="mock-line" style="width:80%;"></div>
-                <div class="mock-line" style="width:60%;"></div>
-                <div class="mock-line" style="width:90%;"></div>
-              </div>
-              <div class="mock-footer">
-                <span>Total Due:</span>
-                <span>$1,250.00</span>
-              </div>
-            </div>
+      <!-- WHY CHOOSE ULTIMATE BANNER -->
+      <div class="ultimate-banner">
+        <h3>Why Choose Ultimate?</h3>
+        <p style="max-width: 650px; margin: 0 auto; color: #e0e7ff;">The ultimate choice for agencies and growing professionals who want complete coverage forever.</p>
+        
+        <div class="ultimate-grid">
+          <div class="ultimate-feature">
+            <h4>Every Template Today</h4>
+            <p>Immediate access to all 16 current designs across all business categories.</p>
           </div>
-          <div class="card-body">
-            <h3 class="card-title">Modern Billing Invoice</h3>
-            <div class="card-rating">★★★★★ 4.9 (23,400 downloads)</div>
-            <div class="card-meta">
-              <span class="tag">HTML</span>
-              <span class="tag">PDF</span>
-              <span class="tag">Word</span>
-              <span class="tag">Letter & A4</span>
-              <span class="tag">Freelance</span>
-              <span class="tag">Modern</span>
-            </div>
-            <div class="card-footer-info">
-              <span>Updated July 2026</span>
-              <span>Blue Theme</span>
-            </div>
-            <div class="card-actions">
-              <button onclick="openPreview('./previews/business-tracker.html', 'Modern Billing Invoice')" class="btn-card btn-preview-card">Preview</button>
-              <a href="./previews/business-tracker.html" target="_blank" onclick="trackView('Modern Billing Invoice')" class="btn-card btn-use-card">Use Template</a>
-            </div>
+          <div class="ultimate-feature">
+            <h4>Future Releases Included</h4>
+            <p>Automatic access to the next 50+ templates as they are developed.</p>
+          </div>
+          <div class="ultimate-feature">
+            <h4>Never Pay Again</h4>
+            <p>Single payment with zero recurring billing or hidden upgrade fees.</p>
+          </div>
+          <div class="ultimate-feature">
+            <h4>Best Long-Term Value</h4>
+            <p>The lowest cost per template with a continuously growing asset library.</p>
           </div>
         </div>
-
-        <!-- Card 2: Cleaning Service Invoice -->
-        <div class="template-card">
-          <div class="card-preview-thumb">
-            <span class="card-badge" style="background:#3b82f6;">New</span>
-            <button class="fav-btn" onclick="toggleFav(this)" aria-label="Favorite">🤍</button>
-            <div class="invoice-mock">
-              <div class="mock-header" style="border-bottom-color: #3b82f6;">
-                <div><strong>CLEANING SVC</strong><br><span style="font-size:0.5rem; color:#64748b;">Service Receipt</span></div>
-                <div style="text-align:right;">Sparkle Clean</div>
-              </div>
-              <div class="mock-lines">
-                <div class="mock-line" style="width:75%;"></div>
-                <div class="mock-line" style="width:85%;"></div>
-              </div>
-              <div class="mock-footer">
-                <span>Amount:</span>
-                <span>$340.00</span>
-              </div>
-            </div>
-          </div>
-          <div class="card-body">
-            <h3 class="card-title">Service & Cleaning Invoice</h3>
-            <div class="card-rating">★★★★★ 4.8 (11,200 downloads)</div>
-            <div class="card-meta">
-              <span class="tag">HTML</span>
-              <span class="tag">Excel</span>
-              <span class="tag">PDF</span>
-              <span class="tag">Letter</span>
-              <span class="tag">Cleaning</span>
-              <span class="tag">Minimal</span>
-            </div>
-            <div class="card-footer-info">
-              <span>Updated July 2026</span>
-              <span>Green / Cyan</span>
-            </div>
-            <div class="card-actions">
-              <button onclick="openPreview('./previews/invoice-ledger.html', 'Service & Cleaning Invoice')" class="btn-card btn-preview-card">Preview</button>
-              <a href="./previews/invoice-ledger.html" target="_blank" onclick="trackView('Service & Cleaning Invoice')" class="btn-card btn-use-card">Use Template</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 3: Construction Purchase Order -->
-        <div class="template-card">
-          <div class="card-preview-thumb">
-            <button class="fav-btn" onclick="toggleFav(this)" aria-label="Favorite">🤍</button>
-            <div class="invoice-mock">
-              <div class="mock-header" style="border-bottom-color: #f59e0b;">
-                <div><strong>WORK ORDER</strong><br><span style="font-size:0.5rem; color:#64748b;">Contractor Build</span></div>
-                <div style="text-align:right;">Apex Build</div>
-              </div>
-              <div class="mock-lines">
-                <div class="mock-line" style="width:95%;"></div>
-                <div class="mock-line" style="width:40%;"></div>
-              </div>
-              <div class="mock-footer">
-                <span>Contract Total:</span>
-                <span>$8,900.00</span>
-              </div>
-            </div>
-          </div>
-          <div class="card-body">
-            <h3 class="card-title">Contractor & Build Order</h3>
-            <div class="card-rating">★★★★★ 4.9 (18,500 downloads)</div>
-            <div class="card-meta">
-              <span class="tag">HTML</span>
-              <span class="tag">PDF</span>
-              <span class="tag">Word</span>
-              <span class="tag">A4</span>
-              <span class="tag">Construction</span>
-              <span class="tag">Corporate</span>
-            </div>
-            <div class="card-footer-info">
-              <span>Updated July 2026</span>
-              <span>Monochrome</span>
-            </div>
-            <div class="card-actions">
-              <button onclick="openPreview('./previews/purchase-order.html', 'Contractor & Build Order')" class="btn-card btn-preview-card">Preview</button>
-              <a href="./previews/purchase-order.html" target="_blank" onclick="trackView('Contractor & Build Order')" class="btn-card btn-use-card">Use Template</a>
-            </div>
-          </div>
-        </div>
-
       </div>
     </section>
 
-    <!-- RECENTLY VIEWED TEMPLATES -->
-    <section class="section-block" id="recently-viewed-block" style="display:none;">
-      <h2>🕒 Recently Viewed Templates</h2>
-      <div id="recently-viewed-list" style="display:flex; gap:0.5rem; flex-wrap:wrap;"></div>
-    </section>
-
-    <!-- TEMPLATE COMPARISON MATRIX -->
+    <!-- 3. COMPARISON TABLE -->
     <section class="section-block">
-      <h2>Template Comparison</h2>
+      <h2 class="section-title">Compare Plan Features</h2>
+      <p class="section-subtitle">A detailed breakdown to help you make the right choice.</p>
+
       <div class="table-container">
         <table class="comparison-table">
           <thead>
             <tr>
-              <th>Template</th>
-              <th>Best For</th>
-              <th>Formats</th>
-              <th>Paper Size</th>
-              <th>Style</th>
+              <th>Feature</th>
+              <th>Starter</th>
+              <th>Professional</th>
+              <th>Ultimate</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td><strong>Modern Billing Invoice</strong></td>
-              <td>Freelancers, Agencies, Consultants</td>
-              <td>HTML, Word, PDF</td>
-              <td>Letter & A4</td>
-              <td>Modern</td>
+              <td>Current templates available</td>
+              <td>4</td>
+              <td>10</td>
+              <td><strong>16</strong></td>
             </tr>
             <tr>
-              <td><strong>Service & Cleaning Invoice</strong></td>
-              <td>Cleaning Services, HVAC, Landscaping</td>
-              <td>HTML, Excel, PDF</td>
-              <td>Letter</td>
-              <td>Minimal</td>
+              <td>Future template releases</td>
+              <td class="check-no">✕</td>
+              <td class="check-no">✕</td>
+              <td class="check-yes">✓ (50+ planned)</td>
             </tr>
             <tr>
-              <td><strong>Contractor & Build Order</strong></td>
-              <td>Construction, Auto Repair, Trades</td>
-              <td>HTML, Word, PDF</td>
-              <td>A4</td>
-              <td>Corporate</td>
+              <td>Commercial license</td>
+              <td class="check-yes">✓</td>
+              <td class="check-yes">✓</td>
+              <td class="check-yes">✓</td>
+            </tr>
+            <tr>
+              <td>Lifetime access</td>
+              <td class="check-yes">✓</td>
+              <td class="check-yes">✓</td>
+              <td class="check-yes">✓</td>
+            </tr>
+            <tr>
+              <td>Priority support</td>
+              <td class="check-no">✕</td>
+              <td class="check-yes">✓</td>
+              <td class="check-yes">✓</td>
             </tr>
           </tbody>
         </table>
       </div>
     </section>
 
-  </main>
+    <!-- 4. GROWING TEMPLATE ROADMAP -->
+    <section class="section-block">
+      <div class="roadmap-box text-center">
+        <h2 style="margin-top:0;">🚀 Growing Template Library</h2>
+        <p style="color:var(--text-muted); margin-bottom:0;">We continuously design and release new niche templates based on user feedback.</p>
+        
+        <ul class="roadmap-list text-center" style="display:inline-block; text-align:left;">
+          <li><span class="check-yes">✅</span> <strong>16 templates available today</strong> across all core industries.</li>
+          <li><span class="check-yes">🔄</span> <strong>More designs added regularly</strong> (Contractor, HVAC, Legal, Medical, Cleaning).</li>
+          <li><span class="check-yes">🎁</span> <strong>Ultimate members receive every future release</strong> automatically at no extra cost.</li>
+          <li><span class="check-yes">🎯</span> <strong>Goal: 66+ professionally designed templates</strong> in the complete library.</li>
+        </ul>
+      </div>
+    </section>
 
-  <!-- PREVIEW MODAL -->
-  <div id="preview-modal" class="modal" style="display:none;">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3 id="modal-title" style="margin:0; font-size:1.1rem;">Template Live Preview</h3>
-        <div class="modal-actions">
-          <button class="btn-modal-action" onclick="printFrame()">🖨️ Print</button>
-          <a id="modal-download" href="#" download class="btn-modal-action">📥 Download</a>
-          <button class="btn-modal-action" style="background:#ef4444; border-color:#dc2626;" onclick="closePreview()">✕ Close</button>
+    <!-- 5. TEMPLATE GALLERY -->
+    <section id="gallery" class="section-block">
+      <h2 class="section-title">Explore Today's Library</h2>
+      <p class="section-subtitle">Preview templates available in our collection.</p>
+
+      <div class="filter-wrapper">
+        <div class="search-box">
+          <input type="text" id="templateSearch" placeholder="Search by industry (e.g., Cleaning, Construction, Freelance)..." />
+        </div>
+        <div class="filter-chips">
+          <button class="chip active">All</button>
+          <button class="chip">Cleaning</button>
+          <button class="chip">Construction</button>
+          <button class="chip">Freelance</button>
+          <button class="chip">HVAC</button>
+          <button class="chip">Medical</button>
         </div>
       </div>
-      <iframe id="preview-frame" class="modal-body" src=""></iframe>
-    </div>
-  </div>
 
-  <!-- SITE FOOTER -->
+      <div class="card-grid">
+        <!-- Example Template Card 1 -->
+        <div class="template-card">
+          <div class="card-preview-thumb">📄 Modern Billing Invoice</div>
+          <div class="card-body">
+            <h3 class="card-title">Modern Billing Invoice</h3>
+            <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1rem;">Clean layout designed for web agencies and freelancers.</p>
+            <div class="card-actions">
+              <a href="#" class="btn-card btn-preview-card">Preview</a>
+              <a href="#pricing" class="btn-card btn-use-card">Get Access</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Example Template Card 2 -->
+        <div class="template-card">
+          <div class="card-preview-thumb">📄 Cleaning Service Receipt</div>
+          <div class="card-body">
+            <h3 class="card-title">Service & Cleaning Receipt</h3>
+            <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1rem;">Tailored for residential & commercial service businesses.</p>
+            <div class="card-actions">
+              <a href="#" class="btn-card btn-preview-card">Preview</a>
+              <a href="#pricing" class="btn-card btn-use-card">Get Access</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Example Template Card 3 -->
+        <div class="template-card">
+          <div class="card-preview-thumb">📄 Contractor Work Order</div>
+          <div class="card-body">
+            <h3 class="card-title">Contractor & Build Order</h3>
+            <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1rem;">Itemized line items suited for trades & construction.</p>
+            <div class="card-actions">
+              <a href="#" class="btn-card btn-preview-card">Preview</a>
+              <a href="#pricing" class="btn-card btn-use-card">Get Access</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. FREQUENTLY ASKED QUESTIONS -->
+    <section class="section-block">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <p class="section-subtitle">Everything you need to know before purchasing.</p>
+
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h4>Are there recurring subscription fees?</h4>
+          <p>No. All plans are strict one-time purchases with lifetime access to your included files.</p>
+        </div>
+        <div class="faq-item">
+          <h4>How do future template updates work for Ultimate members?</h4>
+          <p>When new templates are released, they are automatically unlocked in your Ultimate member portal for instant download.</p>
+        </div>
+        <div class="faq-item">
+          <h4>What formats are provided?</h4>
+          <p>Depending on the template, files are provided in HTML, Microsoft Word, Microsoft Excel, and print-ready PDF formats.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Can I use these templates for my clients?</h4>
+          <p>Yes, all plans come with a full commercial license allowing you to issue invoices and documents to unlimited clients.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 7. FOOTER -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
         <div>
           <h4>BizTemplates</h4>
-          <p>Download free, professional templates for invoices, purchase orders, and business operational tracking.</p>
+          <p>High-quality printable templates for independent contractors, freelancers, and small businesses.</p>
         </div>
         <div>
-          <h4>Template Types</h4>
-          <a href="#templates">Freelance Invoices</a>
-          <a href="#templates">Cleaning Services</a>
-          <a href="#templates">Construction & HVAC</a>
-          <a href="#templates">Consulting & Legal</a>
-        </div>
-        <div>
-          <h4>Company</h4>
-          <a href="/about">About Us</a>
-          <a href="/contact">Contact Support</a>
-          <a href="/faq">Frequently Asked Questions</a>
-        </div>
-        <div>
-          <h4>Legal & Source</h4>
-          <a href="/privacy">Privacy Policy</a>
-          <a href="/terms">Terms of Service</a>
+          <h4>Quick Links</h4>
+          <a href="#pricing">Pricing Plans</a>
+          <a href="#gallery">Template Gallery</a>
           <a href="/license">Commercial License</a>
-          <a href="https://github.com" target="_blank" rel="noopener">GitHub Repository</a>
+        </div>
+        <div>
+          <h4>Support</h4>
+          <a href="/contact">Contact Us</a>
+          <a href="/faq">FAQ</a>
         </div>
       </div>
       <p class="text-center" style="margin:0; border-top: 1px solid #1e293b; padding-top: 1.5rem; font-size: 0.8rem;">
@@ -785,61 +513,8 @@
   </footer>
 
   <script>
-    // PREVIEW MODAL LOGIC
-    function openPreview(fileUrl, title) {
-      document.getElementById('modal-title').innerText = title + ' (Print & Download Ready)';
-      document.getElementById('preview-frame').src = fileUrl;
-      document.getElementById('modal-download').href = fileUrl;
-      document.getElementById('preview-modal').style.display = 'flex';
-      document.body.style.overflow = 'hidden';
-      trackView(title);
-    }
-
-    function closePreview() {
-      document.getElementById('preview-modal').style.display = 'none';
-      document.getElementById('preview-frame').src = '';
-      document.body.style.overflow = 'auto';
-    }
-
-    function printFrame() {
-      const frame = document.getElementById('preview-frame');
-      if (frame.contentWindow) {
-        frame.contentWindow.print();
-      }
-    }
-
-    // DARK MODE TOGGLE
     function toggleDarkMode() {
       document.body.classList.toggle('dark-mode');
-    }
-
-    // FAVORITES TOGGLE
-    function toggleFav(btn) {
-      if (btn.innerText === '🤍') {
-        btn.innerText = '❤️';
-      } else {
-        btn.innerText = '🤍';
-      }
-    }
-
-    // RECENTLY VIEWED TRACKER
-    const viewedTemplates = new Set();
-    function trackView(title) {
-      viewedTemplates.add(title);
-      const block = document.getElementById('recently-viewed-block');
-      const list = document.getElementById('recently-viewed-list');
-      
-      block.style.display = 'block';
-      list.innerHTML = '';
-      
-      viewedTemplates.forEach(item => {
-        const tag = document.createElement('span');
-        tag.className = 'tag';
-        tag.style.padding = '0.5rem 0.8rem';
-        tag.style.fontSize = '0.85rem';
-        tag.innerText = '📄 ' + item;
-        list.appendChild(tag);
-      });
     }
   </script>
 </body>

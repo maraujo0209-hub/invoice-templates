@@ -2,153 +2,95 @@
 <div class="template-nav-bar">
   <div class="nav-left">
     <a href="../index.html" class="nav-btn btn-back">← Back to All Templates</a>
-    <!-- Change tier class dynamically: tier-starter, tier-pro, or tier-ultimate -->
-    <span class="tier-tag tier-ultimate">Ultimate Template</span>
+    <span class="tier-tag tier-professional">Professional Template</span>
   </div>
   <div class="nav-right">
     <button onclick="window.print()" class="nav-btn btn-secondary">🖨️ Print / Save PDF</button>
-    <a href="https://yourstore.gumroad.com/l/ultimate" class="nav-btn btn-primary">Get This Template</a>
+    <a href="https://yourstore.gumroad.com/l/professional" class="nav-btn btn-primary">Get Professional Bundle</a>
   </div>
 </div>
 
-<!-- PREVIEW WATERMARK -->
 <div class="preview-watermark">PREVIEW VERSION — EDITABLE FILE INCLUDED WITH PURCHASE</div>
 
 <style>
-  .template-nav-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.75rem 1.5rem;
-    background: #0f172a;
-    color: #ffffff;
-    font-family: system-ui, -apple-system, sans-serif;
-  }
+  .template-nav-bar { display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 1.5rem; background: #0f172a; color: #ffffff; font-family: system-ui, -apple-system, sans-serif; }
   .nav-left, .nav-right { display: flex; align-items: center; gap: 0.75rem; }
-  .tier-tag {
-    font-size: 0.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    padding: 0.25rem 0.5rem;
-    border-radius: 4px;
-  }
-  .tier-starter { background: #2563eb; color: #fff; }
-  .tier-pro { background: #059669; color: #fff; }
-  .tier-ultimate { background: #9333ea; color: #fff; }
-  .nav-btn {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 0.875rem;
-    font-weight: 600;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    border: none;
-    cursor: pointer;
-  }
+  .tier-tag { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; padding: 0.25rem 0.5rem; border-radius: 4px; }
+  .tier-professional { background: #7c3aed; color: #fff; }
+  .nav-btn { color: #ffffff; text-decoration: none; font-size: 0.875rem; font-weight: 600; padding: 0.5rem 1rem; border-radius: 4px; border: none; cursor: pointer; }
   .btn-back { background: #1e293b; }
   .btn-secondary { background: #334155; }
-  .btn-primary { background: #9333ea; }
-  
-  .preview-watermark {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: rgba(15, 23, 42, 0.9);
-    color: #f8fafc;
-    padding: 0.6rem 1rem;
-    border-radius: 6px;
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    pointer-events: none;
-    z-index: 9999;
-  }
-  @media print {
-    .template-nav-bar, .preview-watermark { display: none !important; }
-  }
+  .btn-primary { background: #7c3aed; }
+  .preview-watermark { position: fixed; bottom: 20px; right: 20px; background: rgba(15, 23, 42, 0.9); color: #f8fafc; padding: 0.6rem 1rem; border-radius: 6px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em; pointer-events: none; z-index: 9999; }
+  @media print { .template-nav-bar, .preview-watermark { display: none !important; } }
 </style>
-<<!DOCTYPE html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Credit Memo - Tier 3 Ultimate</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Credit Memo</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; padding: 2rem; background: #f8fafc; color: #0f172a; }
+    .document-container { max-width: 800px; margin: 0 auto; background: #ffffff; padding: 2.5rem; border-radius: 8px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+    .header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 2rem; border-bottom: 2px solid #e2e8f0; padding-bottom: 1.5rem; }
+    .brand-details h2 { margin: 0 0 0.25rem 0; font-size: 1.25rem; color: #0f172a; }
+    .brand-details p { margin: 0.15rem 0; font-size: 0.85rem; color: #64748b; }
+    .meta-details { text-align: right; }
+    .meta-details h1 { margin: 0 0 0.5rem 0; font-size: 1.75rem; color: #7c3aed; text-transform: uppercase; letter-spacing: 0.02em; }
+    .meta-details p { margin: 0.25rem 0; font-size: 0.875rem; color: #475569; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 2rem; }
+    th, td { padding: 0.75rem 0.5rem; text-align: left; border-bottom: 1px solid #e2e8f0; font-size: 0.85rem; }
+    th { background: #f8fafc; font-weight: 600; color: #475569; text-transform: uppercase; font-size: 0.75rem; }
+    .text-right { text-align: right; }
+    .totals { width: 300px; margin-left: auto; }
+    .totals-row.grand-total { border-top: 2px solid #0f172a; font-weight: 700; font-size: 1.1rem; color: #0f172a; display: flex; justify-content: space-between; padding: 0.5rem 0; }
+    @media print { body { background: #ffffff; padding: 0; } .document-container { border: none; box-shadow: none; } }
+  </style>
 </head>
-<body style="margin:0; padding:0; background-color:#f8fafc; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color:#0f172a; line-height:1.5;">
-
-  <header style="background-color:#ffffff; border-bottom:1px solid #e2e8f0; padding:0.75rem 1.5rem; position:sticky; top:0; z-index:100;">
-    <div style="max-width:1100px; margin:0 auto; display:flex; justify-content:space-between; align-items:center;">
-      <a href="index.html" style="font-size:1rem; font-weight:700; color:#0f172a; text-decoration:none;"><i class="fa-solid fa-arrow-left"></i> Back to Hub</a>
-      <span style="background:#0f172a; color:#fff; font-size:0.75rem; font-weight:700; padding:0.25rem 0.5rem; border-radius:4px;">Tier 3 Ultimate Template</span>
-    </div>
-  </header>
-
-  <main style="max-width:850px; margin:2rem auto; padding:0 1rem;">
-    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem;">
-      <h1 style="font-size:1.5rem; font-weight:700; margin:0;">Credit Memorandum</h1>
-      <button type="button" onclick="window.print()" style="background:#0f172a; color:#fff; border:none; padding:0.5rem 1rem; border-radius:6px; font-weight:600; cursor:pointer;"><i class="fa-solid fa-print"></i> Print / Save PDF</button>
-    </div>
-
-    <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:2.5rem; box-shadow:0 4px 6px -1px rgba(0,0,0,0.05);">
-      <table style="width:100%; border-collapse:collapse; margin-bottom:2rem; border-bottom:2px solid #e2e8f0; padding-bottom:1.5rem;">
-        <tr>
-          <td style="vertical-align:top; width:60%;">
-            <div style="width:160px; height:50px; border:2px dashed #cbd5e1; border-radius:6px; display:flex; align-items:center; justify-content:center; color:#64748b; font-size:0.85rem; background-color:#f8fafc; margin-bottom:1rem;">
-              <i class="fa-solid fa-image" style="margin-right:0.5rem;"></i> Business Logo
-            </div>
-            <div style="font-size:0.875rem; color:#64748b;">
-              <strong style="font-size:1.125rem; color:#0f172a; display:block;" contenteditable="true">Your Business Name</strong>
-              <span contenteditable="true">123 Business Rd, City, ST 12345<br>Phone: (555) 000-0000 | Email: billing@company.com</span>
-            </div>
-          </td>
-          <td style="vertical-align:top; text-align:right; width:40%;">
-            <h1 style="font-size:1.75rem; font-weight:800; color:#dc2626; margin:0 0 0.5rem 0;">CREDIT MEMO</h1>
-            <p style="font-size:0.875rem; color:#334155; margin:0 0 0.25rem 0;"><strong>Credit Memo #:</strong> <span contenteditable="true">CM-5001</span></p>
-            <p style="font-size:0.875rem; color:#334155; margin:0 0 0.25rem 0;"><strong>Date:</strong> <span contenteditable="true">2026-07-21</span></p>
-            <p style="font-size:0.875rem; color:#334155; margin:0;"><strong>Ref Invoice #:</strong> <span contenteditable="true">INV-1001</span></p>
-          </td>
-        </tr>
-      </table>
-
-      <div style="background-color:#f8fafc; border:1px solid #e2e8f0; border-radius:6px; padding:1rem; margin-bottom:2rem;">
-        <span style="font-size:0.75rem; font-weight:700; text-transform:uppercase; color:#64748b; display:block; margin-bottom:0.25rem;">Credit Issued To:</span>
-        <div contenteditable="true" style="font-size:0.875rem; color:#0f172a;">
-          Acme Corporation<br>Attn: Accounts Payable<br>100 Corporate Blvd, Suite 200
-        </div>
+<body>
+  <div class="document-container">
+    <div class="header">
+      <div class="brand-details">
+        <h2>Your Service Company</h2>
+        <p>123 Service Road, Suite 100 • City, State 12345</p>
+        <p>contact@yourservicecompany.com • (555) 019-2831</p>
       </div>
-
-      <table style="width:100%; border-collapse:collapse; margin-bottom:2rem;">
-        <thead>
-          <tr style="background-color:#f1f5f9; border-bottom:2px solid #cbd5e1;">
-            <th style="text-align:left; padding:0.75rem; font-size:0.875rem;">Description / Adjustment Reason</th>
-            <th style="text-align:right; padding:0.75rem; font-size:0.875rem; width:120px;">Credit Amount</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr style="border-bottom:1px solid #e2e8f0;">
-            <td contenteditable="true" style="padding:0.75rem; font-size:0.875rem;">Service Courtesy Discount / Billing Adjustment</td>
-            <td contenteditable="true" style="padding:0.75rem; font-size:0.875rem; text-align:right; color:#dc2626; font-weight:600;">-$150.00</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <table style="width:100%; border-collapse:collapse;">
-        <tr>
-          <td style="width:50%;">
-            <p style="font-size:0.75rem; color:#64748b; margin:0;" contenteditable="true">This amount has been applied as a credit balance against your open account balance.</p>
-          </td>
-          <td style="width:50%;">
-            <table style="width:100%; font-size:0.875rem;">
-              <tr style="border-top:2px solid #0f172a; font-weight:700; font-size:1.1rem;">
-                <td style="padding:0.5rem 0 0 0;">Total Credit Applied:</td>
-                <td style="padding:0.5rem 0 0 0; text-align:right; color:#dc2626;">-$150.00</td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-      </table>
+      <div class="meta-details">
+        <h1>Credit Memo</h1>
+        <p><strong>Credit #:</strong> CRM-2026-004</p>
+        <p><strong>Date:</strong> July 21, 2026</p>
+      </div>
     </div>
-  </main>
+
+    <div style="margin-bottom: 1.5rem; font-size: 0.875rem;">
+      <strong>Credit To:</strong> Acme Property Management<br>
+      <strong>Ref. Invoice:</strong> INV-2026-001
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Reason for Credit</th>
+          <th class="text-right">Credit Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Service Adjustment — Partial Room Cancellation</td>
+          <td class="text-right">-$50.00</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="totals">
+      <div class="totals-row grand-total">
+        <span>Total Account Credit:</span>
+        <span>-$50.00</span>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

@@ -6,25 +6,46 @@
   
   <!-- SEO METADATA -->
   <title>Professional Invoice & Business Templates | Free Download</title>
-  <meta name="description" content="Download professional, customizable invoice templates for freelancers and small businesses. Compatible with Word, Excel, Google Docs, PDF, and HTML." />
+  <meta name="description" content="Free HTML, Word, Excel & PDF invoice templates for freelancers, contractors, and small businesses. Print-ready and commercial license included." />
   <meta name="keywords" content="invoice template, business templates, printable invoice, estimate template, receipt, billing" />
   <link rel="canonical" href="https://maraujo0209-hub.github.io/invoice-templates/" />
 
   <!-- Open Graph / Social Media -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Professional Invoice & Business Templates" />
+  <meta property="og:title" content="Professional Invoice Templates for Freelancers & Small Businesses" />
   <meta property="og:description" content="Download beautiful, printable invoice templates in Word, Excel, PDF, and HTML." />
-  <meta property="og:url" content="https://maraujo0209-hub.github.io/invoice-templates/" />
 
   <style>
+    /* CSS VARIABLES & THEMING */
+    :root {
+      --bg-main: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-hero: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --border-color: #e2e8f0;
+      --primary: #10b981;
+      --primary-dark: #059669;
+      --accent: #3b82f6;
+    }
+
+    /* DARK MODE OVERRIDES */
+    body.dark-mode {
+      --bg-main: #0f172a;
+      --bg-card: #1e293b;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --border-color: #334155;
+    }
+
     /* BASE & RESET */
-    * { box-sizing: border-box; }
+    * { box-sizing: border-box; transition: background-color 0.2s, color 0.2s; }
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f8fafc;
-      color: #0f172a;
+      background-color: var(--bg-main);
+      color: var(--text-main);
       line-height: 1.5;
     }
 
@@ -36,9 +57,42 @@
 
     .text-center { text-align: center; }
 
+    /* HEADER & NAV */
+    .top-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--border-color);
+      background: var(--bg-card);
+    }
+
+    .brand-logo {
+      font-weight: 800;
+      font-size: 1.25rem;
+      color: var(--text-main);
+      text-decoration: none;
+    }
+
+    .nav-actions {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .theme-toggle {
+      background: none;
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
     /* HERO SECTION */
     .hero-section {
-      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      background: var(--bg-hero);
       color: #ffffff;
       padding: 4.5rem 1rem 3.5rem 1rem;
       text-align: center;
@@ -62,11 +116,12 @@
       display: flex;
       justify-content: center;
       gap: 1rem;
-      margin-bottom: 2.5rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
     }
 
     .btn-hero-primary {
-      background: #10b981;
+      background: var(--primary);
       color: #ffffff;
       padding: 0.9rem 1.75rem;
       border-radius: 8px;
@@ -89,79 +144,93 @@
       align-items: center;
     }
 
-    /* SEARCH & FILTER BAR */
+    /* TRUST INDICATORS */
+    .trust-bar {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border-color);
+      padding: 1.5rem 0;
+      text-align: center;
+    }
+
+    .trust-item h3 { margin: 0; font-size: 1.4rem; color: var(--text-main); }
+    .trust-item p { margin: 0; font-size: 0.85rem; color: var(--text-muted); }
+
+    /* FILTERS & SEARCH */
     .filter-wrapper {
-      background: #ffffff;
+      background: var(--bg-card);
       border-radius: 12px;
       padding: 1.25rem;
       box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
-      margin-top: -2rem;
-      border: 1px solid #e2e8f0;
+      margin: 2rem 0;
+      border: 1px solid var(--border-color);
     }
 
     .search-box input {
       width: 100%;
       padding: 0.85rem 1rem;
       border-radius: 6px;
-      border: 1px solid #cbd5e1;
+      border: 1px solid var(--border-color);
+      background: var(--bg-main);
+      color: var(--text-main);
       font-size: 1rem;
       margin-bottom: 1rem;
+    }
+
+    .filter-group {
+      margin-bottom: 0.75rem;
+    }
+
+    .filter-group label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      display: block;
+      margin-bottom: 0.4rem;
     }
 
     .filter-chips {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.5rem;
+      gap: 0.4rem;
     }
 
     .chip {
-      background: #f1f5f9;
-      color: #475569;
-      border: 1px solid #cbd5e1;
-      padding: 0.4rem 0.85rem;
+      background: var(--bg-main);
+      color: var(--text-main);
+      border: 1px solid var(--border-color);
+      padding: 0.35rem 0.75rem;
       border-radius: 50px;
-      font-size: 0.85rem;
+      font-size: 0.825rem;
       font-weight: 600;
       cursor: pointer;
     }
 
     .chip.active {
-      background: #0f172a;
-      color: #ffffff;
-      border-color: #0f172a;
+      background: var(--text-main);
+      color: var(--bg-card);
+      border-color: var(--text-main);
     }
 
-    /* TRUST STATS BAR */
-    .trust-stats {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 1rem;
-      background: #ffffff;
-      border-bottom: 1px solid #e2e8f0;
-      padding: 1.5rem 0;
-      margin-top: 2rem;
-      text-align: center;
-    }
-
-    .stat-item h3 { margin: 0; font-size: 1.5rem; color: #0f172a; }
-    .stat-item p { margin: 0; font-size: 0.85rem; color: #64748b; }
-
-    /* CARD GRID */
-    .section-block { margin: 3.5rem 0; }
+    /* CARD GRID & CARDS */
+    .section-block { margin: 3rem 0; }
     .card-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
       gap: 1.5rem;
     }
 
     .template-card {
-      background: #ffffff;
-      border: 1px solid #e2e8f0;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
       border-radius: 12px;
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      transition: transform 0.2s, box-shadow 0.2s;
+      position: relative;
     }
 
     .template-card:hover {
@@ -169,22 +238,58 @@
       box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.1);
     }
 
+    /* VISUAL THUMBNAIL MOCK */
     .card-preview-thumb {
-      background: #e2e8f0;
-      height: 180px;
+      background: #f1f5f9;
+      height: 200px;
+      padding: 1rem;
+      position: relative;
+      border-bottom: 1px solid var(--border-color);
       display: flex;
       align-items: center;
       justify-content: center;
-      position: relative;
-      border-bottom: 1px solid #e2e8f0;
-      overflow: hidden;
+    }
+
+    .invoice-mock {
+      width: 100%;
+      height: 100%;
+      background: #ffffff;
+      border-radius: 4px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      padding: 0.75rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      font-size: 0.6rem;
+      color: #334155;
+    }
+
+    .mock-header { display: flex; justify-content: space-between; border-bottom: 2px solid #0f172a; padding-bottom: 0.4rem; }
+    .mock-lines { margin: 0.5rem 0; }
+    .mock-line { height: 6px; background: #e2e8f0; border-radius: 2px; margin-bottom: 0.3rem; }
+    .mock-footer { display: flex; justify-content: space-between; font-weight: bold; border-top: 1px solid #cbd5e1; padding-top: 0.3rem; }
+
+    .fav-btn {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(255, 255, 255, 0.9);
+      border: none;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
 
     .card-badge {
       position: absolute;
-      top: 10px;
-      left: 10px;
-      background: #10b981;
+      top: 12px;
+      left: 12px;
+      background: var(--primary);
       color: #fff;
       font-size: 0.7rem;
       font-weight: 700;
@@ -193,11 +298,21 @@
     }
 
     .card-body { padding: 1.25rem; flex: 1; display: flex; flex-direction: column; }
-    .card-title { font-size: 1.1rem; font-weight: 700; margin: 0 0 0.5rem 0; }
-    .card-meta { display: flex; gap: 0.5rem; margin-bottom: 0.75rem; }
-    .tag { font-size: 0.75rem; background: #f1f5f9; padding: 0.15rem 0.4rem; border-radius: 4px; color: #475569; }
+    .card-title { font-size: 1.15rem; font-weight: 700; margin: 0 0 0.25rem 0; color: var(--text-main); }
+    .card-rating { font-size: 0.85rem; color: #f59e0b; margin-bottom: 0.5rem; }
+    
+    .card-meta { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.75rem; }
+    .tag { font-size: 0.7rem; background: var(--bg-main); border: 1px solid var(--border-color); padding: 0.15rem 0.4rem; border-radius: 4px; color: var(--text-muted); font-weight: 600; }
 
-    .card-stats { display: flex; justify-content: space-between; font-size: 0.8rem; color: #64748b; margin-top: auto; padding-top: 1rem; }
+    .card-footer-info {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: auto;
+      padding-top: 0.75rem;
+      border-top: 1px dashed var(--border-color);
+      display: flex;
+      justify-content: space-between;
+    }
 
     .card-actions { display: flex; gap: 0.5rem; margin-top: 1rem; }
     .btn-card {
@@ -214,32 +329,32 @@
       cursor: pointer;
       text-decoration: none;
     }
-    .btn-preview-card { background: #f1f5f9; color: #0f172a; border: 1px solid #cbd5e1; }
-    .btn-use-card { background: #0f172a; color: #ffffff; border: none; }
+    .btn-preview-card { background: var(--bg-main); color: var(--text-main); border: 1px solid var(--border-color); }
+    .btn-use-card { background: var(--text-main); color: var(--bg-card); border: none; }
 
-    /* TABLE COMPARISON */
+    /* COMPARISON TABLE */
     .comparison-table {
       width: 100%;
       border-collapse: collapse;
-      background: #ffffff;
+      background: var(--bg-card);
       border-radius: 8px;
       overflow: hidden;
-      border: 1px solid #e2e8f0;
+      border: 1px solid var(--border-color);
     }
 
     .comparison-table th, .comparison-table td {
       padding: 1rem;
       text-align: left;
-      border-bottom: 1px solid #e2e8f0;
+      border-bottom: 1px solid var(--border-color);
     }
 
     .comparison-table th { background: #0f172a; color: #ffffff; }
 
-    /* MODAL */
+    /* MODAL PREVIEW */
     .modal {
       position: fixed;
       top: 0; left: 0; width: 100%; height: 100%;
-      background: rgba(15, 23, 42, 0.75);
+      background: rgba(15, 23, 42, 0.8);
       z-index: 20000;
       display: flex;
       align-items: center;
@@ -248,9 +363,9 @@
     }
 
     .modal-content {
-      background: #ffffff;
+      background: var(--bg-card);
       width: 100%;
-      max-width: 950px;
+      max-width: 1000px;
       height: 90vh;
       border-radius: 12px;
       overflow: hidden;
@@ -272,23 +387,26 @@
       background: #1e293b;
       color: #fff;
       border: 1px solid #475569;
-      padding: 0.4rem 0.8rem;
+      padding: 0.4rem 0.88rem;
       border-radius: 6px;
       font-size: 0.85rem;
       cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
     }
 
-    .modal-body { flex: 1; border: none; width: 100%; height: 100%; }
+    .modal-body { flex: 1; border: none; width: 100%; height: 100%; background: #fff; }
 
-    /* FOOTER */
+    /* SITE FOOTER */
     .site-footer {
       background: #0f172a;
       color: #94a3b8;
-      padding: 3rem 0;
+      padding: 3.5rem 0 2rem 0;
       margin-top: 4rem;
       font-size: 0.9rem;
     }
-    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
+    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 2rem; margin-bottom: 2.5rem; }
     .footer-grid h4 { color: #ffffff; margin-bottom: 1rem; }
     .footer-grid a { color: #94a3b8; text-decoration: none; display: block; margin-bottom: 0.5rem; }
 
@@ -300,126 +418,217 @@
 </head>
 <body>
 
+  <!-- TOP NAVIGATION BAR -->
+  <div class="container">
+    <nav class="top-nav">
+      <a href="#" class="brand-logo">BizTemplates</a>
+      <div class="nav-actions">
+        <button class="theme-toggle" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+      </div>
+    </nav>
+  </div>
+
   <!-- HERO SECTION -->
   <header class="hero-section">
     <div class="container">
-      <h1>Professional Invoice Templates for Freelancers & Small Businesses</h1>
-      <p class="hero-subtitle">Download beautiful, printable invoice templates in Word, Excel, PDF, and HTML. Free commercial license included.</p>
+      <h1>Professional Invoice Templates</h1>
+      <p class="hero-subtitle">Free HTML, Word, Excel & PDF templates for freelancers, contractors, and small businesses. Print-ready, customizable, and instantly accessible.</p>
       <div class="hero-actions">
         <a href="#templates" class="btn-hero-primary">Browse Templates</a>
-        <a href="#pricing" class="btn-hero-secondary">Get Unlimited Bundle</a>
+        <a href="#templates" class="btn-hero-secondary">Most Popular</a>
       </div>
     </div>
   </header>
 
+  <!-- TRUST SIGNALS BAR -->
+  <div class="trust-bar">
+    <div class="container" style="display:contents;">
+      <div class="trust-item">
+        <h3>250+</h3>
+        <p>Templates Available</p>
+      </div>
+      <div class="trust-item">
+        <h3>50,000+</h3>
+        <p>Total Downloads</p>
+      </div>
+      <div class="trust-item">
+        <h3>100% Free</h3>
+        <p>Commercial License</p>
+      </div>
+      <div class="trust-item">
+        <h3>Letter & A4</h3>
+        <p>Print Ready</p>
+      </div>
+      <div class="trust-item">
+        <h3>No Sign-up</h3>
+        <p>Instant Access</p>
+      </div>
+    </div>
+  </div>
+
   <main class="container">
 
-    <!-- SEARCH & CATEGORY FILTERS -->
+    <!-- FILTERS & SEARCH -->
     <div class="filter-wrapper">
       <div class="search-box">
-        <input type="text" id="templateSearch" placeholder="Search templates (e.g. Invoice, Cleaning, Construction, Freelance)..." />
+        <input type="text" id="templateSearch" placeholder="Search by business type (e.g. Cleaning, Construction, Freelancer, HVAC)..." />
       </div>
-      <div class="filter-chips">
-        <button class="chip active">All</button>
-        <button class="chip">Cleaning</button>
-        <button class="chip">Construction</button>
-        <button class="chip">Freelancer</button>
-        <button class="chip">Contractor</button>
-        <button class="chip">Consulting</button>
-        <button class="chip">Minimal</button>
-        <button class="chip">A4 & Letter</button>
+
+      <div class="filter-group">
+        <label>Business Type</label>
+        <div class="filter-chips">
+          <button class="chip active">All</button>
+          <button class="chip">Cleaning</button>
+          <button class="chip">Construction</button>
+          <button class="chip">Freelancer</button>
+          <button class="chip">HVAC</button>
+          <button class="chip">Medical</button>
+          <button class="chip">Landscaping</button>
+          <button class="chip">Photography</button>
+          <button class="chip">Consultant</button>
+          <button class="chip">Auto Repair</button>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <label>Design Style</label>
+        <div class="filter-chips">
+          <button class="chip">Minimal</button>
+          <button class="chip">Corporate</button>
+          <button class="chip">Luxury</button>
+          <button class="chip">Classic</button>
+          <button class="chip">Modern</button>
+        </div>
       </div>
     </div>
 
-    <!-- TRUST STATS BAR -->
-    <div class="trust-stats">
-      <div class="stat-item">
-        <h3>16+</h3>
-        <p>Essential Templates</p>
-      </div>
-      <div class="stat-item">
-        <h3>50,000+</h3>
-        <p>Downloads</p>
-      </div>
-      <div class="stat-item">
-        <h3>4.9 ★</h3>
-        <p>User Rating</p>
-      </div>
-      <div class="stat-item">
-        <h3>100%</h3>
-        <p>Free Commercial Use</p>
-      </div>
-    </div>
-
-    <!-- TEMPLATE GRID -->
+    <!-- FEATURED TEMPLATES GRID -->
     <section id="templates" class="section-block">
-      <h2>Featured Business Templates</h2>
+      <h2>⭐ Featured & Popular Templates</h2>
       <div class="card-grid">
 
-        <!-- Card 1 -->
+        <!-- Card 1: Modern Invoice -->
         <div class="template-card">
           <div class="card-preview-thumb">
             <span class="card-badge">Popular</span>
-            <div style="font-weight:700; color:#475569;">📄 Invoice Template</div>
+            <button class="fav-btn" onclick="toggleFav(this)">❤️</button>
+            <div class="invoice-mock">
+              <div class="mock-header">
+                <div><strong>INVOICE</strong><br><span style="font-size:0.5rem; color:#64748b;">#INV-2026-01</span></div>
+                <div style="text-align:right;">Modern Co.</div>
+              </div>
+              <div class="mock-lines">
+                <div class="mock-line" style="width:80%;"></div>
+                <div class="mock-line" style="width:60%;"></div>
+                <div class="mock-line" style="width:90%;"></div>
+              </div>
+              <div class="mock-footer">
+                <span>Total Due:</span>
+                <span>$1,250.00</span>
+              </div>
+            </div>
           </div>
           <div class="card-body">
             <h3 class="card-title">Modern Billing Invoice</h3>
+            <div class="card-rating">★★★★★ 4.9 (23,400 downloads)</div>
             <div class="card-meta">
+              <span class="tag">HTML</span>
+              <span class="tag">PDF</span>
+              <span class="tag">Word</span>
+              <span class="tag">Letter & A4</span>
               <span class="tag">Freelance</span>
-              <span class="tag">Blue</span>
-              <span class="tag">Letter</span>
+              <span class="tag">Modern</span>
             </div>
-            <div class="card-stats">
-              <span>★ 4.9 (23.4k downloads)</span>
+            <div class="card-footer-info">
+              <span>Updated July 2026</span>
+              <span>Blue Theme</span>
             </div>
             <div class="card-actions">
               <button onclick="openPreview('./previews/business-tracker.html', 'Modern Billing Invoice')" class="btn-card btn-preview-card">Preview</button>
-              <a href="#pricing" class="btn-card btn-use-card">Use Template</a>
+              <a href="./previews/business-tracker.html" target="_blank" onclick="trackView('Modern Billing Invoice')" class="btn-card btn-use-card">Use Template</a>
             </div>
           </div>
         </div>
 
-        <!-- Card 2 -->
+        <!-- Card 2: Cleaning Service Invoice -->
         <div class="template-card">
           <div class="card-preview-thumb">
             <span class="card-badge" style="background:#3b82f6;">New</span>
-            <div style="font-weight:700; color:#475569;">📊 Invoice Ledger</div>
+            <button class="fav-btn" onclick="toggleFav(this)">🤍</button>
+            <div class="invoice-mock">
+              <div class="mock-header" style="border-bottom-color: #3b82f6;">
+                <div><strong>CLEANING SVC</strong><br><span style="font-size:0.5rem; color:#64748b;">Service Receipt</span></div>
+                <div style="text-align:right;">Sparkle Clean</div>
+              </div>
+              <div class="mock-lines">
+                <div class="mock-line" style="width:75%;"></div>
+                <div class="mock-line" style="width:85%;"></div>
+              </div>
+              <div class="mock-footer">
+                <span>Amount:</span>
+                <span>$340.00</span>
+              </div>
+            </div>
           </div>
           <div class="card-body">
-            <h3 class="card-title">Client Billing Ledger</h3>
+            <h3 class="card-title">Service & Cleaning Invoice</h3>
+            <div class="card-rating">★★★★★ 4.8 (11,200 downloads)</div>
             <div class="card-meta">
-              <span class="tag">Contractor</span>
-              <span class="tag">Corporate</span>
-              <span class="tag">A4</span>
+              <span class="tag">HTML</span>
+              <span class="tag">Excel</span>
+              <span class="tag">PDF</span>
+              <span class="tag">Letter</span>
+              <span class="tag">Cleaning</span>
+              <span class="tag">Minimal</span>
             </div>
-            <div class="card-stats">
-              <span>★ 4.8 (12.1k downloads)</span>
+            <div class="card-footer-info">
+              <span>Updated July 2026</span>
+              <span>Green / Cyan</span>
             </div>
             <div class="card-actions">
-              <button onclick="openPreview('./previews/invoice-ledger.html', 'Client Billing Ledger')" class="btn-card btn-preview-card">Preview</button>
-              <a href="#pricing" class="btn-card btn-use-card">Use Template</a>
+              <button onclick="openPreview('./previews/invoice-ledger.html', 'Service & Cleaning Invoice')" class="btn-card btn-preview-card">Preview</button>
+              <a href="./previews/invoice-ledger.html" target="_blank" onclick="trackView('Service & Cleaning Invoice')" class="btn-card btn-use-card">Use Template</a>
             </div>
           </div>
         </div>
 
-        <!-- Card 3 -->
+        <!-- Card 3: Construction Purchase Order -->
         <div class="template-card">
           <div class="card-preview-thumb">
-            <div style="font-weight:700; color:#475569;">📋 Purchase Order</div>
+            <button class="fav-btn" onclick="toggleFav(this)">🤍</button>
+            <div class="invoice-mock">
+              <div class="mock-header" style="border-bottom-color: #f59e0b;">
+                <div><strong>WORK ORDER</strong><br><span style="font-size:0.5rem; color:#64748b;">Contractor Build</span></div>
+                <div style="text-align:right;">Apex Build</div>
+              </div>
+              <div class="mock-lines">
+                <div class="mock-line" style="width:95%;"></div>
+                <div class="mock-line" style="width:40%;"></div>
+              </div>
+              <div class="mock-footer">
+                <span>Contract Total:</span>
+                <span>$8,900.00</span>
+              </div>
+            </div>
           </div>
           <div class="card-body">
-            <h3 class="card-title">Commercial Purchase Order</h3>
+            <h3 class="card-title">Contractor & Build Order</h3>
+            <div class="card-rating">★★★★★ 4.9 (18,500 downloads)</div>
             <div class="card-meta">
+              <span class="tag">HTML</span>
+              <span class="tag">PDF</span>
+              <span class="tag">Word</span>
+              <span class="tag">A4</span>
               <span class="tag">Construction</span>
-              <span class="tag">Minimal</span>
-              <span class="tag">Letter</span>
+              <span class="tag">Corporate</span>
             </div>
-            <div class="card-stats">
-              <span>★ 4.9 (18.5k downloads)</span>
+            <div class="card-footer-info">
+              <span>Updated July 2026</span>
+              <span>Monochrome</span>
             </div>
             <div class="card-actions">
-              <button onclick="openPreview('./previews/purchase-order.html', 'Commercial Purchase Order')" class="btn-card btn-preview-card">Preview</button>
-              <a href="#pricing" class="btn-card btn-use-card">Use Template</a>
+              <button onclick="openPreview('./previews/purchase-order.html', 'Contractor & Build Order')" class="btn-card btn-preview-card">Preview</button>
+              <a href="./previews/purchase-order.html" target="_blank" onclick="trackView('Contractor & Build Order')" class="btn-card btn-use-card">Use Template</a>
             </div>
           </div>
         </div>
@@ -427,36 +636,46 @@
       </div>
     </section>
 
-    <!-- TEMPLATE COMPARISON TABLE -->
+    <!-- RECENTLY VIEWED TEMPLATES -->
+    <section class="section-block" id="recently-viewed-block" style="display:none;">
+      <h2>🕒 Recently Viewed Templates</h2>
+      <div id="recently-viewed-list" style="display:flex; gap:1rem; flex-wrap:wrap;"></div>
+    </section>
+
+    <!-- TEMPLATE COMPARISON MATRIX -->
     <section class="section-block">
-      <h2>Template Comparison Matrix</h2>
+      <h2>Template Comparison</h2>
       <table class="comparison-table">
         <thead>
           <tr>
-            <th>Template Name</th>
+            <th>Template</th>
             <th>Best For</th>
-            <th>Format Support</th>
+            <th>Formats</th>
             <th>Paper Size</th>
+            <th>Style</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td><strong>Modern Invoice</strong></td>
-            <td>Freelancers & Consultants</td>
-            <td>Word, Excel, PDF, HTML</td>
+            <td><strong>Modern Billing Invoice</strong></td>
+            <td>Freelancers, Agencies, Consultants</td>
+            <td>HTML, Word, PDF</td>
             <td>Letter & A4</td>
+            <td>Modern</td>
           </tr>
           <tr>
-            <td><strong>Invoice Ledger</strong></td>
-            <td>Contractors & Small Business</td>
-            <td>Excel, Google Sheets, PDF</td>
+            <td><strong>Service & Cleaning Invoice</strong></td>
+            <td>Cleaning Services, HVAC, Landscaping</td>
+            <td>HTML, Excel, PDF</td>
             <td>Letter</td>
+            <td>Minimal</td>
           </tr>
           <tr>
-            <td><strong>Profit & Loss Statement</strong></td>
-            <td>Accounting & Service Providers</td>
-            <td>Excel, Google Sheets, PDF</td>
+            <td><strong>Contractor & Build Order</strong></td>
+            <td>Construction, Auto Repair, Trades</td>
+            <td>HTML, Word, PDF</td>
             <td>A4</td>
+            <td>Corporate</td>
           </tr>
         </tbody>
       </table>
@@ -464,15 +683,15 @@
 
   </main>
 
-  <!-- MODAL PREVIEW -->
+  <!-- PREVIEW MODAL -->
   <div id="preview-modal" class="modal" style="display:none;">
     <div class="modal-content">
       <div class="modal-header">
-        <h3 id="modal-title">Template Live Preview</h3>
+        <h3 id="modal-title" style="margin:0; font-size:1.1rem;">Template Live Preview</h3>
         <div class="modal-actions">
           <button class="btn-modal-action" onclick="printFrame()">🖨️ Print</button>
           <a id="modal-download" href="#" download class="btn-modal-action">📥 Download</a>
-          <button class="btn-modal-action" style="background:#ef4444;" onclick="closePreview()">✕ Close</button>
+          <button class="btn-modal-action" style="background:#ef4444; border-color:#dc2626;" onclick="closePreview()">✕ Close</button>
         </div>
       </div>
       <iframe id="preview-frame" class="modal-body" src=""></iframe>
@@ -485,32 +704,44 @@
       <div class="footer-grid">
         <div>
           <h4>BizTemplates</h4>
-          <p>Instant digital templates for operations, billing, and accounting.</p>
+          <p>Download free, professional templates for invoices, purchase orders, and business operational tracking.</p>
         </div>
         <div>
-          <h4>Quick Links</h4>
-          <a href="#templates">All Templates</a>
-          <a href="#pricing">Pricing</a>
-          <a href="/faq">FAQ</a>
+          <h4>Template Types</h4>
+          <a href="#templates">Freelance Invoices</a>
+          <a href="#templates">Cleaning Services</a>
+          <a href="#templates">Construction & HVAC</a>
+          <a href="#templates">Consulting & Legal</a>
         </div>
         <div>
-          <h4>Legal</h4>
+          <h4>Company</h4>
+          <a href="/about">About Us</a>
+          <a href="/contact">Contact Support</a>
+          <a href="/faq">Frequently Asked Questions</a>
+        </div>
+        <div>
+          <h4>Legal & Source</h4>
           <a href="/privacy">Privacy Policy</a>
-          <a href="/terms">Terms of Use</a>
+          <a href="/terms">Terms of Service</a>
           <a href="/license">Commercial License</a>
+          <a href="https://github.com" target="_blank" rel="noopener">GitHub Repository</a>
         </div>
       </div>
-      <p class="text-center">&copy; 2026 BizTemplates. All rights reserved.</p>
+      <p class="text-center" style="margin:0; border-top: 1px solid #1e293b; padding-top: 1.5rem; font-size: 0.8rem;">
+        &copy; 2026 BizTemplates. All rights reserved.
+      </p>
     </div>
   </footer>
 
   <script>
+    // PREVIEW MODAL LOGIC
     function openPreview(fileUrl, title) {
-      document.getElementById('modal-title').innerText = title + ' (Live Preview)';
+      document.getElementById('modal-title').innerText = title + ' (Print & Download Ready)';
       document.getElementById('preview-frame').src = fileUrl;
       document.getElementById('modal-download').href = fileUrl;
       document.getElementById('preview-modal').style.display = 'flex';
       document.body.style.overflow = 'hidden';
+      trackView(title);
     }
 
     function closePreview() {
@@ -524,6 +755,40 @@
       if (frame.contentWindow) {
         frame.contentWindow.print();
       }
+    }
+
+    // DARK MODE TOGGLE
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+
+    // FAVORITES TOGGLE
+    function toggleFav(btn) {
+      if (btn.innerText === '🤍') {
+        btn.innerText = '❤️';
+      } else {
+        btn.innerText = '🤍';
+      }
+    }
+
+    // RECENTLY VIEWED TRACKER
+    const viewedTemplates = new Set();
+    function trackView(title) {
+      viewedTemplates.add(title);
+      const block = document.getElementById('recently-viewed-block');
+      const list = document.getElementById('recently-viewed-list');
+      
+      block.style.display = 'block';
+      list.innerHTML = '';
+      
+      viewedTemplates.forEach(item => {
+        const tag = document.createElement('span');
+        tag.className = 'tag';
+        tag.style.padding = '0.5rem 0.8rem';
+        tag.style.fontSize = '0.85rem';
+        tag.innerText = '📄 ' + item;
+        list.appendChild(tag);
+      });
     }
   </script>
 </body>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Account Statement</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background: #f8fafc;
+      color: #0f172a;
+    }
+    .document-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 2.5rem;
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 2rem;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 1.5rem;
+    }
+    .logo-placeholder {
+      width: 200px;
+      height: 80px;
+      background: #f1f5f9;
+      border: 2px dashed #cbd5e1;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #64748b;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+    .meta-details { text-align: right; }
+    .meta-details h1 {
+      margin: 0 0 0.5rem 0;
+      font-size: 1.75rem;
+      color: #6b21a8;
+      text-transform: uppercase;
+    }
+    .meta-details p { margin: 0.25rem 0; font-size: 0.875rem; color: #475569; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 2rem;
+    }
+    th, td {
+      padding: 0.75rem 0.5rem;
+      text-align: left;
+      border-bottom: 1px solid #e2e8f0;
+      font-size: 0.85rem;
+    }
+    th { background: #f8fafc; font-weight: 600; color: #475569; }
+    .text-right { text-align: right; }
+    .totals {
+      width: 300px;
+      margin-left: auto;
+    }
+    .totals-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.4rem 0;
+      font-size: 0.875rem;
+    }
+    .totals-row.grand-total {
+      border-top: 2px solid #0f172a;
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: #0f172a;
+    }
+    @media print {
+      body { background: #ffffff; padding: 0; }
+      .document-container { border: none; box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="document-container">
+    <div class="header">
+      <div class="logo-placeholder">BUSINESS LOGO</div>
+      <div class="meta-details">
+        <h1>Account Statement</h1>
+        <p><strong>Statement Period:</strong> June 01 – July 21, 2026</p>
+      </div>
+    </div>
+
+    <h3>Statement Activity for Client: Apex Enterprises</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Transaction Details</th>
+          <th class="text-right">Charges</th>
+          <th class="text-right">Payments</th>
+          <th class="text-right">Balance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>06/01/2026</td>
+          <td>Invoice #INV-901</td>
+          <td class="text-right">$1,200.00</td>
+          <td class="text-right">$0.00</td>
+          <td class="text-right">$1,200.00</td>
+        </tr>
+        <tr>
+          <td>06/15/2026</td>
+          <td>Payment Received (Check #401)</td>
+          <td class="text-right">$0.00</td>
+          <td class="text-right">$1,200.00</td>
+          <td class="text-right">$0.00</td>
+        </tr>
+        <tr>
+          <td>07/01/2026</td>
+          <td>Invoice #INV-945</td>
+          <td class="text-right">$650.00</td>
+          <td class="text-right">$0.00</td>
+          <td class="text-right">$650.00</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="totals">
+      <div class="totals-row grand-total">
+        <span>Current Amount Due:</span>
+        <span>$650.00</span>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

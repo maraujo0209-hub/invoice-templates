@@ -58,30 +58,141 @@
 
   <main class="container">
 
-    <!-- BUNDLE INCLUSIONS SECTION -->
+    <!-- BUNDLE INCLUSIONS SECTION WITH PREVIEW BUTTONS -->
     <section class="section-block">
       <div class="section-header text-center">
         <h2>What's Included in the Bundle</h2>
-        <p>Instant access to all 16 essential business templates.</p>
+        <p>Instant access to all 16 essential business templates. Click <strong>Preview</strong> to inspect any file live.</p>
       </div>
 
       <div class="template-features-grid">
-        <div class="feature-card">✓ Invoice Template <span>Included</span></div>
-        <div class="feature-card">✓ Estimate Template <span>Included</span></div>
-        <div class="feature-card">✓ Receipt Template <span>Included</span></div>
-        <div class="feature-card">✓ Purchase Order <span>Included</span></div>
-        <div class="feature-card">✓ Business Proposal <span>Included</span></div>
-        <div class="feature-card">✓ Timesheet Log <span>Included</span></div>
-        <div class="feature-card">✓ Contractor Agreement <span>Included</span></div>
-        <div class="feature-card">✓ Expense Report <span>Included</span></div>
-        <div class="feature-card">✓ Mileage Log <span>Included</span></div>
-        <div class="feature-card">✓ Profit & Loss Statement <span>Included</span></div>
-        <div class="feature-card">✓ Business Tracker <span>Included</span></div>
-        <div class="feature-card">✓ Invoice Ledger <span>Included</span></div>
-        <div class="feature-card">✓ Tax Estimation Sheet <span>Included</span></div>
-        <div class="feature-card">✓ Client Intake Form <span>Included</span></div>
-        <div class="feature-card">✓ Service Quote <span>Included</span></div>
-        <div class="feature-card">✓ Job Work Order <span>Included</span></div>
+        <div class="feature-card">
+          <div class="feature-info">
+            <span class="feature-title">✓ Invoice Template</span>
+            <span class="feature-status">Included</span>
+          </div>
+          <button onclick="openPreview('./previews/business-tracker.html', 'Invoice Template')" class="btn-preview">👁️ Preview</button>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-info">
+            <span class="feature-title">✓ Estimate Template</span>
+            <span class="feature-status">Included</span>
+          </div>
+          <button onclick="openPreview('./previews/purchase-order.html', 'Estimate Template')" class="btn-preview">👁️ Preview</button>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-info">
+            <span class="feature-title">✓ Receipt Template</span>
+            <span class="feature-status">Included</span>
+          </div>
+          <button onclick="openPreview('./previews/invoice-ledger.html', 'Receipt Template')" class="btn-preview">👁️ Preview</button>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-info">
+            <span class="feature-title">✓ Purchase Order</span>
+            <span class="feature-status">Included</span>
+          </div>
+          <button onclick="openPreview('./previews/purchase-order.html', 'Purchase Order')" class="btn-preview">👁️ Preview</button>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-info">
+            <span class="feature-title">✓ Business Proposal</span>
+            <span class="feature-status">Included</span>
+          </div>
+          <button onclick="openPreview('./previews/business-tracker.html', 'Business Proposal')" class="btn-preview">👁️ Preview</button>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-info">
+            <span class="feature-title">✓ Timesheet Log</span>
+            <span class="feature-status">Included</span>
+          </div>
+          <button onclick="openPreview('./previews/business-tracker.html', 'Timesheet Log')" class="btn-preview">👁️ Preview</button>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-info">
+            <span class="feature-title">✓ Contractor Agreement</span>
+            <span class="feature-status">Included</span>
+          </div>
+          <button onclick="openPreview('./previews/purchase-order.html', 'Contractor Agreement')" class="btn-preview">👁️ Preview</button>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-info">
+            <span class="feature-title">✓ Expense Report</span>
+            <span class="feature-status">Included</span>
+          </div>
+          <button onclick="openPreview('./previews/profit-and-loss.html', 'Expense Report')" class="btn-preview">👁️ Preview</button>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-info">
+            <span class="feature-title">✓ Mileage Log</span>
+            <span class="feature-status">Included</span>
+          </div>
+          <button onclick="openPreview('./previews/tax_estimation.html', 'Mileage Log')" class="btn-preview">👁️ Preview</button>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-info">
+            <span class="feature-title">✓ Profit & Loss Statement</span>
+            <span class="feature-status">Included</span>
+          </div>
+          <button onclick="openPreview('./previews/profit-and-loss.html', 'Profit & Loss Statement')" class="btn-preview">👁️ Preview</button>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-info">
+            <span class="feature-title">✓ Business Tracker</span>
+            <span class="feature-status">Included</span>
+          </div>
+          <button onclick="openPreview('./previews/business-tracker.html', 'Business Tracker')" class="btn-preview">👁️ Preview</button>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-info">
+            <span class="feature-title">✓ Invoice Ledger</span>
+            <span class="feature-status">Included</span>
+          </div>
+          <button onclick="openPreview('./previews/invoice-ledger.html', 'Invoice Ledger')" class="btn-preview">👁️ Preview</button>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-info">
+            <span class="feature-title">✓ Tax Estimation Sheet</span>
+            <span class="feature-status">Included</span>
+          </div>
+          <button onclick="openPreview('./previews/tax_estimation.html', 'Tax Estimation Sheet')" class="btn-preview">👁️ Preview</button>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-info">
+            <span class="feature-title">✓ Client Intake Form</span>
+            <span class="feature-status">Included</span>
+          </div>
+          <button onclick="openPreview('./previews/purchase-order.html', 'Client Intake Form')" class="btn-preview">👁️ Preview</button>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-info">
+            <span class="feature-title">✓ Service Quote</span>
+            <span class="feature-status">Included</span>
+          </div>
+          <button onclick="openPreview('./previews/business-tracker.html', 'Service Quote')" class="btn-preview">👁️ Preview</button>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-info">
+            <span class="feature-title">✓ Job Work Order</span>
+            <span class="feature-status">Included</span>
+          </div>
+          <button onclick="openPreview('./previews/purchase-order.html', 'Job Work Order')" class="btn-preview">👁️ Preview</button>
+        </div>
       </div>
     </section>
 
@@ -208,10 +319,36 @@
     </div>
   </footer>
 
+  <!-- PREVIEW MODAL POPUP -->
+  <div id="preview-modal" class="modal" style="display:none;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="modal-title">Template Preview</h3>
+        <button class="close-btn" onclick="closePreview()">&times;</button>
+      </div>
+      <iframe id="preview-frame" class="modal-body" src=""></iframe>
+    </div>
+  </div>
+
   <!-- Sticky Mobile Bar -->
   <div class="sticky-mobile-cta">
     <a href="https://yourstore.gumroad.com/l/ultimate">🟢 Get Ultimate Bundle ($49)</a>
   </div>
+
+  <script>
+    function openPreview(fileUrl, title) {
+      document.getElementById('modal-title').innerText = title + ' (Live Preview)';
+      document.getElementById('preview-frame').src = fileUrl;
+      document.getElementById('preview-modal').style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closePreview() {
+      document.getElementById('preview-modal').style.display = 'none';
+      document.getElementById('preview-frame').src = '';
+      document.body.style.overflow = 'auto';
+    }
+  </script>
 
 </body>
 </html>

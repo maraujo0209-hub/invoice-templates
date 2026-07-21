@@ -1,3 +1,72 @@
+<!-- GLOBAL TEMPLATE NAVIGATION & CONTROL BAR -->
+<div class="template-nav-bar">
+  <div class="nav-left">
+    <a href="../index.html" class="nav-btn btn-back">← Back to All Templates</a>
+    <!-- Change tier class dynamically: tier-starter, tier-pro, or tier-ultimate -->
+    <span class="tier-tag tier-ultimate">Ultimate Template</span>
+  </div>
+  <div class="nav-right">
+    <button onclick="window.print()" class="nav-btn btn-secondary">🖨️ Print / Save PDF</button>
+    <a href="https://yourstore.gumroad.com/l/ultimate" class="nav-btn btn-primary">Get This Template</a>
+  </div>
+</div>
+
+<!-- PREVIEW WATERMARK -->
+<div class="preview-watermark">PREVIEW VERSION — EDITABLE FILE INCLUDED WITH PURCHASE</div>
+
+<style>
+  .template-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    background: #0f172a;
+    color: #ffffff;
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+  .nav-left, .nav-right { display: flex; align-items: center; gap: 0.75rem; }
+  .tier-tag {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+  }
+  .tier-starter { background: #2563eb; color: #fff; }
+  .tier-pro { background: #059669; color: #fff; }
+  .tier-ultimate { background: #9333ea; color: #fff; }
+  .nav-btn {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+  }
+  .btn-back { background: #1e293b; }
+  .btn-secondary { background: #334155; }
+  .btn-primary { background: #9333ea; }
+  
+  .preview-watermark {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(15, 23, 42, 0.9);
+    color: #f8fafc;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    pointer-events: none;
+    z-index: 9999;
+  }
+  @media print {
+    .template-nav-bar, .preview-watermark { display: none !important; }
+  }
+</style>
 <<!DOCTYPE html>
 <html lang="en">
 <head>

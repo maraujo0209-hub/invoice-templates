@@ -6,7 +6,7 @@
   </div>
   <div class="nav-right">
     <button onclick="window.print()" class="nav-btn btn-secondary">🖨️ Print / Save PDF</button>
-    <a href="https://yourstore.gumroad.com/l/starter" class="nav-btn btn-primary">Get This Template</a>
+    <a href="https://yourstore.gumroad.com/l/starter" class="nav-btn btn-primary">Get Starter Bundle</a>
   </div>
 </div>
 
@@ -24,6 +24,7 @@
   .preview-watermark { position: fixed; bottom: 20px; right: 20px; background: rgba(15, 23, 42, 0.9); color: #f8fafc; padding: 0.6rem 1rem; border-radius: 6px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em; pointer-events: none; z-index: 9999; }
   @media print { .template-nav-bar, .preview-watermark { display: none !important; } }
 </style>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,15 +36,17 @@
     body { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; padding: 2rem; background: #f8fafc; color: #0f172a; }
     .document-container { max-width: 800px; margin: 0 auto; background: #ffffff; padding: 2.5rem; border-radius: 8px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
     .header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 2rem; border-bottom: 2px solid #e2e8f0; padding-bottom: 1.5rem; }
-    .brand-details h2 { margin: 0 0 0.25rem 0; font-size: 1.15rem; color: #0f172a; }
+    .brand-details h2 { margin: 0 0 0.25rem 0; font-size: 1.25rem; color: #0f172a; }
     .brand-details p { margin: 0.15rem 0; font-size: 0.85rem; color: #64748b; }
     .meta-details { text-align: right; }
-    .meta-details h1 { margin: 0 0 0.5rem 0; font-size: 1.75rem; color: #2563eb; text-transform: uppercase; }
+    .meta-details h1 { margin: 0 0 0.5rem 0; font-size: 1.75rem; color: #2563eb; text-transform: uppercase; letter-spacing: 0.02em; }
     .meta-details p { margin: 0.25rem 0; font-size: 0.875rem; color: #475569; }
     table { width: 100%; border-collapse: collapse; margin-bottom: 2rem; }
     th, td { padding: 0.75rem 0.5rem; text-align: left; border-bottom: 1px solid #e2e8f0; font-size: 0.85rem; }
-    th { background: #f8fafc; font-weight: 600; color: #475569; }
+    th { background: #f8fafc; font-weight: 600; color: #475569; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.05em; }
     .text-right { text-align: right; }
+    .totals { width: 300px; margin-left: auto; }
+    .totals-row.grand-total { border-top: 2px solid #0f172a; font-weight: 700; font-size: 1.1rem; color: #0f172a; display: flex; justify-content: space-between; padding: 0.5rem 0; }
     @media print { body { background: #ffffff; padding: 0; } .document-container { border: none; box-shadow: none; } }
   </style>
 </head>
@@ -51,12 +54,12 @@
   <div class="document-container">
     <div class="header">
       <div class="brand-details">
-        <h2>Your Business Name, LLC</h2>
-        <p>123 Business Rd, Suite 100 • City, State 12345</p>
-        <p>contact@yourbusiness.com • (555) 019-2831</p>
+        <h2>Your Service Company</h2>
+        <p>123 Service Road, Suite 100 • City, State 12345</p>
+        <p>contact@yourservicecompany.com • (555) 019-2831</p>
       </div>
       <div class="meta-details">
-        <h1>Timesheet</h1>
+        <h1>Timesheet Log</h1>
         <p><strong>Employee:</strong> Alex Rivera</p>
         <p><strong>Pay Period:</strong> July 14 – July 21, 2026</p>
       </div>
@@ -66,23 +69,30 @@
       <thead>
         <tr>
           <th>Date</th>
-          <th>Project / Task</th>
-          <th class="text-right">Hours Logged</th>
+          <th>Location / Task Description</th>
+          <th class="text-right">Hours Worked</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td>07/15/2026</td>
-          <td>Client Onsite Support</td>
+          <td>Acme Corp Office — Onsite Service</td>
           <td class="text-right">8.0 hrs</td>
         </tr>
         <tr>
           <td>07/16/2026</td>
-          <td>System Optimization</td>
+          <td>Bright Path Learning Center — Deep Clean</td>
           <td class="text-right">7.5 hrs</td>
         </tr>
       </tbody>
     </table>
+
+    <div class="totals">
+      <div class="totals-row grand-total">
+        <span>Total Hours Logged:</span>
+        <span>15.5 hrs</span>
+      </div>
+    </div>
   </div>
 </body>
 </html>

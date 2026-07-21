@@ -1,76 +1,80 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tax Estimation Sheet</title>
-    <style>
-        :root {
-            --primary-color: #111111;
-            --secondary-color: #4a5568;
-            --accent-bg: #f8fafc;
-            --border-color: #cbd5e1;
-            --subtle-text: #64748b;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-            color: var(--primary-color);
-            line-height: 1.5;
-            margin: 0;
-            padding: 0;
-            background-color: #f1f5f9;
-        }
-
-        .tax-container {
-            background-color: #ffffff;
-            width: 8.5in;
-            margin: 40px auto;
-            padding: 0.8in;
-            box-sizing: border-box;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-        }
-
-        @media print {
-            @page { size: letter; margin: 0.5in; }
-            body { background-color: #ffffff; }
-            .tax-container { margin: 0; padding: 0; width: 100%; box-shadow: none; }
-        }
-
-        header {
-            border-bottom: 2px solid var(--primary-color);
-            padding-bottom: 15px;
-            margin-bottom: 30px;
-        }
-
-        h1 { font-size: 24px; font-weight: 800; text-transform: uppercase; margin: 0; }
-        .subtitle { font-size: 12px; color: var(--secondary-color); text-transform: uppercase; letter-spacing: 2px; font-weight: 600; margin: 0; }
-
-        .tax-section-title { font-size: 12px; text-transform: uppercase; font-weight: 700; color: var(--secondary-color); border-bottom: 1px solid var(--border-color); padding-bottom: 4px; margin-top: 25px; margin-bottom: 15px; }
-
-        .calc-row { display: flex; justify-content: space-between; padding: 8px 12px; font-size: 13px; border-bottom: 1px solid var(--border-color); }
-        .calc-row.total { font-weight: 700; background-color: var(--accent-bg); border-top: 1px solid var(--primary-color); border-bottom: 2px solid var(--primary-color); }
-        .value { font-weight: 600; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quarterly Tax Estimation Worksheet - Tier 3 Ultimate</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
+<body style="margin:0; padding:0; background-color:#f8fafc; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color:#0f172a; line-height:1.5;">
 
-<div class="tax-container">
-    <header>
-        <h1>Tax Estimation Sheet</h1>
-        <p class="subtitle">Quarterly Filings & Liability Forecast</p>
-    </header>
+  <header style="background-color:#ffffff; border-bottom:1px solid #e2e8f0; padding:0.75rem 1.5rem; position:sticky; top:0; z-index:100;">
+    <div style="max-width:1100px; margin:0 auto; display:flex; justify-content:space-between; align-items:center;">
+      <a href="index.html" style="font-size:1rem; font-weight:700; color:#0f172a; text-decoration:none;"><i class="fa-solid fa-arrow-left"></i> Back to Hub</a>
+      <span style="background:#0f172a; color:#fff; font-size:0.75rem; font-weight:700; padding:0.25rem 0.5rem; border-radius:4px;">Tier 3 Ultimate Template</span>
+    </div>
+  </header>
 
-    <div class="tax-section-title">Income & Write-Off Aggregations</div>
-    <div class="calc-row"><span>Gross Estimated Annual Receipts</span><span class="value">$0.00</span></div>
-    <div class="calc-row"><span>Less: Deductible Business Expenditures</span><span class="value">-$0.00</span></div>
-    <div class="calc-row total"><span>Adjusted Net Taxable Income</span><span class="value">$0.00</span></div>
+  <main style="max-width:850px; margin:2rem auto; padding:0 1rem;">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem;">
+      <h1 style="font-size:1.5rem; font-weight:700; margin:0;">Quarterly Tax Estimation Worksheet</h1>
+      <button type="button" onclick="window.print()" style="background:#0f172a; color:#fff; border:none; padding:0.5rem 1rem; border-radius:6px; font-weight:600; cursor:pointer;"><i class="fa-solid fa-print"></i> Print / Save PDF</button>
+    </div>
 
-    <div class="tax-section-title">Liability Breakdown Calculations</div>
-    <div class="calc-row"><span>Estimated Self-Employment Burden Allocation</span><span class="value">$0.00</span></div>
-    <div class="calc-row"><span>Income Tax Bracket Base Reserve</span><span class="value">$0.00</span></div>
-    <div class="calc-row total"><span>Total Estimated Quarterly Installment Due</span><span class="value">$0.00</span></div>
-</div>
+    <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:2.5rem; box-shadow:0 4px 6px -1px rgba(0,0,0,0.05);">
+      <table style="width:100%; border-collapse:collapse; margin-bottom:2rem; border-bottom:2px solid #e2e8f0; padding-bottom:1.5rem;">
+        <tr>
+          <td style="vertical-align:top; width:60%;">
+            <div style="width:160px; height:50px; border:2px dashed #cbd5e1; border-radius:6px; display:flex; align-items:center; justify-content:center; color:#64748b; font-size:0.85rem; background-color:#f8fafc; margin-bottom:1rem;">
+              <i class="fa-solid fa-image" style="margin-right:0.5rem;"></i> Business Logo
+            </div>
+            <div style="font-size:0.875rem; color:#64748b;">
+              <strong style="font-size:1.125rem; color:#0f172a; display:block;" contenteditable="true">Your Business Name</strong>
+              <span contenteditable="true">Tax Year 2026 Planning Worksheet</span>
+            </div>
+          </td>
+          <td style="vertical-align:top; text-align:right; width:40%;">
+            <h1 style="font-size:1.75rem; font-weight:800; color:#0f172a; margin:0 0 0.5rem 0;">TAX WORKSHEET</h1>
+            <p style="font-size:0.875rem; color:#334155; margin:0;"><strong>Target Quarter:</strong> <span contenteditable="true">Q3 2026</span></p>
+          </td>
+        </tr>
+      </table>
 
+      <table style="width:100%; border-collapse:collapse; margin-bottom:2rem;">
+        <thead>
+          <tr style="background-color:#f1f5f9; border-bottom:2px solid #cbd5e1;">
+            <th style="text-align:left; padding:0.75rem; font-size:0.875rem;">Tax Estimation Step</th>
+            <th style="text-align:right; padding:0.75rem; font-size:0.875rem; width:150px;">Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid #e2e8f0;">
+            <td contenteditable="true" style="padding:0.75rem; font-size:0.875rem;">1. Projected Gross Income for Quarter</td>
+            <td contenteditable="true" style="padding:0.75rem; font-size:0.875rem; text-align:right;">$35,000.00</td>
+          </tr>
+          <tr style="border-bottom:1px solid #e2e8f0;">
+            <td contenteditable="true" style="padding:0.75rem; font-size:0.875rem;">2. Estimated Deductions & Expenses</td>
+            <td contenteditable="true" style="padding:0.75rem; font-size:0.875rem; text-align:right; color:#dc2626;">-$10,000.00</td>
+          </tr>
+          <tr style="border-bottom:1px solid #e2e8f0; font-weight:600; background-color:#f8fafc;">
+            <td contenteditable="true" style="padding:0.75rem; font-size:0.875rem;">3. Estimated Net Taxable Income</td>
+            <td contenteditable="true" style="padding:0.75rem; font-size:0.875rem; text-align:right;">$25,000.00</td>
+          </tr>
+          <tr style="border-bottom:1px solid #e2e8f0;">
+            <td contenteditable="true" style="padding:0.75rem; font-size:0.875rem;">4. Estimated Self-Employment & Federal Tax Reserve (30%)</td>
+            <td contenteditable="true" style="padding:0.75rem; font-size:0.875rem; text-align:right;">$7,500.00</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div style="background-color:#f0fdf4; border:1px solid #bbf7d0; border-radius:6px; padding:1.25rem; display:flex; justify-content:space-between; align-items:center;">
+        <div>
+          <strong style="font-size:1rem; color:#166534; display:block;">Recommended Tax Reserve Set-Aside:</strong>
+          <span style="font-size:0.8rem; color:#15803d;">Transfer this amount to your dedicated tax savings account.</span>
+        </div>
+        <span contenteditable="true" style="font-size:1.5rem; font-weight:800; color:#166534;">$7,500.00</span>
+      </div>
+    </div>
+  </main>
 </body>
 </html>

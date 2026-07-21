@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tax Invoice - Preview</title>
+  <title>Employee Timesheet - Preview</title>
   <style>
     :root {
       --primary-color: #0f172a;
@@ -115,27 +115,28 @@
       margin-bottom: 0.5rem;
     }
 
-    .invoice-table {
+    .timesheet-table {
       width: 100%;
       border-collapse: collapse;
       margin-bottom: 2rem;
     }
-    .invoice-table th {
+    .timesheet-table th {
       background: var(--primary-color);
       color: #ffffff;
       font-size: 0.8rem;
       text-transform: uppercase;
       letter-spacing: 0.05em;
-      padding: 0.75rem 1rem;
-      text-align: left;
+      padding: 0.75rem 0.5rem;
+      text-align: center;
     }
-    .invoice-table td {
-      padding: 0.85rem 1rem;
+    .timesheet-table td {
+      padding: 0.75rem 0.5rem;
       border-bottom: 1px solid var(--border-color);
       font-size: 0.875rem;
+      text-align: center;
     }
-    .invoice-table tr:nth-child(even) { background-color: var(--bg-light); }
-    .text-right { text-align: right; }
+    .timesheet-table td.text-left { text-align: left; }
+    .timesheet-table tr:nth-child(even) { background-color: var(--bg-light); }
 
     .totals-block {
       display: flex;
@@ -149,6 +150,22 @@
       font-size: 1.1rem;
       background: var(--primary-color);
       color: #ffffff;
+    }
+    .text-right { text-align: right; }
+
+    .signature-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border-color);
+      font-size: 0.85rem;
+    }
+    .sig-line {
+      border-bottom: 1px solid var(--text-main);
+      margin-top: 2.5rem;
+      margin-bottom: 0.25rem;
     }
 
     @media print {
@@ -185,65 +202,93 @@
         </div>
         <div class="company-details">
           <div class="company-name">Blue Horizon Construction</div>
-          <div>[Tax ID / EIN]: 12-3456789</div>
           <div>[Street Address] • 2450 Main Street, Suite 400</div>
           <div>[City, State, Zip] • Sarasota, FL 34236</div>
         </div>
       </div>
 
       <div class="doc-meta">
-        <div class="doc-title">TAX INVOICE</div>
+        <div class="doc-title">TIMESHEET</div>
         <div class="meta-list">
-          <div><strong>[Tax Invoice Ref]:</strong> TXI-2026-044</div>
-          <div><strong>[Invoice Date]:</strong> July 21, 2026</div>
-          <div><strong>[Due Date]:</strong> August 20, 2026</div>
+          <div><strong>[Pay Period]:</strong> July 14 – July 20, 2026</div>
+          <div><strong>[Submission Date]:</strong> July 21, 2026</div>
         </div>
       </div>
     </div>
 
     <div class="info-grid">
       <div class="info-card">
-        <div class="card-title">Billed To (Customer):</div>
-        <strong>[Customer Name]</strong><br />
-        Apex Retail Group<br />
-        Tax Registration ID: 98-7654321<br />
-        1200 Commercial Blvd<br />
-        Sarasota, FL 34232
+        <div class="card-title">Employee Details:</div>
+        <strong>[Employee Name]:</strong> Alex Rivera<br />
+        <strong>[Employee ID]:</strong> EMP-8042<br />
+        <strong>[Department]:</strong> Field Operations
       </div>
 
       <div class="info-card">
-        <div class="card-title">Payment Information:</div>
-        <strong>[Bank Name]:</strong> First National Bank<br />
-        <strong>[Account No]:</strong> ********4820<br />
-        <strong>[Routing / Swift]:</strong> 121000358<br />
-        <strong>[Terms]:</strong> Net 30 Days
+        <div class="card-title">Supervisor / Approval:</div>
+        <strong>[Supervisor]:</strong> Sarah Jenkins<br />
+        <strong>[Status]:</strong> Pending Approval<br />
+        <strong>[Standard Rate]:</strong> $28.00 / hr
       </div>
     </div>
 
-    <table class="invoice-table">
+    <table class="timesheet-table">
       <thead>
         <tr>
-          <th>[Description]</th>
-          <th class="text-right">[Qty]</th>
-          <th class="text-right">[Unit Price]</th>
-          <th class="text-right">[Tax Rate]</th>
-          <th class="text-right">[Total (Excl. Tax)]</th>
+          <th>[Date]</th>
+          <th>[Day]</th>
+          <th class="text-left">[Project / Description]</th>
+          <th>[In]</th>
+          <th>[Out]</th>
+          <th>[Reg Hrs]</th>
+          <th>[OT Hrs]</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Commercial Drywall Framing Services</td>
-          <td class="text-right">1</td>
-          <td class="text-right">$4,500.00</td>
-          <td class="text-right">7.00%</td>
-          <td class="text-right">$4,500.00</td>
+          <td>07/14/2026</td>
+          <td>Mon</td>
+          <td class="text-left">Apex Retail Site Prep</td>
+          <td>08:00 AM</td>
+          <td>05:00 PM</td>
+          <td>8.0</td>
+          <td>0.0</td>
         </tr>
         <tr>
-          <td>Fire-Rated Insulation Panels</td>
-          <td class="text-right">10</td>
-          <td class="text-right">$150.00</td>
-          <td class="text-right">7.00%</td>
-          <td class="text-right">$1,500.00</td>
+          <td>07/15/2026</td>
+          <td>Tue</td>
+          <td class="text-left">Metal Stud Framing</td>
+          <td>08:00 AM</td>
+          <td>05:00 PM</td>
+          <td>8.0</td>
+          <td>0.0</td>
+        </tr>
+        <tr>
+          <td>07/16/2026</td>
+          <td>Wed</td>
+          <td class="text-left">Drywall Installation</td>
+          <td>08:00 AM</td>
+          <td>07:00 PM</td>
+          <td>8.0</td>
+          <td>2.0</td>
+        </tr>
+        <tr>
+          <td>07/17/2026</td>
+          <td>Thu</td>
+          <td class="text-left">Drywall Finishing</td>
+          <td>08:00 AM</td>
+          <td>05:00 PM</td>
+          <td>8.0</td>
+          <td>0.0</td>
+        </tr>
+        <tr>
+          <td>07/18/2026</td>
+          <td>Fri</td>
+          <td class="text-left">Site Cleanup & Inspection</td>
+          <td>08:00 AM</td>
+          <td>04:00 PM</td>
+          <td>7.0</td>
+          <td>0.0</td>
         </tr>
       </tbody>
     </table>
@@ -251,18 +296,31 @@
     <div class="totals-block">
       <table class="totals-table">
         <tr>
-          <td>[Net Amount]:</td>
-          <td class="text-right">$6,000.00</td>
+          <td>[Regular Hours]:</td>
+          <td class="text-right">39.0 hrs</td>
         </tr>
         <tr>
-          <td>[Total Sales Tax (7%)]:</td>
-          <td class="text-right">$420.00</td>
+          <td>[Overtime Hours]:</td>
+          <td class="text-right">2.0 hrs</td>
         </tr>
         <tr class="grand-total">
-          <td>[Gross Amount Due]:</td>
-          <td class="text-right">$6,420.00</td>
+          <td>[Total Worked]:</td>
+          <td class="text-right">41.0 hrs</td>
         </tr>
       </table>
+    </div>
+
+    <div class="signature-grid">
+      <div>
+        <strong>Employee Signature:</strong>
+        <div class="sig-line"></div>
+        Date
+      </div>
+      <div>
+        <strong>Supervisor Approval Signature:</strong>
+        <div class="sig-line"></div>
+        Date
+      </div>
     </div>
 
   </div>

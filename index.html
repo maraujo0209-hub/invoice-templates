@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Business Document Templates & Ultimate Bundle</title>
+  <title>Business Document Templates Store</title>
   
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
@@ -37,10 +37,18 @@
       font-size: 1.1rem;
     }
 
-    /* Card Library Grid */
+    /* Template Store Grid */
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: #0f172a;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 0.5rem;
+    }
     .card-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1.5rem;
       margin-bottom: 3rem;
     }
@@ -48,21 +56,20 @@
       background: #ffffff;
       border: 1px solid #e2e8f0;
       border-radius: 8px;
-      padding: 1.5rem;
+      padding: 1.25rem;
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    .card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
     .card-badge {
       display: inline-block;
-      padding: 0.25rem 0.5rem;
+      padding: 0.2rem 0.5rem;
       font-size: 0.75rem;
       font-weight: 700;
       border-radius: 4px;
       margin-bottom: 0.75rem;
+      width: fit-content;
       text-transform: uppercase;
     }
     .badge-starter { background: #e0f2fe; color: #0369a1; }
@@ -71,24 +78,24 @@
     
     .card h3 {
       margin: 0 0 0.5rem 0;
-      font-size: 1.15rem;
+      font-size: 1.1rem;
     }
     .card p {
       color: #64748b;
-      font-size: 0.875rem;
+      font-size: 0.85rem;
       margin-bottom: 1rem;
-      line-height: 1.5;
+      line-height: 1.4;
     }
     .card-btn {
       display: inline-block;
       width: 100%;
       text-align: center;
-      padding: 0.6rem;
+      padding: 0.5rem;
       background: #0f172a;
       color: #ffffff;
       text-decoration: none;
       border-radius: 6px;
-      font-size: 0.875rem;
+      font-size: 0.85rem;
       font-weight: 600;
     }
   </style>
@@ -100,33 +107,149 @@
     <!-- Hero Header -->
     <header class="hero">
       <h1>Business Document Templates</h1>
-      <p>Explore individual templates or unlock full access with the Ultimate Bundle.</p>
+      <p>Explore all 16 professional templates or unlock full access with the Ultimate Suite.</p>
     </header>
 
-    <!-- Card Library Section -->
+    <!-- Starter Tier (4 Templates) -->
+    <h2 class="section-title">Starter Tier (4 Templates)</h2>
     <section class="card-grid">
-      <!-- Starter Tier Card -->
       <div class="card">
-        <span class="card-badge badge-starter">Starter</span>
-        <h3>Standard Invoice Template</h3>
-        <p>Clean, professional standard commercial invoice with line items, tax calculations, and print layout.</p>
-        <a href="#" class="card-btn">View Template</a>
+        <div>
+          <span class="card-badge badge-starter">Starter</span>
+          <h3>1. Standard Invoice</h3>
+          <p>Commercial invoice with tax, discount, payment terms, and notes.</p>
+        </div>
+        <a href="invoice.html" class="card-btn">View Template</a>
       </div>
-
-      <!-- Professional Tier Card -->
       <div class="card">
-        <span class="card-badge badge-pro">Professional</span>
-        <h3>Estimates & Scope of Work</h3>
-        <p>Fixed-price project estimate and milestone scope-of-work layout designed for client approvals.</p>
-        <a href="#" class="card-btn">View Template</a>
+        <div>
+          <span class="card-badge badge-starter">Starter</span>
+          <h3>2. Service Quote</h3>
+          <p>Client quote featuring expiration date and itemized scope.</p>
+        </div>
+        <a href="service-quote.html" class="card-btn">View Template</a>
       </div>
-
-      <!-- Ultimate Tier Card -->
       <div class="card">
-        <span class="card-badge badge-ultimate">Ultimate</span>
-        <h3>Ledgers & Mileage Trackers</h3>
-        <p>Comprehensive tracking for accounts receivable aging, business KPIs, and IRS-compliant mileage logs.</p>
-        <a href="#" class="card-btn">View Template</a>
+        <div>
+          <span class="card-badge badge-starter">Starter</span>
+          <h3>3. Purchase Order</h3>
+          <p>Standard vendor order form with item details and authorization.</p>
+        </div>
+        <a href="purchase-order.html" class="card-btn">View Template</a>
+      </div>
+      <div class="card">
+        <div>
+          <span class="card-badge badge-starter">Starter</span>
+          <h3>4. Receipt</h3>
+          <p>Proof of payment template with business header and breakdown.</p>
+        </div>
+        <a href="receipt.html" class="card-btn">View Template</a>
+      </div>
+    </section>
+
+    <!-- Professional Tier (+5 Templates) -->
+    <h2 class="section-title">Professional Tier (5 Additional Templates)</h2>
+    <section class="card-grid">
+      <div class="card">
+        <div>
+          <span class="card-badge badge-pro">Professional</span>
+          <h3>5. Work Order</h3>
+          <p>Field service dispatch and labor tracking sheet.</p>
+        </div>
+        <a href="work-order.html" class="card-btn">View Template</a>
+      </div>
+      <div class="card">
+        <div>
+          <span class="card-badge badge-pro">Professional</span>
+          <h3>6. Timesheet</h3>
+          <p>Weekly pay period time tracker with overtime and break logs.</p>
+        </div>
+        <a href="timesheet.html" class="card-btn">View Template</a>
+      </div>
+      <div class="card">
+        <div>
+          <span class="card-badge badge-pro">Professional</span>
+          <h3>7. Expense Report</h3>
+          <p>Employee reimbursement form with approvals and advances.</p>
+        </div>
+        <a href="expense-report.html" class="card-btn">View Template</a>
+      </div>
+      <div class="card">
+        <div>
+          <span class="card-badge badge-pro">Professional</span>
+          <h3>8. Client Database</h3>
+          <p>Client contact repository with branding placeholder.</p>
+        </div>
+        <a href="client-database.html" class="card-btn">View Template</a>
+      </div>
+      <div class="card">
+        <div>
+          <span class="card-badge badge-pro">Professional</span>
+          <h3>9. Contractor Agreement</h3>
+          <p>Complete legal agreement covering confidentiality, IP, and terms.</p>
+        </div>
+        <a href="contractor-agreement.html" class="card-btn">View Template</a>
+      </div>
+    </section>
+
+    <!-- Ultimate Tier (+7 Templates = 16 Total) -->
+    <h2 class="section-title">Ultimate Suite (7 Additional Templates — 16 Total)</h2>
+    <section class="card-grid">
+      <div class="card">
+        <div>
+          <span class="card-badge badge-ultimate">Ultimate</span>
+          <h3>10. Invoice Ledger</h3>
+          <p>Track due dates, paid status, overdue balances, and totals.</p>
+        </div>
+        <a href="invoice-ledger.html" class="card-btn">View Template</a>
+      </div>
+      <div class="card">
+        <div>
+          <span class="card-badge badge-ultimate">Ultimate</span>
+          <h3>11. Business Tracker</h3>
+          <p>Performance dashboard for revenue, profit margin, and KPIs.</p>
+        </div>
+        <a href="business-tracker.html" class="card-btn">View Template</a>
+      </div>
+      <div class="card">
+        <div>
+          <span class="card-badge badge-ultimate">Ultimate</span>
+          <h3>12. Mileage Log</h3>
+          <p>IRS-compliant reimbursement and mileage tracking ledger.</p>
+        </div>
+        <a href="mileage-log.html" class="card-btn">View Template</a>
+      </div>
+      <div class="card">
+        <div>
+          <span class="card-badge badge-ultimate">Ultimate</span>
+          <h3>13. Estimating Sheet</h3>
+          <p>Detailed unit-cost and material pricing calculator.</p>
+        </div>
+        <a href="estimating-sheet.html" class="card-btn">View Template</a>
+      </div>
+      <div class="card">
+        <div>
+          <span class="card-badge badge-ultimate">Ultimate</span>
+          <h3>14. Project Proposal</h3>
+          <p>Tiered proposal layout with scope and milestone details.</p>
+        </div>
+        <a href="project-proposal.html" class="card-btn">View Template</a>
+      </div>
+      <div class="card">
+        <div>
+          <span class="card-badge badge-ultimate">Ultimate</span>
+          <h3>15. Account Statement</h3>
+          <p>Summary of client billing, payments, and open account balances.</p>
+        </div>
+        <a href="account-statement.html" class="card-btn">View Template</a>
+      </div>
+      <div class="card" style="border: 2px solid #a855f7;">
+        <div>
+          <span class="card-badge badge-ultimate">Ultimate</span>
+          <h3>16. Profit & Loss Statement</h3>
+          <p>Complete P&L summary for revenue, COGS, expenses, and net profit.</p>
+        </div>
+        <a href="profit-and-loss.html" class="card-btn" style="background:#6b21a8;">View Template</a>
       </div>
     </section>
 
@@ -134,7 +257,7 @@
     <section style="max-width:1100px; margin:3rem auto; padding:2rem; background:#ffffff; border:1px solid #e2e8f0; border-radius:8px;">
       <div style="margin-bottom:1.5rem;">
         <h2 style="font-size:1.25rem; font-weight:700; color:#0f172a; margin:0 0 0.5rem 0;">50+ Advanced Layout Variations Included</h2>
-        <p style="font-size:0.875rem; color:#64748b; margin:0;">The Ultimate Bundle includes full access to tailored variations across 6 specialized business categories:</p>
+        <p style="font-size:0.875rem; color:#64748b; margin:0;">The Ultimate Bundle (All 16 Templates) includes full access to tailored variations across 6 specialized business categories:</p>
       </div>
 
       <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:1.5rem;">
@@ -173,8 +296,8 @@
           <ul style="font-size:0.8rem; color:#334155; padding-left:1.2rem; margin:0; line-height:1.6;">
             <li>Accounts Receivable Aging Ledger</li>
             <li>Business Performance & KPI Matrix</li>
+            <li>Profit & Loss (P&L) Financial Summary</li>
             <li>IRS Mileage Log with Reimbursements</li>
-            <li>Quarterly Estimated Tax Reserve Sheet</li>
           </ul>
         </div>
       </div>

@@ -1,71 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Standard Invoice - Preview</title>
-    <style>
-        :root { --primary-color: #111111; --secondary-color: #4a5568; --accent-bg: #f8fafc; --border-color: #cbd5e1; --subtle-text: #64748b; }
-        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: var(--primary-color); margin: 0; padding: 0 20px 40px 20px; background-color: #f1f5f9; }
-        .preview-nav-bar { display: flex; justify-content: space-between; align-items: center; max-width: 8.5in; margin: 20px auto 0 auto; }
-        .back-link { color: var(--secondary-color); text-decoration: none; font-size: 14px; font-weight: 600; }
-        .back-link:hover { color: var(--primary-color); }
-        .preview-badge { background-color: #fee2e2; color: #dc2626; font-size: 11px; font-weight: 800; padding: 4px 10px; border-radius: 9999px; letter-spacing: 1px; }
-        .invoice-container { background-color: #ffffff; width: 8.5in; min-height: 11in; margin: 20px auto; padding: 1in; box-sizing: border-box; position: relative; box-shadow: 0 4px 20px rgba(0,0,0,0.05); overflow: hidden; }
-        .invoice-container::after { content: "WATERMARKED PREVIEW - NOT FOR COMMERCIAL USE"; position: absolute; top: 40%; left: 5%; right: 5%; font-size: 28px; font-weight: 900; color: rgba(220, 38, 38, 0.18); transform: rotate(-30deg); text-align: center; pointer-events: none; letter-spacing: 2px; }
-        @media print { body { display: none !important; } }
-        .invoice-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 40px; }
-        .logo-placeholder { width: 250px; height: 100px; background-color: #e2e8f0; border: 2px dashed #cbd5e1; display: flex; flex-direction: column; align-items: center; justify-content: center; border-radius: 4px; font-size: 14px; font-weight: 700; color: #64748b; }
-        .invoice-title-area { text-align: right; }
-        .invoice-title-area h1 { font-size: 36px; font-weight: 700; margin: 0 0 5px 0; text-transform: uppercase; }
-        .serial-number { font-size: 16px; font-weight: 600; color: var(--secondary-color); margin-bottom: 15px; }
-        .meta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; text-align: right; font-size: 13px; }
-        .meta-label { font-weight: 600; color: var(--subtle-text); }
-        .meta-value { font-weight: 700; }
-        .details-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 30px; font-size: 13px; }
-        .details-block h3 { font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--secondary-color); border-bottom: 1px solid var(--border-color); padding-bottom: 4px; margin: 0 0 8px 0; }
-        .details-block p { margin: 0 0 4px 0; color: #334155; }
-        .items-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
-        .items-table th { background-color: var(--primary-color); color: #ffffff; font-size: 11px; text-transform: uppercase; padding: 10px; text-align: left; }
-        .items-table td { padding: 10px; font-size: 13px; border-bottom: 1px solid var(--border-color); color: #334155; }
-        .items-table tr:nth-child(even) td { background-color: var(--accent-bg); }
-        .totals-table { width: 250px; margin-left: auto; margin-bottom: 30px; font-size: 13px; border-collapse: collapse; }
-        .totals-table td { padding: 6px 10px; text-align: right; }
-        .totals-table tr.grand-total { font-weight: 700; font-size: 15px; border-top: 2px solid var(--primary-color); border-bottom: 2px solid var(--primary-color); }
-        .invoice-footer { position: absolute; bottom: 1in; left: 1in; right: 1in; border-top: 1px solid var(--border-color); padding-top: 15px; display: flex; justify-content: space-between; font-size: 12px; color: var(--secondary-color); }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Starter Invoice - Business Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-<div class="preview-nav-bar"><a href="./#templates" class="back-link">← Back to All Templates</a><div class="preview-badge">PREVIEW ONLY</div></div>
-<div class="invoice-container">
-    <div class="invoice-header">
-        <div class="logo-placeholder"><div>LOGO</div><div style="font-size: 10px; font-weight: normal; color: #94a3b8;">250 x 100</div></div>
-        <div class="invoice-title-area">
-            <h1>Invoice</h1>
-            <div class="serial-number">INV-2026-001</div>
-            <div class="meta-grid">
-                <span class="meta-label">Invoice Date:</span><span class="meta-value">2026-07-20</span>
-                <span class="meta-label">Due Date:</span><span class="meta-value">2026-08-04</span>
-            </div>
+<body data-page="invoice">
+
+  <!-- Global Header Navigation -->
+  <header class="app-header">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo">
+        <i class="fa-solid fa-chart-line"></i> Business Tracker
+      </a>
+      <nav class="app-nav">
+        <a href="index.html" class="nav-link">Dashboard</a>
+        <a href="client_database.html" class="nav-link">Clients</a>
+        <a href="quote.html" class="nav-link">Quotes</a>
+        <a href="estimate.html" class="nav-link">Estimates</a>
+        <a href="work_order.html" class="nav-link">Work Orders</a>
+        <a href="invoice.html" class="nav-link active">Invoices</a>
+        <a href="invoice_ledger.html" class="nav-link">Ledger</a>
+        <a href="timesheet.html" class="nav-link">Timesheet</a>
+        <a href="expense_report.html" class="nav-link">Expenses</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="page-wrapper">
+    <section class="page-header">
+      <div class="page-header-left">
+        <h1 class="page-title">Starter Invoice</h1>
+        <p class="page-subtitle">Standard customer billing template for rendered services.</p>
+      </div>
+      <div class="page-header-actions">
+        <button type="button" class="btn btn-secondary" onclick="window.print()">
+          <i class="fa-solid fa-print"></i> Print / PDF
+        </button>
+        <button type="button" class="btn btn-primary" id="save-invoice-btn">
+          <i class="fa-solid fa-floppy-disk"></i> Save Invoice
+        </button>
+      </div>
+    </section>
+
+    <!-- Printable Invoice Card -->
+    <section class="page-content card document-wrapper">
+      <div class="document-header">
+        <div class="company-details">
+          <h2 contenteditable="true">Your Company Name</h2>
+          <p contenteditable="true">123 Business Rd.<br>City, State 12345<br>Phone: (555) 000-0000<br>Email: billing@company.com</p>
         </div>
-    </div>
-    <div class="details-grid">
-        <div class="details-block"><h3>Billed From</h3><p class="meta-value">Your Company Name</p><p>123 Business Street, Suite 100</p><p>billing@yourcompany.com</p></div>
-        <div class="details-block"><h3>Billed To</h3><p class="meta-value">Acme Global Corporation</p><p>456 Client Avenue</p><p>accounts@acmeglobal.com</p></div>
-    </div>
-    <table class="items-table">
-        <thead><tr><th>Description</th><th style="text-align: center;">Qty</th><th style="text-align: right;">Unit Price</th><th style="text-align: right;">Amount</th></tr></thead>
-        <tbody>
-            <tr><td>Professional Cleaning Services - Monthly Maintenance</td><td style="text-align: center;">1</td><td style="text-align: right;">$850.00</td><td style="text-align: right;">$850.00</td></tr>
-            <tr><td>Deep Sanitization Service Pack</td><td style="text-align: center;">1</td><td style="text-align: right;">$350.00</td><td style="text-align: right;">$350.00</td></tr>
-        </tbody>
-    </table>
-    <table class="totals-table">
-        <tr><td>Subtotal:</td><td>$1,200.00</td></tr>
-        <tr><td>Tax (5%):</td><td>$60.00</td></tr>
-        <tr class="grand-total"><td>Total Due:</td><td>$1,260.00</td></tr>
-    </table>
-    <div class="invoice-footer"><div>Thank you for your business! Payment terms: Net 15.</div><div>Page 1 of 1</div></div>
-</div>
+        <div class="document-meta">
+          <h2>INVOICE</h2>
+          <p><strong>Invoice #:</strong> <span id="invoice-number">INV-1001</span></p>
+          <p><strong>Date:</strong> <span id="invoice-date">2026-07-21</span></p>
+          <p><strong>Due Date:</strong> <span id="invoice-due">2026-08-04</span></p>
+        </div>
+      </div>
+
+      <div class="document-body">
+        <div class="bill-to">
+          <h3>Bill To:</h3>
+          <p contenteditable="true">Client Name<br>Client Address<br>Phone / Email</p>
+        </div>
+
+        <table class="line-items-table">
+          <thead>
+            <tr>
+              <th>Description</th>
+              <th class="text-center">Qty / Hrs</th>
+              <th class="text-right">Rate</th>
+              <th class="text-right">Total</th>
+            </tr>
+          </thead>
+          <tbody id="line-items-body">
+            <tr>
+              <td contenteditable="true">Standard Service / Job Description</td>
+              <td class="text-center" contenteditable="true">1</td>
+              <td class="text-right" contenteditable="true">$150.00</td>
+              <td class="text-right">$150.00</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="document-summary">
+          <div class="summary-line">
+            <span>Subtotal:</span>
+            <span id="subtotal-val">$150.00</span>
+          </div>
+          <div class="summary-line">
+            <span>Tax:</span>
+            <span id="tax-val">$0.00</span>
+          </div>
+          <div class="summary-line total-line">
+            <span>Total Due:</span>
+            <span id="total-val">$150.00</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
 </body>
 </html>

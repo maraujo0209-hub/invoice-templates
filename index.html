@@ -3,342 +3,512 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Professional Business Templates | Instant Download</title>
-  <meta name="description" content="Save hours with editable invoice, estimate, receipt, and operations templates for Word, Excel, Google Docs, and PDF." />
-  <link rel="stylesheet" href="style.css" />
+  
+  <!-- SEO METADATA -->
+  <title>Professional Invoice & Business Templates | Free Download</title>
+  <meta name="description" content="Download professional, customizable invoice templates for freelancers and small businesses. Compatible with Word, Excel, Google Docs, PDF, and HTML." />
+  <meta name="keywords" content="invoice template, business templates, printable invoice, estimate template, receipt, billing" />
+  <link rel="canonical" href="https://maraujo0209-hub.github.io/invoice-templates/" />
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Professional Invoice & Business Templates" />
+  <meta property="og:description" content="Download beautiful, printable invoice templates in Word, Excel, PDF, and HTML." />
+  <meta property="og:url" content="https://maraujo0209-hub.github.io/invoice-templates/" />
+
+  <style>
+    /* BASE & RESET */
+    * { box-sizing: border-box; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8fafc;
+      color: #0f172a;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    .text-center { text-align: center; }
+
+    /* HERO SECTION */
+    .hero-section {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: #ffffff;
+      padding: 4.5rem 1rem 3.5rem 1rem;
+      text-align: center;
+    }
+
+    .hero-section h1 {
+      font-size: 2.75rem;
+      font-weight: 800;
+      margin: 0 0 1rem 0;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-subtitle {
+      font-size: 1.2rem;
+      color: #94a3b8;
+      max-width: 720px;
+      margin: 0 auto 2rem auto;
+    }
+
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .btn-hero-primary {
+      background: #10b981;
+      color: #ffffff;
+      padding: 0.9rem 1.75rem;
+      border-radius: 8px;
+      font-weight: 700;
+      text-decoration: none;
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .btn-hero-secondary {
+      background: #334155;
+      color: #ffffff;
+      padding: 0.9rem 1.75rem;
+      border-radius: 8px;
+      font-weight: 700;
+      text-decoration: none;
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    /* SEARCH & FILTER BAR */
+    .filter-wrapper {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 1.25rem;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+      margin-top: -2rem;
+      border: 1px solid #e2e8f0;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      border-radius: 6px;
+      border: 1px solid #cbd5e1;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .filter-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .chip {
+      background: #f1f5f9;
+      color: #475569;
+      border: 1px solid #cbd5e1;
+      padding: 0.4rem 0.85rem;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .chip.active {
+      background: #0f172a;
+      color: #ffffff;
+      border-color: #0f172a;
+    }
+
+    /* TRUST STATS BAR */
+    .trust-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1rem;
+      background: #ffffff;
+      border-bottom: 1px solid #e2e8f0;
+      padding: 1.5rem 0;
+      margin-top: 2rem;
+      text-align: center;
+    }
+
+    .stat-item h3 { margin: 0; font-size: 1.5rem; color: #0f172a; }
+    .stat-item p { margin: 0; font-size: 0.85rem; color: #64748b; }
+
+    /* CARD GRID */
+    .section-block { margin: 3.5rem 0; }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .template-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .template-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-preview-thumb {
+      background: #e2e8f0;
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      border-bottom: 1px solid #e2e8f0;
+      overflow: hidden;
+    }
+
+    .card-badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: #10b981;
+      color: #fff;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+    }
+
+    .card-body { padding: 1.25rem; flex: 1; display: flex; flex-direction: column; }
+    .card-title { font-size: 1.1rem; font-weight: 700; margin: 0 0 0.5rem 0; }
+    .card-meta { display: flex; gap: 0.5rem; margin-bottom: 0.75rem; }
+    .tag { font-size: 0.75rem; background: #f1f5f9; padding: 0.15rem 0.4rem; border-radius: 4px; color: #475569; }
+
+    .card-stats { display: flex; justify-content: space-between; font-size: 0.8rem; color: #64748b; margin-top: auto; padding-top: 1rem; }
+
+    .card-actions { display: flex; gap: 0.5rem; margin-top: 1rem; }
+    .btn-card {
+      flex: 1;
+      text-align: center;
+      padding: 0.6rem;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .btn-preview-card { background: #f1f5f9; color: #0f172a; border: 1px solid #cbd5e1; }
+    .btn-use-card { background: #0f172a; color: #ffffff; border: none; }
+
+    /* TABLE COMPARISON */
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #ffffff;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid #e2e8f0;
+    }
+
+    .comparison-table th, .comparison-table td {
+      padding: 1rem;
+      text-align: left;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .comparison-table th { background: #0f172a; color: #ffffff; }
+
+    /* MODAL */
+    .modal {
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(15, 23, 42, 0.75);
+      z-index: 20000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+
+    .modal-content {
+      background: #ffffff;
+      width: 100%;
+      max-width: 950px;
+      height: 90vh;
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.5rem;
+      background: #0f172a;
+      color: #ffffff;
+    }
+
+    .modal-actions { display: flex; gap: 0.5rem; }
+    .btn-modal-action {
+      background: #1e293b;
+      color: #fff;
+      border: 1px solid #475569;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      cursor: pointer;
+    }
+
+    .modal-body { flex: 1; border: none; width: 100%; height: 100%; }
+
+    /* FOOTER */
+    .site-footer {
+      background: #0f172a;
+      color: #94a3b8;
+      padding: 3rem 0;
+      margin-top: 4rem;
+      font-size: 0.9rem;
+    }
+    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
+    .footer-grid h4 { color: #ffffff; margin-bottom: 1rem; }
+    .footer-grid a { color: #94a3b8; text-decoration: none; display: block; margin-bottom: 0.5rem; }
+
+    @media (max-width: 768px) {
+      .hero-actions { flex-direction: column; }
+      .card-actions { flex-direction: column; }
+    }
+  </style>
 </head>
 <body>
 
   <!-- HERO SECTION -->
   <header class="hero-section">
-    <div class="container hero-content">
-      <span class="badge-pill">Instant Digital Download</span>
-      <h1>Professional Business Templates for Every Business</h1>
-      <p class="hero-subtitle">Save hours creating invoices, estimates, receipts, proposals, contracts, and more. Compatible with Word, Excel, Google Docs, and PDF.</p>
-      
-      <div class="hero-value-props">
-        <span>⚡ Instant Download</span>
-        <span>✏️ Fully Editable</span>
-        <span>🖨️ Print Ready</span>
-        <span>💳 No Subscription</span>
-      </div>
-
-      <!-- Search Bar -->
-      <div class="hero-search-wrapper">
-        <input type="text" id="template-search" placeholder="Search templates (e.g., Invoice, Cleaning, Excel, Estimate)..." />
-        <button class="btn-search">Search</button>
+    <div class="container">
+      <h1>Professional Invoice Templates for Freelancers & Small Businesses</h1>
+      <p class="hero-subtitle">Download beautiful, printable invoice templates in Word, Excel, PDF, and HTML. Free commercial license included.</p>
+      <div class="hero-actions">
+        <a href="#templates" class="btn-hero-primary">Browse Templates</a>
+        <a href="#pricing" class="btn-hero-secondary">Get Unlimited Bundle</a>
       </div>
     </div>
   </header>
 
-  <!-- TRUST BAR -->
-  <div class="trust-bar">
-    <div class="container trust-container">
-      <div class="trust-item">
-        <span class="stars">★★★★★</span>
-        <span class="trust-text"><strong>4.9/5</strong> (500+ Downloads)</span>
-      </div>
-      <div class="trust-divider"></div>
-      <div class="trust-item">
-        <span class="trust-icon">⚡</span>
-        <span class="trust-text">Instant Digital Download</span>
-      </div>
-      <div class="trust-divider"></div>
-      <div class="trust-item">
-        <span class="trust-icon">🔒</span>
-        <span class="trust-text">Secure Checkout</span>
-      </div>
-      <div class="trust-divider"></div>
-      <div class="trust-item">
-        <span class="trust-icon">♾️</span>
-        <span class="trust-text">Lifetime Access & Free Updates</span>
-      </div>
-    </div>
-  </div>
-
   <main class="container">
 
-    <!-- BUNDLE INCLUSIONS SECTION WITH PREVIEW BUTTONS -->
+    <!-- SEARCH & CATEGORY FILTERS -->
+    <div class="filter-wrapper">
+      <div class="search-box">
+        <input type="text" id="templateSearch" placeholder="Search templates (e.g. Invoice, Cleaning, Construction, Freelance)..." />
+      </div>
+      <div class="filter-chips">
+        <button class="chip active">All</button>
+        <button class="chip">Cleaning</button>
+        <button class="chip">Construction</button>
+        <button class="chip">Freelancer</button>
+        <button class="chip">Contractor</button>
+        <button class="chip">Consulting</button>
+        <button class="chip">Minimal</button>
+        <button class="chip">A4 & Letter</button>
+      </div>
+    </div>
+
+    <!-- TRUST STATS BAR -->
+    <div class="trust-stats">
+      <div class="stat-item">
+        <h3>16+</h3>
+        <p>Essential Templates</p>
+      </div>
+      <div class="stat-item">
+        <h3>50,000+</h3>
+        <p>Downloads</p>
+      </div>
+      <div class="stat-item">
+        <h3>4.9 ★</h3>
+        <p>User Rating</p>
+      </div>
+      <div class="stat-item">
+        <h3>100%</h3>
+        <p>Free Commercial Use</p>
+      </div>
+    </div>
+
+    <!-- TEMPLATE GRID -->
+    <section id="templates" class="section-block">
+      <h2>Featured Business Templates</h2>
+      <div class="card-grid">
+
+        <!-- Card 1 -->
+        <div class="template-card">
+          <div class="card-preview-thumb">
+            <span class="card-badge">Popular</span>
+            <div style="font-weight:700; color:#475569;">📄 Invoice Template</div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Modern Billing Invoice</h3>
+            <div class="card-meta">
+              <span class="tag">Freelance</span>
+              <span class="tag">Blue</span>
+              <span class="tag">Letter</span>
+            </div>
+            <div class="card-stats">
+              <span>★ 4.9 (23.4k downloads)</span>
+            </div>
+            <div class="card-actions">
+              <button onclick="openPreview('./previews/business-tracker.html', 'Modern Billing Invoice')" class="btn-card btn-preview-card">Preview</button>
+              <a href="#pricing" class="btn-card btn-use-card">Use Template</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="template-card">
+          <div class="card-preview-thumb">
+            <span class="card-badge" style="background:#3b82f6;">New</span>
+            <div style="font-weight:700; color:#475569;">📊 Invoice Ledger</div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Client Billing Ledger</h3>
+            <div class="card-meta">
+              <span class="tag">Contractor</span>
+              <span class="tag">Corporate</span>
+              <span class="tag">A4</span>
+            </div>
+            <div class="card-stats">
+              <span>★ 4.8 (12.1k downloads)</span>
+            </div>
+            <div class="card-actions">
+              <button onclick="openPreview('./previews/invoice-ledger.html', 'Client Billing Ledger')" class="btn-card btn-preview-card">Preview</button>
+              <a href="#pricing" class="btn-card btn-use-card">Use Template</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="template-card">
+          <div class="card-preview-thumb">
+            <div style="font-weight:700; color:#475569;">📋 Purchase Order</div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Commercial Purchase Order</h3>
+            <div class="card-meta">
+              <span class="tag">Construction</span>
+              <span class="tag">Minimal</span>
+              <span class="tag">Letter</span>
+            </div>
+            <div class="card-stats">
+              <span>★ 4.9 (18.5k downloads)</span>
+            </div>
+            <div class="card-actions">
+              <button onclick="openPreview('./previews/purchase-order.html', 'Commercial Purchase Order')" class="btn-card btn-preview-card">Preview</button>
+              <a href="#pricing" class="btn-card btn-use-card">Use Template</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TEMPLATE COMPARISON TABLE -->
     <section class="section-block">
-      <div class="section-header text-center">
-        <h2>What's Included in the Bundle</h2>
-        <p>Instant access to all 16 essential business templates. Click <strong>Preview</strong> to inspect any file live.</p>
-      </div>
-
-      <div class="template-features-grid">
-        <div class="feature-card">
-          <div class="feature-info">
-            <span class="feature-title">✓ Invoice Template</span>
-            <span class="feature-status">Included</span>
-          </div>
-          <button onclick="openPreview('./previews/business-tracker.html', 'Invoice Template')" class="btn-preview">👁️ Preview</button>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-info">
-            <span class="feature-title">✓ Estimate Template</span>
-            <span class="feature-status">Included</span>
-          </div>
-          <button onclick="openPreview('./previews/purchase-order.html', 'Estimate Template')" class="btn-preview">👁️ Preview</button>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-info">
-            <span class="feature-title">✓ Receipt Template</span>
-            <span class="feature-status">Included</span>
-          </div>
-          <button onclick="openPreview('./previews/invoice-ledger.html', 'Receipt Template')" class="btn-preview">👁️ Preview</button>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-info">
-            <span class="feature-title">✓ Purchase Order</span>
-            <span class="feature-status">Included</span>
-          </div>
-          <button onclick="openPreview('./previews/purchase-order.html', 'Purchase Order')" class="btn-preview">👁️ Preview</button>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-info">
-            <span class="feature-title">✓ Business Proposal</span>
-            <span class="feature-status">Included</span>
-          </div>
-          <button onclick="openPreview('./previews/business-tracker.html', 'Business Proposal')" class="btn-preview">👁️ Preview</button>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-info">
-            <span class="feature-title">✓ Timesheet Log</span>
-            <span class="feature-status">Included</span>
-          </div>
-          <button onclick="openPreview('./previews/business-tracker.html', 'Timesheet Log')" class="btn-preview">👁️ Preview</button>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-info">
-            <span class="feature-title">✓ Contractor Agreement</span>
-            <span class="feature-status">Included</span>
-          </div>
-          <button onclick="openPreview('./previews/purchase-order.html', 'Contractor Agreement')" class="btn-preview">👁️ Preview</button>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-info">
-            <span class="feature-title">✓ Expense Report</span>
-            <span class="feature-status">Included</span>
-          </div>
-          <button onclick="openPreview('./previews/profit-and-loss.html', 'Expense Report')" class="btn-preview">👁️ Preview</button>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-info">
-            <span class="feature-title">✓ Mileage Log</span>
-            <span class="feature-status">Included</span>
-          </div>
-          <button onclick="openPreview('./previews/tax_estimation.html', 'Mileage Log')" class="btn-preview">👁️ Preview</button>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-info">
-            <span class="feature-title">✓ Profit & Loss Statement</span>
-            <span class="feature-status">Included</span>
-          </div>
-          <button onclick="openPreview('./previews/profit-and-loss.html', 'Profit & Loss Statement')" class="btn-preview">👁️ Preview</button>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-info">
-            <span class="feature-title">✓ Business Tracker</span>
-            <span class="feature-status">Included</span>
-          </div>
-          <button onclick="openPreview('./previews/business-tracker.html', 'Business Tracker')" class="btn-preview">👁️ Preview</button>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-info">
-            <span class="feature-title">✓ Invoice Ledger</span>
-            <span class="feature-status">Included</span>
-          </div>
-          <button onclick="openPreview('./previews/invoice-ledger.html', 'Invoice Ledger')" class="btn-preview">👁️ Preview</button>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-info">
-            <span class="feature-title">✓ Tax Estimation Sheet</span>
-            <span class="feature-status">Included</span>
-          </div>
-          <button onclick="openPreview('./previews/tax_estimation.html', 'Tax Estimation Sheet')" class="btn-preview">👁️ Preview</button>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-info">
-            <span class="feature-title">✓ Client Intake Form</span>
-            <span class="feature-status">Included</span>
-          </div>
-          <button onclick="openPreview('./previews/purchase-order.html', 'Client Intake Form')" class="btn-preview">👁️ Preview</button>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-info">
-            <span class="feature-title">✓ Service Quote</span>
-            <span class="feature-status">Included</span>
-          </div>
-          <button onclick="openPreview('./previews/business-tracker.html', 'Service Quote')" class="btn-preview">👁️ Preview</button>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-info">
-            <span class="feature-title">✓ Job Work Order</span>
-            <span class="feature-status">Included</span>
-          </div>
-          <button onclick="openPreview('./previews/purchase-order.html', 'Job Work Order')" class="btn-preview">👁️ Preview</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- FORMAT COMPATIBILITY BADGES -->
-    <section class="section-block formats-section">
-      <div class="section-header text-center">
-        <h2>Included File Formats</h2>
-        <p>Works seamlessly with your favorite desktop and cloud software.</p>
-      </div>
-      <div class="formats-badge-grid">
-        <div class="format-chip chip-html">HTML</div>
-        <div class="format-chip chip-pdf">PDF</div>
-        <div class="format-chip chip-word">Microsoft Word (.docx)</div>
-        <div class="format-chip chip-excel">Microsoft Excel (.xlsx)</div>
-        <div class="format-chip chip-sheets">Google Sheets Compatible</div>
-        <div class="format-chip chip-docs">Google Docs Compatible</div>
-      </div>
-    </section>
-
-    <!-- 3-TIER PRICING SECTION -->
-    <section id="pricing" class="section-block pricing-section">
-      <div class="section-header text-center">
-        <h2>Choose Your Option</h2>
-        <p>Get instant lifetime access with no monthly fees.</p>
-      </div>
-
-      <div class="pricing-grid">
-        
-        <!-- Tier 1: Single Template -->
-        <div class="pricing-card">
-          <span class="card-badge">Flexible</span>
-          <h3>Single Template</h3>
-          <div class="price">$9 <span>/ one-time</span></div>
-          <p class="price-desc">Pick any single template of your choice.</p>
-          <ul class="pricing-features">
-            <li>✓ 1 Template Choice</li>
-            <li>✓ All Supported File Formats</li>
-            <li>✓ Lifetime Access</li>
-            <li>✓ Commercial License</li>
-          </ul>
-          <a href="https://yourstore.gumroad.com/l/single" class="btn btn-outline">Select Template</a>
-        </div>
-
-        <!-- Tier 2: Essential Bundle -->
-        <div class="pricing-card">
-          <span class="card-badge">Starter Set</span>
-          <h3>Essential Bundle</h3>
-          <div class="price">$29 <span>/ one-time</span></div>
-          <p class="price-desc">Core financial & billing templates package.</p>
-          <ul class="pricing-features">
-            <li>✓ 8 Core Business Templates</li>
-            <li>✓ All Supported File Formats</li>
-            <li>✓ Lifetime Access</li>
-            <li>✓ Commercial Use License</li>
-          </ul>
-          <a href="https://yourstore.gumroad.com/l/essential" class="btn btn-secondary">Get Essential Bundle</a>
-        </div>
-
-        <!-- Tier 3: Ultimate Bundle -->
-        <div class="pricing-card featured-card">
-          <span class="card-badge badge-fire">🔥 Best Value</span>
-          <h3>Ultimate Business Bundle</h3>
-          <div class="price">$49 <span>/ one-time</span></div>
-          <p class="price-desc">All 16 templates + future updates included.</p>
-          <ul class="pricing-features">
-            <li>✓ All 16 Business Templates</li>
-            <li>✓ All Supported File Formats</li>
-            <li>✓ Free Lifetime Updates</li>
-            <li>✓ Commercial Use Rights</li>
-            <li>✓ Priority Support</li>
-          </ul>
-          <a href="https://yourstore.gumroad.com/l/ultimate" class="btn btn-primary">🟢 Get the Ultimate Bundle</a>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- FREQUENTLY ASKED QUESTIONS -->
-    <section class="section-block faq-section">
-      <div class="section-header text-center">
-        <h2>Frequently Asked Questions</h2>
-      </div>
-
-      <div class="faq-grid">
-        <div class="faq-item">
-          <h4>Can I edit the templates?</h4>
-          <p>Yes! Every template is 100% customizable. You can easily add your own logo, adjust colors, modify fields, and update business details.</p>
-        </div>
-        <div class="faq-item">
-          <h4>Do they work on Mac and Windows?</h4>
-          <p>Absolutely. The templates are provided in standard formats (.docx, .xlsx, .pdf, .html) compatible with both macOS and Windows operating systems.</p>
-        </div>
-        <div class="faq-item">
-          <h4>Do I need Microsoft Office?</h4>
-          <p>No. While they work great with Microsoft Word and Excel, you can also open and edit them using free tools like Google Docs, Google Sheets, or Apple Pages/Numbers.</p>
-        </div>
-        <div class="faq-item">
-          <h4>Are updates free?</h4>
-          <p>Yes! Buying the Ultimate Bundle includes free lifetime access to any newly added templates or revisions.</p>
-        </div>
-        <div class="faq-item">
-          <h4>Can I use them for my commercial business?</h4>
-          <p>Yes. You are granted a full commercial license to use these templates for your business operations and client billing.</p>
-        </div>
-        <div class="faq-item">
-          <h4>Is this a subscription or a one-time purchase?</h4>
-          <p>This is a strict one-time purchase. Pay once and own the files forever—no recurring monthly or annual fees.</p>
-        </div>
-      </div>
+      <h2>Template Comparison Matrix</h2>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Template Name</th>
+            <th>Best For</th>
+            <th>Format Support</th>
+            <th>Paper Size</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Modern Invoice</strong></td>
+            <td>Freelancers & Consultants</td>
+            <td>Word, Excel, PDF, HTML</td>
+            <td>Letter & A4</td>
+          </tr>
+          <tr>
+            <td><strong>Invoice Ledger</strong></td>
+            <td>Contractors & Small Business</td>
+            <td>Excel, Google Sheets, PDF</td>
+            <td>Letter</td>
+          </tr>
+          <tr>
+            <td><strong>Profit & Loss Statement</strong></td>
+            <td>Accounting & Service Providers</td>
+            <td>Excel, Google Sheets, PDF</td>
+            <td>A4</td>
+          </tr>
+        </tbody>
+      </table>
     </section>
 
   </main>
 
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container footer-content">
-      <div class="footer-links">
-        <a href="/contact">Contact Support</a>
-        <a href="/privacy">Privacy Policy</a>
-        <a href="/terms">Terms of Use</a>
-        <a href="/refunds">Refund Policy</a>
-      </div>
-      <p>&copy; 2026 BizTemplates. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <!-- PREVIEW MODAL POPUP -->
+  <!-- MODAL PREVIEW -->
   <div id="preview-modal" class="modal" style="display:none;">
     <div class="modal-content">
       <div class="modal-header">
-        <h3 id="modal-title">Template Preview</h3>
-        <button class="close-btn" onclick="closePreview()">&times;</button>
+        <h3 id="modal-title">Template Live Preview</h3>
+        <div class="modal-actions">
+          <button class="btn-modal-action" onclick="printFrame()">🖨️ Print</button>
+          <a id="modal-download" href="#" download class="btn-modal-action">📥 Download</a>
+          <button class="btn-modal-action" style="background:#ef4444;" onclick="closePreview()">✕ Close</button>
+        </div>
       </div>
       <iframe id="preview-frame" class="modal-body" src=""></iframe>
     </div>
   </div>
 
-  <!-- Sticky Mobile Bar -->
-  <div class="sticky-mobile-cta">
-    <a href="https://yourstore.gumroad.com/l/ultimate">🟢 Get Ultimate Bundle ($49)</a>
-  </div>
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>BizTemplates</h4>
+          <p>Instant digital templates for operations, billing, and accounting.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <a href="#templates">All Templates</a>
+          <a href="#pricing">Pricing</a>
+          <a href="/faq">FAQ</a>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <a href="/privacy">Privacy Policy</a>
+          <a href="/terms">Terms of Use</a>
+          <a href="/license">Commercial License</a>
+        </div>
+      </div>
+      <p class="text-center">&copy; 2026 BizTemplates. All rights reserved.</p>
+    </div>
+  </footer>
 
   <script>
     function openPreview(fileUrl, title) {
       document.getElementById('modal-title').innerText = title + ' (Live Preview)';
       document.getElementById('preview-frame').src = fileUrl;
+      document.getElementById('modal-download').href = fileUrl;
       document.getElementById('preview-modal').style.display = 'flex';
       document.body.style.overflow = 'hidden';
     }
@@ -348,7 +518,13 @@
       document.getElementById('preview-frame').src = '';
       document.body.style.overflow = 'auto';
     }
-  </script>
 
+    function printFrame() {
+      const frame = document.getElementById('preview-frame');
+      if (frame.contentWindow) {
+        frame.contentWindow.print();
+      }
+    }
+  </script>
 </body>
 </html>

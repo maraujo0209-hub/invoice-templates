@@ -6,7 +6,7 @@
   </div>
   <div class="nav-right">
     <button onclick="window.print()" class="nav-btn btn-secondary">🖨️ Print / Save PDF</button>
-    <a href="https://yourstore.gumroad.com/l/starter" class="nav-btn btn-primary">Get This Template</a>
+    <a href="https://yourstore.gumroad.com/l/starter" class="nav-btn btn-primary">Get Starter Bundle</a>
   </div>
 </div>
 
@@ -24,6 +24,7 @@
   .preview-watermark { position: fixed; bottom: 20px; right: 20px; background: rgba(15, 23, 42, 0.9); color: #f8fafc; padding: 0.6rem 1rem; border-radius: 6px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em; pointer-events: none; z-index: 9999; }
   @media print { .template-nav-bar, .preview-watermark { display: none !important; } }
 </style>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,15 +36,20 @@
     body { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; padding: 2rem; background: #f8fafc; color: #0f172a; }
     .document-container { max-width: 800px; margin: 0 auto; background: #ffffff; padding: 2.5rem; border-radius: 8px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
     .header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 2rem; border-bottom: 2px solid #e2e8f0; padding-bottom: 1.5rem; }
-    .brand-details h2 { margin: 0 0 0.25rem 0; font-size: 1.15rem; color: #0f172a; }
+    .brand-details h2 { margin: 0 0 0.25rem 0; font-size: 1.25rem; color: #0f172a; }
     .brand-details p { margin: 0.15rem 0; font-size: 0.85rem; color: #64748b; }
     .meta-details { text-align: right; }
-    .meta-details h1 { margin: 0 0 0.5rem 0; font-size: 1.75rem; color: #2563eb; text-transform: uppercase; }
+    .meta-details h1 { margin: 0 0 0.5rem 0; font-size: 1.75rem; color: #2563eb; text-transform: uppercase; letter-spacing: 0.02em; }
     .meta-details p { margin: 0.25rem 0; font-size: 0.875rem; color: #475569; }
+    .billing-row { display: flex; justify-content: space-between; margin-bottom: 2rem; font-size: 0.875rem; line-height: 1.5; }
     table { width: 100%; border-collapse: collapse; margin-bottom: 2rem; }
     th, td { padding: 0.75rem 0.5rem; text-align: left; border-bottom: 1px solid #e2e8f0; font-size: 0.85rem; }
-    th { background: #f8fafc; font-weight: 600; color: #475569; }
+    th { background: #f8fafc; font-weight: 600; color: #475569; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.05em; }
     .text-right { text-align: right; }
+    .totals { width: 300px; margin-left: auto; }
+    .totals-row.grand-total { border-top: 2px solid #0f172a; font-weight: 700; font-size: 1.1rem; color: #0f172a; display: flex; justify-content: space-between; padding: 0.5rem 0; }
+    .signatures { display: flex; justify-content: space-between; margin-top: 3rem; }
+    .sig-line { width: 220px; border-top: 1px solid #0f172a; margin-top: 2.5rem; padding-top: 0.5rem; font-size: 0.8rem; font-weight: 600; color: #475569; }
     @media print { body { background: #ffffff; padding: 0; } .document-container { border: none; box-shadow: none; } }
   </style>
 </head>
@@ -51,14 +57,24 @@
   <div class="document-container">
     <div class="header">
       <div class="brand-details">
-        <h2>Your Business Name, LLC</h2>
-        <p>123 Business Rd, Suite 100 • City, State 12345</p>
-        <p>contact@yourbusiness.com • (555) 019-2831</p>
+        <h2>Your Service Company</h2>
+        <p>123 Service Road, Suite 100 • City, State 12345</p>
+        <p>contact@yourservicecompany.com • (555) 019-2831</p>
       </div>
       <div class="meta-details">
         <h1>Service Quote</h1>
         <p><strong>Quote #:</strong> QUO-2026-042</p>
+        <p><strong>Quote Date:</strong> July 21, 2026</p>
         <p><strong>Valid Until:</strong> August 21, 2026</p>
+      </div>
+    </div>
+
+    <div class="billing-row">
+      <div>
+        <strong style="color: #0f172a;">Prepared For:</strong><br>
+        Bright Path Learning Center<br>
+        Attn: Mark Davis<br>
+        789 Education Way, City, ST 12345
       </div>
     </div>
 
@@ -67,17 +83,36 @@
         <tr>
           <th>Proposed Service</th>
           <th>Details</th>
-          <th class="text-right">Estimated Cost</th>
+          <th class="text-right">Estimated Amount</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Commercial Cleaning</td>
-          <td>Weekly deep cleaning (Monthly Contract)</td>
-          <td class="text-right">$1,200.00</td>
+          <td>Bi-Weekly Office Cleaning</td>
+          <td>General dusting, trash removal, vacuuming, and bathroom sanitation</td>
+          <td class="text-right">$450.00 / mo</td>
+        </tr>
+        <tr>
+          <td>Initial Deep Sanitation Treatment</td>
+          <td>One-time intensive deep clean including floor buffing and high-dusting</td>
+          <td class="text-right">$200.00</td>
         </tr>
       </tbody>
     </table>
+
+    <div class="totals">
+      <div class="totals-row grand-total">
+        <span>Estimated Initial Total:</span>
+        <span>$650.00</span>
+      </div>
+    </div>
+
+    <p style="font-size: 0.8rem; color: #64748b; margin-top: 1.5rem;">To accept this quote, please sign below and return a copy via email.</p>
+
+    <div class="signatures">
+      <div class="sig-line">Prepared By (Signature)</div>
+      <div class="sig-line">Accepted By Client (Signature)</div>
+    </div>
   </div>
 </body>
 </html>

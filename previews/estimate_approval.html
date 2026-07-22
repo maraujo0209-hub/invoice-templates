@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estimate Approval Form</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0f172a;
+      --accent: #2563eb;
+      --text: #334155;
+      --border: #e2e8f0;
+      --bg-light: #f8fafc;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+    body { background: #f1f5f9; padding: 40px 20px; color: var(--text); }
+    .doc-container { max-width: 800px; margin: 0 auto; background: #fff; padding: 48px; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+    .header { display: flex; justify-content: space-between; border-bottom: 2px solid var(--border); padding-bottom: 24px; margin-bottom: 32px; }
+    .brand-title { font-size: 1.5rem; font-weight: 700; color: var(--primary); }
+    .doc-type { font-size: 1.25rem; font-weight: 700; color: var(--accent); text-transform: uppercase; text-align: right; }
+    .meta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 32px; }
+    .info-box { background: var(--bg-light); padding: 16px; border-radius: 6px; border: 1px solid var(--border); }
+    .info-box h4 { font-size: 0.75rem; text-transform: uppercase; color: #64748b; margin-bottom: 8px; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 32px; }
+    th { background: var(--bg-light); text-align: left; padding: 12px; font-size: 0.85rem; border-bottom: 1px solid var(--border); }
+    td { padding: 12px; border-bottom: 1px solid var(--border); font-size: 0.9rem; }
+    .totals { text-align: right; margin-bottom: 32px; }
+    .totals div { font-size: 0.95rem; margin-bottom: 6px; }
+    .totals .grand-total { font-size: 1.25rem; font-weight: 700; color: var(--primary); }
+    .approval-box { border: 2px dashed var(--border); padding: 24px; border-radius: 8px; background: #fafafa; }
+    .signature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 24px; }
+    .sig-line { border-bottom: 1px solid #94a3b8; margin-top: 40px; }
+    .sig-label { font-size: 0.8rem; color: #64748b; margin-top: 4px; }
+    @media print { body { background: #fff; padding: 0; } .doc-container { box-shadow: none; padding: 0; } }
+  </style>
+</head>
+<body>
+  <div class="doc-container">
+    <div class="header">
+      <div>
+        <div class="brand-title">[Your Business Name]</div>
+        <div style="font-size: 0.875rem; color: #64748b;">123 Business Rd, Suite 100</div>
+      </div>
+      <div>
+        <div class="doc-type">Estimate Approval</div>
+        <div style="font-size: 0.875rem; color: #64748b;">Ref #: EST-2026-001</div>
+      </div>
+    </div>
+
+    <div class="meta-grid">
+      <div class="info-box">
+        <h4>Client Details</h4>
+        <strong>[Client Name / Company]</strong><br>
+        [Client Address]<br>
+        [Client Email]
+      </div>
+      <div class="info-box">
+        <h4>Estimate Summary</h4>
+        <strong>Date:</strong> July 22, 2026<br>
+        <strong>Valid Until:</strong> August 22, 2026<br>
+        <strong>Prepared By:</strong> [Account Manager]
+      </div>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Description</th>
+          <th style="width: 80px; text-align: center;">Qty</th>
+          <th style="width: 120px; text-align: right;">Unit Price</th>
+          <th style="width: 120px; text-align: right;">Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Scope Item 1: Initial Service Setup & Configuration</td>
+          <td style="text-align: center;">1</td>
+          <td style="text-align: right;">$500.00</td>
+          <td style="text-align: right;">$500.00</td>
+        </tr>
+        <tr>
+          <td>Scope Item 2: On-site Execution & Labor</td>
+          <td style="text-align: center;">8</td>
+          <td style="text-align: right;">$75.00</td>
+          <td style="text-align: right;">$600.00</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="totals">
+      <div>Subtotal: $1,100.00</div>
+      <div>Estimated Tax (8%): $88.00</div>
+      <div class="grand-total">Total Estimate: $1,188.00</div>
+    </div>
+
+    <div class="approval-box">
+      <strong style="color: var(--primary);">Client Acceptance & Authorization</strong>
+      <p style="font-size: 0.85rem; color: #64748b; margin-top: 4px;">
+        By signing below, you authorize [Your Business Name] to proceed with the services outlined in this estimate at the quoted costs.
+      </p>
+      <div class="signature-grid">
+        <div>
+          <div class="sig-line"></div>
+          <div class="sig-label">Authorized Signature</div>
+        </div>
+        <div>
+          <div class="sig-line"></div>
+          <div class="sig-label">Date Signed</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

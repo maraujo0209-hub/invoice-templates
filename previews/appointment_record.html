@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Appointment Record</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --primary: #0f172a; --border: #cbd5e1; --bg-light: #f8fafc; }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+    body { background: #f8fafc; padding: 40px 20px; color: #334155; }
+    .doc-card { max-width: 800px; margin: 0 auto; background: #fff; padding: 40px; border: 1px solid var(--border); border-radius: 6px; }
+    .header { border-bottom: 2px solid var(--primary); padding-bottom: 16px; margin-bottom: 24px; display: flex; justify-content: space-between; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px; font-size: 0.875rem; }
+    .box { background: var(--bg-light); border: 1px solid var(--border); padding: 12px; border-radius: 4px; }
+    .box label { font-size: 0.75rem; font-weight: 700; color: #64748b; text-transform: uppercase; display: block; margin-bottom: 4px; }
+    @media print { body { padding: 0; } .doc-card { border: none; } }
+  </style>
+</head>
+<body>
+  <div class="doc-card">
+    <div class="header">
+      <div>
+        <h2 style="color: var(--primary);">Service Appointment Record</h2>
+        <p style="font-size: 0.85rem; color: #64748b;">[Your Business Name]</p>
+      </div>
+      <div style="text-align: right;">
+        <p style="font-size: 0.85rem;"><strong>Appt ID:</strong> APT-2026-904</p>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="box"><label>Client Name</label>[Client Name / Business]</div>
+      <div class="box"><label>Appointment Date & Time</label>July 22, 2026 @ 09:00 AM</div>
+    </div>
+
+    <div class="grid">
+      <div class="box"><label>Service Location</label>[Full Service Address]</div>
+      <div class="box"><label>Assigned Staff / Crew</label>[Team Lead Name]</div>
+    </div>
+
+    <div class="box" style="margin-bottom: 16px;">
+      <label>Scheduled Work Scope</label>
+      <p style="font-size: 0.875rem; margin-top: 4px;">Standard commercial cleaning, carpet vacuuming, surface sanitization, trash clearance.</p>
+    </div>
+
+    <div class="box">
+      <label>Client Sign-off & Arrival/Departure Times</label>
+      <p style="font-size: 0.85rem; color: #64748b; margin-top: 4px;">Arrival Time: ______ | Departure Time: ______</p>
+      <div style="border-bottom: 1px solid #94a3b8; margin-top: 30px; width: 60%;"></div>
+      <span style="font-size: 0.75rem; color: #64748b;">Client Acceptance Signature</span>
+    </div>
+  </div>
+</body>
+</html>

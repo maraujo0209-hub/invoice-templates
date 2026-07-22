@@ -1,1 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proforma Invoice</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --primary: #0f172a; --accent: #2563eb; --border: #cbd5e1; }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+    body { background: #f8fafc; padding: 40px 20px; }
+    .doc-card { max-width: 800px; margin: 0 auto; background: #fff; padding: 40px; border: 1px solid var(--border); border-radius: 6px; }
+    .flex-header { display: flex; justify-content: space-between; margin-bottom: 32px; }
+    .title-banner { background: #eff6ff; color: var(--accent); font-weight: 700; padding: 8px 16px; border-radius: 4px; font-size: 0.9rem; text-transform: uppercase; }
+    table { width: 100%; border-collapse: collapse; margin: 24px 0; }
+    th { background: #f1f5f9; padding: 10px; font-size: 0.8rem; text-align: left; border-bottom: 2px solid var(--border); }
+    td { padding: 10px; font-size: 0.875rem; border-bottom: 1px solid #e2e8f0; }
+    .bank-details { background: #f8fafc; padding: 16px; border-radius: 6px; border: 1px solid #e2e8f0; margin-top: 24px; font-size: 0.85rem; }
+    @media print { body { padding: 0; } .doc-card { border: none; } }
+  </style>
+</head>
+<body>
+  <div class="doc-card">
+    <div class="flex-header">
+      <div>
+        <h2 style="color: var(--primary);">[Your Business Name]</h2>
+        <p style="font-size: 0.85rem; color: #64748b;">Tax ID / EIN: XX-XXXXXXX</p>
+      </div>
+      <div style="text-align: right;">
+        <span class="title-banner">Proforma Invoice</span>
+        <p style="font-size: 0.85rem; margin-top: 8px;"><strong>Invoice #:</strong> PRO-2026-08</p>
+        <p style="font-size: 0.85rem;"><strong>Date:</strong> July 22, 2026</p>
+      </div>
+    </div>
 
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; font-size: 0.875rem; margin-bottom: 20px;">
+      <div>
+        <strong>Billed To:</strong><br>
+        [Client Company Name]<br>
+        [Attn: Contact Name]<br>
+        [Address Line]
+      </div>
+      <div>
+        <strong>Shipping/Destination:</strong><br>
+        [Ship-To Address Line]<br>
+        <strong>Port/Delivery Terms:</strong> FOB Destination
+      </div>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Item / Service</th>
+          <th style="text-align: center;">Qty</th>
+          <th style="text-align: right;">Rate</th>
+          <th style="text-align: right;">Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Advance Equipment Allocation / Service Retainer</td>
+          <td style="text-align: center;">1</td>
+          <td style="text-align: right;">$1,500.00</td>
+          <td style="text-align: right;">$1,500.00</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div style="text-align: right; font-weight: 700; font-size: 1.1rem; color: var(--primary);">
+      Total Due Prior to Shipment: $1,500.00
+    </div>
+
+    <div class="bank-details">
+      <strong style="color: var(--primary);">Wire Transfer / Payment Instructions</strong><br>
+      Bank Name: [Your Bank Name]<br>
+      Account #: XXXXXXXX1234 | Routing / ABA #: XXXXXXXXX<br>
+      SWIFT/BIC Code: XXXXXXXX
+    </div>
+  </div>
+</body>
+</html>

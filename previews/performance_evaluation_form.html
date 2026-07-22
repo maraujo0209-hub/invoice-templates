@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Performance Evaluation Form</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --primary: #0f172a; --border: #cbd5e1; --bg-light: #f8fafc; }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+    body { background: #f8fafc; padding: 40px 20px; color: #334155; }
+    .doc-card { max-width: 800px; margin: 0 auto; background: #fff; padding: 40px; border: 1px solid var(--border); border-radius: 6px; }
+    .header { border-bottom: 2px solid var(--primary); padding-bottom: 16px; margin-bottom: 24px; display: flex; justify-content: space-between; }
+    .meta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; background: var(--bg-light); padding: 16px; border: 1px solid var(--border); border-radius: 4px; font-size: 0.875rem; }
+    .eval-block { margin-bottom: 20px; }
+    .eval-title { font-size: 0.875rem; font-weight: 700; color: var(--primary); margin-bottom: 6px; }
+    .rating-row { display: flex; gap: 12px; font-size: 0.85rem; margin-bottom: 8px; }
+    .rating-box { flex: 1; border: 1px solid var(--border); padding: 6px; border-radius: 4px; text-align: center; background: var(--bg-light); }
+    .notes-area { border: 1px solid var(--border); border-radius: 4px; min-height: 60px; padding: 8px; font-size: 0.85rem; }
+    .sig-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 32px; }
+    .sig-line { border-bottom: 1px solid #94a3b8; margin-top: 30px; }
+    @media print { body { padding: 0; } .doc-card { border: none; } }
+  </style>
+</head>
+<body>
+  <div class="doc-card">
+    <div class="header">
+      <div>
+        <h2 style="color: var(--primary);">Employee Performance Evaluation</h2>
+        <p style="font-size: 0.85rem; color: #64748b;">Annual / Periodic Review</p>
+      </div>
+      <div style="text-align: right;">
+        <p style="font-size: 0.85rem;"><strong>Review Date:</strong> July 22, 2026</p>
+      </div>
+    </div>
+
+    <div class="meta-grid">
+      <div><strong>Employee Name:</strong> [Employee Name]</div>
+      <div><strong>Reviewer Name:</strong> [Manager Name]</div>
+      <div><strong>Job Title:</strong> [Title]</div>
+      <div><strong>Review Period:</strong> [Q2 2026 / Annual]</div>
+    </div>
+
+    <div class="eval-block">
+      <div class="eval-title">1. Work Quality & Attention to Detail</div>
+      <div class="rating-row">
+        <div class="rating-box">1 - Unsatisfactory</div>
+        <div class="rating-box">2 - Needs Improvement</div>
+        <div class="rating-box">3 - Meets Expectations</div>
+        <div class="rating-box">4 - Exceeds Expectations</div>
+      </div>
+      <div class="notes-area">Consistently thorough in job execution and follows protocol.</div>
+    </div>
+
+    <div class="eval-block">
+      <div class="eval-title">2. Punctuality & Reliability</div>
+      <div class="rating-row">
+        <div class="rating-box">1 - Unsatisfactory</div>
+        <div class="rating-box">2 - Needs Improvement</div>
+        <div class="rating-box">3 - Meets Expectations</div>
+        <div class="rating-box">4 - Exceeds Expectations</div>
+      </div>
+      <div class="notes-area">Arrives on time for shifts and maintains clean attendance records.</div>
+    </div>
+
+    <div class="sig-grid">
+      <div>
+        <div class="sig-line"></div>
+        <p style="font-size: 0.75rem; color: #64748b; margin-top: 4px;">Manager Signature</p>
+      </div>
+      <div>
+        <div class="sig-line"></div>
+        <p style="font-size: 0.75rem; color: #64748b; margin-top: 4px;">Employee Signature</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

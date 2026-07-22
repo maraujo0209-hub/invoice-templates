@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sales Agreement</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --primary: #0f172a; --accent: #2563eb; --text: #334155; --border: #cbd5e1; --bg-light: #f8fafc; }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+    body { background: #f1f5f9; padding: 40px 20px; color: var(--text); }
+    .doc-container { max-width: 800px; margin: 0 auto; background: #fff; padding: 48px; border-radius: 8px; border: 1px solid var(--border); }
+    .header { border-bottom: 2px solid var(--primary); padding-bottom: 16px; margin-bottom: 24px; text-align: center; }
+    .header h1 { font-size: 1.5rem; text-transform: uppercase; letter-spacing: 1px; color: var(--primary); }
+    .party-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 24px; }
+    .party-box { background: var(--bg-light); padding: 16px; border-radius: 6px; border: 1px solid var(--border); font-size: 0.875rem; }
+    .party-box h3 { font-size: 0.75rem; text-transform: uppercase; color: #64748b; margin-bottom: 8px; }
+    .section-title { font-size: 1rem; font-weight: 700; color: var(--primary); margin: 20px 0 8px 0; border-bottom: 1px solid var(--border); padding-bottom: 4px; }
+    p, li { font-size: 0.875rem; line-height: 1.6; color: var(--text); margin-bottom: 8px; }
+    table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.875rem; }
+    th { background: var(--bg-light); text-align: left; padding: 10px; border-bottom: 2px solid var(--border); }
+    td { padding: 10px; border-bottom: 1px solid #e2e8f0; }
+    .sig-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 40px; }
+    .sig-line { border-bottom: 1px solid #94a3b8; margin-top: 40px; }
+    .sig-label { font-size: 0.8rem; color: #64748b; margin-top: 4px; }
+    @media print { body { background: #fff; padding: 0; } .doc-container { border: none; padding: 0; } }
+  </style>
+</head>
+<body>
+  <div class="doc-container">
+    <div class="header">
+      <h1>Sales Agreement</h1>
+      <p style="font-size: 0.85rem; color: #64748b;">Agreement Ref #: SA-2026-001</p>
+    </div>
+
+    <p>This Sales Agreement ("Agreement") is entered into as of <strong>July 22, 2026</strong>, by and between the Seller and Buyer listed below.</p>
+
+    <div class="party-grid">
+      <div class="party-box">
+        <h3>Seller</h3>
+        <strong>[Your Company Name]</strong><br>
+        [Address Line 1]<br>
+        [City, State, ZIP]<br>
+        Email: [seller@email.com]
+      </div>
+      <div class="party-box">
+        <h3>Buyer</h3>
+        <strong>[Buyer Company / Name]</strong><br>
+        [Address Line 1]<br>
+        [City, State, ZIP]<br>
+        Email: [buyer@email.com]
+      </div>
+    </div>
+
+    <div class="section-title">1. Goods / Services Purchased</div>
+    <table>
+      <thead>
+        <tr>
+          <th>Description</th>
+          <th style="width: 80px; text-align: center;">Qty</th>
+          <th style="width: 120px; text-align: right;">Unit Price</th>
+          <th style="width: 120px; text-align: right;">Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>[Product or Service Name]</td>
+          <td style="text-align: center;">1</td>
+          <td style="text-align: right;">$2,500.00</td>
+          <td style="text-align: right;">$2,500.00</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="section-title">2. Payment Terms</div>
+    <p>Buyer agrees to pay the total purchase amount of <strong>$2,500.00</strong> according to the following schedule: 50% deposit upon execution, and remaining 50% upon delivery.</p>
+
+    <div class="section-title">3. Delivery & Title Transfer</div>
+    <p>Goods shall be delivered to Buyer's specified address on or before [Target Delivery Date]. Title and risk of loss pass to Buyer upon physical delivery.</p>
+
+    <div class="section-title">4. Signatures</div>
+    <div class="sig-grid">
+      <div>
+        <div class="sig-line"></div>
+        <div class="sig-label">Authorized Seller Representative</div>
+      </div>
+      <div>
+        <div class="sig-line"></div>
+        <div class="sig-label">Authorized Buyer Representative</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

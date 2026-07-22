@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Offer Letter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --primary: #0f172a; --border: #cbd5e1; --bg-light: #f8fafc; }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+    body { background: #f8fafc; padding: 40px 20px; color: #334155; }
+    .doc-card { max-width: 800px; margin: 0 auto; background: #fff; padding: 48px; border: 1px solid var(--border); border-radius: 6px; }
+    .header { border-bottom: 2px solid var(--primary); padding-bottom: 16px; margin-bottom: 24px; display: flex; justify-content: space-between; }
+    p { font-size: 0.875rem; line-height: 1.6; margin-bottom: 16px; }
+    ul { font-size: 0.875rem; line-height: 1.6; margin: 0 0 16px 20px; }
+    .sig-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 40px; }
+    .sig-line { border-bottom: 1px solid #94a3b8; margin-top: 40px; }
+    @media print { body { padding: 0; } .doc-card { border: none; padding: 0; } }
+  </style>
+</head>
+<body>
+  <div class="doc-card">
+    <div class="header">
+      <div>
+        <h2 style="color: var(--primary);">[Your Company Name]</h2>
+        <p style="font-size: 0.85rem; color: #64748b;">Human Resources Department</p>
+      </div>
+      <div style="text-align: right;">
+        <p style="font-size: 0.85rem;"><strong>Date:</strong> July 22, 2026</p>
+      </div>
+    </div>
+
+    <p>Dear <strong>[Candidate Name]</strong>,</p>
+
+    <p>We are excited to offer you the position of <strong>[Job Title]</strong> at <strong>[Your Company Name]</strong>! We were impressed with your experience and believe your skills will be a fantastic addition to our team.</p>
+
+    <p><strong>Offer Details:</strong></p>
+    <ul>
+      <li><strong>Position:</strong> [Job Title]</li>
+      <li><strong>Start Date:</strong> [MM/DD/YYYY]</li>
+      <li><strong>Compensation:</strong> $[00.00] per hour / annual salary</li>
+      <li><strong>Schedule:</strong> [Full-Time / Part-Time / Shift Details]</li>
+      <li><strong>Reporting To:</strong> [Manager Name / Title]</li>
+    </ul>
+
+    <p>Please indicate your acceptance of this offer by signing and returning a copy of this letter by <strong>[Offer Expiration Date]</strong>.</p>
+
+    <div class="sig-grid">
+      <div>
+        <div class="sig-line"></div>
+        <p style="font-size: 0.8rem; color: #64748b; margin-top: 4px;">Hiring Manager Signature</p>
+      </div>
+      <div>
+        <div class="sig-line"></div>
+        <p style="font-size: 0.8rem; color: #64748b; margin-top: 4px;">Candidate Acceptance Signature</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

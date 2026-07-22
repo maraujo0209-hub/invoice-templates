@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exit Interview Form</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --primary: #0f172a; --border: #cbd5e1; --bg-light: #f8fafc; }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+    body { background: #f8fafc; padding: 40px 20px; color: #334155; }
+    .doc-card { max-width: 800px; margin: 0 auto; background: #fff; padding: 40px; border: 1px solid var(--border); border-radius: 6px; }
+    .header { border-bottom: 2px solid var(--primary); padding-bottom: 16px; margin-bottom: 24px; display: flex; justify-content: space-between; }
+    .meta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px; background: var(--bg-light); padding: 16px; border: 1px solid var(--border); border-radius: 4px; font-size: 0.875rem; }
+    .q-block { margin-bottom: 16px; }
+    .q-title { font-size: 0.85rem; font-weight: 700; color: var(--primary); margin-bottom: 6px; }
+    .text-box { border: 1px solid var(--border); border-radius: 4px; min-height: 50px; padding: 8px; }
+    @media print { body { padding: 0; } .doc-card { border: none; } }
+  </style>
+</head>
+<body>
+  <div class="doc-card">
+    <div class="header">
+      <div>
+        <h2 style="color: var(--primary);">Exit Interview Questionnaire</h2>
+        <p style="font-size: 0.85rem; color: #64748b;">Offboarding Feedback</p>
+      </div>
+      <div style="text-align: right;">
+        <p style="font-size: 0.85rem;"><strong>Date:</strong> July 22, 2026</p>
+      </div>
+    </div>
+
+    <div class="meta-grid">
+      <div><strong>Employee Name:</strong> [Employee Name]</div>
+      <div><strong>Job Title:</strong> [Title]</div>
+      <div><strong>Separation Date:</strong> [MM/DD/YYYY]</div>
+      <div><strong>Interviewer:</strong> [HR / Manager]</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-title">1. Primary reason for leaving the company?</div>
+      <div class="text-box"></div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-title">2. What did you enjoy most about working here?</div>
+      <div class="text-box"></div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-title">3. Do you have suggestions for improving workplace operations or culture?</div>
+      <div class="text-box"></div>
+    </div>
+  </div>
+</body>
+</html>

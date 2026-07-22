@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventory Stock Log</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --primary: #0f172a; --border: #cbd5e1; --bg-light: #f8fafc; }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+    body { background: #f8fafc; padding: 40px 20px; color: #334155; }
+    .doc-card { max-width: 850px; margin: 0 auto; background: #fff; padding: 40px; border: 1px solid var(--border); border-radius: 6px; }
+    .header { border-bottom: 2px solid var(--primary); padding-bottom: 16px; margin-bottom: 24px; display: flex; justify-content: space-between; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 24px; font-size: 0.85rem; }
+    th { background: var(--bg-light); text-align: left; padding: 10px; border-bottom: 2px solid var(--border); }
+    td { padding: 10px; border-bottom: 1px solid #e2e8f0; }
+    .pill-low { padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; font-weight: 600; background: #fef2f2; color: #dc2626; }
+    .pill-ok { padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; font-weight: 600; background: #f0fdf4; color: #16a34a; }
+    @media print { body { padding: 0; } .doc-card { border: none; } }
+  </style>
+</head>
+<body>
+  <div class="doc-card">
+    <div class="header">
+      <div>
+        <h2 style="color: var(--primary);">Inventory & Warehouse Stock Log</h2>
+        <p style="font-size: 0.85rem; color: #64748b;">Monthly Tracking Sheet</p>
+      </div>
+      <div style="text-align: right;">
+        <p style="font-size: 0.85rem;"><strong>As of:</strong> July 22, 2026</p>
+      </div>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>SKU / Item Description</th>
+          <th style="width: 100px; text-align: center;">In Stock</th>
+          <th style="width: 100px; text-align: center;">Reorder Pt.</th>
+          <th>Storage Location</th>
+          <th style="width: 90px; text-align: center;">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Glass Cleaner Refill (1 Gal)</td>
+          <td style="text-align: center;">14</td>
+          <td style="text-align: center;">5</td>
+          <td>Shelf A3</td>
+          <td style="text-align: center;"><span class="pill-ok">Optimal</span></td>
+        </tr>
+        <tr>
+          <td>Trash Liners 55-Gallon (Roll)</td>
+          <td style="text-align: center;">2</td>
+          <td style="text-align: center;">5</td>
+          <td>Shelf B1</td>
+          <td style="text-align: center;"><span class="pill-low">Low Stock</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

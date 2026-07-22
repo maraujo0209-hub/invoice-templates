@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Intake Form</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --primary: #0f172a; --border: #cbd5e1; --bg-light: #f8fafc; }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+    body { background: #f8fafc; padding: 40px 20px; color: #334155; }
+    .doc-card { max-width: 800px; margin: 0 auto; background: #fff; padding: 40px; border: 1px solid var(--border); border-radius: 6px; }
+    .header { border-bottom: 2px solid var(--primary); padding-bottom: 16px; margin-bottom: 24px; }
+    .form-section { margin-bottom: 20px; }
+    .form-section-title { font-size: 0.85rem; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid var(--border); padding-bottom: 4px; margin-bottom: 12px; }
+    .field-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .field-box { border: 1px solid var(--border); border-radius: 4px; padding: 8px 12px; background: #fff; }
+    .field-label { font-size: 0.75rem; font-weight: 600; color: #64748b; text-transform: uppercase; margin-bottom: 4px; }
+    .field-value { font-size: 0.875rem; min-height: 20px; color: #0f172a; }
+    .full-width { grid-column: span 2; }
+    @media print { body { padding: 0; } .doc-card { border: none; } }
+  </style>
+</head>
+<body>
+  <div class="doc-card">
+    <div class="header">
+      <h2 style="color: var(--primary);">Client Intake & Information Sheet</h2>
+      <p style="font-size: 0.85rem; color: #64748b;">Please complete all required fields for account registration.</p>
+    </div>
+
+    <div class="form-section">
+      <div class="form-section-title">1. General Information</div>
+      <div class="field-grid">
+        <div class="field-box"><div class="field-label">Full Name / Business Name</div><div class="field-value"></div></div>
+        <div class="field-box"><div class="field-label">Primary Contact Person</div><div class="field-value"></div></div>
+        <div class="field-box"><div class="field-label">Phone Number</div><div class="field-value"></div></div>
+        <div class="field-box"><div class="field-label">Email Address</div><div class="field-value"></div></div>
+        <div class="field-box full-width"><div class="field-label">Service Address</div><div class="field-value"></div></div>
+      </div>
+    </div>
+
+    <div class="form-section">
+      <div class="form-section-title">2. Property Details & Preferences</div>
+      <div class="field-grid">
+        <div class="field-box"><div class="field-label">Property Type</div><div class="field-value">[Residential / Commercial / Office]</div></div>
+        <div class="field-box"><div class="field-label">Square Footage / Size</div><div class="field-value"></div></div>
+        <div class="field-box"><div class="field-label">Preferred Service Day/Time</div><div class="field-value"></div></div>
+        <div class="field-box"><div class="field-label">Pets / Hazards On-Site</div><div class="field-value"></div></div>
+        <div class="field-box full-width"><div class="field-label">Special Requests / Focus Areas</div><div class="field-value" style="min-height: 40px;"></div></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

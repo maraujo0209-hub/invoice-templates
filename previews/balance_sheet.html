@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Balance Sheet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --primary: #0f172a; --accent: #2563eb; --border: #cbd5e1; --bg-light: #f8fafc; }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+    body { background: #f8fafc; padding: 40px 20px; color: #334155; }
+    .doc-card { max-width: 800px; margin: 0 auto; background: #fff; padding: 40px; border: 1px solid var(--border); border-radius: 6px; }
+    .header { border-bottom: 2px solid var(--primary); padding-bottom: 16px; margin-bottom: 24px; display: flex; justify-content: space-between; align-items: flex-end; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 24px; font-size: 0.875rem; }
+    th { background: var(--bg-light); text-align: left; padding: 10px; border-bottom: 2px solid var(--border); }
+    td { padding: 10px; border-bottom: 1px solid #e2e8f0; }
+    .section-head { background: #f1f5f9; font-weight: 700; color: var(--primary); }
+    .subtotal { font-weight: 600; background: #fafafa; }
+    .grand-total { font-weight: 700; font-size: 1rem; background: #eff6ff; border-top: 2px solid var(--primary); border-bottom: 2px solid var(--primary); }
+    @media print { body { padding: 0; } .doc-card { border: none; } }
+  </style>
+</head>
+<body>
+  <div class="doc-card">
+    <div class="header">
+      <div>
+        <h2 style="color: var(--primary);">[Your Company Name]</h2>
+        <p style="font-size: 0.85rem; color: #64748b;">Balance Sheet</p>
+      </div>
+      <div style="text-align: right;">
+        <p style="font-size: 0.85rem;"><strong>As of:</strong> July 22, 2026</p>
+      </div>
+    </div>
+
+    <table>
+      <thead>
+        <tr><th>Assets</th><th style="width: 140px; text-align: right;">Amount ($)</th></tr>
+      </thead>
+      <tbody>
+        <tr class="section-head"><td colspan="2">Current Assets</td></tr>
+        <tr><td style="padding-left: 20px;">Cash and Cash Equivalents</td><td style="text-align: right;">$23,250.00</td></tr>
+        <tr><td style="padding-left: 20px;">Accounts Receivable</td><td style="text-align: right;">$6,400.00</td></tr>
+        <tr><td style="padding-left: 20px;">Inventory</td><td style="text-align: right;">$4,100.00</td></tr>
+        <tr class="section-head"><td colspan="2">Fixed Assets</td></tr>
+        <tr><td style="padding-left: 20px;">Equipment & Machinery</td><td style="text-align: right;">$18,500.00</td></tr>
+        <tr><td style="padding-left: 20px;">Less: Accumulated Depreciation</td><td style="text-align: right;">-$3,200.00</td></tr>
+        <tr class="grand-total"><td>Total Assets</td><td style="text-align: right; color: var(--accent);">$49,050.00</td></tr>
+      </tbody>
+    </table>
+
+    <table>
+      <thead>
+        <tr><th>Liabilities & Owner's Equity</th><th style="width: 140px; text-align: right;">Amount ($)</th></tr>
+      </thead>
+      <tbody>
+        <tr class="section-head"><td colspan="2">Current Liabilities</td></tr>
+        <tr><td style="padding-left: 20px;">Accounts Payable</td><td style="text-align: right;">$3,100.00</td></tr>
+        <tr><td style="padding-left: 20px;">Accrued Expenses</td><td style="text-align: right;">$1,200.00</td></tr>
+        <tr class="section-head"><td colspan="2">Long-Term Liabilities</td></tr>
+        <tr><td style="padding-left: 20px;">Business Loan Payable</td><td style="text-align: right;">$12,000.00</td></tr>
+        <tr class="subtotal"><td>Total Liabilities</td><td style="text-align: right;">$16,300.00</td></tr>
+        
+        <tr class="section-head"><td colspan="2">Owner's Equity</td></tr>
+        <tr><td style="padding-left: 20px;">Owner's Capital</td><td style="text-align: right;">$20,300.00</td></tr>
+        <tr><td style="padding-left: 20px;">Retained Earnings</td><td style="text-align: right;">$12,450.00</td></tr>
+        <tr class="subtotal"><td>Total Equity</td><td style="text-align: right;">$32,750.00</td></tr>
+        <tr class="grand-total"><td>Total Liabilities & Equity</td><td style="text-align: right; color: var(--accent);">$49,050.00</td></tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

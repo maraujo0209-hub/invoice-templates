@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Income Statement</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --primary: #0f172a; --accent: #2563eb; --border: #cbd5e1; --bg-light: #f8fafc; }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+    body { background: #f8fafc; padding: 40px 20px; color: #334155; }
+    .doc-card { max-width: 800px; margin: 0 auto; background: #fff; padding: 40px; border: 1px solid var(--border); border-radius: 6px; }
+    .header { border-bottom: 2px solid var(--primary); padding-bottom: 16px; margin-bottom: 24px; display: flex; justify-content: space-between; align-items: flex-end; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 24px; font-size: 0.875rem; }
+    th { background: var(--bg-light); text-align: left; padding: 10px; border-bottom: 2px solid var(--border); }
+    td { padding: 10px; border-bottom: 1px solid #e2e8f0; }
+    .section-row { background: #f1f5f9; font-weight: 700; color: var(--primary); }
+    .subtotal-row { font-weight: 600; background: #fafafa; }
+    .grand-total { font-weight: 700; font-size: 1.05rem; background: #eff6ff; border-top: 2px solid var(--primary); border-bottom: 2px solid var(--primary); }
+    @media print { body { padding: 0; } .doc-card { border: none; } }
+  </style>
+</head>
+<body>
+  <div class="doc-card">
+    <div class="header">
+      <div>
+        <h2 style="color: var(--primary);">[Your Company Name]</h2>
+        <p style="font-size: 0.85rem; color: #64748b;">Income Statement (P&L)</p>
+      </div>
+      <div style="text-align: right;">
+        <p style="font-size: 0.85rem;"><strong>For Period Ending:</strong> July 31, 2026</p>
+      </div>
+    </div>
+
+    <table>
+      <thead>
+        <tr><th>Account / Description</th><th style="width: 140px; text-align: right;">Amount ($)</th></tr>
+      </thead>
+      <tbody>
+        <tr class="section-row"><td colspan="2">Revenue</td></tr>
+        <tr><td style="padding-left: 20px;">Gross Sales & Service Revenue</td><td style="text-align: right;">$38,500.00</td></tr>
+        <tr><td style="padding-left: 20px;">Less: Returns & Discounts</td><td style="text-align: right;">-$500.00</td></tr>
+        <tr class="subtotal-row"><td>Net Revenue</td><td style="text-align: right;">$38,000.00</td></tr>
+
+        <tr class="section-row"><td colspan="2">Cost of Goods Sold (COGS)</td></tr>
+        <tr><td style="padding-left: 20px;">Direct Labor & Materials</td><td style="text-align: right;">$12,200.00</td></tr>
+        <tr class="subtotal-row"><td>Gross Profit</td><td style="text-align: right; color: var(--accent);">$25,800.00</td></tr>
+
+        <tr class="section-row"><td colspan="2">Operating Expenses</td></tr>
+        <tr><td style="padding-left: 20px;">Advertising & Marketing</td><td style="text-align: right;">$2,100.00</td></tr>
+        <tr><td style="padding-left: 20px;">Rent & Utilities</td><td style="text-align: right;">$3,500.00</td></tr>
+        <tr><td style="padding-left: 20px;">Insurance & Software Subscriptions</td><td style="text-align: right;">$1,850.00</td></tr>
+        <tr><td style="padding-left: 20px;">Payroll & Administrative</td><td style="text-align: right;">$5,900.00</td></tr>
+        <tr class="subtotal-row"><td>Total Operating Expenses</td><td style="text-align: right;">$13,350.00</td></tr>
+
+        <tr class="grand-total"><td>Net Operating Income (EBIT)</td><td style="text-align: right; color: var(--accent);">$12,450.00</td></tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

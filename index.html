@@ -16,7 +16,6 @@
   <meta property="og:description" content="Everything you need to run your business professionally. Invoices, contracts, P&L trackers, proposals, and operational tools." />
 
   <style>
-    /* CSS VARIABLES & THEMING */
     :root {
       --bg-main: #f8fafc;
       --bg-card: #ffffff;
@@ -28,7 +27,6 @@
       --primary-dark: #059669;
       --accent: #3b82f6;
     }
-
     body.dark-mode {
       --bg-main: #0f172a;
       --bg-card: #1e293b;
@@ -36,8 +34,6 @@
       --text-muted: #94a3b8;
       --border-color: #334155;
     }
-
-    /* BASE RESET */
     * { box-sizing: border-box; transition: background-color 0.2s, color 0.2s, border-color 0.2s; }
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -46,13 +42,10 @@
       color: var(--text-main);
       line-height: 1.5;
     }
-
     .container { max-width: 1200px; margin: 0 auto; padding: 0 1.25rem; }
     .text-center { text-align: center; }
     .section-title { font-size: 2.25rem; font-weight: 800; margin-bottom: 0.5rem; text-align: center; letter-spacing: -0.02em; }
     .section-subtitle { text-align: center; color: var(--text-muted); max-width: 680px; margin: 0 auto 2.5rem auto; font-size: 1.1rem; }
-
-    /* HEADER & NAV */
     .top-nav {
       display: flex; justify-content: space-between; align-items: center;
       padding: 1rem 0; border-bottom: 1px solid var(--border-color); background: var(--bg-card);
@@ -64,8 +57,6 @@
       background: none; border: 1px solid var(--border-color); color: var(--text-main);
       padding: 0.4rem 0.8rem; border-radius: 6px; cursor: pointer; font-weight: 600;
     }
-
-    /* HERO SECTION */
     .hero-section {
       background: var(--bg-hero); color: #ffffff;
       padding: 5rem 1rem 4rem 1rem; text-align: center;
@@ -82,18 +73,12 @@
       background: #334155; color: #ffffff; padding: 0.95rem 1.85rem;
       border-radius: 8px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; font-size: 1.05rem;
     }
-
-    /* TRUST BADGES BAR */
     .trust-badges { background: var(--bg-card); border-bottom: 1px solid var(--border-color); padding: 1.5rem 0; }
     .trust-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; text-align: center; }
     .trust-item h4 { margin: 0.25rem 0 0 0; font-size: 0.95rem; color: var(--text-main); }
     .trust-item p { margin: 0; font-size: 0.8rem; color: var(--text-muted); }
     .trust-icon { font-size: 1.5rem; }
-
-    /* SECTION BLOCK */
     .section-block { padding: 4.5rem 0; border-bottom: 1px solid var(--border-color); }
-
-    /* PRICING CARDS */
     .pricing-grid {
       display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;
       align-items: stretch; margin-top: 1.5rem;
@@ -116,12 +101,10 @@
     .price-target { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.25rem; font-weight: 600; }
     .price-amount { font-size: 2.75rem; font-weight: 800; margin-bottom: 1.25rem; display: flex; align-items: baseline; gap: 0.25rem; }
     .price-amount span { font-size: 0.9rem; font-weight: 500; color: var(--text-muted); }
-    
     .included-list-title { font-size: 0.8rem; font-weight: 800; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.05em; margin-bottom: 0.75rem; }
     .price-features { list-style: none; padding: 0; margin: 0 0 2rem 0; flex: 1; }
     .price-features li { padding: 0.45rem 0; border-bottom: 1px dashed var(--border-color); font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; color: var(--text-main); }
     .price-features li strong { font-weight: 700; }
-    
     .btn-price {
       width: 100%; text-align: center; padding: 0.9rem; border-radius: 8px; font-weight: 700;
       text-decoration: none; cursor: pointer; display: block; border: none; font-size: 1rem;
@@ -129,28 +112,23 @@
     .btn-price-primary { background: var(--primary); color: #ffffff; }
     .btn-price-primary:hover { background: var(--primary-dark); }
     .btn-price-secondary { background: var(--text-main); color: var(--bg-card); }
-
-    /* CATEGORY GALLERY & CARDS */
     .category-title {
       font-size: 1.5rem; font-weight: 800; margin: 2.5rem 0 1.25rem 0; display: flex; align-items: center; gap: 0.6rem;
       border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;
     }
     .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; }
-    
     .template-card {
       background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px;
       overflow: hidden; display: flex; flex-direction: column; position: relative;
       transition: transform 0.2s, box-shadow 0.2s;
     }
     .template-card:hover { transform: translateY(-3px); box-shadow: 0 10px 20px -5px rgba(0,0,0,0.08); }
-    
     .card-preview-thumb {
       background: #f1f5f9; height: 160px; padding: 1rem; border-bottom: 1px solid var(--border-color);
       display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
       position: relative;
     }
     body.dark-mode .card-preview-thumb { background: #0b1329; }
-    
     .thumb-icon { font-size: 2.25rem; margin-bottom: 0.25rem; }
     .card-tier-badge {
       position: absolute; top: 10px; right: 10px; font-size: 0.7rem; font-weight: 800;
@@ -159,11 +137,9 @@
     .tier-starter { background: #e2e8f0; color: #334155; }
     .tier-pro { background: #dbeafe; color: #1e40af; }
     .tier-ultimate { background: #d1fae5; color: #065f46; }
-
     .card-body { padding: 1.25rem; flex: 1; display: flex; flex-direction: column; }
     .card-title { font-size: 1.15rem; font-weight: 700; margin: 0 0 0.4rem 0; color: var(--text-main); }
     .card-desc { font-size: 0.875rem; color: var(--text-muted); margin-bottom: 1rem; line-height: 1.4; flex: 1; }
-    
     .card-actions { display: flex; gap: 0.5rem; margin-top: auto; }
     .btn-card {
       flex: 1; text-align: center; padding: 0.65rem; border-radius: 6px; font-weight: 600;
@@ -173,16 +149,12 @@
     .btn-preview-card:hover { border-color: var(--text-main); }
     .btn-use-card { background: var(--text-main); color: var(--bg-card); border: none; }
     .btn-use-card:hover { opacity: 0.9; }
-
-    /* WHY BUY VS FREE TABLE/CARDS */
     .vs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
     .vs-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 1.75rem; }
     .vs-card.paid { border: 2px solid var(--primary); background: linear-gradient(180deg, var(--bg-card) 0%, rgba(16, 185, 129, 0.02) 100%); }
     .vs-card h3 { margin-top: 0; font-size: 1.3rem; }
     .vs-list { list-style: none; padding: 0; margin: 0; }
     .vs-list li { padding: 0.6rem 0; border-bottom: 1px solid var(--border-color); font-size: 0.925rem; display: flex; align-items: center; gap: 0.5rem; }
-
-    /* MODAL PREVIEW */
     .modal {
       position: fixed; top: 0; left: 0; width: 100%; height: 100%;
       background: rgba(15, 23, 42, 0.85); z-index: 20000;
@@ -191,6 +163,7 @@
     .modal-content {
       background: var(--bg-card); width: 100%; max-width: 1050px; height: 92vh;
       border-radius: 12px; overflow: hidden; display: flex; flex-direction: column;
+      position: relative;
     }
     .modal-header {
       display: flex; justify-content: space-between; align-items: center;
@@ -202,9 +175,21 @@
       padding: 0.4rem 0.85rem; border-radius: 6px; font-size: 0.85rem; cursor: pointer;
       text-decoration: none; display: inline-flex; align-items: center;
     }
-    .modal-body { flex: 1; border: none; width: 100%; height: 100%; background: #fff; }
-
-    /* ROADMAP BOX */
+    .btn-modal-unlock {
+      background: var(--primary); color: #ffffff; border: 1px solid var(--primary);
+      padding: 0.5rem 1rem; border-radius: 6px; font-size: 0.9rem; font-weight: 700;
+      text-decoration: none; display: inline-flex; align-items: center; justify-content: center;
+    }
+    .btn-modal-unlock:hover { background: var(--primary-dark); border-color: var(--primary-dark); }
+    .modal-body-wrap { flex: 1; position: relative; overflow: hidden; }
+    .modal-body { border: none; width: 100%; height: 100%; background: #fff; display: block; }
+    .modal-preview-gate {
+      position: absolute; inset: 0; z-index: 5;
+      background: linear-gradient(to bottom, rgba(15,23,42,0) 65%, rgba(15,23,42,0.92) 100%);
+      display: flex; align-items: flex-end; justify-content: center; padding-bottom: 2rem;
+      pointer-events: none;
+    }
+    .modal-preview-gate .btn-modal-unlock { pointer-events: auto; font-size: 1rem; padding: 0.85rem 1.75rem; }
     .roadmap-box {
       background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 14px; padding: 2.5rem;
       max-width: 900px; margin: 0 auto;
@@ -216,20 +201,15 @@
       background: var(--bg-main); padding: 0.75rem 1rem; border-radius: 6px; border: 1px solid var(--border-color);
       font-size: 0.875rem; font-weight: 600; display: flex; align-items: center; gap: 0.5rem; color: var(--text-muted);
     }
-
-    /* FAQ SECTION */
     .faq-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; }
     .faq-item { background: var(--bg-card); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--border-color); }
     .faq-item h4 { margin: 0 0 0.5rem 0; font-size: 1.05rem; }
     .faq-item p { margin: 0; font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; }
-
-    /* FOOTER */
     .site-footer { background: #0f172a; color: #94a3b8; padding: 4rem 0 2rem 0; font-size: 0.9rem; }
     .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 2rem; margin-bottom: 2.5rem; }
     .footer-grid h4 { color: #ffffff; margin-bottom: 1rem; margin-top: 0; }
     .footer-grid a { color: #94a3b8; text-decoration: none; display: block; margin-bottom: 0.5rem; }
     .footer-grid a:hover { color: #ffffff; }
-
     @media (max-width: 768px) {
       .hero-section h1 { font-size: 2.25rem; }
       .hero-actions { flex-direction: column; }
@@ -238,7 +218,6 @@
 </head>
 <body>
 
-  <!-- TOP NAVIGATION BAR -->
   <header style="background: var(--bg-card);">
     <div class="container">
       <nav class="top-nav">
@@ -250,7 +229,6 @@
     </div>
   </header>
 
-  <!-- HERO SECTION -->
   <section class="hero-section">
     <div class="container">
       <h1>Professional Business Document Library</h1>
@@ -262,59 +240,30 @@
     </div>
   </section>
 
-  <!-- TRUST BADGES BAR -->
   <div class="trust-badges">
     <div class="container">
       <div class="trust-grid">
-        <div class="trust-item">
-          <div class="trust-icon">💳</div>
-          <h4>One-Time Purchase</h4>
-          <p>No monthly subscriptions</p>
-        </div>
-        <div class="trust-item">
-          <div class="trust-icon">♾️</div>
-          <h4>Lifetime Access</h4>
-          <p>Download files anytime</p>
-        </div>
-        <div class="trust-item">
-          <div class="trust-icon">💼</div>
-          <h4>Commercial Use</h4>
-          <p>Unlimited business use</p>
-        </div>
-        <div class="trust-item">
-          <div class="trust-icon">🖨️</div>
-          <h4>Print-Ready</h4>
-          <p>Formatted Letter & A4</p>
-        </div>
-        <div class="trust-item">
-          <div class="trust-icon">⚡</div>
-          <h4>Instant Download</h4>
-          <p>HTML, Word, Excel & PDF</p>
-        </div>
-        <div class="trust-item">
-          <div class="trust-icon">🎁</div>
-          <h4>Future Releases</h4>
-          <p>Included with Ultimate</p>
-        </div>
+        <div class="trust-item"><div class="trust-icon">💳</div><h4>One-Time Purchase</h4><p>No monthly subscriptions</p></div>
+        <div class="trust-item"><div class="trust-icon">♾️</div><h4>Lifetime Access</h4><p>Download files anytime</p></div>
+        <div class="trust-item"><div class="trust-icon">💼</div><h4>Commercial Use</h4><p>Unlimited business use</p></div>
+        <div class="trust-item"><div class="trust-icon">🖨️</div><h4>Print-Ready</h4><p>Formatted Letter & A4</p></div>
+        <div class="trust-item"><div class="trust-icon">⚡</div><h4>Instant Download</h4><p>HTML, Word, Excel & PDF</p></div>
+        <div class="trust-item"><div class="trust-icon">🎁</div><h4>Future Releases</h4><p>Included with Ultimate</p></div>
       </div>
     </div>
   </div>
 
   <main class="container">
 
-    <!-- PRICING PLANS -->
     <section id="pricing" class="section-block">
       <h2 class="section-title">Simple, Transparent Ownership</h2>
       <p class="section-subtitle">Select the tier that matches your current scale. Pay once with zero recurring billing.</p>
 
       <div class="pricing-grid">
-        
-        <!-- STARTER CARD -->
         <div class="price-card">
           <h3>Starter Pass</h3>
           <div class="price-target">Essential billing tools for freelancers</div>
           <div class="price-amount">$19 <span>one-time</span></div>
-          
           <div class="included-list-title">Includes 4 Essential Templates:</div>
           <ul class="price-features">
             <li>✅ <strong>Invoice Template</strong></li>
@@ -324,15 +273,13 @@
             <li style="color:var(--text-muted);">🔒 Instant file download</li>
             <li style="color:var(--text-muted);">🔒 Commercial license included</li>
           </ul>
-          <a href="#" class="btn-price btn-price-secondary">Get Starter Pass</a>
+          <a href="https://yourstore.gumroad.com/l/starter" class="btn-price btn-price-secondary">Get Starter Pass</a>
         </div>
 
-        <!-- PROFESSIONAL CARD -->
         <div class="price-card">
           <h3>Professional Pass</h3>
           <div class="price-target">Complete operational toolkit for small teams</div>
           <div class="price-amount">$39 <span>one-time</span></div>
-          
           <div class="included-list-title">Includes 10 Core Templates:</div>
           <ul class="price-features">
             <li>✅ <strong>Everything in Starter (4)</strong></li>
@@ -344,16 +291,14 @@
             <li>✅ <strong>Timesheet Log</strong></li>
             <li style="color:var(--text-muted);">🔒 Commercial license included</li>
           </ul>
-          <a href="#" class="btn-price btn-price-secondary">Get Professional Pass</a>
+          <a href="https://yourstore.gumroad.com/l/professional" class="btn-price btn-price-secondary">Get Professional Pass</a>
         </div>
 
-        <!-- ULTIMATE CARD -->
         <div class="price-card ultimate-card">
           <span class="badge-ultimate">⭐ Everything We Create</span>
           <h3>Ultimate Library Pass</h3>
           <div class="price-target">Complete document vault + every future release</div>
           <div class="price-amount">$69 <span>one-time</span></div>
-          
           <div class="included-list-title">Complete Unrestricted Access:</div>
           <ul class="price-features">
             <li>✅ <strong>Everything in Professional</strong></li>
@@ -364,27 +309,19 @@
             <li>🔒 <strong>Unlimited Commercial License</strong></li>
             <li>⚡ <strong>Priority Design Requests</strong></li>
           </ul>
-          <a href="#" class="btn-price btn-price-primary">Unlock Everything. Forever.</a>
+          <a href="https://yourstore.gumroad.com/l/ultimate" class="btn-price btn-price-primary">Unlock Everything. Forever.</a>
         </div>
-
       </div>
     </section>
 
-    <!-- BROWSE THE COLLECTION (CATEGORIZED TEMPLATE GALLERY) -->
     <section id="collection" class="section-block">
       <h2 class="section-title">Browse the Collection</h2>
       <p class="section-subtitle">Inspect every document in our library. Click any preview button to view the actual template live.</p>
 
-      <!-- CATEGORY 1: INVOICES & BILLING -->
       <div class="category-title">💳 Invoices & Billing</div>
       <div class="card-grid">
-        
         <div class="template-card">
-          <div class="card-preview-thumb">
-            <span class="card-tier-badge tier-starter">Starter</span>
-            <div class="thumb-icon">📄</div>
-            <strong>Invoice</strong>
-          </div>
+          <div class="card-preview-thumb"><span class="card-tier-badge tier-starter">Starter</span><div class="thumb-icon">📄</div><strong>Invoice</strong></div>
           <div class="card-body">
             <h3 class="card-title">Professional Invoice</h3>
             <p class="card-desc">Send polished invoices that strengthen your brand and ensure prompt payments.</p>
@@ -394,13 +331,8 @@
             </div>
           </div>
         </div>
-
         <div class="template-card">
-          <div class="card-preview-thumb">
-            <span class="card-tier-badge tier-starter">Starter</span>
-            <div class="thumb-icon">🧾</div>
-            <strong>Receipt</strong>
-          </div>
+          <div class="card-preview-thumb"><span class="card-tier-badge tier-starter">Starter</span><div class="thumb-icon">🧾</div><strong>Receipt</strong></div>
           <div class="card-body">
             <h3 class="card-title">Payment Receipt</h3>
             <p class="card-desc">Issue official payment confirmations to clients upon completion of sales or services.</p>
@@ -410,13 +342,8 @@
             </div>
           </div>
         </div>
-
         <div class="template-card">
-          <div class="card-preview-thumb">
-            <span class="card-tier-badge tier-starter">Starter</span>
-            <div class="thumb-icon">📦</div>
-            <strong>Purchase Order</strong>
-          </div>
+          <div class="card-preview-thumb"><span class="card-tier-badge tier-starter">Starter</span><div class="thumb-icon">📦</div><strong>Purchase Order</strong></div>
           <div class="card-body">
             <h3 class="card-title">Purchase Order (PO)</h3>
             <p class="card-desc">Standardize vendor purchases and material requisitions for smooth operations.</p>
@@ -426,13 +353,8 @@
             </div>
           </div>
         </div>
-
         <div class="template-card">
-          <div class="card-preview-thumb">
-            <span class="card-tier-badge tier-pro">Professional</span>
-            <div class="thumb-icon">💳</div>
-            <strong>Credit Memo</strong>
-          </div>
+          <div class="card-preview-thumb"><span class="card-tier-badge tier-pro">Professional</span><div class="thumb-icon">💳</div><strong>Credit Memo</strong></div>
           <div class="card-body">
             <h3 class="card-title">Credit Memo</h3>
             <p class="card-desc">Issue formal billing adjustments, refunds, or service credits to customer accounts.</p>
@@ -442,13 +364,8 @@
             </div>
           </div>
         </div>
-
         <div class="template-card">
-          <div class="card-preview-thumb">
-            <span class="card-tier-badge tier-starter">Starter</span>
-            <div class="thumb-icon">💬</div>
-            <strong>Service Quote</strong>
-          </div>
+          <div class="card-preview-thumb"><span class="card-tier-badge tier-starter">Starter</span><div class="thumb-icon">💬</div><strong>Service Quote</strong></div>
           <div class="card-body">
             <h3 class="card-title">Service Quote</h3>
             <p class="card-desc">Provide accurate cost estimates before commencing work to lock in client agreements.</p>
@@ -458,19 +375,12 @@
             </div>
           </div>
         </div>
-
       </div>
 
-      <!-- CATEGORY 2: BUSINESS DOCUMENTS -->
       <div class="category-title">📝 Business Documents</div>
       <div class="card-grid">
-
         <div class="template-card">
-          <div class="card-preview-thumb">
-            <span class="card-tier-badge tier-pro">Professional</span>
-            <div class="thumb-icon">📋</div>
-            <strong>Project Proposal</strong>
-          </div>
+          <div class="card-preview-thumb"><span class="card-tier-badge tier-pro">Professional</span><div class="thumb-icon">📋</div><strong>Project Proposal</strong></div>
           <div class="card-body">
             <h3 class="card-title">Project Proposal</h3>
             <p class="card-desc">Win more clients with structured, professional project scopes and deliverables.</p>
@@ -480,13 +390,8 @@
             </div>
           </div>
         </div>
-
         <div class="template-card">
-          <div class="card-preview-thumb">
-            <span class="card-tier-badge tier-pro">Professional</span>
-            <div class="thumb-icon">🤝</div>
-            <strong>Contractor Agreement</strong>
-          </div>
+          <div class="card-preview-thumb"><span class="card-tier-badge tier-pro">Professional</span><div class="thumb-icon">🤝</div><strong>Contractor Agreement</strong></div>
           <div class="card-body">
             <h3 class="card-title">Contractor Agreement</h3>
             <p class="card-desc">Protect your business with straightforward subcontractor and freelance terms of service.</p>
@@ -496,13 +401,8 @@
             </div>
           </div>
         </div>
-
         <div class="template-card">
-          <div class="card-preview-thumb">
-            <span class="card-tier-badge tier-pro">Professional</span>
-            <div class="thumb-icon">🛠️</div>
-            <strong>Work Order</strong>
-          </div>
+          <div class="card-preview-thumb"><span class="card-tier-badge tier-pro">Professional</span><div class="thumb-icon">🛠️</div><strong>Work Order</strong></div>
           <div class="card-body">
             <h3 class="card-title">Work Order</h3>
             <p class="card-desc">Authorize field tasks, labor, and job site requirements cleanly for crews and technicians.</p>
@@ -512,13 +412,8 @@
             </div>
           </div>
         </div>
-
         <div class="template-card">
-          <div class="card-preview-thumb">
-            <span class="card-tier-badge tier-ultimate">Ultimate</span>
-            <div class="thumb-icon">📐</div>
-            <strong>Estimating Sheet</strong>
-          </div>
+          <div class="card-preview-thumb"><span class="card-tier-badge tier-ultimate">Ultimate</span><div class="thumb-icon">📐</div><strong>Estimating Sheet</strong></div>
           <div class="card-body">
             <h3 class="card-title">Estimating Sheet</h3>
             <p class="card-desc">Calculate labor, materials, and overhead costs to ensure profitable job pricing.</p>
@@ -528,19 +423,12 @@
             </div>
           </div>
         </div>
-
       </div>
 
-      <!-- CATEGORY 3: ACCOUNTING -->
       <div class="category-title">📊 Accounting</div>
       <div class="card-grid">
-
         <div class="template-card">
-          <div class="card-preview-thumb">
-            <span class="card-tier-badge tier-ultimate">Ultimate</span>
-            <div class="thumb-icon">📈</div>
-            <strong>Profit & Loss</strong>
-          </div>
+          <div class="card-preview-thumb"><span class="card-tier-badge tier-ultimate">Ultimate</span><div class="thumb-icon">📈</div><strong>Profit & Loss</strong></div>
           <div class="card-body">
             <h3 class="card-title">Profit & Loss Statement</h3>
             <p class="card-desc">Track business performance with clear income and expenditure financial reports.</p>
@@ -550,13 +438,8 @@
             </div>
           </div>
         </div>
-
         <div class="template-card">
-          <div class="card-preview-thumb">
-            <span class="card-tier-badge tier-pro">Professional</span>
-            <div class="thumb-icon">💸</div>
-            <strong>Expense Report</strong>
-          </div>
+          <div class="card-preview-thumb"><span class="card-tier-badge tier-pro">Professional</span><div class="thumb-icon">💸</div><strong>Expense Report</strong></div>
           <div class="card-body">
             <h3 class="card-title">Expense Report</h3>
             <p class="card-desc">Log and categorize employee business expenses for quick reimbursement.</p>
@@ -566,13 +449,8 @@
             </div>
           </div>
         </div>
-
         <div class="template-card">
-          <div class="card-preview-thumb">
-            <span class="card-tier-badge tier-ultimate">Ultimate</span>
-            <div class="thumb-icon">🧮</div>
-            <strong>Tax Estimation</strong>
-          </div>
+          <div class="card-preview-thumb"><span class="card-tier-badge tier-ultimate">Ultimate</span><div class="thumb-icon">🧮</div><strong>Tax Estimation</strong></div>
           <div class="card-body">
             <h3 class="card-title">Tax Estimation Sheet</h3>
             <p class="card-desc">Estimate quarterly tax set-asides and avoid end-of-year tax surprises.</p>
@@ -582,19 +460,12 @@
             </div>
           </div>
         </div>
-
       </div>
 
-      <!-- CATEGORY 4: BUSINESS MANAGEMENT -->
       <div class="category-title">⚙️ Business Management</div>
       <div class="card-grid">
-
         <div class="template-card">
-          <div class="card-preview-thumb">
-            <span class="card-tier-badge tier-ultimate">Ultimate</span>
-            <div class="thumb-icon">👥</div>
-            <strong>Client Database</strong>
-          </div>
+          <div class="card-preview-thumb"><span class="card-tier-badge tier-ultimate">Ultimate</span><div class="thumb-icon">👥</div><strong>Client Database</strong></div>
           <div class="card-body">
             <h3 class="card-title">Client Database</h3>
             <p class="card-desc">Organize client contacts, communication history, and account notes in one place.</p>
@@ -604,13 +475,8 @@
             </div>
           </div>
         </div>
-
         <div class="template-card">
-          <div class="card-preview-thumb">
-            <span class="card-tier-badge tier-ultimate">Ultimate</span>
-            <div class="thumb-icon">🎯</div>
-            <strong>Business Tracker</strong>
-          </div>
+          <div class="card-preview-thumb"><span class="card-tier-badge tier-ultimate">Ultimate</span><div class="thumb-icon">🎯</div><strong>Business Tracker</strong></div>
           <div class="card-body">
             <h3 class="card-title">Business Tracker</h3>
             <p class="card-desc">Monitor monthly revenue targets, sales pipelines, and key growth metrics.</p>
@@ -620,13 +486,8 @@
             </div>
           </div>
         </div>
-
         <div class="template-card">
-          <div class="card-preview-thumb">
-            <span class="card-tier-badge tier-pro">Professional</span>
-            <div class="thumb-icon">⏱️</div>
-            <strong>Timesheet</strong>
-          </div>
+          <div class="card-preview-thumb"><span class="card-tier-badge tier-pro">Professional</span><div class="thumb-icon">⏱️</div><strong>Timesheet</strong></div>
           <div class="card-body">
             <h3 class="card-title">Hourly Timesheet</h3>
             <p class="card-desc">Record hourly work, project tasks, and billable client hours accurately.</p>
@@ -636,13 +497,8 @@
             </div>
           </div>
         </div>
-
         <div class="template-card">
-          <div class="card-preview-thumb">
-            <span class="card-tier-badge tier-ultimate">Ultimate</span>
-            <div class="thumb-icon">🚗</div>
-            <strong>Mileage Log</strong>
-          </div>
+          <div class="card-preview-thumb"><span class="card-tier-badge tier-ultimate">Ultimate</span><div class="thumb-icon">🚗</div><strong>Mileage Log</strong></div>
           <div class="card-body">
             <h3 class="card-title">Mileage Log</h3>
             <p class="card-desc">Log travel miles for tax deductions and client travel expense claims.</p>
@@ -652,19 +508,12 @@
             </div>
           </div>
         </div>
-
       </div>
 
-      <!-- CATEGORY 5: REPORTS -->
       <div class="category-title">📂 Reports & Account Summaries</div>
       <div class="card-grid">
-
         <div class="template-card">
-          <div class="card-preview-thumb">
-            <span class="card-tier-badge tier-ultimate">Ultimate</span>
-            <div class="thumb-icon">🏛️</div>
-            <strong>Account Statement</strong>
-          </div>
+          <div class="card-preview-thumb"><span class="card-tier-badge tier-ultimate">Ultimate</span><div class="thumb-icon">🏛️</div><strong>Account Statement</strong></div>
           <div class="card-body">
             <h3 class="card-title">Account Statement</h3>
             <p class="card-desc">Provide clients with detailed monthly summaries of outstanding balances and billing history.</p>
@@ -674,13 +523,8 @@
             </div>
           </div>
         </div>
-
         <div class="template-card">
-          <div class="card-preview-thumb">
-            <span class="card-tier-badge tier-ultimate">Ultimate</span>
-            <div class="thumb-icon">📚</div>
-            <strong>Invoice Ledger</strong>
-          </div>
+          <div class="card-preview-thumb"><span class="card-tier-badge tier-ultimate">Ultimate</span><div class="thumb-icon">📚</div><strong>Invoice Ledger</strong></div>
           <div class="card-body">
             <h3 class="card-title">Invoice Ledger</h3>
             <p class="card-desc">Maintain a centralized view of sent invoices, paid status, and outstanding receivables.</p>
@@ -690,15 +534,12 @@
             </div>
           </div>
         </div>
-
       </div>
     </section>
 
-    <!-- WHY BUY VS FREE TEMPLATES -->
     <section class="section-block">
       <h2 class="section-title">Why Buy Instead of Using Free Templates?</h2>
       <p class="section-subtitle">Free web templates often cost you hours in broken layouts and unprofessional branding.</p>
-
       <div class="vs-grid">
         <div class="vs-card">
           <h3 style="color: #ef4444;">❌ Free Web Templates</h3>
@@ -710,7 +551,6 @@
             <li>⚠️ No ongoing updates or new form releases</li>
           </ul>
         </div>
-
         <div class="vs-card paid">
           <h3 style="color: var(--primary);">✅ BizTemplates Pro Library</h3>
           <ul class="vs-list">
@@ -725,14 +565,12 @@
       </div>
     </section>
 
-    <!-- GROWING ROADMAP SECTION -->
     <section class="section-block">
       <div class="roadmap-box text-center">
         <h2 style="margin-top:0;">🚀 Active Development Roadmap</h2>
         <p style="color:var(--text-muted); margin-bottom:1rem;">
           Ultimate pass holders receive instant access to all 18 current templates today plus lifetime access to our upcoming pipeline as designs release toward our 66+ document goal.
         </p>
-        
         <div class="upcoming-grid">
           <div class="upcoming-item"><span>🔄</span> Delivery Note</div>
           <div class="upcoming-item"><span>🔄</span> Packing Slip</div>
@@ -746,49 +584,37 @@
       </div>
     </section>
 
-    <!-- FREQUENTLY ASKED QUESTIONS -->
     <section class="section-block">
       <h2 class="section-title">Frequently Asked Questions</h2>
       <p class="section-subtitle">Clear answers regarding licensing, file types, and updates.</p>
-
       <div class="faq-grid">
-        <div class="faq-item">
-          <h4>Are these templates only invoices?</h4>
-          <p>No! Our collection covers the full spectrum of operational business needs: financial reports, proposals, client databases, timesheets, and contractor agreements.</p>
-        </div>
-        <div class="faq-item">
-          <h4>Are there recurring monthly fees?</h4>
-          <p>No. All purchases are strict one-time payments granting lifetime ownership of the included files.</p>
-        </div>
-        <div class="faq-item">
-          <h4>How do Ultimate members receive new templates?</h4>
-          <p>Whenever a new document or tracker is designed and added to the pipeline, it automatically unlocks inside your Ultimate member download area at no extra cost.</p>
-        </div>
-        <div class="faq-item">
-          <h4>What file formats do I receive?</h4>
-          <p>You receive clean, customizable source files tailored to the template function—including print-ready HTML, Word (.docx), Excel (.xlsx), and PDF formats.</p>
-        </div>
+        <div class="faq-item"><h4>Are these templates only invoices?</h4><p>No! Our collection covers the full spectrum of operational business needs: financial reports, proposals, client databases, timesheets, and contractor agreements.</p></div>
+        <div class="faq-item"><h4>Are there recurring monthly fees?</h4><p>No. All purchases are strict one-time payments granting lifetime ownership of the included files.</p></div>
+        <div class="faq-item"><h4>How do Ultimate members receive new templates?</h4><p>Whenever a new document or tracker is designed and added to the pipeline, it automatically unlocks inside your Ultimate member download area at no extra cost.</p></div>
+        <div class="faq-item"><h4>What file formats do I receive?</h4><p>You receive clean, customizable source files tailored to the template function—including print-ready HTML, Word (.docx), Excel (.xlsx), and PDF formats.</p></div>
       </div>
     </section>
 
   </main>
 
-  <!-- LIVE PREVIEW MODAL -->
   <div id="preview-modal" class="modal" style="display:none;">
     <div class="modal-content">
       <div class="modal-header">
         <h3 id="modal-title" style="margin:0; font-size:1.1rem;">Template Live Preview</h3>
         <div class="modal-actions">
-          <button class="btn-modal-action" onclick="printFrame()">🖨️ Print</button>
-          <a id="modal-download" href="#" download class="btn-modal-action">📥 Download</a>
+          <a href="#pricing" class="btn-modal-unlock" onclick="closePreview()">🔓 Unlock Full Template</a>
           <button class="btn-modal-action" style="background:#ef4444; border-color:#dc2626;" onclick="closePreview()">✕ Return to Collection</button>
         </div>
       </div>
-      <iframe id="preview-frame" class="modal-body" src=""></iframe>
+      <div class="modal-body-wrap">
+        <iframe id="preview-frame" class="modal-body" src="" sandbox="allow-same-origin allow-scripts"></iframe>
+        <div class="modal-preview-gate">
+          <a href="#pricing" class="btn-modal-unlock" onclick="closePreview()">🔓 Unlock Full Template — View Pricing</a>
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- SITE FOOTER -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
@@ -824,11 +650,9 @@
   </footer>
 
   <script>
-    // PREVIEW MODAL LOGIC WITH 1-TO-1 FILE MAPPING
     function openPreview(fileUrl, title) {
       document.getElementById('modal-title').innerText = title + ' (Document Preview)';
       document.getElementById('preview-frame').src = fileUrl;
-      document.getElementById('modal-download').href = fileUrl;
       document.getElementById('preview-modal').style.display = 'flex';
       document.body.style.overflow = 'hidden';
     }
@@ -839,12 +663,6 @@
       document.body.style.overflow = 'auto';
     }
 
-    function printFrame() {
-      const frame = document.getElementById('preview-frame');
-      if (frame.contentWindow) frame.contentWindow.print();
-    }
-
-    // THEME TOGGLE
     function toggleDarkMode() {
       document.body.classList.toggle('dark-mode');
     }

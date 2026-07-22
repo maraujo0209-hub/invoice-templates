@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Lead Intake Sheet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --primary: #0f172a; --border: #cbd5e1; --bg-light: #f8fafc; }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+    body { background: #f8fafc; padding: 40px 20px; color: #334155; }
+    .doc-card { max-width: 800px; margin: 0 auto; background: #fff; padding: 40px; border: 1px solid var(--border); border-radius: 6px; }
+    .header { border-bottom: 2px solid var(--primary); padding-bottom: 16px; margin-bottom: 24px; display: flex; justify-content: space-between; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
+    .box { border: 1px solid var(--border); padding: 10px; border-radius: 4px; font-size: 0.875rem; background: var(--bg-light); }
+    .box label { font-size: 0.75rem; font-weight: 700; color: #64748b; text-transform: uppercase; display: block; margin-bottom: 4px; }
+    .full { grid-column: span 2; }
+    @media print { body { padding: 0; } .doc-card { border: none; } }
+  </style>
+</head>
+<body>
+  <div class="doc-card">
+    <div class="header">
+      <div>
+        <h2 style="color: var(--primary);">Customer Lead Intake Form</h2>
+        <p style="font-size: 0.85rem; color: #64748b;">Sales Qualification Log</p>
+      </div>
+      <div style="text-align: right;">
+        <p style="font-size: 0.85rem;"><strong>Inquiry Date:</strong> July 22, 2026</p>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="box"><label>Prospect / Contact Name</label>[Full Name]</div>
+      <div class="box"><label>Company Name</label>[Business Name]</div>
+      <div class="box"><label>Phone Number</label>[Phone]</div>
+      <div class="box"><label>Email Address</label>[Email]</div>
+      <div class="box"><label>Lead Source</label>[ Website / Referral / Cold Call ]</div>
+      <div class="box"><label>Facility Type / Square Footage</label>[ Office / Retail / Sq Ft ]</div>
+      <div class="box full"><label>Service Requirements & Notes</label>[Specific cleaning needs, frequency, current pains]</div>
+      <div class="box full"><label>Follow-up Action Plan</label>[Quote send date, site walkthrough appointment]</div>
+    </div>
+  </div>
+</body>
+</html>

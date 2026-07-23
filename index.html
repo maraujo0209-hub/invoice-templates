@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <!-- SEO METADATA -->
-  <title>Professional Business Document Templates | Complete Library</title>
+  <title>BizTemplates Pro | Professional Business Document Library</title>
   <meta name="description" content="All-in-one professional business document library: invoices, receipts, proposals, P&L statements, client databases, contracts, and tracking tools." />
   <meta name="keywords" content="business templates, invoice template, profit and loss template, proposal template, client database, business tracker" />
   <link rel="canonical" href="https://maraujo0209-hub.github.io/invoice-templates/" />
 
   <!-- Open Graph / Social Media -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Professional Business Document Library" />
+  <meta property="og:title" content="BizTemplates Pro - Professional Business Document Library" />
   <meta property="og:description" content="Everything you need to run your business professionally. Invoices, contracts, P&L trackers, proposals, and operational tools." />
 
   <style>
@@ -158,7 +158,7 @@
     .modal {
       position: fixed; top: 0; left: 0; width: 100%; height: 100%;
       background: rgba(15, 23, 42, 0.85); z-index: 20000;
-      display: flex; align-items: center; justify-content: center; padding: 1rem;
+      display: none; align-items: center; justify-content: center; padding: 1rem;
     }
     .modal-content {
       background: var(--bg-card); width: 100%; max-width: 1050px; height: 92vh;
@@ -218,6 +218,7 @@
 </head>
 <body>
 
+  <!-- HEADER NAV -->
   <header style="background: var(--bg-card);">
     <div class="container">
       <nav class="top-nav">
@@ -229,6 +230,7 @@
     </div>
   </header>
 
+  <!-- HERO SECTION -->
   <section class="hero-section">
     <div class="container">
       <h1>Professional Business Document Library</h1>
@@ -240,6 +242,7 @@
     </div>
   </section>
 
+  <!-- TRUST BADGES -->
   <div class="trust-badges">
     <div class="container">
       <div class="trust-grid">
@@ -255,10 +258,11 @@
 
   <main class="container">
 
+    <!-- PRICING SECTION -->
     <section id="pricing" class="section-block">
       <h2 class="section-title">Simple, Transparent Ownership</h2>
       <p class="section-subtitle">Select the tier that matches your current scale. Pay once with zero recurring billing.</p>
-
+      
       <div class="pricing-grid">
         <div class="price-card">
           <h3>Starter Pass</h3>
@@ -314,6 +318,7 @@
       </div>
     </section>
 
+    <!-- COLLECTION SECTION -->
     <section id="collection" class="section-block">
       <h2 class="section-title">Browse the Collection</h2>
       <p class="section-subtitle">Inspect every document in our library. Click any preview button to view the actual template live.</p>
@@ -535,11 +540,14 @@
           </div>
         </div>
       </div>
+
     </section>
 
+    <!-- WHY BUY SECTION -->
     <section class="section-block">
       <h2 class="section-title">Why Buy Instead of Using Free Templates?</h2>
       <p class="section-subtitle">Free web templates often cost you hours in broken layouts and unprofessional branding.</p>
+
       <div class="vs-grid">
         <div class="vs-card">
           <h3 style="color: #ef4444;">❌ Free Web Templates</h3>
@@ -565,8 +573,9 @@
       </div>
     </section>
 
-    <section class="section-block">
-      <div class="roadmap-box text-center">
+    <!-- ROADMAP SECTION -->
+    <section class="section-block text-center">
+      <div class="roadmap-box">
         <h2 style="margin-top:0;">🚀 Active Development Roadmap</h2>
         <p style="color:var(--text-muted); margin-bottom:1rem;">
           Ultimate pass holders receive instant access to all 18 current templates today plus lifetime access to our upcoming pipeline as designs release toward our 66+ document goal.
@@ -584,37 +593,34 @@
       </div>
     </section>
 
-    <section class="section-block">
+    <!-- FAQ SECTION -->
+    <section class="section-block" id="faq">
       <h2 class="section-title">Frequently Asked Questions</h2>
       <p class="section-subtitle">Clear answers regarding licensing, file types, and updates.</p>
+
       <div class="faq-grid">
-        <div class="faq-item"><h4>Are these templates only invoices?</h4><p>No! Our collection covers the full spectrum of operational business needs: financial reports, proposals, client databases, timesheets, and contractor agreements.</p></div>
-        <div class="faq-item"><h4>Are there recurring monthly fees?</h4><p>No. All purchases are strict one-time payments granting lifetime ownership of the included files.</p></div>
-        <div class="faq-item"><h4>How do Ultimate members receive new templates?</h4><p>Whenever a new document or tracker is designed and added to the pipeline, it automatically unlocks inside your Ultimate member download area at no extra cost.</p></div>
-        <div class="faq-item"><h4>What file formats do I receive?</h4><p>You receive clean, customizable source files tailored to the template function—including print-ready HTML, Word (.docx), Excel (.xlsx), and PDF formats.</p></div>
+        <div class="faq-item">
+          <h4>Are these templates only invoices?</h4>
+          <p>No! Our collection covers the full spectrum of operational business needs: financial reports, proposals, client databases, timesheets, and contractor agreements.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Are there recurring monthly fees?</h4>
+          <p>No. All purchases are strict one-time payments granting lifetime ownership of the included files.</p>
+        </div>
+        <div class="faq-item">
+          <h4>How do Ultimate members receive new templates?</h4>
+          <p>Whenever a new document or tracker is designed and added to the pipeline, it automatically unlocks inside your Ultimate member download area at no extra cost.</p>
+        </div>
+        <div class="faq-item">
+          <h4>What file formats do I receive?</h4>
+          <p>You receive clean, customizable source files tailored to the template function—including print-ready HTML, Word (.docx), Excel (.xlsx), and PDF formats.</p>
+        </div>
       </div>
     </section>
 
   </main>
 
-  <div id="preview-modal" class="modal" style="display:none;">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3 id="modal-title" style="margin:0; font-size:1.1rem;">Template Live Preview</h3>
-        <div class="modal-actions">
-          <a href="#pricing" class="btn-modal-unlock" onclick="closePreview()">🔓 Unlock Full Template</a>
-          <button class="btn-modal-action" style="background:#ef4444; border-color:#dc2626;" onclick="closePreview()">✕ Return to Collection</button>
-        </div>
-      </div>
-      <div class="modal-body-wrap">
-        <iframe id="preview-frame" class="modal-body" src="" sandbox="allow-same-origin allow-scripts"></iframe>
-        <div class="modal-preview-gate">
-          <a href="#pricing" class="btn-modal-unlock" onclick="closePreview()">🔓 Unlock Full Template — View Pricing</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
@@ -628,7 +634,7 @@
           <a href="#collection">Business Documents</a>
           <a href="#collection">Accounting</a>
           <a href="#collection">Business Management</a>
-          <a href="#collection">Reports</a>
+          <a href="#collection">Reports & Summaries</a>
         </div>
         <div>
           <h4>Plans & Access</h4>
@@ -638,33 +644,58 @@
         </div>
         <div>
           <h4>Support & Legal</h4>
-          <a href="/contact">Support Center</a>
-          <a href="/license">Commercial License</a>
-          <a href="/privacy">Privacy Policy</a>
+          <a href="mailto:support@example.com">Support Center</a>
+          <a href="#pricing">Commercial License</a>
+          <a href="#">Privacy Policy</a>
         </div>
       </div>
-      <p class="text-center" style="margin:0; border-top: 1px solid #1e293b; padding-top: 1.5rem; font-size: 0.8rem;">
-        &copy; 2026 BizTemplates. All rights reserved.
-      </p>
+      <div class="text-center" style="border-top: 1px solid #334155; padding-top: 1.5rem;">
+        <p>© 2026 BizTemplates Pro. All rights reserved.</p>
+      </div>
     </div>
   </footer>
 
+  <!-- PREVIEW MODAL -->
+  <div id="previewModal" class="modal" onclick="closeModalOnBackdrop(event)">
+    <div class="modal-content">
+      <div class="modal-header">
+        <strong id="modalTitle">Template Live Preview</strong>
+        <div class="modal-actions">
+          <a href="#pricing" onclick="closePreview()" class="btn-modal-unlock">🔓 Unlock Full Template</a>
+          <button onclick="closePreview()" class="btn-modal-action">✕ Close</button>
+        </div>
+      </div>
+      <div class="modal-body-wrap">
+        <iframe id="modalIframe" class="modal-body" src="about:blank"></iframe>
+        <div class="modal-preview-gate">
+          <a href="#pricing" onclick="closePreview()" class="btn-modal-unlock">🔓 Unlock Full Template — View Pricing</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script>
-    function openPreview(fileUrl, title) {
-      document.getElementById('modal-title').innerText = title + ' (Document Preview)';
-      document.getElementById('preview-frame').src = fileUrl;
-      document.getElementById('preview-modal').style.display = 'flex';
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+
+    function openPreview(url, title) {
+      document.getElementById('modalTitle').innerText = 'Preview: ' + title;
+      document.getElementById('modalIframe').src = url;
+      document.getElementById('previewModal').style.display = 'flex';
       document.body.style.overflow = 'hidden';
     }
 
     function closePreview() {
-      document.getElementById('preview-modal').style.display = 'none';
-      document.getElementById('preview-frame').src = '';
+      document.getElementById('previewModal').style.display = 'none';
+      document.getElementById('modalIframe').src = 'about:blank';
       document.body.style.overflow = 'auto';
     }
 
-    function toggleDarkMode() {
-      document.body.classList.toggle('dark-mode');
+    function closeModalOnBackdrop(e) {
+      if (e.target.id === 'previewModal') {
+        closePreview();
+      }
     }
   </script>
 </body>

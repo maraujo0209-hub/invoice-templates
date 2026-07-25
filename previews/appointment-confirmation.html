@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    @page { size: A4; margin: 15mm 12mm; }
+    body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 10pt; color: #2c3e50; margin: 0; line-height: 1.4; }
+    .header { border-bottom: 2px solid #2c3e50; padding-bottom: 10px; margin-bottom: 20px; }
+    .header table { width: 100%; }
+    .company-title { font-size: 18pt; font-weight: bold; color: #1a252f; text-transform: uppercase; letter-spacing: 1px; }
+    .doc-title { font-size: 14pt; font-weight: bold; color: #27ae60; text-align: right; text-transform: uppercase; }
+    .info-section { width: 100%; margin-bottom: 20px; border-collapse: collapse; }
+    .info-section td { padding: 6px 8px; vertical-align: top; }
+    .label { font-weight: bold; color: #34495e; width: 20%; background-color: #f8f9fa; border: 1px solid #dee2e6; }
+    .value { width: 30%; border: 1px solid #dee2e6; }
+    .section-title { font-size: 11pt; font-weight: bold; color: #2c3e50; border-bottom: 1px solid #2c3e50; padding-bottom: 4px; margin-top: 15px; margin-bottom: 10px; }
+    .confirmation-box { background-color: #e8f8f5; border: 1px solid #27ae60; border-left: 4px solid #27ae60; padding: 12px; margin-bottom: 20px; }
+    .confirmation-box p { margin: 0; font-size: 10pt; color: #1e8449; font-weight: bold; }
+    ul { margin: 0; padding-left: 18px; }
+    li { margin-bottom: 6px; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <table><tr><td class="company-title">Apex Service Operations</td><td class="doc-title">Appointment Confirmation</td></tr></table>
+  </div>
+
+  <div class="confirmation-box">
+    <p>✓ Your appointment has been successfully scheduled and confirmed.</p>
+  </div>
+
+  <table class="info-section">
+    <tr>
+      <td class="label">Confirmation #:</td>
+      <td class="value">APT-2026-8801</td>
+      <td class="label">Date:</td>
+      <td class="value">August 12, 2026</td>
+    </tr>
+    <tr>
+      <td class="label">Client Name:</td>
+      <td class="value">Patricia Araujo</td>
+      <td class="label">Scheduled Time:</td>
+      <td class="value">10:00 AM EST</td>
+    </tr>
+    <tr>
+      <td class="label">Service Type:</td>
+      <td class="value">On-Site Service Review</td>
+      <td class="label">Assigned Lead:</td>
+      <td class="value">Marcio Araujo</td>
+    </tr>
+  </table>
+
+  <div class="section-title">1. Appointment Details &amp; Location</div>
+  <p>Please review the details above. Our team will arrive at the designated service location at the scheduled time. If you need to make any updates, please inform us at least 24 hours prior to your slot.</p>
+
+  <div class="section-title">2. Preparation Checklist</div>
+  <ul>
+    <li>Ensure clear access to the property and necessary service areas prior to arrival.</li>
+    <li>Secure any pets or sensitive items before the team's arrival.</li>
+    <li>Have a primary point of contact available during the scheduled window.</li>
+  </ul>
+</body>
+</html>

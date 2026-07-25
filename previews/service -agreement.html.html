@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service Agreement</title>
+  <style>
+    :root {
+      --primary: #0f172a;
+      --accent: #2563eb;
+      --gray-light: #f8fafc;
+      --gray-border: #e2e8f0;
+      --text-dark: #1e293b;
+      --text-muted: #64748b;
+      --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: var(--font-family); font-size: 11pt; color: var(--text-dark); background-color: #f1f5f9; padding: 20px; }
+    .document-container { max-width: 800px; margin: 0 auto; background: #ffffff; padding: 40px; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+    .header { display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 2px solid var(--primary); padding-bottom: 20px; margin-bottom: 24px; }
+    .brand { display: flex; gap: 16px; align-items: center; }
+    .logo-placeholder { width: 70px; height: 70px; background: var(--gray-light); border: 2px dashed var(--accent); display: flex; align-items: center; justify-content: center; font-size: 9pt; color: var(--text-muted); border-radius: 6px; }
+    .doc-title-bar { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 24px; }
+    .doc-title { font-size: 22px; color: var(--primary); font-weight: 800; text-transform: uppercase; }
+    .doc-meta { font-size: 10pt; text-align: right; color: var(--text-muted); line-height: 1.5; }
+    .section-block { margin-bottom: 20px; }
+    .section-block h3 { font-size: 11pt; color: var(--primary); border-bottom: 1px solid var(--gray-border); padding-bottom: 6px; margin-bottom: 10px; }
+    .section-block p { font-size: 10pt; color: var(--text-dark); line-height: 1.6; }
+    .sig-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; margin-top: 40px; }
+    .sig-line { border-top: 1px solid var(--primary); padding-top: 8px; font-size: 9.5pt; color: var(--text-muted); }
+    .footer { margin-top: 40px; border-top: 1px solid var(--gray-border); padding-top: 16px; text-align: center; font-size: 9pt; color: var(--text-muted); }
+    @media print { body { background: none; padding: 0; } .document-container { box-shadow: none; padding: 0; max-width: 100%; } }
+  </style>
+</head>
+<body>
+  <div class="document-container">
+    <header class="header">
+      <div class="brand">
+        <div class="logo-placeholder">[Logo]</div>
+        <div>
+          <h1 style="font-size: 18px; color: var(--primary);">[Company Name]</h1>
+          <p style="font-size: 10pt; color: var(--text-muted);">Master Services Contract</p>
+        </div>
+      </div>
+    </header>
+
+    <div class="doc-title-bar">
+      <div>
+        <h2 class="doc-title">Service Agreement</h2>
+      </div>
+      <div class="doc-meta">
+        <p><strong>Effective Date:</strong> [YYYY-MM-DD]</p>
+        <p><strong>Contract No:</strong> [SA-2026-001]</p>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <h3>1. Service Scope & Responsibilities</h3>
+      <p>This Service Agreement ("Agreement") is made between <strong>[Service Provider Name]</strong> ("Provider") and <strong>[Client Name]</strong> ("Client"). The Provider agrees to deliver services described herein in a timely and professional manner.</p>
+    </div>
+
+    <div class="section-block">
+      <h3>2. Payment & Billing Terms</h3>
+      <p>Client agrees to compensate Provider the agreed fee structure of <strong>$[0.00]</strong> according to the payment schedule. Invoices are due within 30 days of receipt.</p>
+    </div>
+
+    <div class="sig-grid">
+      <div class="sig-line"><strong>Service Provider Signature & Date</strong></div>
+      <div class="sig-line"><strong>Client Signature & Date</strong></div>
+    </div>
+
+    <footer class="footer">
+      <p><strong>[Company Name]</strong> | Professional Service Agreement</p>
+    </footer>
+  </div>
+</body>
+</html>

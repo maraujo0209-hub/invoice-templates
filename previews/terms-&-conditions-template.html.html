@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms & Conditions</title>
+  <style>
+    :root {
+      --primary: #0f172a;
+      --accent: #2563eb;
+      --gray-light: #f8fafc;
+      --gray-border: #e2e8f0;
+      --text-dark: #1e293b;
+      --text-muted: #64748b;
+      --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: var(--font-family); font-size: 11pt; color: var(--text-dark); background-color: #f1f5f9; padding: 20px; }
+    .document-container { max-width: 800px; margin: 0 auto; background: #ffffff; padding: 40px; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+    .header { display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 2px solid var(--primary); padding-bottom: 20px; margin-bottom: 24px; }
+    .brand { display: flex; gap: 16px; align-items: center; }
+    .logo-placeholder { width: 70px; height: 70px; background: var(--gray-light); border: 2px dashed var(--accent); display: flex; align-items: center; justify-content: center; font-size: 9pt; color: var(--text-muted); border-radius: 6px; }
+    .doc-title-bar { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 24px; }
+    .doc-title { font-size: 22px; color: var(--primary); font-weight: 800; text-transform: uppercase; }
+    .doc-meta { font-size: 10pt; text-align: right; color: var(--text-muted); line-height: 1.5; }
+    .section-block { margin-bottom: 20px; }
+    .section-block h3 { font-size: 11pt; color: var(--primary); border-bottom: 1px solid var(--gray-border); padding-bottom: 6px; margin-bottom: 10px; }
+    .section-block p { font-size: 10pt; color: var(--text-dark); line-height: 1.6; }
+    .footer { margin-top: 40px; border-top: 1px solid var(--gray-border); padding-top: 16px; text-align: center; font-size: 9pt; color: var(--text-muted); }
+    @media print { body { background: none; padding: 0; } .document-container { box-shadow: none; padding: 0; max-width: 100%; } }
+  </style>
+</head>
+<body>
+  <div class="document-container">
+    <header class="header">
+      <div class="brand">
+        <div class="logo-placeholder">[Logo]</div>
+        <div>
+          <h1 style="font-size: 18px; color: var(--primary);">[Company Name]</h1>
+          <p style="font-size: 10pt; color: var(--text-muted);">Legal Terms</p>
+        </div>
+      </div>
+    </header>
+
+    <div class="doc-title-bar">
+      <div>
+        <h2 class="doc-title">Terms & Conditions</h2>
+      </div>
+      <div class="doc-meta">
+        <p><strong>Last Updated:</strong> [YYYY-MM-DD]</p>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <h3>1. Acceptance of Terms</h3>
+      <p>By purchasing goods or services from <strong>[Company Name]</strong>, the client agrees to be bound by these Terms and Conditions. Please review them carefully.</p>
+    </div>
+
+    <div class="section-block">
+      <h3>2. Payment & Cancellation Policy</h3>
+      <p>All payments are subject to agreed invoicing terms. Orders or bookings canceled within 48 hours of service delivery may be subject to a cancellation fee.</p>
+    </div>
+
+    <div class="section-block">
+      <h3>3. Limitation of Liability</h3>
+      <p>[Company Name] shall not be liable for indirect, consequential, or incidental damages arising out of the performance or non-performance of services.</p>
+    </div>
+
+    <footer class="footer">
+      <p><strong>[Company Name]</strong> | Standard Business Terms & Conditions</p>
+    </footer>
+  </div>
+</body>
+</html>

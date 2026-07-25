@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    @page { size: A4; margin: 15mm 12mm; }
+    body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 10pt; color: #2c3e50; margin: 0; line-height: 1.4; }
+    .header { border-bottom: 2px solid #2c3e50; padding-bottom: 10px; margin-bottom: 20px; }
+    .header table { width: 100%; }
+    .company-title { font-size: 18pt; font-weight: bold; color: #1a252f; text-transform: uppercase; letter-spacing: 1px; }
+    .doc-title { font-size: 14pt; font-weight: bold; color: #27ae60; text-align: right; text-transform: uppercase; }
+    .info-section { width: 100%; margin-bottom: 20px; border-collapse: collapse; }
+    .info-section td { padding: 6px 8px; vertical-align: top; }
+    .label { font-weight: bold; color: #34495e; width: 15%; background-color: #f8f9fa; border: 1px solid #dee2e6; }
+    .value { width: 35%; border: 1px solid #dee2e6; }
+    .data-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+    .data-table th { background-color: #27ae60; color: #ffffff; padding: 8px; font-size: 9pt; text-transform: uppercase; border: 1px solid #27ae60; text-align: left; }
+    .data-table td { padding: 8px; border: 1px solid #dee2e6; vertical-align: top; font-size: 9.5pt; }
+    .data-table tr:nth-child(even) { background-color: #f8f9fa; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <table><tr><td class="company-title">Apex Treasury</td><td class="doc-title">Accounts Payable Schedule</td></tr></table>
+  </div>
+  <table class="info-section">
+    <tr><td class="label">Period:</td><td class="value">August 2026</td><td class="label">Status:</td><td class="value">Scheduled</td></tr>
+  </table>
+  <table class="data-table">
+    <thead>
+      <tr><th>Due Date</th><th>Payee / Vendor</th><th>Invoice Ref</th><th>Amount ($)</th><th>Payment Method</th></tr>
+    </thead>
+    <tbody>
+      <tr><td style="font-weight: bold;">Aug 01, 2026</td><td>Office Lease Corp</td><td>INV-8821</td><td>$3,500.00</td><td>ACH Transfer</td></tr>
+      <tr><td style="font-weight: bold;">Aug 05, 2026</td><td>Digital Marketing Agency</td><td>INV-3302</td><td>$2,150.00</td><td>Credit Card</td></tr>
+      <tr><td style="font-weight: bold;">Aug 15, 2026</td><td>Cloud Host Infrastructure</td><td>INV-9910</td><td>$1,280.00</td><td>ACH Transfer</td></tr>
+      <tr><td style="font-weight: bold;">Aug 28, 2026</td><td>Utilities &amp; Telecom</td><td>INV-1049</td><td>$420.00</td><td>Auto-Debit</td></tr>
+    </tbody>
+  </table>
+</body>
+</html>

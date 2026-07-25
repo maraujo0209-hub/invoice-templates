@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    @page { size: A4; margin: 15mm 12mm; }
+    body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 10pt; color: #2c3e50; margin: 0; line-height: 1.4; }
+    .header { border-bottom: 2px solid #2c3e50; padding-bottom: 10px; margin-bottom: 20px; }
+    .header table { width: 100%; }
+    .company-title { font-size: 18pt; font-weight: bold; color: #1a252f; text-transform: uppercase; letter-spacing: 1px; }
+    .doc-title { font-size: 14pt; font-weight: bold; color: #8e44ad; text-align: right; text-transform: uppercase; }
+    .info-section { width: 100%; margin-bottom: 20px; border-collapse: collapse; }
+    .info-section td { padding: 6px 8px; vertical-align: top; }
+    .label { font-weight: bold; color: #34495e; width: 15%; background-color: #f8f9fa; border: 1px solid #dee2e6; }
+    .value { width: 35%; border: 1px solid #dee2e6; }
+    .data-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+    .data-table th { background-color: #8e44ad; color: #ffffff; padding: 8px; font-size: 9pt; text-transform: uppercase; border: 1px solid #8e44ad; text-align: left; }
+    .data-table td { padding: 8px; border: 1px solid #dee2e6; vertical-align: top; font-size: 9.5pt; }
+    .data-table tr:nth-child(even) { background-color: #f8f9fa; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <table><tr><td class="company-title">Apex Management</td><td class="doc-title">Quarterly Business Review (QBR)</td></tr></table>
+  </div>
+  <table class="info-section">
+    <tr><td class="label">Quarter:</td><td class="value">Q2 2026</td><td class="label">Date:</td><td class="value">July 2026</td></tr>
+  </table>
+  <table class="data-table">
+    <thead>
+      <tr><th>Strategic Pillar</th><th>Quarterly Objective</th><th>Completion Status</th></tr>
+    </thead>
+    <tbody>
+      <tr><td style="font-weight: bold;">Software Infrastructure</td><td>Deploy single-file web interfaces with zero backend dependency</td><td style="color: green; font-weight: bold;">Achieved</td></tr>
+      <tr><td style="font-weight: bold;">Content &amp; IP</td><td>Maintain continuous digital distribution across author platforms</td><td style="color: green; font-weight: bold;">Achieved</td></tr>
+      <tr><td style="font-weight: bold;">Business Automation</td><td>Integrate direct booking calendar without third-party fees</td><td style="color: green; font-weight: bold;">Achieved</td></tr>
+    </tbody>
+  </table>
+</body>
+</html>

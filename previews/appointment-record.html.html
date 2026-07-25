@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Appointment Record</title>
+  <style>
+    :root {
+      --primary: #0f172a;
+      --accent: #2563eb;
+      --gray-light: #f8fafc;
+      --gray-border: #e2e8f0;
+      --text-dark: #1e293b;
+      --text-muted: #64748b;
+      --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: var(--font-family); font-size: 11pt; color: var(--text-dark); background-color: #f1f5f9; padding: 20px; }
+    .document-container { max-width: 800px; margin: 0 auto; background: #ffffff; padding: 40px; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+    .header { display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 2px solid var(--primary); padding-bottom: 20px; margin-bottom: 24px; }
+    .brand { display: flex; gap: 16px; align-items: center; }
+    .logo-placeholder { width: 70px; height: 70px; background: var(--gray-light); border: 2px dashed var(--accent); display: flex; align-items: center; justify-content: center; font-size: 9pt; color: var(--text-muted); border-radius: 6px; }
+    .doc-title-bar { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 24px; }
+    .doc-title { font-size: 22px; color: var(--primary); font-weight: 800; text-transform: uppercase; }
+    .info-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-bottom: 24px; }
+    .info-box { background: var(--gray-light); padding: 12px; border-radius: 6px; font-size: 9.5pt; }
+    .info-box p { margin-bottom: 4px; }
+    .table { width: 100%; border-collapse: collapse; margin-bottom: 24px; }
+    .table th { background-color: var(--primary); color: #ffffff; font-size: 9.5pt; text-align: left; padding: 10px 12px; }
+    .table td { padding: 10px 12px; border-bottom: 1px solid var(--gray-border); font-size: 9.5pt; color: var(--text-dark); }
+    .footer { margin-top: 40px; border-top: 1px solid var(--gray-border); padding-top: 16px; text-align: center; font-size: 9pt; color: var(--text-muted); }
+    @media print { body { background: none; padding: 0; } .document-container { box-shadow: none; padding: 0; max-width: 100%; } }
+  </style>
+</head>
+<body>
+  <div class="document-container">
+    <header class="header">
+      <div class="brand">
+        <div class="logo-placeholder">[Logo]</div>
+        <div>
+          <h1 style="font-size: 18px; color: var(--primary);">[Company Name]</h1>
+          <p style="font-size: 10pt; color: var(--text-muted);">Scheduling & Bookings</p>
+        </div>
+      </div>
+    </header>
+
+    <div class="doc-title-bar">
+      <div>
+        <h2 class="doc-title">Appointment Record</h2>
+      </div>
+    </div>
+
+    <div class="info-grid">
+      <div class="info-box">
+        <p><strong>Client Name:</strong> [Client Name]</p>
+        <p><strong>Phone:</strong> [Phone Number]</p>
+        <p><strong>Email:</strong> [Email Address]</p>
+      </div>
+      <div class="info-box">
+        <p><strong>Date:</strong> [YYYY-MM-DD]</p>
+        <p><strong>Time:</strong> [00:00 AM/PM]</p>
+        <p><strong>Assigned Staff:</strong> [Staff Name]</p>
+      </div>
+    </div>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Service / Reason for Visit</th>
+          <th>Location</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>[Service Description]</td>
+          <td>[Office / On-Site]</td>
+          <td>Confirmed</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <footer class="footer">
+      <p><strong>[Company Name]</strong> | Official Appointment Booking Slip</p>
+    </footer>
+  </div>
+</body>
+</html>

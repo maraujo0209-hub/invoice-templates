@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    @page { size: A4; margin: 15mm 12mm; }
+    body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 10pt; color: #2c3e50; margin: 0; line-height: 1.4; }
+    .header { border-bottom: 2px solid #2c3e50; padding-bottom: 10px; margin-bottom: 20px; }
+    .header table { width: 100%; }
+    .company-title { font-size: 18pt; font-weight: bold; color: #1a252f; text-transform: uppercase; letter-spacing: 1px; }
+    .doc-title { font-size: 14pt; font-weight: bold; color: #8e44ad; text-align: right; text-transform: uppercase; }
+    .info-section { width: 100%; margin-bottom: 20px; border-collapse: collapse; }
+    .info-section td { padding: 6px 8px; vertical-align: top; }
+    .label { font-weight: bold; color: #34495e; width: 18%; background-color: #f8f9fa; border: 1px solid #dee2e6; }
+    .value { width: 32%; border: 1px solid #dee2e6; }
+    .section-title { font-size: 11pt; font-weight: bold; color: #2c3e50; border-bottom: 1px solid #2c3e50; padding-bottom: 4px; margin-top: 15px; margin-bottom: 10px; }
+    .data-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+    .data-table th { background-color: #8e44ad; color: #ffffff; padding: 8px; font-size: 9pt; text-transform: uppercase; border: 1px solid #8e44ad; text-align: left; }
+    .data-table td { padding: 8px; border: 1px solid #dee2e6; vertical-align: top; font-size: 9.5pt; }
+    .data-table tr:nth-child(even) { background-color: #f8f9fa; }
+    .badge { display: inline-block; padding: 2px 6px; font-size: 8.5pt; font-weight: bold; border-radius: 3px; }
+    .badge-weekly { background-color: #e8daef; color: #6c3483; }
+    .badge-monthly { background-color: #d4efdf; color: #196f3d; }
+    .badge-quarterly { background-color: #fdebd0; color: #b9770e; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <table><tr><td class="company-title">Apex Service Operations</td><td class="doc-title">Preventative Maintenance Schedule</td></tr></table>
+  </div>
+
+  <table class="info-section">
+    <tr>
+      <td class="label">Schedule ID:</td>
+      <td class="value">SCH-2026-Q3</td>
+      <td class="label">Effective Date:</td>
+      <td class="value">August 01, 2026</td>
+    </tr>
+    <tr>
+      <td class="label">Facility / Site:</td>
+      <td class="value">Commercial Office Suite 100</td>
+      <td class="label">Account Lead:</td>
+      <td class="value">Marcio Araujo</td>
+    </tr>
+    <tr>
+      <td class="label">Client Name:</td>
+      <td class="value">Patricia Araujo</td>
+      <td class="label">Review Cycle:</td>
+      <td class="value">Q3 2026 Operations</td>
+    </tr>
+  </table>
+
+  <div class="section-title">1. Scheduled Maintenance Routine</div>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th style="width: 20%;">Frequency</th>
+        <th style="width: 45%;">Service Task / Focus Area</th>
+        <th style="width: 35%;">Target Window / Assigned Day</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="badge badge-weekly">Weekly</span></td>
+        <td>High-traffic floor sanitization, surface dusting, and waste management</td>
+        <td>Every Tuesday &amp; Thursday (Morning)</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-monthly">Monthly</span></td>
+        <td>Deep floor care, carpet extraction, and interior glass panel cleaning</td>
+        <td>First Saturday of each month</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-quarterly">Quarterly</span></td>
+        <td>Comprehensive facility quality inspection and supply inventory audit</td>
+        <td>End of quarter (Sept 30, 2026)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="section-title">2. Operational Guidelines</div>
+  <p>All service tasks must be verified against the quality assurance checklist upon completion. Any schedule adjustments require advance notice of at least 24 hours.</p>
+</body>
+</html>

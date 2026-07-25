@@ -1,1 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    @page { size: A4; margin: 15mm 12mm; }
+    body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 10pt; color: #2c3e50; margin: 0; line-height: 1.4; }
+    .header { border-bottom: 2px solid #2c3e50; padding-bottom: 10px; margin-bottom: 20px; }
+    .header table { width: 100%; }
+    .company-title { font-size: 18pt; font-weight: bold; color: #1a252f; text-transform: uppercase; letter-spacing: 1px; }
+    .doc-title { font-size: 14pt; font-weight: bold; color: #16a085; text-align: right; text-transform: uppercase; }
+    .info-section { width: 100%; margin-bottom: 20px; border-collapse: collapse; }
+    .info-section td { padding: 6px 8px; vertical-align: top; }
+    .label { font-weight: bold; color: #34495e; width: 18%; background-color: #f8f9fa; border: 1px solid #dee2e6; }
+    .value { width: 32%; border: 1px solid #dee2e6; }
+    .section-title { font-size: 11pt; font-weight: bold; color: #2c3e50; border-bottom: 1px solid #2c3e50; padding-bottom: 4px; margin-top: 15px; margin-bottom: 10px; }
+    .checklist-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+    .checklist-table th { background-color: #16a085; color: #ffffff; padding: 8px; font-size: 9pt; text-transform: uppercase; border: 1px solid #16a085; text-align: left; }
+    .checklist-table td { padding: 8px; border: 1px solid #dee2e6; vertical-align: middle; font-size: 9.5pt; }
+    .checklist-table tr:nth-child(even) { background-color: #f8f9fa; }
+    .checkbox { width: 14px; height: 14px; border: 1px solid #34495e; border-radius: 2px; display: inline-block; text-align: center; line-height: 14px; font-size: 10pt; }
+    .checked { background-color: #16a085; border-color: #16a085; color: #ffffff; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <table><tr><td class="company-title">Apex Service Operations</td><td class="doc-title">Field Service Checklist</td></tr></table>
+  </div>
 
+  <table class="info-section">
+    <tr>
+      <td class="label">Service Order #:</td>
+      <td class="value">SVC-2026-1042</td>
+      <td class="label">Service Date:</td>
+      <td class="value">August 12, 2026</td>
+    </tr>
+    <tr>
+      <td class="label">Client Name:</td>
+      <td class="value">Patricia Araujo</td>
+      <td class="label">Service Lead:</td>
+      <td class="value">Marcio Araujo</td>
+    </tr>
+  </table>
+
+  <div class="section-title">1. Pre-Service Inspection &amp; Preparation</div>
+  <table class="checklist-table">
+    <thead>
+      <tr>
+        <th style="width: 10%; text-align: center;">Status</th>
+        <th style="width: 60%;">Task Description</th>
+        <th style="width: 30%;">Notes / Remarks</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: center;"><span class="checkbox checked">✓</span></td>
+        <td>Verify client site access instructions and keycodes</td>
+        <td>Access confirmed</td>
+      </tr>
+      <tr>
+        <td style="text-align: center;"><span class="checkbox checked">✓</span></td>
+        <td>Inspect equipment, safety gear, and specialized cleaning supplies</td>
+        <td>All equipment operational</td>
+      </tr>
+      <tr>
+        <td style="text-align: center;"><span class="checkbox checked">✓</span></td>
+        <td>Review site-specific safety protocols and customer requirements</td>
+        <td>Verified</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="section-title">2. Service Execution &amp; Quality Check</div>
+  <table class="checklist-table">
+    <thead>
+      <tr>
+        <th style="width: 10%; text-align: center;">Status</th>
+        <th style="width: 60%;">Task Description</th>
+        <th style="width: 30%;">Notes / Remarks</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: center;"><span class="checkbox checked">✓</span></td>
+        <td>Perform primary area cleaning and high-touch surface sanitization</td>
+        <td>Completed</td>
+      </tr>
+      <tr>
+        <td style="text-align: center;"><span class="checkbox checked">✓</span></td>
+        <td>Execute floor care routine (vacuuming, sweeping, and mopping)</td>
+        <td>Completed</td>
+      </tr>
+      <tr>
+        <td style="text-align: center;"><span class="checkbox checked">✓</span></td>
+        <td>Restock paper goods, soap dispensers, and essential consumables</td>
+        <td>Replenished</td>
+      </tr>
+      <tr>
+        <td style="text-align: center;"><span class="checkbox"></span></td>
+        <td>Final walkthrough and client sign-off review</td>
+        <td>Scheduled post-service</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Business Model Canvas — [Your Company Name]</title>
+<style>
+  :root{
+    --bg:#F5F5F4; --surface:#FFFFFF; --primary:#171717; --primary-dark:#000000;
+    --accent:#C9A227; --text:#181818; --muted:#5F5F5D; --border:#E2E0DB; --chip:#F0EEE8; --danger:#B3261E;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font-family:'Helvetica Neue', Arial, sans-serif; font-size:14px; line-height:1.55;
+  }
+  .page{max-width:960px;margin:0 auto;padding:36px 28px 60px;}
+  .doc-header{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;border-bottom:3px solid var(--primary);padding-bottom:18px;margin-bottom:22px;}
+  .brand-row{display:flex;gap:14px;align-items:center;}
+  .logo-box{width:64px;height:64px;border:2px dashed var(--border);border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--muted);font-size:10px;font-weight:700;letter-spacing:.04em;text-align:center;flex-shrink:0;background:var(--chip);}
+  .logo-box span{display:block;}
+  .brand-name{font-family:'Helvetica Neue', Arial, sans-serif;font-weight:700;font-size:18px;color:var(--primary-dark);letter-spacing:.01em;}
+  .brand-meta{font-size:11.5px;color:var(--muted);margin-top:2px;}
+  .doc-id-block{text-align:right;font-size:11.5px;color:var(--muted);}
+  .doc-id-block .doc-id{font-weight:700;color:var(--text);font-size:13px;}
+  .status-badge{display:inline-block;margin-top:6px;padding:3px 11px;border-radius:20px;font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;background:var(--chip);color:var(--primary-dark);border:1px solid var(--border);}
+  .title-block{margin-bottom:22px;}
+  .doc-title{font-family:'Helvetica Neue', Arial, sans-serif;font-size:32px;font-weight:800;color:var(--primary-dark);margin:0 0 4px;letter-spacing:.01em;}
+  .doc-subtitle{font-size:14.5px;color:var(--muted);font-style:italic;margin:0;}
+  .accent-rule{height:4px;background:var(--accent);border-radius:3px;margin-top:14px;width:100%;}
+  .meta-row{display:flex;flex-wrap:wrap;gap:22px;margin-bottom:24px;padding:14px 18px;background:var(--surface);border:1px solid var(--border);border-radius:10px;}
+  .meta-item{min-width:110px;}
+  .meta-label{font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:3px;}
+  .meta-value{font-size:14px;font-weight:600;color:var(--text);}
+  .cards-row{display:flex;gap:16px;margin-bottom:24px;flex-wrap:wrap;}
+  .card{flex:1;min-width:240px;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px 18px;}
+  .card-heading{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--primary);margin-bottom:10px;border-bottom:2px solid var(--accent);padding-bottom:6px;display:inline-block;}
+  .card-field{margin-bottom:10px;}
+  .card-field:last-child{margin-bottom:0;}
+  .card-field-label{font-size:10px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin-bottom:3px;}
+  .card-field-line{border-bottom:1px solid var(--border);min-height:18px;font-size:13.5px;}
+  .section{margin-bottom:26px;}
+  .section-heading{font-size:15.5px;font-weight:700;color:var(--primary-dark);border-bottom:2px solid var(--accent);padding-bottom:7px;margin-bottom:14px;font-family:'Helvetica Neue', Arial, sans-serif;}
+  .section-body{font-size:13.5px;color:var(--text);margin-bottom:6px;}
+  table{width:100%;border-collapse:collapse;margin-bottom:8px;}
+  thead th{background:var(--primary);color:#fff;text-align:left;font-size:11px;letter-spacing:.04em;text-transform:uppercase;padding:9px 10px;}
+  thead th.num{text-align:right;}
+  tbody td{padding:9px 10px;border-bottom:1px solid var(--border);font-size:13px;min-height:18px;}
+  tbody tr:nth-child(even){background:var(--chip);}
+  td.num{text-align:right;}
+  .fill-row td{height:26px;}
+  .bullets{margin:0;padding-left:20px;}
+  .bullets li{margin-bottom:7px;font-size:13.5px;}
+  .bullets.notes li{list-style:none;margin-left:-20px;padding-left:20px;position:relative;}
+  .bullets.notes li:before{content:"•";color:var(--accent);font-weight:900;position:absolute;left:0;}
+  .checklist{list-style:none;margin:0;padding:0;}
+  .checklist li{display:flex;gap:10px;align-items:flex-start;margin-bottom:11px;font-size:13.5px;}
+  .checkbox{width:16px;height:16px;border:2px solid var(--primary);border-radius:3px;flex-shrink:0;margin-top:1px;}
+  .summary-panel{background:var(--primary-dark);color:#fff;border-radius:12px;padding:20px 22px;margin:26px 0;}
+  .summary-panel .section-heading{color:#fff;border-bottom-color:var(--accent);}
+  .summary-row{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.14);font-size:13.5px;}
+  .summary-row:last-child{border-bottom:none;}
+  .summary-row.grand{font-weight:800;font-size:15.5px;color:var(--accent);border-top:2px solid var(--accent);margin-top:6px;padding-top:12px;}
+  .summary-label{color:rgba(255,255,255,.78);}
+  .summary-value{font-weight:700;min-width:110px;text-align:right;border-bottom:1px dashed rgba(255,255,255,.4);}
+  .calc-ref{background:var(--chip);border:1px solid var(--border);border-radius:10px;padding:16px 18px;margin-bottom:24px;}
+  .disclaimer{font-size:12px;font-style:italic;color:var(--danger);background:var(--chip);border-left:3px solid var(--danger);padding:10px 14px;border-radius:0 6px 6px 0;margin-bottom:24px;}
+  .approval-section{margin-top:30px;}
+  .sign-row{display:flex;gap:24px;margin-bottom:22px;flex-wrap:wrap;}
+  .sign-block{flex:1;min-width:220px;}
+  .sign-line{border-bottom:2px solid var(--text);height:36px;}
+  .sign-label{font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin-top:6px;}
+  .doc-footer{margin-top:40px;padding-top:14px;border-top:1px solid var(--border);display:flex;justify-content:space-between;font-size:10.5px;color:var(--muted);}
+  .chart-wrap{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:18px;margin-bottom:24px;}
+  @media print{
+    body{background:#fff;}
+    .page{max-width:100%;padding:0;}
+    .no-print{display:none;}
+  }
+  @media (max-width:640px){
+    .page{padding:20px 14px 40px;}
+    .doc-title{font-size:24px;}
+    .cards-row, .sign-row{flex-direction:column;}
+  }
+  </style>
+</head>
+<body>
+<div class="page">
+  
+  <div class="doc-header">
+    <div class="brand-row">
+      <div class="logo-box"><span>LOGO</span><span style="font-weight:400;font-style:italic;">(insert)</span></div>
+      <div>
+        <div class="brand-name">[YOUR COMPANY NAME]</div>
+        <div class="brand-meta">[address] &nbsp;•&nbsp; [phone] &nbsp;•&nbsp; [email] &nbsp;•&nbsp; [website]</div>
+      </div>
+    </div>
+    <div class="doc-id-block">
+      <div>PREMIUM EXECUTIVE TEMPLATES</div>
+      <div class="doc-id">100 - Business Model Canvas</div>
+      <div>v1.0 &nbsp;•&nbsp; Created: ______ &nbsp;•&nbsp; Updated: ______</div>
+      <span class="status-badge">Draft</span>
+    </div>
+  </div>
+  <div class="title-block">
+    <h1 class="doc-title">Business Model Canvas</h1>
+    <p class="doc-subtitle">One-page view of how the business creates and captures value</p>
+    <div class="accent-rule"></div>
+  </div>
+  <div class="meta-row">
+    <div class="meta-item">
+      <div class="meta-label">Business Name</div>
+      <div class="meta-value">&nbsp;</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-label">Date</div>
+      <div class="meta-value">&nbsp;</div>
+    </div></div><div class="section"><div class="section-heading">Key Partners</div><p class="section-body">Who are your key partners and suppliers?</p></div><div class="section"><div class="section-heading">Key Activities</div><p class="section-body">What key activities does your value proposition require?</p></div><div class="section"><div class="section-heading">Key Resources</div><p class="section-body">What key resources does your value proposition require?</p></div><div class="section"><div class="section-heading">Value Propositions</div><p class="section-body">What value do you deliver to the customer?</p></div><div class="section"><div class="section-heading">Customer Relationships</div><p class="section-body">What type of relationship do your customers expect?</p></div><div class="section"><div class="section-heading">Channels</div><p class="section-body">Through which channels do your customers want to be reached?</p></div><div class="section"><div class="section-heading">Customer Segments</div><p class="section-body">For whom are you creating value?</p></div><div class="section"><div class="section-heading">Cost Structure</div><p class="section-body">What are the most important costs in your business model?</p></div><div class="section"><div class="section-heading">Revenue Streams</div><p class="section-body">For what value are your customers willing to pay?</p></div>
+  <div class="doc-footer no-print-border">
+    <span>Confidential — [Your Company Name]</span>
+    <span>Generated: ______________</span>
+    <span>Page 1 of 1</span>
+    <span>[website]</span>
+  </div>
+</div>
+</body>
+</html>

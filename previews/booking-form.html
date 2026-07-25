@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    @page { size: A4; margin: 15mm 12mm; }
+    body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 10pt; color: #2c3e50; margin: 0; line-height: 1.4; }
+    .header { border-bottom: 2px solid #2c3e50; padding-bottom: 10px; margin-bottom: 20px; }
+    .header table { width: 100%; }
+    .company-title { font-size: 18pt; font-weight: bold; color: #1a252f; text-transform: uppercase; letter-spacing: 1px; }
+    .doc-title { font-size: 14pt; font-weight: bold; color: #2980b9; text-align: right; text-transform: uppercase; }
+    .form-group { margin-bottom: 15px; }
+    .form-label { font-weight: bold; color: #34495e; font-size: 9.5pt; margin-bottom: 5px; display: block; text-transform: uppercase; }
+    .form-control { width: 100%; padding: 8px; border: 1px solid #ced4da; border-radius: 4px; box-sizing: border-box; font-size: 9.5pt; color: #495057; background-color: #f8f9fa; }
+    .grid-2 { width: 100%; border-collapse: collapse; margin-bottom: 10px; }
+    .grid-2 td { width: 50%; vertical-align: top; padding-right: 10px; }
+    .grid-2 td:last-child { padding-right: 0; padding-left: 10px; }
+    .section-title { font-size: 11pt; font-weight: bold; color: #2c3e50; border-bottom: 1px solid #2c3e50; padding-bottom: 4px; margin-top: 20px; margin-bottom: 15px; }
+    .btn-submit { background-color: #2980b9; color: #ffffff; padding: 10px 20px; border: none; font-weight: bold; font-size: 10pt; text-transform: uppercase; letter-spacing: 0.5px; border-radius: 4px; display: inline-block; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <table><tr><td class="company-title">Apex Service Operations</td><td class="doc-title">Service Booking Form</td></tr></table>
+  </div>
+
+  <form>
+    <div class="section-title">1. Client Contact Details</div>
+    <table class="grid-2">
+      <tr>
+        <td>
+          <div class="form-group">
+            <label class="form-label">Full Name</label>
+            <div class="form-control">Patricia Araujo</div>
+          </div>
+        </td>
+        <td>
+          <div class="form-group">
+            <label class="form-label">Phone Number</label>
+            <div class="form-control">(555) 019-2834</div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="form-group">
+            <label class="form-label">Email Address</label>
+            <div class="form-control">patricia@apexservices.com</div>
+          </div>
+        </td>
+        <td>
+          <div class="form-group">
+            <label class="form-label">Preferred Contact Method</label>
+            <div class="form-control">Email</div>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+    <div class="section-title">2. Service Request Details</div>
+    <table class="grid-2">
+      <tr>
+        <td>
+          <div class="form-group">
+            <label class="form-label">Requested Date</label>
+            <div class="form-control">2026-08-15</div>
+          </div>
+        </td>
+        <td>
+          <div class="form-group">
+            <label class="form-label">Preferred Time Window</label>
+            <div class="form-control">Morning (9:00 AM - 12:00 PM)</div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="form-group">
+            <label class="form-label">Service Type</label>
+            <div class="form-control">Standard Service Cleaning</div>
+          </div>
+        </td>
+        <td>
+          <div class="form-group">
+            <label class="form-label">Frequency</label>
+            <div class="form-control">Bi-Weekly Recurring</div>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+    <div class="form-group">
+      <label class="form-label">Property Address / Service Location</label>
+      <div class="form-control">123 Business Parkway, Suite 100, Cityville, ST 12345</div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Special Instructions or Notes</label>
+      <div class="form-control" style="height: 60px;">Please enter via the side reception door. Keycode will be provided prior to arrival.</div>
+    </div>
+
+    <div style="margin-top: 20px; text-align: right;">
+      <div class="btn-submit">Submit Request</div>
+    </div>
+  </form>
+</body>
+</html>

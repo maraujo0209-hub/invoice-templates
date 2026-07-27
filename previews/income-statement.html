@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Income Statement — [Your Company Name]</title>
+<style>
+  :root{
+    --bg:#F4F7FB; --surface:#FFFFFF; --primary:#154C79; --primary-dark:#0E3555;
+    --accent:#2E86C1; --text:#1B2733; --muted:#5B6B7A; --border:#D7E1EA; --chip:#E7F1FA; --danger:#B3261E;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:'Segoe UI', Arial, sans-serif;font-size:14px;line-height:1.55;}
+  .page{max-width:980px;margin:0 auto;padding:36px 30px 60px;}
+  h1,h2,h3{font-family:'Georgia', 'Times New Roman', serif;}
+  .doc-footer{margin-top:40px;padding-top:14px;border-top:1px solid var(--border);display:flex;justify-content:space-between;font-size:10.5px;color:var(--muted);flex-wrap:wrap;gap:6px;}
+  .section{margin-bottom:26px;}
+  .section-heading{font-size:15.5px;font-weight:700;color:var(--primary-dark);border-bottom:2px solid var(--accent);padding-bottom:7px;margin-bottom:14px;font-family:'Georgia', 'Times New Roman', serif;}
+  .section-body{font-size:13.5px;color:var(--text);margin-bottom:6px;}
+  table{width:100%;border-collapse:collapse;margin-bottom:8px;}
+  thead th{background:var(--primary);color:#fff;text-align:left;font-size:11px;letter-spacing:.04em;text-transform:uppercase;padding:9px 10px;}
+  thead th.num{text-align:right;}
+  tbody td{padding:9px 10px;border-bottom:1px solid var(--border);font-size:13px;}
+  tbody tr:nth-child(even){background:var(--chip);}
+  td.num{text-align:right;}
+  .fill-row td{height:24px;}
+  .bullets{margin:0;padding-left:20px;}
+  .bullets li{margin-bottom:7px;font-size:13.5px;}
+  .bullets.notes{list-style:none;margin:0;padding:0;}
+  .bullets.notes li{padding-left:20px;position:relative;}
+  .bullets.notes li:before{content:"•";color:var(--accent);font-weight:900;position:absolute;left:0;}
+  .checklist{list-style:none;margin:0;padding:0;}
+  .checklist li{display:flex;gap:10px;align-items:flex-start;margin-bottom:11px;font-size:13.5px;}
+  .checkbox{width:16px;height:16px;border:2px solid var(--primary);border-radius:3px;flex-shrink:0;margin-top:1px;}
+  .disclaimer{font-size:12px;font-style:italic;color:var(--danger);background:var(--chip);border-left:3px solid var(--danger);padding:10px 14px;border-radius:0 6px 6px 0;margin-bottom:24px;}
+  .card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px 18px;}
+  .card-heading{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--primary);margin-bottom:10px;border-bottom:2px solid var(--accent);padding-bottom:6px;display:inline-block;}
+  .card-field-label{font-size:10px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin-bottom:3px;}
+  .card-field-line{border-bottom:1px solid var(--border);min-height:18px;font-size:13.5px;}
+  .sign-row{display:flex;gap:24px;margin-bottom:22px;flex-wrap:wrap;}
+  .sign-block{flex:1;min-width:200px;}
+  .sign-line{border-bottom:2px solid var(--text);height:34px;}
+  .sign-label{font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin-top:6px;}
+  @media print{.page-break{page-break-before:always;} .no-print{display:none;}}
+  @media (max-width:640px){.page{padding:20px 14px 40px;} .kpi-grid,.cards-row,.sign-row{flex-direction:column;}}
+  </style></head>
+<body><div class="page"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:22px;">
+    <div style="display:flex;align-items:center;gap:14px;">
+    <div style="width:56px;height:56px;border:2px dashed var(--border);border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--muted);font-size:9px;font-weight:700;background:var(--chip);flex-shrink:0;">
+      <span>LOGO</span><span style="font-weight:400;font-style:italic;">(insert)</span>
+    </div>
+    <div>
+      <div style="font-weight:700;font-size:16px;color:var(--primary-dark);">[YOUR COMPANY NAME]</div>
+      <div style="font-size:11px;color:var(--muted);">[address] • [phone] • [email] • [website]</div>
+    </div>
+  </div>
+    <div style="text-align:right;font-size:11px;color:var(--muted);">
+      <div>ACCOUNTING &AMP; FINANCE</div>
+      <div style="font-weight:700;color:var(--text);font-size:12.5px;">20 - Income Statement</div>
+      <span style="display:inline-block;margin-top:5px;padding:3px 11px;border-radius:20px;font-size:10px;font-weight:700;text-transform:uppercase;background:var(--chip);border:1px solid var(--border);">Draft</span>
+    </div>
+  </div><div class="section"><h1 style="font-size:28px;font-weight:800;color:var(--primary-dark);margin:0;">Income Statement</h1><p style="font-size:13.5px;color:var(--muted);font-style:italic;margin:4px 0 0;">Revenue, expenses, and net income summary</p><div style="height:4px;background:var(--accent);margin-top:12px;border-radius:3px;"></div></div><div class="section" style="display:flex;gap:22px;flex-wrap:wrap;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px 18px;">
+      <div><div class="card-field-label">Period</div><div style="font-weight:700;">&nbsp;</div></div><div><div class="card-field-label">Business Name</div><div style="font-weight:700;">&nbsp;</div></div>
+    </div><div class="section card"><div class="card-heading">Trend</div><div><div style="margin-bottom:8px;"><span style="display:inline-flex;align-items:center;gap:5px;margin-right:14px;font-size:11.5px;color:#1B2733;">
+    <span style="width:10px;height:10px;background:#2E86C1;display:inline-block;border-radius:2px;"></span>This Year</span><span style="display:inline-flex;align-items:center;gap:5px;margin-right:14px;font-size:11.5px;color:#1B2733;">
+    <span style="width:10px;height:10px;background:#5B6B7A;display:inline-block;border-radius:2px;"></span>Last Year</span></div><svg width="640" height="220" viewBox="0 0 640 220" style="max-width:100%;"><line x1="36" y1="14" x2="626" y2="14" stroke="#D7E1EA" stroke-width="1"/><line x1="36" y1="59.5" x2="626" y2="59.5" stroke="#D7E1EA" stroke-width="1"/><line x1="36" y1="105" x2="626" y2="105" stroke="#D7E1EA" stroke-width="1"/><line x1="36" y1="150.5" x2="626" y2="150.5" stroke="#D7E1EA" stroke-width="1"/><line x1="36" y1="196" x2="626" y2="196" stroke="#D7E1EA" stroke-width="1"/><polyline points="36.0,86.8 232.7,43.1 429.3,57.7 626.0,14.0" fill="none" stroke="#2E86C1" stroke-width="2.5"/><circle cx="36.0" cy="86.8" r="3" fill="#2E86C1"/><circle cx="232.7" cy="43.1" r="3" fill="#2E86C1"/><circle cx="429.3" cy="57.7" r="3" fill="#2E86C1"/><circle cx="626.0" cy="14.0" r="3" fill="#2E86C1"/><polyline points="36.0,101.4 232.7,72.2 429.3,75.9 626.0,50.4" fill="none" stroke="#5B6B7A" stroke-width="2.5"/><circle cx="36.0" cy="101.4" r="3" fill="#5B6B7A"/><circle cx="232.7" cy="72.2" r="3" fill="#5B6B7A"/><circle cx="429.3" cy="75.9" r="3" fill="#5B6B7A"/><circle cx="626.0" cy="50.4" r="3" fill="#5B6B7A"/><text x="36.0" y="214" font-size="10" fill="#5B6B7A" text-anchor="middle">Q1</text><text x="232.7" y="214" font-size="10" fill="#5B6B7A" text-anchor="middle">Q2</text><text x="429.3" y="214" font-size="10" fill="#5B6B7A" text-anchor="middle">Q3</text><text x="626.0" y="214" font-size="10" fill="#5B6B7A" text-anchor="middle">Q4</text></svg></div></div><div class="doc-footer"><span>Confidential — [Your Company Name]</span><span>Generated: ______________</span><span>Page __ of __</span><span>[website]</span></div></div></body></html>

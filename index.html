@@ -1,1643 +1,853 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BizTemplates Pro Toolkit - 116 Business Templates</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- SEO METADATA -->
+  <title>Professional Business Document Templates | Complete Library</title>
+  <meta name="description" content="All-in-one professional business document library: invoices, receipts, proposals, P&L statements, client databases, contracts, and tracking tools." />
+  <meta name="keywords" content="business templates, invoice template, profit and loss template, proposal template, client database, business tracker" />
+  <link rel="canonical" href="https://maraujo0209-hub.github.io/invoice-templates/" />
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Professional Business Document Library" />
+  <meta property="og:description" content="Everything you need to run your business professionally. Invoices, contracts, P&L trackers, proposals, and operational tools." />
+
   <style>
-    /* RESET & BASE STYLES */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+    /* CSS VARIABLES & THEMING */
+    :root {
+      --bg-main: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-hero: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --border-color: #e2e8f0;
+      --primary: #10b981;
+      --primary-dark: #059669;
+      --accent: #3b82f6;
     }
+
+    body.dark-mode {
+      --bg-main: #0f172a;
+      --bg-card: #1e293b;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --border-color: #334155;
+    }
+
+    /* BASE RESET */
+    * { box-sizing: border-box; transition: background-color 0.2s, color 0.2s, border-color 0.2s; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      line-height: 1.6;
-      color: #1e293b;
-      background-color: #f8fafc;
-      padding: 20px;
-    }
-    a {
-      color: #2563eb;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      margin: 0; padding: 0;
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.5;
     }
 
-    /* HEADER & HERO SECTION */
-    .hero {
-      text-align: center;
-      max-width: 900px;
-      margin: 0 auto 40px auto;
-      padding: 40px 20px;
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 1.25rem; }
+    .text-center { text-align: center; }
+    .section-title { font-size: 2.25rem; font-weight: 800; margin-bottom: 0.5rem; text-align: center; letter-spacing: -0.02em; }
+    .section-subtitle { text-align: center; color: var(--text-muted); max-width: 680px; margin: 0 auto 2.5rem auto; font-size: 1.1rem; }
+
+    /* HEADER & NAV */
+    .top-nav {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1rem 0; border-bottom: 1px solid var(--border-color); background: var(--bg-card);
     }
-    .hero-brand {
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: #64748b;
-      font-size: 0.9rem;
-      margin-bottom: 10px;
-      display: inline-block;
+    .brand-logo { font-weight: 800; font-size: 1.3rem; color: var(--text-main); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; }
+    .brand-logo span { background: var(--primary); color: #fff; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.8rem; text-transform: uppercase; }
+    .nav-actions { display: flex; gap: 1rem; align-items: center; }
+    .theme-toggle {
+      background: none; border: 1px solid var(--border-color); color: var(--text-main);
+      padding: 0.4rem 0.8rem; border-radius: 6px; cursor: pointer; font-weight: 600;
     }
-    .hero h1 {
-      font-size: 2.5rem;
-      color: #0f172a;
-      margin-bottom: 15px;
-      line-height: 1.2;
+
+    /* HERO SECTION */
+    .hero-section {
+      background: var(--bg-hero); color: #ffffff;
+      padding: 5rem 1rem 4rem 1rem; text-align: center;
     }
-    .hero p {
-      font-size: 1.15rem;
-      color: #475569;
-      margin-bottom: 25px;
-    }
-    .hero-nav-btns {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-    }
-    .btn-hero {
-      padding: 10px 20px;
-      border-radius: 6px;
-      font-weight: 600;
-      transition: background 0.2s ease;
-    }
+    .hero-section h1 { font-size: 3rem; font-weight: 800; margin: 0 0 1.25rem 0; letter-spacing: -0.03em; line-height: 1.15; }
+    .hero-subtitle { font-size: 1.25rem; color: #94a3b8; max-width: 780px; margin: 0 auto 2.25rem auto; line-height: 1.6; }
+    .hero-actions { display: flex; justify-content: center; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap; }
     .btn-hero-primary {
-      background-color: #2563eb;
-      color: #ffffff;
+      background: var(--primary); color: #ffffff; padding: 0.95rem 1.85rem;
+      border-radius: 8px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; font-size: 1.05rem;
     }
-    .btn-hero-primary:hover {
-      background-color: #1d4ed8;
-      text-decoration: none;
-    }
+    .btn-hero-primary:hover { background: var(--primary-dark); }
     .btn-hero-secondary {
-      background-color: #e2e8f0;
-      color: #1e293b;
-    }
-    .btn-hero-secondary:hover {
-      background-color: #cbd5e1;
-      text-decoration: none;
+      background: #334155; color: #ffffff; padding: 0.95rem 1.85rem;
+      border-radius: 8px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; font-size: 1.05rem;
     }
 
-    /* FEATURE HIGHLIGHTS GRID */
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 20px;
-      max-width: 1100px;
-      margin: 0 auto 50px auto;
-    }
-    .feature-card {
-      background: #ffffff;
-      padding: 20px;
-      border-radius: 8px;
-      text-align: center;
-      border: 1px solid #e2e8f0;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-    }
-    .feature-card .icon {
-      font-size: 2rem;
-      margin-bottom: 8px;
-    }
-    .feature-card h4 {
-      font-size: 1rem;
-      color: #0f172a;
-      margin-bottom: 4px;
-    }
-    .feature-card p {
-      font-size: 0.85rem;
-      color: #64748b;
-    }
+    /* TRUST BADGES BAR */
+    .trust-badges { background: var(--bg-card); border-bottom: 1px solid var(--border-color); padding: 1.5rem 0; }
+    .trust-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; text-align: center; }
+    .trust-item h4 { margin: 0.25rem 0 0 0; font-size: 0.95rem; color: var(--text-main); }
+    .trust-item p { margin: 0; font-size: 0.8rem; color: var(--text-muted); }
+    .trust-icon { font-size: 1.5rem; }
 
-    /* SECTION CONTAINERS */
-    .section-block {
-      max-width: 1200px;
-      margin: 0 auto 60px auto;
-    }
-    .section-title {
-      font-size: 1.8rem;
-      color: #0f172a;
-      text-align: center;
-      margin-bottom: 8px;
-    }
-    .section-subtitle {
-      text-align: center;
-      color: #64748b;
-      margin-bottom: 35px;
-    }
+    /* SECTION BLOCK */
+    .section-block { padding: 4.5rem 0; border-bottom: 1px solid var(--border-color); }
 
-    /* PRICING SECTION */
+    /* PRICING CARDS */
     .pricing-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-      align-items: stretch;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;
+      align-items: stretch; margin-top: 1.5rem;
     }
     .price-card {
-      background: #ffffff;
-      border: 1px solid #cbd5e1;
-      border-radius: 12px;
-      padding: 30px 25px;
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+      background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 14px;
+      padding: 2.25rem; display: flex; flex-direction: column; position: relative;
     }
-    .ultimate-card {
-      border: 2px solid #2563eb;
-      box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.15);
+    .price-card.ultimate-card {
+      border: 2px solid var(--primary);
+      box-shadow: 0 15px 35px -5px rgba(16, 185, 129, 0.2);
+      background: linear-gradient(180deg, var(--bg-card) 0%, rgba(16, 185, 129, 0.03) 100%);
     }
     .badge-ultimate {
-      position: absolute;
-      top: -12px;
-      right: 20px;
-      background: #2563eb;
-      color: #ffffff;
-      font-size: 0.75rem;
-      font-weight: 700;
-      padding: 4px 12px;
-      border-radius: 20px;
-      text-transform: uppercase;
+      position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+      background: var(--primary); color: #fff; font-size: 0.8rem; font-weight: 800;
+      padding: 0.3rem 0.85rem; border-radius: 50px; text-transform: uppercase; letter-spacing: 0.05em;
     }
-    .price-card h3 {
-      font-size: 1.4rem;
-      color: #0f172a;
-      margin-bottom: 5px;
-    }
-    .price-target {
-      font-size: 0.85rem;
-      color: #64748b;
-      margin-bottom: 15px;
-    }
-    .price-amount {
-      font-size: 2.2rem;
-      font-weight: 800;
-      color: #0f172a;
-      margin-bottom: 20px;
-    }
-    .price-amount span {
-      font-size: 0.9rem;
-      font-weight: 400;
-      color: #64748b;
-    }
-    .included-list-title {
-      font-weight: 600;
-      font-size: 0.9rem;
-      margin-bottom: 10px;
-      color: #334155;
-    }
-    .price-features {
-      list-style: none;
-      margin-bottom: 25px;
-      flex-grow: 1;
-    }
-    .price-features li {
-      font-size: 0.9rem;
-      margin-bottom: 8px;
-      color: #475569;
-    }
+    .price-card h3 { font-size: 1.6rem; margin: 0 0 0.25rem 0; }
+    .price-target { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.25rem; font-weight: 600; }
+    .price-amount { font-size: 2.75rem; font-weight: 800; margin-bottom: 1.25rem; display: flex; align-items: baseline; gap: 0.25rem; }
+    .price-amount span { font-size: 0.9rem; font-weight: 500; color: var(--text-muted); }
+    
+    .included-list-title { font-size: 0.8rem; font-weight: 800; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.05em; margin-bottom: 0.75rem; }
+    .price-features { list-style: none; padding: 0; margin: 0 0 2rem 0; flex: 1; }
+    .price-features li { padding: 0.45rem 0; border-bottom: 1px dashed var(--border-color); font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; color: var(--text-main); }
+    .price-features li strong { font-weight: 700; }
+    
     .btn-price {
-      display: block;
-      text-align: center;
-      padding: 12px;
-      border-radius: 6px;
-      font-weight: 700;
-      transition: background 0.2s;
+      width: 100%; text-align: center; padding: 0.9rem; border-radius: 8px; font-weight: 700;
+      text-decoration: none; cursor: pointer; display: block; border: none; font-size: 1rem;
     }
-    .btn-price-secondary {
-      background: #f1f5f9;
-      color: #0f172a;
-    }
-    .btn-price-secondary:hover {
-      background: #e2e8f0;
-      text-decoration: none;
-    }
-    .btn-price-primary {
-      background: #2563eb;
-      color: #ffffff;
-    }
-    .btn-price-primary:hover {
-      background: #1d4ed8;
-      text-decoration: none;
-    }
+    .btn-price-primary { background: var(--primary); color: #ffffff; }
+    .btn-price-primary:hover { background: var(--primary-dark); }
+    .btn-price-secondary { background: var(--text-main); color: var(--bg-card); }
 
-    /* COLLECTION CARDS GRID */
+    /* CATEGORY GALLERY & CARDS */
     .category-title {
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: #1e293b;
-      margin: 30px 0 15px 0;
-      padding-bottom: 8px;
-      border-bottom: 2px solid #e2e8f0;
+      font-size: 1.5rem; font-weight: 800; margin: 2.5rem 0 1.25rem 0; display: flex; align-items: center; gap: 0.6rem;
+      border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;
     }
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 20px;
-      margin-bottom: 30px;
-    }
+    .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; }
+    
     .template-card {
-      background: #ffffff;
-      border: 1px solid #e2e8f0;
-      border-radius: 8px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
+      background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px;
+      overflow: hidden; display: flex; flex-direction: column; position: relative;
       transition: transform 0.2s, box-shadow 0.2s;
     }
-    .template-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 15px -3px rgba(0,0,0,0.08);
-    }
+    .template-card:hover { transform: translateY(-3px); box-shadow: 0 10px 20px -5px rgba(0,0,0,0.08); }
+    
     .card-preview-thumb {
-      background: #f1f5f9;
-      height: 100px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      background: #f1f5f9; height: 160px; padding: 1rem; border-bottom: 1px solid var(--border-color);
+      display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
       position: relative;
     }
-    .thumb-icon {
-      font-size: 2.5rem;
-    }
+    body.dark-mode .card-preview-thumb { background: #0b1329; }
+    
+    .thumb-icon { font-size: 2.25rem; margin-bottom: 0.25rem; }
     .card-tier-badge {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      font-size: 0.7rem;
-      font-weight: 700;
-      padding: 2px 8px;
-      border-radius: 4px;
-      text-transform: uppercase;
+      position: absolute; top: 10px; right: 10px; font-size: 0.7rem; font-weight: 800;
+      padding: 0.2rem 0.5rem; border-radius: 4px; text-transform: uppercase;
     }
-    .tier-starter { background: #e0f2fe; color: #0369a1; }
-    .tier-pro { background: #fef3c7; color: #b45309; }
-    .tier-ultimate { background: #f3e8ff; color: #6b21a8; }
+    .tier-starter { background: #e2e8f0; color: #334155; }
+    .tier-pro { background: #dbeafe; color: #1e40af; }
+    .tier-ultimate { background: #d1fae5; color: #065f46; }
 
-    .card-body {
-      padding: 15px;
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
-    }
-    .card-title {
-      font-size: 1rem;
-      color: #0f172a;
-      margin-bottom: 6px;
-    }
-    .card-desc {
-      font-size: 0.85rem;
-      color: #64748b;
-      margin-bottom: 15px;
-      flex-grow: 1;
-    }
-    .card-actions {
-      display: flex;
-      gap: 10px;
-    }
+    .card-body { padding: 1.25rem; flex: 1; display: flex; flex-direction: column; }
+    .card-title { font-size: 1.15rem; font-weight: 700; margin: 0 0 0.4rem 0; color: var(--text-main); }
+    .card-desc { font-size: 0.875rem; color: var(--text-muted); margin-bottom: 1rem; line-height: 1.4; flex: 1; }
+    
+    .card-actions { display: flex; gap: 0.5rem; margin-top: auto; }
     .btn-card {
-      flex: 1;
-      padding: 8px 0;
-      text-align: center;
-      font-size: 0.8rem;
-      font-weight: 600;
-      border-radius: 4px;
-      cursor: pointer;
-      border: none;
+      flex: 1; text-align: center; padding: 0.65rem; border-radius: 6px; font-weight: 600;
+      font-size: 0.85rem; text-decoration: none; cursor: pointer; display: inline-flex; align-items: center; justify-content: center;
     }
-    .btn-preview-card {
-      background: #ffffff;
-      border: 1px solid #cbd5e1;
-      color: #334155;
-    }
-    .btn-preview-card:hover {
-      background: #f8fafc;
-    }
-    .btn-use-card {
-      background: #2563eb;
-      color: #ffffff;
-    }
-    .btn-use-card:hover {
-      background: #1d4ed8;
-      text-decoration: none;
-    }
+    .btn-preview-card { background: var(--bg-main); color: var(--text-main); border: 1px solid var(--border-color); }
+    .btn-preview-card:hover { border-color: var(--text-main); }
+    .btn-use-card { background: var(--text-main); color: var(--bg-card); border: none; }
+    .btn-use-card:hover { opacity: 0.9; }
 
-    /* MODAL POPUP STYLES */
-    .modal-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: rgba(15, 23, 42, 0.6);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.3s ease;
-      z-index: 1000;
+    /* WHY BUY VS FREE TABLE/CARDS */
+    .vs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+    .vs-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 1.75rem; }
+    .vs-card.paid { border: 2px solid var(--primary); background: linear-gradient(180deg, var(--bg-card) 0%, rgba(16, 185, 129, 0.02) 100%); }
+    .vs-card h3 { margin-top: 0; font-size: 1.3rem; }
+    .vs-list { list-style: none; padding: 0; margin: 0; }
+    .vs-list li { padding: 0.6rem 0; border-bottom: 1px solid var(--border-color); font-size: 0.925rem; display: flex; align-items: center; gap: 0.5rem; }
+
+    /* MODAL PREVIEW */
+    .modal {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(15, 23, 42, 0.85); z-index: 20000;
+      display: flex; align-items: center; justify-content: center; padding: 1rem;
     }
-    .modal-overlay.active {
-      opacity: 1;
-      pointer-events: auto;
-    }
-    .modal-container {
-      background: #ffffff;
-      width: 90%;
-      max-width: 900px;
-      height: 80vh;
-      border-radius: 12px;
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+    .modal-content {
+      background: var(--bg-card); width: 100%; max-width: 1050px; height: 92vh;
+      border-radius: 12px; overflow: hidden; display: flex; flex-direction: column;
     }
     .modal-header {
-      padding: 15px 20px;
-      background: #f8fafc;
-      border-bottom: 1px solid #e2e8f0;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1rem 1.5rem; background: #0f172a; color: #ffffff;
     }
-    .modal-header h3 {
-      font-size: 1.1rem;
-      color: #0f172a;
+    .modal-actions { display: flex; gap: 0.5rem; }
+    .btn-modal-action {
+      background: #1e293b; color: #fff; border: 1px solid #475569;
+      padding: 0.4rem 0.85rem; border-radius: 6px; font-size: 0.85rem; cursor: pointer;
+      text-decoration: none; display: inline-flex; align-items: center;
     }
-    .btn-close-modal {
-      background: transparent;
-      border: none;
-      font-size: 1.5rem;
-      cursor: pointer;
-      color: #64748b;
+    .modal-body { flex: 1; border: none; width: 100%; height: 100%; background: #fff; }
+
+    /* ROADMAP BOX */
+    .roadmap-box {
+      background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 14px; padding: 2.5rem;
+      max-width: 900px; margin: 0 auto;
     }
-    .modal-body {
-      flex: 1;
-      background: #f1f5f9;
+    .upcoming-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.75rem; margin-top: 1.5rem; text-align: left;
     }
-    .modal-body iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
+    .upcoming-item {
+      background: var(--bg-main); padding: 0.75rem 1rem; border-radius: 6px; border: 1px solid var(--border-color);
+      font-size: 0.875rem; font-weight: 600; display: flex; align-items: center; gap: 0.5rem; color: var(--text-muted);
+    }
+
+    /* FAQ SECTION */
+    .faq-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; }
+    .faq-item { background: var(--bg-card); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--border-color); }
+    .faq-item h4 { margin: 0 0 0.5rem 0; font-size: 1.05rem; }
+    .faq-item p { margin: 0; font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; }
+
+    /* FOOTER */
+    .site-footer { background: #0f172a; color: #94a3b8; padding: 4rem 0 2rem 0; font-size: 0.9rem; }
+    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 2rem; margin-bottom: 2.5rem; }
+    .footer-grid h4 { color: #ffffff; margin-bottom: 1rem; margin-top: 0; }
+    .footer-grid a { color: #94a3b8; text-decoration: none; display: block; margin-bottom: 0.5rem; }
+    .footer-grid a:hover { color: #ffffff; }
+
+    @media (max-width: 768px) {
+      .hero-section h1 { font-size: 2.25rem; }
+      .hero-actions { flex-direction: column; }
     }
   </style>
 </head>
 <body>
 
-  <!-- HERO SECTION -->
-  <header class="hero">
-    <a href="#" class="hero-brand">BizTemplates Pro Toolkit</a>
-    <h1>116 Professional Business Documents &amp; Trackers</h1>
-    <p>Everything you need to run your business professionally—from invoices, quotes, and legal agreements to financial spreadsheets, HR logs, and operational dashboards.</p>
-    <div class="hero-nav-btns">
-      <a href="#pricing" class="btn-hero btn-hero-primary">View Pricing &amp; Plans</a>
-      <a href="#collection" class="btn-hero btn-hero-secondary">Explore All 116 Templates</a>
+  <!-- TOP NAVIGATION BAR -->
+  <header style="background: var(--bg-card);">
+    <div class="container">
+      <nav class="top-nav">
+        <a href="#" class="brand-logo">BizTemplates <span>Pro Toolkit</span></a>
+        <div class="nav-actions">
+          <button class="theme-toggle" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+        </div>
+      </nav>
     </div>
   </header>
 
-  <!-- FEATURES GRID -->
-  <section class="features-grid">
-    <div class="feature-card">
-      <div class="icon">💳</div>
-      <h4>One-Time Purchase</h4>
-      <p>No monthly subscriptions</p>
-    </div>
-    <div class="feature-card">
-      <div class="icon">♾️</div>
-      <h4>Lifetime Access</h4>
-      <p>Download files anytime</p>
-    </div>
-    <div class="feature-card">
-      <div class="icon">💼</div>
-      <h4>Commercial Use</h4>
-      <p>Unlimited business use</p>
-    </div>
-    <div class="feature-card">
-      <div class="icon">🖨️</div>
-      <h4>Print-Ready</h4>
-      <p>Formatted Letter &amp; A4</p>
-    </div>
-    <div class="feature-card">
-      <div class="icon">⚡</div>
-      <h4>Instant Download</h4>
-      <p>HTML, Word, Excel &amp; PDF</p>
-    </div>
-    <div class="feature-card">
-      <div class="icon">🎁</div>
-      <h4>Future Releases</h4>
-      <p>Included with Ultimate</p>
-    </div>
-  </section>
-
-  <!-- PRICING SECTION -->
-  <section id="pricing" class="section-block">
-    <h2 class="section-title">Simple, Transparent Ownership</h2>
-    <p class="section-subtitle">Select the tier that matches your current scale. Pay once with zero recurring billing.</p>
-    
-    <div class="pricing-grid">
-      <!-- Starter Pass -->
-      <div class="price-card">
-        <h3>Starter Pass</h3>
-        <div class="price-target">10 Essential Templates for Freelancers</div>
-        <div class="price-amount">$19 <span>one-time</span></div>
-        <div class="included-list-title">Includes 10 Essential Documents:</div>
-        <ul class="price-features">
-          <li>✅ <strong>10 Essential Templates</strong></li>
-          <li>✅ Invoices, Quotes &amp; Receipts</li>
-          <li>✅ Purchase Orders &amp; Credit Memos</li>
-          <li>🔒 Instant File Download</li>
-          <li>🔒 Commercial License Included</li>
-          <li>🔒 Print &amp; PDF Ready Formats</li>
-        </ul>
-        <a href="https://yourstore.gumroad.com/l/starter" class="btn-price btn-price-secondary">Get Starter Pass</a>
-      </div>
-
-      <!-- Professional Pass -->
-      <div class="price-card">
-        <h3>Professional Pass</h3>
-        <div class="price-target">35 Core Templates for Small Teams</div>
-        <div class="price-amount">$39 <span>one-time</span></div>
-        <div class="included-list-title">Includes 35 Core Documents:</div>
-        <ul class="price-features">
-          <li>✅ <strong>Everything in Starter (10)</strong></li>
-          <li>✅ <strong>35 Business Templates Total</strong></li>
-          <li>✅ Contracts &amp; Work Orders</li>
-          <li>✅ Expense Reports &amp; Timesheets</li>
-          <li>✅ Project Proposals &amp; Estimates</li>
-          <li>🔒 Commercial License Included</li>
-        </ul>
-        <a href="https://yourstore.gumroad.com/l/professional" class="btn-price btn-price-secondary">Get Professional Pass</a>
-      </div>
-
-      <!-- Ultimate Pass -->
-      <div class="price-card ultimate-card">
-        <span class="badge-ultimate">⭐ Unlimited Access</span>
-        <h3>Ultimate Library Pass</h3>
-        <div class="price-target">Complete 116 Document Vault + All Future Releases</div>
-        <div class="price-amount">$69 <span>one-time</span></div>
-        <div class="included-list-title">Complete Unrestricted Vault:</div>
-        <ul class="price-features">
-          <li>✅ <strong>116 Complete Templates Total</strong></li>
-          <li>✅ <strong>All Future Releases Included</strong></li>
-          <li>✅ Full Legal &amp; HR Vault</li>
-          <li>✅ Full Financial &amp; Accounting Suite</li>
-          <li>✅ Operations, Marketing &amp; CRM Trackers</li>
-          <li>⚡ <strong>Lifetime Library Access</strong></li>
-          <li>🔒 <strong>Unlimited Commercial License</strong></li>
-        </ul>
-        <a href="https://yourstore.gumroad.com/l/ultimate" class="btn-price btn-price-primary">Unlock 116 Templates. Forever.</a>
+  <!-- HERO SECTION -->
+  <section class="hero-section">
+    <div class="container">
+      <h1>Professional Business Document Library</h1>
+      <p class="hero-subtitle">Everything you need to run your business professionally—from invoices and receipts to purchase orders, proposals, P&L reports, contracts, and tracking logs.</p>
+      <div class="hero-actions">
+        <a href="#pricing" class="btn-hero-primary">View Pricing & Plans</a>
+        <a href="#collection" class="btn-hero-secondary">Explore All 18 Templates</a>
       </div>
     </div>
   </section>
 
-  <!-- COLLECTION SECTION -->
-  <section id="collection" class="section-block">
-    <h2 class="section-title">Browse the Full Collection (116 Templates)</h2>
-    <p class="section-subtitle">Explore every standard, advanced, and specialized business document in our library.</p>
-
-    <!-- 1. INVOICES & BILLING -->
-    <div class="category-title">💳 Invoices &amp; Billing (1-20)</div>
-    <div class="card-grid">
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-starter">Starter</span><div class="thumb-icon">📄</div></div>
-        <div class="card-body">
-          <h3 class="card-title">1. Standard Invoice</h3>
-          <p class="card-desc">Polished itemized billing statement for general services.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/invoice.html', 'Standard Invoice')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
+  <!-- TRUST BADGES BAR -->
+  <div class="trust-badges">
+    <div class="container">
+      <div class="trust-grid">
+        <div class="trust-item">
+          <div class="trust-icon">💳</div>
+          <h4>One-Time Purchase</h4>
+          <p>No monthly subscriptions</p>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">♾️</div>
+          <h4>Lifetime Access</h4>
+          <p>Download files anytime</p>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">💼</div>
+          <h4>Commercial Use</h4>
+          <p>Unlimited business use</p>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">🖨️</div>
+          <h4>Print-Ready</h4>
+          <p>Formatted Letter & A4</p>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">⚡</div>
+          <h4>Instant Download</h4>
+          <p>HTML, Word, Excel & PDF</p>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">🎁</div>
+          <h4>Future Releases</h4>
+          <p>Included with Ultimate</p>
         </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-starter">Starter</span><div class="thumb-icon">🧾</div></div>
-        <div class="card-body">
-          <h3 class="card-title">2. Payment Receipt</h3>
-          <p class="card-desc">Official payment confirmation receipt for clients.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/receipt.html', 'Payment Receipt')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-starter">Starter</span><div class="thumb-icon">📦</div></div>
-        <div class="card-body">
-          <h3 class="card-title">3. Purchase Order (PO)</h3>
-          <p class="card-desc">Standard vendor purchase order requisition statement.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/purchase-order.html', 'Purchase Order')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-starter">Starter</span><div class="thumb-icon">💬</div></div>
-        <div class="card-body">
-          <h3 class="card-title">4. Service Quote</h3>
-          <p class="card-desc">Detailed cost breakdown before starting a new job.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/service-quote.html', 'Service Quote')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-starter">Starter</span><div class="thumb-icon">🔄</div></div>
-        <div class="card-body">
-          <h3 class="card-title">5. Proforma Invoice</h3>
-          <p class="card-desc">Preliminary invoice sent prior to shipment or delivery.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/invoice.html', 'Proforma Invoice')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-starter">Starter</span><div class="thumb-icon">⏱️</div></div>
-        <div class="card-body">
-          <h3 class="card-title">6. Hourly Rate Invoice</h3>
-          <p class="card-desc">Bill clients based on time entries and hourly rates.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/invoice.html', 'Hourly Rate Invoice')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-starter">Starter</span><div class="thumb-icon">📅</div></div>
-        <div class="card-body">
-          <h3 class="card-title">7. Recurring Subscription Invoice</h3>
-          <p class="card-desc">Automated billing format for monthly retainers.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/invoice.html', 'Recurring Invoice')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-starter">Starter</span><div class="thumb-icon">🏢</div></div>
-        <div class="card-body">
-          <h3 class="card-title">8. Commercial Invoice</h3>
-          <p class="card-desc">International trade invoice required for customs clearance.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/invoice.html', 'Commercial Invoice')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-starter">Starter</span><div class="thumb-icon">🛠️</div></div>
-        <div class="card-body">
-          <h3 class="card-title">9. Contractor Job Invoice</h3>
-          <p class="card-desc">Tailored for trade labor, materials, and equipment charges.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/invoice.html', 'Contractor Invoice')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-starter">Starter</span><div class="thumb-icon">💳</div></div>
-        <div class="card-body">
-          <h3 class="card-title">10. Credit Memo</h3>
-          <p class="card-desc">Issue formal billing adjustments and account credits.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/credit_memo.html', 'Credit Memo')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-pro">Pro</span><div class="thumb-icon">📉</div></div>
-        <div class="card-body">
-          <h3 class="card-title">11. Debit Memo</h3>
-          <p class="card-desc">Adjust client balances upward for unexpected fees.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/invoice.html', 'Debit Memo')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-pro">Pro</span><div class="thumb-icon">📊</div></div>
-        <div class="card-body">
-          <h3 class="card-title">12. Progress Billing Invoice</h3>
-          <p class="card-desc">Bill clients in percentage increments for long projects.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/invoice.html', 'Progress Billing')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-pro">Pro</span><div class="thumb-icon">⚠️</div></div>
-        <div class="card-body">
-          <h3 class="card-title">13. Past Due Notice Invoice</h3>
-          <p class="card-desc">Overdue balance statement with integrated late fees.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/invoice.html', 'Past Due Invoice')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-pro">Pro</span><div class="thumb-icon">💰</div></div>
-        <div class="card-body">
-          <h3 class="card-title">14. Sales Deposit Invoice</h3>
-          <p class="card-desc">Request upfront percentage or retainer payments.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/invoice.html', 'Deposit Invoice')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-pro">Pro</span><div class="thumb-icon">🚚</div></div>
-        <div class="card-body">
-          <h3 class="card-title">15. Freight &amp; Shipping Invoice</h3>
-          <p class="card-desc">Specialized logistics billing sheet with weight &amp; distance.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/invoice.html', 'Freight Invoice')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-pro">Pro</span><div class="thumb-icon">💻</div></div>
-        <div class="card-body">
-          <h3 class="card-title">16. Software Services Invoice</h3>
-          <p class="card-desc">Designed for SaaS, IT support, and tech projects.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/invoice.html', 'Software Invoice')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-pro">Pro</span><div class="thumb-icon">🎓</div></div>
-        <div class="card-body">
-          <h3 class="card-title">17. Consulting Fee Invoice</h3>
-          <p class="card-desc">Clean advisory billing sheet for professional consultants.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/invoice.html', 'Consulting Invoice')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-pro">Pro</span><div class="thumb-icon">🎨</div></div>
-        <div class="card-body">
-          <h3 class="card-title">18. Creative Studio Invoice</h3>
-          <p class="card-desc">Tailored for designers, agency work, and media production.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/invoice.html', 'Creative Invoice')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-pro">Pro</span><div class="thumb-icon">🏷️</div></div>
-        <div class="card-body">
-          <h3 class="card-title">19. Discounted Product Receipt</h3>
-          <p class="card-desc">Detailed receipt highlighting promo codes and markdown values.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/receipt.html', 'Discount Receipt')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-pro">Pro</span><div class="thumb-icon">📝</div></div>
-        <div class="card-body">
-          <h3 class="card-title">20. Final Settlement Invoice</h3>
-          <p class="card-desc">Concluding bill for completed long-term contracts.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/invoice.html', 'Settlement Invoice')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 2. CONTRACTS & LEGAL -->
-    <div class="category-title">🤝 Contracts &amp; Legal Agreements (21-40)</div>
-    <div class="card-grid">
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-pro">Pro</span><div class="thumb-icon">📋</div></div>
-        <div class="card-body">
-          <h3 class="card-title">21. Contractor Agreement</h3>
-          <p class="card-desc">Subcontractor terms, scope, and payment schedule.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/contractor-agreement.html', 'Contractor Agreement')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-pro">Pro</span><div class="thumb-icon">🔒</div></div>
-        <div class="card-body">
-          <h3 class="card-title">22. Non-Disclosure Agreement (NDA)</h3>
-          <p class="card-desc">Mutual or one-way confidentiality protection.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/contractor-agreement.html', 'NDA')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-pro">Pro</span><div class="thumb-icon">🤝</div></div>
-        <div class="card-body">
-          <h3 class="card-title">23. Master Services Agreement</h3>
-          <p class="card-desc">Core framework contract for long-term client engagements.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/contractor-agreement.html', 'MSA Agreement')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-pro">Pro</span><div class="thumb-icon">📜</div></div>
-        <div class="card-body">
-          <h3 class="card-title">24. Statement of Work (SOW)</h3>
-          <p class="card-desc">Define deliverables, milestones, and project timelines.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/contractor-agreement.html', 'Statement of Work')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-pro">Pro</span><div class="thumb-icon">💼</div></div>
-        <div class="card-body">
-          <h3 class="card-title">25. Freelance Service Contract</h3>
-          <p class="card-desc">Simple, protective contract for independent creators.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/contractor-agreement.html', 'Freelance Contract')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-pro">Pro</span><div class="thumb-icon">👥</div></div>
-        <div class="card-body">
-          <h3 class="card-title">26. Employment Agreement</h3>
-          <p class="card-desc">Standard terms of employment, duties, and compensation.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/contractor-agreement.html', 'Employment Contract')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-pro">Pro</span><div class="thumb-icon">🏢</div></div>
-        <div class="card-body">
-          <h3 class="card-title">27. Commercial Lease Agreement</h3>
-          <p class="card-desc">Office or shop rental contract for business tenants.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/contractor-agreement.html', 'Lease Agreement')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-pro">Pro</span><div class="thumb-icon">⚡</div></div>
-        <div class="card-body">
-          <h3 class="card-title">28. Partnership Agreement</h3>
-          <p class="card-desc">Structure equity, profit splits, and co-founder roles.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/contractor-agreement.html', 'Partnership Agreement')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-pro">Pro</span><div class="thumb-icon">🔑</div></div>
-        <div class="card-body">
-          <h3 class="card-title">29. IP Assignment Agreement</h3>
-          <p class="card-desc">Transfer ownership of intellectual property cleanly.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/contractor-agreement.html', 'IP Assignment')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-pro">Pro</span><div class="thumb-icon">🛡️</div></div>
-        <div class="card-body">
-          <h3 class="card-title">30. Liability Waiver Form</h3>
-          <p class="card-desc">Protect your business against customer injury or damages.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/contractor-agreement.html', 'Liability Waiver')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-ultimate">Ultimate</span><div class="thumb-icon">📢</div></div>
-        <div class="card-body">
-          <h3 class="card-title">31. Media &amp; Photo Release Form</h3>
-          <p class="card-desc">Permission form to use client images/video in marketing.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/contractor-agreement.html', 'Media Release')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-ultimate">Ultimate</span><div class="thumb-icon">🚫</div></div>
-        <div class="card-body">
-          <h3 class="card-title">32. Non-Compete Agreement</h3>
-          <p class="card-desc">Restrict competitive trade practices after employment.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/contractor-agreement.html', 'Non-Compete')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-ultimate">Ultimate</span><div class="thumb-icon">🤝</div></div>
-        <div class="card-body">
-          <h3 class="card-title">33. Referral Fee Agreement</h3>
-          <p class="card-desc">Commission structure for third-party affiliate referrals.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/contractor-agreement.html', 'Referral Agreement')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-ultimate">Ultimate</span><div class="thumb-icon">🔄</div></div>
-        <div class="card-body">
-          <h3 class="card-title">34. Contract Termination Letter</h3>
-          <p class="card-desc">Formal legal notice ending a vendor or client contract.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/contractor-agreement.html', 'Termination Letter')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-ultimate">Ultimate</span><div class="thumb-icon">📝</div></div>
-        <div class="card-body">
-          <h3 class="card-title">35. Contract Amendment Form</h3>
-          <p class="card-desc">Modify existing agreement terms without rewriting.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/contractor-agreement.html', 'Contract Amendment')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-ultimate">Ultimate</span><div class="thumb-icon">💼</div></div>
-        <div class="card-body">
-          <h3 class="card-title">36. Advisory Board Agreement</h3>
-          <p class="card-desc">Terms for hiring business advisors and mentors.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/contractor-agreement.html', 'Advisory Agreement')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-ultimate">Ultimate</span><div class="thumb-icon">🌐</div></div>
-        <div class="card-body">
-          <h3 class="card-title">37. Website Privacy Policy</h3>
-          <p class="card-desc">Standard compliance document for web applications.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/contractor-agreement.html', 'Privacy Policy')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-ultimate">Ultimate</span><div class="thumb-icon">📜</div></div>
-        <div class="card-body">
-          <h3 class="card-title">38. Terms of Service (ToS)</h3>
-          <p class="card-desc">Legal usage terms for digital tools and services.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/contractor-agreement.html', 'Terms of Service')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-ultimate">Ultimate</span><div class="thumb-icon">🏷️</div></div>
-        <div class="card-body">
-          <h3 class="card-title">39. Licensing Agreement</h3>
-          <p class="card-desc">Grant third parties rights to use your assets/brand.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/contractor-agreement.html', 'Licensing Agreement')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-ultimate">Ultimate</span><div class="thumb-icon">📦</div></div>
-        <div class="card-body">
-          <h3 class="card-title">40. Subcontractor Scope Form</h3>
-          <p class="card-desc">Detailed labor and materials task order attachment.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/contractor-agreement.html', 'Subcontractor Scope')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 3. PROPOSALS & ESTIMATES -->
-    <div class="category-title">📋 Proposals &amp; Project Estimates (41-55)</div>
-    <div class="card-grid">
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-pro">Pro</span><div class="thumb-icon">📋</div></div>
-        <div class="card-body">
-          <h3 class="card-title">41. Project Proposal</h3>
-          <p class="card-desc">Structured client proposal with scope and deliverables.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/project-proposal.html', 'Project Proposal')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-pro">Pro</span><div class="thumb-icon">🛠️</div></div>
-        <div class="card-body">
-          <h3 class="card-title">42. Work Order Form</h3>
-          <p class="card-desc">Field job authorization for technicians and crews.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/work-order.html', 'Work Order')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-pro">Pro</span><div class="thumb-icon">📐</div></div>
-        <div class="card-body">
-          <h3 class="card-title">43. Estimating Sheet</h3>
-          <p class="card-desc">Calculate materials, labor, and overhead for profit margins.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/estimating-sheet.html', 'Estimating Sheet')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-pro">Pro</span><div class="thumb-icon">💡</div></div>
-        <div class="card-body">
-          <h3 class="card-title">44. Creative Pitch Deck Outline</h3>
-          <p class="card-desc">Slide outline and document proposal for creative agencies.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/project-proposal.html', 'Pitch Deck')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-pro">Pro</span><div class="thumb-icon">🏗️</div></div>
-        <div class="card-body">
-          <h3 class="card-title">45. Construction Bid Form</h3>
-          <p class="card-desc">Formal bid submission sheet for trade contractors.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/project-proposal.html', 'Construction Bid')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-ultimate">Ultimate</span><div class="thumb-icon">📢</div></div>
-        <div class="card-body">
-          <h3 class="card-title">46. Marketing Strategy Proposal</h3>
-          <p class="card-desc">Campaign roadmap, channel allocation, and deliverables.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/project-proposal.html', 'Marketing Proposal')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-ultimate">Ultimate</span><div class="thumb-icon">💻</div></div>
-        <div class="card-body">
-          <h3 class="card-title">47. Software Development Spec</h3>
-          <p class="card-desc">Technical specification proposal and milestones.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/project-proposal.html', 'Software Spec')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-ultimate">Ultimate</span><div class="thumb-icon">🎯</div></div>
-        <div class="card-body">
-          <h3 class="card-title">48. Grant Application Proposal</h3>
-          <p class="card-desc">Structured grant proposal template for organizations.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/project-proposal.html', 'Grant Proposal')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-ultimate">Ultimate</span><div class="thumb-icon">🏢</div></div>
-        <div class="card-body">
-          <h3 class="card-title">49. RFP Response Template</h3>
-          <p class="card-desc">Standard response document for corporate RFPs.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/project-proposal.html', 'RFP Response')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-ultimate">Ultimate</span><div class="thumb-icon">🔄</div></div>
-        <div class="card-body">
-          <h3 class="card-title">50. Change Order Request Form</h3>
-          <p class="card-desc">Document client scope modifications and fee additions.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/work-order.html', 'Change Order')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-ultimate">Ultimate</span><div class="thumb-icon">🧹</div></div>
-        <div class="card-body">
-          <h3 class="card-title">51. Commercial Service Bid</h3>
-          <p class="card-desc">Janitorial, maintenance, and facility service estimate.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/project-proposal.html', 'Commercial Bid')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-ultimate">Ultimate</span><div class="thumb-icon">📸</div></div>
-        <div class="card-body">
-          <h3 class="card-title">52. Event &amp; Photo Estimate</h3>
-          <p class="card-desc">Hourly, venue, and licensing cost estimate form.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/estimating-sheet.html', 'Event Estimate')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-ultimate">Ultimate</span><div class="thumb-icon">📦</div></div>
-        <div class="card-body">
-          <h3 class="card-title">53. Supply Procurement Request</h3>
-          <p class="card-desc">Internal purchasing requisition &amp; estimate approval.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/work-order.html', 'Procurement Request')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-ultimate">Ultimate</span><div class="thumb-icon">🚗</div></div>
-        <div class="card-body">
-          <h3 class="card-title">54. Repair Estimate Form</h3>
-          <p class="card-desc">Auto and equipment repair diagnostic quote.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/estimating-sheet.html', 'Repair Estimate')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-ultimate">Ultimate</span><div class="thumb-icon">📈</div></div>
-        <div class="card-body">
-          <h3 class="card-title">55. Growth Strategy Proposal</h3>
-          <p class="card-desc">Executive pitch for corporate scaling &amp; funding.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/project-proposal.html', 'Growth Proposal')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 4. ACCOUNTING & FINANCIAL REPORTS -->
-    <div class="category-title">📊 Accounting &amp; Financial Reports (56-75)</div>
-    <div class="card-grid">
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-pro">Pro</span><div class="thumb-icon">💸</div></div>
-        <div class="card-body">
-          <h3 class="card-title">56. Expense Report Sheet</h3>
-          <p class="card-desc">Log employee business expenses for quick reimbursement.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/expense-report.html', 'Expense Report')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-ultimate">Ultimate</span><div class="thumb-icon">📈</div></div>
-        <div class="card-body">
-          <h3 class="card-title">57. Profit &amp; Loss Statement</h3>
-          <p class="card-desc">Monthly and annual revenue and expense report.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/profit-and-loss.html', 'Profit &amp; Loss')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-ultimate">Ultimate</span><div class="thumb-icon">🧮</div></div>
-        <div class="card-body">
-          <h3 class="card-title">58. Tax Estimation Sheet</h3>
-          <p class="card-desc">Calculate quarterly estimated tax set-asides accurately.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/tax_estimation.html', 'Tax Estimation')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-ultimate">Ultimate</span><div class="thumb-icon">💵</div></div>
-        <div class="card-body">
-          <h3 class="card-title">59. Cash Flow Statement</h3>
-          <p class="card-desc">Track operating, investing, and financing cash movements.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/profit-and-loss.html', 'Cash Flow')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-ultimate">Ultimate</span><div class="thumb-icon">⚖️</div></div>
-        <div class="card-body">
-          <h3 class="card-title">60. Balance Sheet Tracker</h3>
-          <p class="card-desc">Summary of business assets, liabilities, and equity.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/profit-and-loss.html', 'Balance Sheet')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-ultimate">Ultimate</span><div class="thumb-icon">📊</div></div>
-        <div class="card-body">
-          <h3 class="card-title">61. Annual Budget Planning Sheet</h3>
-          <p class="card-desc">Forecast annual revenue and cap departmental spend.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/profit-and-loss.html', 'Budget Plan')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-ultimate">Ultimate</span><div class="thumb-icon">🎯</div></div>
-        <div class="card-body">
-          <h3 class="card-title">62. Break-Even Analysis Sheet</h3>
-          <p class="card-desc">Calculate sales volume needed to cover overhead.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/profit-and-loss.html', 'Break Even')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-ultimate">Ultimate</span><div class="thumb-icon">🏦</div></div>
-        <div class="card-body">
-          <h3 class="card-title">63. Bank Reconciliation Log</h3>
-          <p class="card-desc">Match cash ledgers against bank account statements.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/profit-and-loss.html', 'Bank Recon')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-ultimate">Ultimate</span><div class="thumb-icon">🪙</div></div>
-        <div class="card-body">
-          <h3 class="card-title">64. Petty Cash Voucher Log</h3>
-          <p class="card-desc">Track minor office cash disbursements cleanly.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/expense-report.html', 'Petty Cash')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-ultimate">Ultimate</span><div class="thumb-icon">📉</div></div>
-        <div class="card-body">
-          <h3 class="card-title">65. Accounts Receivable Aging Report</h3>
-          <p class="card-desc">Monitor unpaid invoices by 30, 60, and 90+ day buckets.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/profit-and-loss.html', 'Aging Report')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-ultimate">Ultimate</span><div class="thumb-icon">📈</div></div>
-        <div class="card-body">
-          <h3 class="card-title">66. Accounts Payable Ledger</h3>
-          <p class="card-desc">Track upcoming vendor liabilities and payment dates.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/profit-and-loss.html', 'Payable Ledger')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-ultimate">Ultimate</span><div class="thumb-icon">🏭</div></div>
-        <div class="card-body">
-          <h3 class="card-title">67. Cost of Goods Sold (COGS) Sheet</h3>
-          <p class="card-desc">Calculate direct material &amp; labor expenses per product.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/profit-and-loss.html', 'COGS Sheet')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-ultimate">Ultimate</span><div class="thumb-icon">💼</div></div>
-        <div class="card-body">
-          <h3 class="card-title">68. Payroll Summary Register</h3>
-          <p class="card-desc">Log employee gross wages, taxes, and net disbursements.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/profit-and-loss.html', 'Payroll Register')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-ultimate">Ultimate</span><div class="thumb-icon">🚗</div></div>
-        <div class="card-body">
-          <h3 class="card-title">69. Vehicle Asset Depreciation Tracker</h3>
-          <p class="card-desc">Track equipment tax write-offs and asset value loss.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/profit-and-loss.html', 'Depreciation Tracker')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-ultimate">Ultimate</span><div class="thumb-icon">🏢</div></div>
-        <div class="card-body">
-          <h3 class="card-title">70. Overhead Allocation Sheet</h3>
-          <p class="card-desc">Distribute rent, utilities, and software costs across jobs.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/profit-and-loss.html', 'Overhead Allocation')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-ultimate">Ultimate</span><div class="thumb-icon">📊</div></div>
-        <div class="card-body">
-          <h3 class="card-title">71. Monthly Financial KPI Dashboard</h3>
-          <p class="card-desc">High-level financial health summary for business owners.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/profit-and-loss.html', 'KPI Dashboard')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-ultimate">Ultimate</span><div class="thumb-icon">💳</div></div>
-        <div class="card-body">
-          <h3 class="card-title">72. Credit Card Expense Log</h3>
-          <p class="card-desc">Reconcile company card receipts with monthly statements.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/expense-report.html', 'Card Expense Log')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-ultimate">Ultimate</span><div class="thumb-icon">🎁</div></div>
-        <div class="card-body">
-          <h3 class="card-title">73. Charitable Contribution Log</h3>
-          <p class="card-desc">Log tax-deductible business donations and receipts.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/expense-report.html', 'Charity Log')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-ultimate">Ultimate</span><div class="thumb-icon">🛠️</div></div>
-        <div class="card-body">
-          <h3 class="card-title">74. Capital Expenditure (CapEx) Tracker</h3>
-          <p class="card-desc">Monitor large equipment and real estate investments.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/profit-and-loss.html', 'CapEx Tracker')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-ultimate">Ultimate</span><div class="thumb-icon">🔍</div></div>
-        <div class="card-body">
-          <h3 class="card-title">75. Internal Audit Checklist</h3>
-          <p class="card-desc">Ensure internal accounting compliance and security.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/profit-and-loss.html', 'Audit Checklist')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 5. BUSINESS MANAGEMENT & OPERATIONS -->
-    <div class="category-title">⚙️ Operations &amp; Management (76-90)</div>
-    <div class="card-grid">
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-pro">Pro</span><div class="thumb-icon">⏱️</div></div>
-        <div class="card-body">
-          <h3 class="card-title">76. Hourly Timesheet Log</h3>
-          <p class="card-desc">Record hourly work, project tasks, and billable time.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/timesheet.html', 'Hourly Timesheet')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-ultimate">Ultimate</span><div class="thumb-icon">👥</div></div>
-        <div class="card-body">
-          <h3 class="card-title">77. Client CRM Database</h3>
-          <p class="card-desc">Organize client contacts, account status, and call notes.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/client-database.html', 'Client Database')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-ultimate">Ultimate</span><div class="thumb-icon">🎯</div></div>
-        <div class="card-body">
-          <h3 class="card-title">78. Business Growth Tracker</h3>
-          <p class="card-desc">Monitor sales pipelines, revenue targets, and goals.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/business-tracker.html', 'Business Tracker')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-ultimate">Ultimate</span><div class="thumb-icon">🚗</div></div>
-        <div class="card-body">
-          <h3 class="card-title">79. Vehicle Mileage Log</h3>
-          <p class="card-desc">Log travel miles for IRS tax write-offs &amp; reimbursements.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/mileage-log.html', 'Mileage Log')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-ultimate">Ultimate</span><div class="thumb-icon">📦</div></div>
-        <div class="card-body">
-          <h3 class="card-title">80. Inventory Tracker Sheet</h3>
-          <p class="card-desc">Monitor stock levels, reorder points, and SKU values.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/business-tracker.html', 'Inventory Tracker')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-ultimate">Ultimate</span><div class="thumb-icon">🚚</div></div>
-        <div class="card-body">
-          <h3 class="card-title">81. Delivery Note / Packing Slip</h3>
-          <p class="card-desc">Accompany physical orders with itemized fulfillment slips.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/work-order.html', 'Delivery Note')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-ultimate">Ultimate</span><div class="thumb-icon">📅</div></div>
-        <div class="card-body">
-          <h3 class="card-title">82. Staff Shift Schedule Planner</h3>
-          <p class="card-desc">Organize weekly employee shifts, coverage, and hours.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/timesheet.html', 'Shift Schedule')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-ultimate">Ultimate</span><div class="thumb-icon">📋</div></div>
-        <div class="card-body">
-          <h3 class="card-title">83. Project Milestone Roadmap</h3>
-          <p class="card-desc">Gantt-style task tracking spreadsheet for team projects.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/business-tracker.html', 'Project Roadmap')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-ultimate">Ultimate</span><div class="thumb-icon">🏭</div></div>
-        <div class="card-body">
-          <h3 class="card-title">84. Vendor &amp; Supplier Directory</h3>
-          <p class="card-desc">Maintain terms, contact info, and IDs for suppliers.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/client-database.html', 'Vendor Directory')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-ultimate">Ultimate</span><div class="thumb-icon">🛠️</div></div>
-        <div class="card-body">
-          <h3 class="card-title">85. Equipment Maintenance Log</h3>
-          <p class="card-desc">Track service schedules and repair costs for machinery.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/business-tracker.html', 'Maintenance Log')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-ultimate">Ultimate</span><div class="thumb-icon">💡</div></div>
-        <div class="card-body">
-          <h3 class="card-title">86. SOP Operations Template</h3>
-          <p class="card-desc">Document standard operating procedures for team onboarding.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/project-proposal.html', 'SOP Template')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-ultimate">Ultimate</span><div class="thumb-icon">📞</div></div>
-        <div class="card-body">
-          <h3 class="card-title">87. Customer Support Ticket Log</h3>
-          <p class="card-desc">Log client inquiries, resolution status, and response time.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/business-tracker.html', 'Support Ticket Log')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-ultimate">Ultimate</span><div class="thumb-icon">📈</div></div>
-        <div class="card-body">
-          <h3 class="card-title">88. Sales Lead Pipeline Tracker</h3>
-          <p class="card-desc">Track leads from initial contact to closed-won deals.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/business-tracker.html', 'Lead Pipeline')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-ultimate">Ultimate</span><div class="thumb-icon">🔑</div></div>
-        <div class="card-body">
-          <h3 class="card-title">89. Office Asset Checkout Sheet</h3>
-          <p class="card-desc">Track company laptops, tools, and hardware assigned to staff.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/business-tracker.html', 'Asset Checkout')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="template-card">
-        <div class="card-preview-thumb"><span class="card-tier-badge tier-ultimate">Ultimate</span><div class="thumb-icon">📝</div></div>
-        <div class="card-body">
-          <h3 class="card-title">90. Meeting Minutes &amp; Action Tracker</h3>
-          <p class="card-desc">Document meeting takeaways, action items, and owners.</p>
-          <div class="card-actions">
-            <button onclick="openPreview('./previews/project-proposal.html', 'Meeting Minutes')" class="btn-card btn-preview-card">Preview</button>
-            <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PREVIEW MODAL CONTAINER -->
-  <div id="previewModal" class="modal-overlay">
-    <div class="modal-container">
-      <div class="modal-header">
-        <h3 id="modalTitle">Document Preview</h3>
-        <button class="btn-close-modal" onclick="closePreview()">&times;</button>
-      </div>
-      <div class="modal-body">
-        <iframe id="modalIframe" src="about:blank"></iframe>
       </div>
     </div>
   </div>
 
-  <!-- JAVASCRIPT FOR MODAL FUNCTIONALITY -->
+  <main class="container">
+
+    <!-- PRICING PLANS -->
+    <section id="pricing" class="section-block">
+      <h2 class="section-title">Simple, Transparent Ownership</h2>
+      <p class="section-subtitle">Select the tier that matches your current scale. Pay once with zero recurring billing.</p>
+
+      <div class="pricing-grid">
+        
+        <!-- STARTER CARD -->
+        <div class="price-card">
+          <h3>Starter Pass</h3>
+          <div class="price-target">Essential billing tools for freelancers</div>
+          <div class="price-amount">$19 <span>one-time</span></div>
+          
+          <div class="included-list-title">Includes 4 Essential Templates:</div>
+          <ul class="price-features">
+            <li>✅ <strong>Invoice Template</strong></li>
+            <li>✅ <strong>Receipt Template</strong></li>
+            <li>✅ <strong>Purchase Order</strong></li>
+            <li>✅ <strong>Service Quote</strong></li>
+            <li style="color:var(--text-muted);">🔒 Instant file download</li>
+            <li style="color:var(--text-muted);">🔒 Commercial license included</li>
+          </ul>
+          <a href="#" class="btn-price btn-price-secondary">Get Starter Pass</a>
+        </div>
+
+        <!-- PROFESSIONAL CARD -->
+        <div class="price-card">
+          <h3>Professional Pass</h3>
+          <div class="price-target">Complete operational toolkit for small teams</div>
+          <div class="price-amount">$39 <span>one-time</span></div>
+          
+          <div class="included-list-title">Includes 10 Core Templates:</div>
+          <ul class="price-features">
+            <li>✅ <strong>Everything in Starter (4)</strong></li>
+            <li>✅ <strong>Project Proposal</strong></li>
+            <li>✅ <strong>Contractor Agreement</strong></li>
+            <li>✅ <strong>Work Order</strong></li>
+            <li>✅ <strong>Credit Memo</strong></li>
+            <li>✅ <strong>Expense Report</strong></li>
+            <li>✅ <strong>Timesheet Log</strong></li>
+            <li style="color:var(--text-muted);">🔒 Commercial license included</li>
+          </ul>
+          <a href="#" class="btn-price btn-price-secondary">Get Professional Pass</a>
+        </div>
+
+        <!-- ULTIMATE CARD -->
+        <div class="price-card ultimate-card">
+          <span class="badge-ultimate">⭐ Everything We Create</span>
+          <h3>Ultimate Library Pass</h3>
+          <div class="price-target">Complete document vault + every future release</div>
+          <div class="price-amount">$69 <span>one-time</span></div>
+          
+          <div class="included-list-title">Complete Unrestricted Access:</div>
+          <ul class="price-features">
+            <li>✅ <strong>Everything in Professional</strong></li>
+            <li>✅ <strong>All Current Templates (18 Total)</strong></li>
+            <li>✅ <strong>Every Future Template Release</strong></li>
+            <li>✅ <strong>Lifetime Library Updates</strong></li>
+            <li>🚀 <strong>66+ Total Templates Planned</strong></li>
+            <li>🔒 <strong>Unlimited Commercial License</strong></li>
+            <li>⚡ <strong>Priority Design Requests</strong></li>
+          </ul>
+          <a href="#" class="btn-price btn-price-primary">Unlock Everything. Forever.</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- BROWSE THE COLLECTION (CATEGORIZED TEMPLATE GALLERY) -->
+    <section id="collection" class="section-block">
+      <h2 class="section-title">Browse the Collection</h2>
+      <p class="section-subtitle">Inspect every document in our library. Click any preview button to view the actual template live.</p>
+
+      <!-- CATEGORY 1: INVOICES & BILLING -->
+      <div class="category-title">💳 Invoices & Billing</div>
+      <div class="card-grid">
+        
+        <div class="template-card">
+          <div class="card-preview-thumb">
+            <span class="card-tier-badge tier-starter">Starter</span>
+            <div class="thumb-icon">📄</div>
+            <strong>Invoice</strong>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Professional Invoice</h3>
+            <p class="card-desc">Send polished invoices that strengthen your brand and ensure prompt payments.</p>
+            <div class="card-actions">
+              <button onclick="openPreview('./previews/invoice.html', 'Professional Invoice')" class="btn-card btn-preview-card">Preview Document</button>
+              <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="template-card">
+          <div class="card-preview-thumb">
+            <span class="card-tier-badge tier-starter">Starter</span>
+            <div class="thumb-icon">🧾</div>
+            <strong>Receipt</strong>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Payment Receipt</h3>
+            <p class="card-desc">Issue official payment confirmations to clients upon completion of sales or services.</p>
+            <div class="card-actions">
+              <button onclick="openPreview('./previews/receipt.html', 'Payment Receipt')" class="btn-card btn-preview-card">Preview Document</button>
+              <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="template-card">
+          <div class="card-preview-thumb">
+            <span class="card-tier-badge tier-starter">Starter</span>
+            <div class="thumb-icon">📦</div>
+            <strong>Purchase Order</strong>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Purchase Order (PO)</h3>
+            <p class="card-desc">Standardize vendor purchases and material requisitions for smooth operations.</p>
+            <div class="card-actions">
+              <button onclick="openPreview('./previews/purchase-order.html', 'Purchase Order')" class="btn-card btn-preview-card">Preview Document</button>
+              <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="template-card">
+          <div class="card-preview-thumb">
+            <span class="card-tier-badge tier-pro">Professional</span>
+            <div class="thumb-icon">💳</div>
+            <strong>Credit Memo</strong>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Credit Memo</h3>
+            <p class="card-desc">Issue formal billing adjustments, refunds, or service credits to customer accounts.</p>
+            <div class="card-actions">
+              <button onclick="openPreview('./previews/credit_memo.html', 'Credit Memo')" class="btn-card btn-preview-card">Preview Document</button>
+              <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="template-card">
+          <div class="card-preview-thumb">
+            <span class="card-tier-badge tier-starter">Starter</span>
+            <div class="thumb-icon">💬</div>
+            <strong>Service Quote</strong>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Service Quote</h3>
+            <p class="card-desc">Provide accurate cost estimates before commencing work to lock in client agreements.</p>
+            <div class="card-actions">
+              <button onclick="openPreview('./previews/service-quote.html', 'Service Quote')" class="btn-card btn-preview-card">Preview Document</button>
+              <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CATEGORY 2: BUSINESS DOCUMENTS -->
+      <div class="category-title">📝 Business Documents</div>
+      <div class="card-grid">
+
+        <div class="template-card">
+          <div class="card-preview-thumb">
+            <span class="card-tier-badge tier-pro">Professional</span>
+            <div class="thumb-icon">📋</div>
+            <strong>Project Proposal</strong>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Project Proposal</h3>
+            <p class="card-desc">Win more clients with structured, professional project scopes and deliverables.</p>
+            <div class="card-actions">
+              <button onclick="openPreview('./previews/project-proposal.html', 'Project Proposal')" class="btn-card btn-preview-card">Preview Document</button>
+              <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="template-card">
+          <div class="card-preview-thumb">
+            <span class="card-tier-badge tier-pro">Professional</span>
+            <div class="thumb-icon">🤝</div>
+            <strong>Contractor Agreement</strong>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Contractor Agreement</h3>
+            <p class="card-desc">Protect your business with straightforward subcontractor and freelance terms of service.</p>
+            <div class="card-actions">
+              <button onclick="openPreview('./previews/contractor-agreement.html', 'Contractor Agreement')" class="btn-card btn-preview-card">Preview Document</button>
+              <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="template-card">
+          <div class="card-preview-thumb">
+            <span class="card-tier-badge tier-pro">Professional</span>
+            <div class="thumb-icon">🛠️</div>
+            <strong>Work Order</strong>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Work Order</h3>
+            <p class="card-desc">Authorize field tasks, labor, and job site requirements cleanly for crews and technicians.</p>
+            <div class="card-actions">
+              <button onclick="openPreview('./previews/work-order.html', 'Work Order')" class="btn-card btn-preview-card">Preview Document</button>
+              <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="template-card">
+          <div class="card-preview-thumb">
+            <span class="card-tier-badge tier-ultimate">Ultimate</span>
+            <div class="thumb-icon">📐</div>
+            <strong>Estimating Sheet</strong>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Estimating Sheet</h3>
+            <p class="card-desc">Calculate labor, materials, and overhead costs to ensure profitable job pricing.</p>
+            <div class="card-actions">
+              <button onclick="openPreview('./previews/estimating-sheet.html', 'Estimating Sheet')" class="btn-card btn-preview-card">Preview Document</button>
+              <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CATEGORY 3: ACCOUNTING -->
+      <div class="category-title">📊 Accounting</div>
+      <div class="card-grid">
+
+        <div class="template-card">
+          <div class="card-preview-thumb">
+            <span class="card-tier-badge tier-ultimate">Ultimate</span>
+            <div class="thumb-icon">📈</div>
+            <strong>Profit & Loss</strong>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Profit & Loss Statement</h3>
+            <p class="card-desc">Track business performance with clear income and expenditure financial reports.</p>
+            <div class="card-actions">
+              <button onclick="openPreview('./previews/profit-and-loss.html', 'Profit & Loss')" class="btn-card btn-preview-card">Preview Document</button>
+              <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="template-card">
+          <div class="card-preview-thumb">
+            <span class="card-tier-badge tier-pro">Professional</span>
+            <div class="thumb-icon">💸</div>
+            <strong>Expense Report</strong>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Expense Report</h3>
+            <p class="card-desc">Log and categorize employee business expenses for quick reimbursement.</p>
+            <div class="card-actions">
+              <button onclick="openPreview('./previews/expense-report.html', 'Expense Report')" class="btn-card btn-preview-card">Preview Document</button>
+              <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="template-card">
+          <div class="card-preview-thumb">
+            <span class="card-tier-badge tier-ultimate">Ultimate</span>
+            <div class="thumb-icon">🧮</div>
+            <strong>Tax Estimation</strong>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Tax Estimation Sheet</h3>
+            <p class="card-desc">Estimate quarterly tax set-asides and avoid end-of-year tax surprises.</p>
+            <div class="card-actions">
+              <button onclick="openPreview('./previews/tax_estimation.html', 'Tax Estimation')" class="btn-card btn-preview-card">Preview Document</button>
+              <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CATEGORY 4: BUSINESS MANAGEMENT -->
+      <div class="category-title">⚙️ Business Management</div>
+      <div class="card-grid">
+
+        <div class="template-card">
+          <div class="card-preview-thumb">
+            <span class="card-tier-badge tier-ultimate">Ultimate</span>
+            <div class="thumb-icon">👥</div>
+            <strong>Client Database</strong>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Client Database</h3>
+            <p class="card-desc">Organize client contacts, communication history, and account notes in one place.</p>
+            <div class="card-actions">
+              <button onclick="openPreview('./previews/client-database.html', 'Client Database')" class="btn-card btn-preview-card">Preview Document</button>
+              <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="template-card">
+          <div class="card-preview-thumb">
+            <span class="card-tier-badge tier-ultimate">Ultimate</span>
+            <div class="thumb-icon">🎯</div>
+            <strong>Business Tracker</strong>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Business Tracker</h3>
+            <p class="card-desc">Monitor monthly revenue targets, sales pipelines, and key growth metrics.</p>
+            <div class="card-actions">
+              <button onclick="openPreview('./previews/business-tracker.html', 'Business Tracker')" class="btn-card btn-preview-card">Preview Document</button>
+              <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="template-card">
+          <div class="card-preview-thumb">
+            <span class="card-tier-badge tier-pro">Professional</span>
+            <div class="thumb-icon">⏱️</div>
+            <strong>Timesheet</strong>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Hourly Timesheet</h3>
+            <p class="card-desc">Record hourly work, project tasks, and billable client hours accurately.</p>
+            <div class="card-actions">
+              <button onclick="openPreview('./previews/timesheet.html', 'Timesheet')" class="btn-card btn-preview-card">Preview Document</button>
+              <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="template-card">
+          <div class="card-preview-thumb">
+            <span class="card-tier-badge tier-ultimate">Ultimate</span>
+            <div class="thumb-icon">🚗</div>
+            <strong>Mileage Log</strong>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Mileage Log</h3>
+            <p class="card-desc">Log travel miles for tax deductions and client travel expense claims.</p>
+            <div class="card-actions">
+              <button onclick="openPreview('./previews/mileage-log.html', 'Mileage Log')" class="btn-card btn-preview-card">Preview Document</button>
+              <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CATEGORY 5: REPORTS -->
+      <div class="category-title">📂 Reports & Account Summaries</div>
+      <div class="card-grid">
+
+        <div class="template-card">
+          <div class="card-preview-thumb">
+            <span class="card-tier-badge tier-ultimate">Ultimate</span>
+            <div class="thumb-icon">🏛️</div>
+            <strong>Account Statement</strong>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Account Statement</h3>
+            <p class="card-desc">Provide clients with detailed monthly summaries of outstanding balances and billing history.</p>
+            <div class="card-actions">
+              <button onclick="openPreview('./previews/account-statement.html', 'Account Statement')" class="btn-card btn-preview-card">Preview Document</button>
+              <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="template-card">
+          <div class="card-preview-thumb">
+            <span class="card-tier-badge tier-ultimate">Ultimate</span>
+            <div class="thumb-icon">📚</div>
+            <strong>Invoice Ledger</strong>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Invoice Ledger</h3>
+            <p class="card-desc">Maintain a centralized view of sent invoices, paid status, and outstanding receivables.</p>
+            <div class="card-actions">
+              <button onclick="openPreview('./previews/invoice-ledger.html', 'Invoice Ledger')" class="btn-card btn-preview-card">Preview Document</button>
+              <a href="#pricing" class="btn-card btn-use-card">Get Pass</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- WHY BUY VS FREE TEMPLATES -->
+    <section class="section-block">
+      <h2 class="section-title">Why Buy Instead of Using Free Templates?</h2>
+      <p class="section-subtitle">Free web templates often cost you hours in broken layouts and unprofessional branding.</p>
+
+      <div class="vs-grid">
+        <div class="vs-card">
+          <h3 style="color: #ef4444;">❌ Free Web Templates</h3>
+          <ul class="vs-list">
+            <li>⚠️ Cluttered with external logos & watermarks</li>
+            <li>⚠️ Broken print stylesheets and page breaks</li>
+            <li>⚠️ Inconsistent design styles across documents</li>
+            <li>⚠️ Wastes hours fixing formulas & CSS alignment</li>
+            <li>⚠️ No ongoing updates or new form releases</li>
+          </ul>
+        </div>
+
+        <div class="vs-card paid">
+          <h3 style="color: var(--primary);">✅ BizTemplates Pro Library</h3>
+          <ul class="vs-list">
+            <li>✨ <strong>100% Brandable:</strong> Completely clean with your logo</li>
+            <li>✨ <strong>Print & PDF Ready:</strong> Perfectly calibrated layouts</li>
+            <li>✨ <strong>Consistent Branding:</strong> Uniform design system</li>
+            <li>✨ <strong>Saves Hours:</strong> Pre-built formulas & clean structure</li>
+            <li>✨ <strong>One-Time Purchase:</strong> Pay once, own for life</li>
+            <li>✨ <strong>Lifetime Access:</strong> Ongoing releases with Ultimate</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- GROWING ROADMAP SECTION -->
+    <section class="section-block">
+      <div class="roadmap-box text-center">
+        <h2 style="margin-top:0;">🚀 Active Development Roadmap</h2>
+        <p style="color:var(--text-muted); margin-bottom:1rem;">
+          Ultimate pass holders receive instant access to all 18 current templates today plus lifetime access to our upcoming pipeline as designs release toward our 66+ document goal.
+        </p>
+        
+        <div class="upcoming-grid">
+          <div class="upcoming-item"><span>🔄</span> Delivery Note</div>
+          <div class="upcoming-item"><span>🔄</span> Packing Slip</div>
+          <div class="upcoming-item"><span>🔄</span> Inventory Tracker</div>
+          <div class="upcoming-item"><span>🔄</span> Cash Flow Statement</div>
+          <div class="upcoming-item"><span>🔄</span> Sales Pipeline Report</div>
+          <div class="upcoming-item"><span>🔄</span> Subcontractor Scope</div>
+          <div class="upcoming-item"><span>🔄</span> Balance Sheet</div>
+          <div class="upcoming-item"><span>🔄</span> Commercial Lease Memo</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FREQUENTLY ASKED QUESTIONS -->
+    <section class="section-block">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <p class="section-subtitle">Clear answers regarding licensing, file types, and updates.</p>
+
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h4>Are these templates only invoices?</h4>
+          <p>No! Our collection covers the full spectrum of operational business needs: financial reports, proposals, client databases, timesheets, and contractor agreements.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Are there recurring monthly fees?</h4>
+          <p>No. All purchases are strict one-time payments granting lifetime ownership of the included files.</p>
+        </div>
+        <div class="faq-item">
+          <h4>How do Ultimate members receive new templates?</h4>
+          <p>Whenever a new document or tracker is designed and added to the pipeline, it automatically unlocks inside your Ultimate member download area at no extra cost.</p>
+        </div>
+        <div class="faq-item">
+          <h4>What file formats do I receive?</h4>
+          <p>You receive clean, customizable source files tailored to the template function—including print-ready HTML, Word (.docx), Excel (.xlsx), and PDF formats.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- LIVE PREVIEW MODAL -->
+  <div id="preview-modal" class="modal" style="display:none;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="modal-title" style="margin:0; font-size:1.1rem;">Template Live Preview</h3>
+        <div class="modal-actions">
+          <button class="btn-modal-action" onclick="printFrame()">🖨️ Print</button>
+          <a id="modal-download" href="#" download class="btn-modal-action">📥 Download</a>
+          <button class="btn-modal-action" style="background:#ef4444; border-color:#dc2626;" onclick="closePreview()">✕ Return to Collection</button>
+        </div>
+      </div>
+      <iframe id="preview-frame" class="modal-body" src=""></iframe>
+    </div>
+  </div>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>BizTemplates Pro</h4>
+          <p>Complete business document library designed for independent professionals, contractors, and small business operators.</p>
+        </div>
+        <div>
+          <h4>Collection</h4>
+          <a href="#collection">Invoices & Billing</a>
+          <a href="#collection">Business Documents</a>
+          <a href="#collection">Accounting</a>
+          <a href="#collection">Business Management</a>
+          <a href="#collection">Reports</a>
+        </div>
+        <div>
+          <h4>Plans & Access</h4>
+          <a href="#pricing">Starter Pass ($19)</a>
+          <a href="#pricing">Professional Pass ($39)</a>
+          <a href="#pricing">Ultimate Pass ($69)</a>
+        </div>
+        <div>
+          <h4>Support & Legal</h4>
+          <a href="/contact">Support Center</a>
+          <a href="/license">Commercial License</a>
+          <a href="/privacy">Privacy Policy</a>
+        </div>
+      </div>
+      <p class="text-center" style="margin:0; border-top: 1px solid #1e293b; padding-top: 1.5rem; font-size: 0.8rem;">
+        &copy; 2026 BizTemplates. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
   <script>
-    function openPreview(url, title) {
-      const modal = document.getElementById('previewModal');
-      const iframe = document.getElementById('modalIframe');
-      const titleElem = document.getElementById('modalTitle');
-      
-      titleElem.textContent = 'Preview: ' + title;
-      iframe.src = url;
-      modal.classList.add('active');
+    // PREVIEW MODAL LOGIC WITH 1-TO-1 FILE MAPPING
+    function openPreview(fileUrl, title) {
+      document.getElementById('modal-title').innerText = title + ' (Document Preview)';
+      document.getElementById('preview-frame').src = fileUrl;
+      document.getElementById('modal-download').href = fileUrl;
+      document.getElementById('preview-modal').style.display = 'flex';
+      document.body.style.overflow = 'hidden';
     }
 
     function closePreview() {
-      const modal = document.getElementById('previewModal');
-      const iframe = document.getElementById('modalIframe');
-      
-      modal.classList.remove('active');
-      iframe.src = 'about:blank';
+      document.getElementById('preview-modal').style.display = 'none';
+      document.getElementById('preview-frame').src = '';
+      document.body.style.overflow = 'auto';
     }
 
-    // Close modal when clicking on background overlay
-    document.getElementById('previewModal').addEventListener('click', function(e) {
-      if (e.target === this) {
-        closePreview();
-      }
-    });
+    function printFrame() {
+      const frame = document.getElementById('preview-frame');
+      if (frame.contentWindow) frame.contentWindow.print();
+    }
+
+    // THEME TOGGLE
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
   </script>
 </body>
 </html>

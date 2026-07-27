@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Invoice — [Your Company Name]</title>
+<title>Equipment Inventory — [Your Company Name]</title>
 <style>
   :root{
-    --bg:#F5F7FA; --surface:#FFFFFF; --primary:#1B2A4A; --primary-dark:#0F1B33;
-    --accent:#2563EB; --text:#111827; --muted:#5B6472; --border:#DCE2EA; --chip:#E9EEF7; --danger:#B3261E;
+    --bg:#FBF6F1; --surface:#FFFFFF; --primary:#C1521A; --primary-dark:#8F3B10;
+    --accent:#FFB020; --text:#241C15; --muted:#7A6C5D; --border:#EDDFCF; --chip:#FCEEDD; --danger:#B3261E;
   }
   *{box-sizing:border-box;}
   body{
@@ -19,13 +19,13 @@
   .brand-row{display:flex;gap:14px;align-items:center;}
   .logo-box{width:64px;height:64px;border:2px dashed var(--border);border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--muted);font-size:10px;font-weight:700;letter-spacing:.04em;text-align:center;flex-shrink:0;background:var(--chip);}
   .logo-box span{display:block;}
-  .brand-name{font-family:'Segoe UI', Arial, sans-serif;font-weight:700;font-size:18px;color:var(--primary-dark);letter-spacing:.01em;}
+  .brand-name{font-family:'Arial Black', Arial, sans-serif;font-weight:700;font-size:18px;color:var(--primary-dark);letter-spacing:.01em;}
   .brand-meta{font-size:11.5px;color:var(--muted);margin-top:2px;}
   .doc-id-block{text-align:right;font-size:11.5px;color:var(--muted);}
   .doc-id-block .doc-id{font-weight:700;color:var(--text);font-size:13px;}
   .status-badge{display:inline-block;margin-top:6px;padding:3px 11px;border-radius:20px;font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;background:var(--chip);color:var(--primary-dark);border:1px solid var(--border);}
   .title-block{margin-bottom:22px;}
-  .doc-title{font-family:'Segoe UI', Arial, sans-serif;font-size:32px;font-weight:800;color:var(--primary-dark);margin:0 0 4px;letter-spacing:.01em;}
+  .doc-title{font-family:'Arial Black', Arial, sans-serif;font-size:32px;font-weight:800;color:var(--primary-dark);margin:0 0 4px;letter-spacing:.01em;}
   .doc-subtitle{font-size:14.5px;color:var(--muted);font-style:italic;margin:0;}
   .accent-rule{height:4px;background:var(--accent);border-radius:3px;margin-top:14px;width:100%;}
   .meta-row{display:flex;flex-wrap:wrap;gap:22px;margin-bottom:24px;padding:14px 18px;background:var(--surface);border:1px solid var(--border);border-radius:10px;}
@@ -40,7 +40,7 @@
   .card-field-label{font-size:10px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin-bottom:3px;}
   .card-field-line{border-bottom:1px solid var(--border);min-height:18px;font-size:13.5px;}
   .section{margin-bottom:26px;}
-  .section-heading{font-size:15.5px;font-weight:700;color:var(--primary-dark);border-bottom:2px solid var(--accent);padding-bottom:7px;margin-bottom:14px;font-family:'Segoe UI', Arial, sans-serif;}
+  .section-heading{font-size:15.5px;font-weight:700;color:var(--primary-dark);border-bottom:2px solid var(--accent);padding-bottom:7px;margin-bottom:14px;font-family:'Arial Black', Arial, sans-serif;}
   .section-body{font-size:13.5px;color:var(--text);margin-bottom:6px;}
   table{width:100%;border-collapse:collapse;margin-bottom:8px;}
   thead th{background:var(--primary);color:#fff;text-align:left;font-size:11px;letter-spacing:.04em;text-transform:uppercase;padding:9px 10px;}
@@ -96,64 +96,33 @@
       </div>
     </div>
     <div class="doc-id-block">
-      <div>SALES &AMP; CLIENT DOCUMENTS</div>
-      <div class="doc-id">01 - Invoice</div>
+      <div>BUSINESS OPERATIONS</div>
+      <div class="doc-id">28 - Equipment Inventory</div>
       <div>v1.0 &nbsp;•&nbsp; Created: ______ &nbsp;•&nbsp; Updated: ______</div>
       <span class="status-badge">Draft</span>
     </div>
   </div>
   <div class="title-block">
-    <h1 class="doc-title">Invoice</h1>
-    <p class="doc-subtitle">For products or services rendered</p>
+    <h1 class="doc-title">Equipment Inventory</h1>
+    <p class="doc-subtitle">Master list of owned equipment and condition</p>
     <div class="accent-rule"></div>
   </div>
   <div class="meta-row">
     <div class="meta-item">
-      <div class="meta-label">Invoice #</div>
-      <div class="meta-value">INV-0001</div>
-    </div>
-    <div class="meta-item">
-      <div class="meta-label">Issue Date</div>
+      <div class="meta-label">Location</div>
       <div class="meta-value">&nbsp;</div>
     </div>
     <div class="meta-item">
-      <div class="meta-label">Due Date</div>
+      <div class="meta-label">Prepared By</div>
       <div class="meta-value">&nbsp;</div>
     </div>
     <div class="meta-item">
-      <div class="meta-label">Payment Terms</div>
-      <div class="meta-value">Net 15</div>
-    </div>
-    <div class="meta-item">
-      <div class="meta-label">Currency</div>
-      <div class="meta-value">USD</div>
-    </div></div><div class="cards-row">
-    <div class="card">
-      <div class="card-heading">Customer Information</div>
-      <div style="display:flex;gap:14px;">
-          <div class="card-field" style="flex:1;">
-            <div class="card-field-label">Customer / Company Name</div>
-            <div class="card-field-line">&nbsp;</div>
-          </div>
-          <div class="card-field" style="flex:1;">
-            <div class="card-field-label">Billing Address</div>
-            <div class="card-field-line">&nbsp;</div>
-          </div></div><div style="display:flex;gap:14px;">
-          <div class="card-field" style="flex:1;">
-            <div class="card-field-label">Phone</div>
-            <div class="card-field-line">&nbsp;</div>
-          </div>
-          <div class="card-field" style="flex:1;">
-            <div class="card-field-label">Email</div>
-            <div class="card-field-line">&nbsp;</div>
-          </div></div>
+      <div class="meta-label">Date</div>
+      <div class="meta-value">&nbsp;</div>
     </div></div><div class="section"><table>
-    <thead><tr><th class="">DESCRIPTION</th><th class="num">QTY</th><th class="num">UNIT PRICE</th><th class="num">AMOUNT</th></tr></thead>
-    <tbody><tr class="fill-row"><td class="">&nbsp;</td><td class="num">&nbsp;</td><td class="num">&nbsp;</td><td class="num">&nbsp;</td></tr><tr class="fill-row"><td class="">&nbsp;</td><td class="num">&nbsp;</td><td class="num">&nbsp;</td><td class="num">&nbsp;</td></tr><tr class="fill-row"><td class="">&nbsp;</td><td class="num">&nbsp;</td><td class="num">&nbsp;</td><td class="num">&nbsp;</td></tr><tr class="fill-row"><td class="">&nbsp;</td><td class="num">&nbsp;</td><td class="num">&nbsp;</td><td class="num">&nbsp;</td></tr><tr class="fill-row"><td class="">&nbsp;</td><td class="num">&nbsp;</td><td class="num">&nbsp;</td><td class="num">&nbsp;</td></tr><tr class="fill-row"><td class="">&nbsp;</td><td class="num">&nbsp;</td><td class="num">&nbsp;</td><td class="num">&nbsp;</td></tr></tbody>
-  </table></div><div class="summary-panel">
-    <div class="section-heading">Totals Summary</div>
-    <div class="summary-row"><span class="summary-label">Subtotal</span><span class="summary-value">&nbsp;</span></div><div class="summary-row"><span class="summary-label">Discount Amount</span><span class="summary-value">&nbsp;</span></div><div class="summary-row"><span class="summary-label">Taxable Amount</span><span class="summary-value">&nbsp;</span></div><div class="summary-row"><span class="summary-label">Tax Amount</span><span class="summary-value">&nbsp;</span></div><div class="summary-row"><span class="summary-label">Shipping / Fees</span><span class="summary-value">&nbsp;</span></div><div class="summary-row grand"><span class="summary-label">Total</span><span class="summary-value">&nbsp;</span></div><div class="summary-row"><span class="summary-label">Amount Paid / Deposit</span><span class="summary-value">&nbsp;</span></div><div class="summary-row grand"><span class="summary-label">Balance Due</span><span class="summary-value">&nbsp;</span></div>
-  </div><div class="section"><div class="section-heading">Notes</div><ul class="bullets notes"><li>Payment instructions: [bank transfer / check / online payment link].</li><li>Add or remove item rows as needed to fit the full order.</li><li>Late payments may be subject to a late fee as stated in your terms and conditions.</li></ul></div><div class="calc-ref"><div class="section-heading">Calculation Reference</div><ul class="bullets notes"><li>Line Total = Quantity × Unit Price</li><li>Subtotal = Sum of all Line Totals</li><li>Discount Amount = Subtotal × Discount %</li><li>Taxable Amount = Subtotal − Discount Amount</li><li>Tax Amount = Taxable Amount × Tax Rate</li><li>Total = Taxable Amount + Tax Amount + Shipping/Fees</li><li>Balance Due = Total − Amount Paid</li></ul></div><div class="disclaimer">Note: tax is not automatically applied to shipping unless you choose to include it in the taxable amount.</div>
+    <thead><tr><th class="">EQUIPMENT</th><th class="">SERIAL #</th><th class="">PURCHASE DATE</th><th class="num">VALUE</th><th class="">CONDITION</th><th class="">LOCATION</th></tr></thead>
+    <tbody><tr class="fill-row"><td class="">&nbsp;</td><td class="">&nbsp;</td><td class="">&nbsp;</td><td class="num">&nbsp;</td><td class="">&nbsp;</td><td class="">&nbsp;</td></tr><tr class="fill-row"><td class="">&nbsp;</td><td class="">&nbsp;</td><td class="">&nbsp;</td><td class="num">&nbsp;</td><td class="">&nbsp;</td><td class="">&nbsp;</td></tr><tr class="fill-row"><td class="">&nbsp;</td><td class="">&nbsp;</td><td class="">&nbsp;</td><td class="num">&nbsp;</td><td class="">&nbsp;</td><td class="">&nbsp;</td></tr><tr class="fill-row"><td class="">&nbsp;</td><td class="">&nbsp;</td><td class="">&nbsp;</td><td class="num">&nbsp;</td><td class="">&nbsp;</td><td class="">&nbsp;</td></tr><tr class="fill-row"><td class="">&nbsp;</td><td class="">&nbsp;</td><td class="">&nbsp;</td><td class="num">&nbsp;</td><td class="">&nbsp;</td><td class="">&nbsp;</td></tr><tr class="fill-row"><td class="">&nbsp;</td><td class="">&nbsp;</td><td class="">&nbsp;</td><td class="num">&nbsp;</td><td class="">&nbsp;</td><td class="">&nbsp;</td></tr><tr class="fill-row"><td class="">&nbsp;</td><td class="">&nbsp;</td><td class="">&nbsp;</td><td class="num">&nbsp;</td><td class="">&nbsp;</td><td class="">&nbsp;</td></tr><tr class="fill-row"><td class="">&nbsp;</td><td class="">&nbsp;</td><td class="">&nbsp;</td><td class="num">&nbsp;</td><td class="">&nbsp;</td><td class="">&nbsp;</td></tr><tr class="fill-row"><td class="">&nbsp;</td><td class="">&nbsp;</td><td class="">&nbsp;</td><td class="num">&nbsp;</td><td class="">&nbsp;</td><td class="">&nbsp;</td></tr><tr class="fill-row"><td class="">&nbsp;</td><td class="">&nbsp;</td><td class="">&nbsp;</td><td class="num">&nbsp;</td><td class="">&nbsp;</td><td class="">&nbsp;</td></tr></tbody>
+  </table></div>
   <div class="doc-footer no-print-border">
     <span>Confidential — [Your Company Name]</span>
     <span>Generated: ______________</span>

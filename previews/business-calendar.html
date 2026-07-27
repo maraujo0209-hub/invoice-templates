@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Business Calendar — [Your Company Name]</title>
+<style>
+  :root{
+    --bg:#FFFFFF; --surface:#FBFBFB; --primary:#222222; --primary-dark:#000000;
+    --accent:#8C8C8C; --text:#1C1C1C; --muted:#767676; --border:#E5E5E5; --chip:#F2F2F2; --danger:#B3261E;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:'Helvetica Neue', Arial, sans-serif;font-size:14px;line-height:1.55;}
+  .page{max-width:980px;margin:0 auto;padding:36px 30px 60px;}
+  h1,h2,h3{font-family:'Helvetica Neue', Arial, sans-serif;}
+  .doc-footer{margin-top:40px;padding-top:14px;border-top:1px solid var(--border);display:flex;justify-content:space-between;font-size:10.5px;color:var(--muted);flex-wrap:wrap;gap:6px;}
+  .section{margin-bottom:26px;}
+  .section-heading{font-size:15.5px;font-weight:700;color:var(--primary-dark);border-bottom:2px solid var(--accent);padding-bottom:7px;margin-bottom:14px;font-family:'Helvetica Neue', Arial, sans-serif;}
+  .section-body{font-size:13.5px;color:var(--text);margin-bottom:6px;}
+  table{width:100%;border-collapse:collapse;margin-bottom:8px;}
+  thead th{background:var(--primary);color:#fff;text-align:left;font-size:11px;letter-spacing:.04em;text-transform:uppercase;padding:9px 10px;}
+  thead th.num{text-align:right;}
+  tbody td{padding:9px 10px;border-bottom:1px solid var(--border);font-size:13px;}
+  tbody tr:nth-child(even){background:var(--chip);}
+  td.num{text-align:right;}
+  .fill-row td{height:24px;}
+  .bullets{margin:0;padding-left:20px;}
+  .bullets li{margin-bottom:7px;font-size:13.5px;}
+  .bullets.notes{list-style:none;margin:0;padding:0;}
+  .bullets.notes li{padding-left:20px;position:relative;}
+  .bullets.notes li:before{content:"•";color:var(--accent);font-weight:900;position:absolute;left:0;}
+  .checklist{list-style:none;margin:0;padding:0;}
+  .checklist li{display:flex;gap:10px;align-items:flex-start;margin-bottom:11px;font-size:13.5px;}
+  .checkbox{width:16px;height:16px;border:2px solid var(--primary);border-radius:3px;flex-shrink:0;margin-top:1px;}
+  .disclaimer{font-size:12px;font-style:italic;color:var(--danger);background:var(--chip);border-left:3px solid var(--danger);padding:10px 14px;border-radius:0 6px 6px 0;margin-bottom:24px;}
+  .card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px 18px;}
+  .card-heading{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--primary);margin-bottom:10px;border-bottom:2px solid var(--accent);padding-bottom:6px;display:inline-block;}
+  .card-field-label{font-size:10px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin-bottom:3px;}
+  .card-field-line{border-bottom:1px solid var(--border);min-height:18px;font-size:13.5px;}
+  .sign-row{display:flex;gap:24px;margin-bottom:22px;flex-wrap:wrap;}
+  .sign-block{flex:1;min-width:200px;}
+  .sign-line{border-bottom:2px solid var(--text);height:34px;}
+  .sign-label{font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin-top:6px;}
+  @media print{.page-break{page-break-before:always;} .no-print{display:none;}}
+  @media (max-width:640px){.page{padding:20px 14px 40px;} .kpi-grid,.cards-row,.sign-row{flex-direction:column;}}
+  </style></head>
+<body><div class="page"><div class="section" style="display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2px solid var(--text);padding-bottom:10px;margin-bottom:20px;">
+    <div><h1 style="font-size:26px;font-weight:800;margin:0;">Business Calendar</h1><p style="font-size:12.5px;color:var(--muted);margin:2px 0 0;">Key dates, deadlines, and events for the period</p></div>
+    <div style="font-size:11.5px;color:var(--muted);">95 - Business Calendar</div>
+  </div><div class="section">
+    <div class="section-heading">This Month</div>
+    <table style="table-layout:fixed;">
+      <thead><tr><th style="text-align:center;">Sun</th><th style="text-align:center;">Mon</th><th style="text-align:center;">Tue</th><th style="text-align:center;">Wed</th><th style="text-align:center;">Thu</th><th style="text-align:center;">Fri</th><th style="text-align:center;">Sat</th></tr></thead>
+      <tbody><tr><td style="border:1px solid var(--border);height:74px;vertical-align:top;padding:4px 6px;font-size:11px;color:var(--muted);width:14.285714285714286%;">1</td><td style="border:1px solid var(--border);height:74px;vertical-align:top;padding:4px 6px;font-size:11px;color:var(--muted);width:14.285714285714286%;">2</td><td style="border:1px solid var(--border);height:74px;vertical-align:top;padding:4px 6px;font-size:11px;color:var(--muted);width:14.285714285714286%;">3</td><td style="border:1px solid var(--border);height:74px;vertical-align:top;padding:4px 6px;font-size:11px;color:var(--muted);width:14.285714285714286%;">4</td><td style="border:1px solid var(--border);height:74px;vertical-align:top;padding:4px 6px;font-size:11px;color:var(--muted);width:14.285714285714286%;">5</td><td style="border:1px solid var(--border);height:74px;vertical-align:top;padding:4px 6px;font-size:11px;color:var(--muted);width:14.285714285714286%;">6</td><td style="border:1px solid var(--border);height:74px;vertical-align:top;padding:4px 6px;font-size:11px;color:var(--muted);width:14.285714285714286%;">7</td></tr><tr><td style="border:1px solid var(--border);height:74px;vertical-align:top;padding:4px 6px;font-size:11px;color:var(--muted);width:14.285714285714286%;">8</td><td style="border:1px solid var(--border);height:74px;vertical-align:top;padding:4px 6px;font-size:11px;color:var(--muted);width:14.285714285714286%;">9</td><td style="border:1px solid var(--border);height:74px;vertical-align:top;padding:4px 6px;font-size:11px;color:var(--muted);width:14.285714285714286%;">10</td><td style="border:1px solid var(--border);height:74px;vertical-align:top;padding:4px 6px;font-size:11px;color:var(--muted);width:14.285714285714286%;">11</td><td style="border:1px solid var(--border);height:74px;vertical-align:top;padding:4px 6px;font-size:11px;color:var(--muted);width:14.285714285714286%;">12</td><td style="border:1px solid var(--border);height:74px;vertical-align:top;padding:4px 6px;font-size:11px;color:var(--muted);width:14.285714285714286%;">13</td><td style="border:1px solid var(--border);height:74px;vertical-align:top;padding:4px 6px;font-size:11px;color:var(--muted);width:14.285714285714286%;">14</td></tr><tr><td style="border:1px solid var(--border);height:74px;vertical-align:top;padding:4px 6px;font-size:11px;color:var(--muted);width:14.285714285714286%;">15</td><td style="border:1px solid var(--border);height:74px;vertical-align:top;padding:4px 6px;font-size:11px;color:var(--muted);width:14.285714285714286%;">16</td><td style="border:1px solid var(--border);height:74px;vertical-align:top;padding:4px 6px;font-size:11px;color:var(--muted);width:14.285714285714286%;">17</td><td style="border:1px solid var(--border);height:74px;vertical-align:top;padding:4px 6px;font-size:11px;color:var(--muted);width:14.285714285714286%;">18</td><td style="border:1px solid var(--border);height:74px;vertical-align:top;padding:4px 6px;font-size:11px;color:var(--muted);width:14.285714285714286%;">19</td><td style="border:1px solid var(--border);height:74px;vertical-align:top;padding:4px 6px;font-size:11px;color:var(--muted);width:14.285714285714286%;">20</td><td style="border:1px solid var(--border);height:74px;vertical-align:top;padding:4px 6px;font-size:11px;color:var(--muted);width:14.285714285714286%;">21</td></tr><tr><td style="border:1px solid var(--border);height:74px;vertical-align:top;padding:4px 6px;font-size:11px;color:var(--muted);width:14.285714285714286%;">22</td><td style="border:1px solid var(--border);height:74px;vertical-align:top;padding:4px 6px;font-size:11px;color:var(--muted);width:14.285714285714286%;">23</td><td style="border:1px solid var(--border);height:74px;vertical-align:top;padding:4px 6px;font-size:11px;color:var(--muted);width:14.285714285714286%;">24</td><td style="border:1px solid var(--border);height:74px;vertical-align:top;padding:4px 6px;font-size:11px;color:var(--muted);width:14.285714285714286%;">25</td><td style="border:1px solid var(--border);height:74px;vertical-align:top;padding:4px 6px;font-size:11px;color:var(--muted);width:14.285714285714286%;">26</td><td style="border:1px solid var(--border);height:74px;vertical-align:top;padding:4px 6px;font-size:11px;color:var(--muted);width:14.285714285714286%;">27</td><td style="border:1px solid var(--border);height:74px;vertical-align:top;padding:4px 6px;font-size:11px;color:var(--muted);width:14.285714285714286%;">28</td></tr><tr><td style="border:1px solid var(--border);height:74px;vertical-align:top;padding:4px 6px;font-size:11px;color:var(--muted);width:14.285714285714286%;">29</td><td style="border:1px solid var(--border);height:74px;vertical-align:top;padding:4px 6px;font-size:11px;color:var(--muted);width:14.285714285714286%;">30</td><td style="border:1px solid var(--border);height:74px;vertical-align:top;padding:4px 6px;font-size:11px;color:var(--muted);width:14.285714285714286%;"></td><td style="border:1px solid var(--border);height:74px;vertical-align:top;padding:4px 6px;font-size:11px;color:var(--muted);width:14.285714285714286%;"></td><td style="border:1px solid var(--border);height:74px;vertical-align:top;padding:4px 6px;font-size:11px;color:var(--muted);width:14.285714285714286%;"></td><td style="border:1px solid var(--border);height:74px;vertical-align:top;padding:4px 6px;font-size:11px;color:var(--muted);width:14.285714285714286%;"></td><td style="border:1px solid var(--border);height:74px;vertical-align:top;padding:4px 6px;font-size:11px;color:var(--muted);width:14.285714285714286%;"></td></tr></tbody>
+    </table>
+  </div><div class="section"><div class="section-heading">Key Dates &amp; Deadlines</div><table>
+    <thead><tr><th class="">DATE</th><th class="">EVENT / DEADLINE</th><th class="">OWNER</th></tr></thead>
+    <tbody><tr class="fill-row"><td class="">&nbsp;</td><td class="">&nbsp;</td><td class="">&nbsp;</td></tr><tr class="fill-row"><td class="">&nbsp;</td><td class="">&nbsp;</td><td class="">&nbsp;</td></tr><tr class="fill-row"><td class="">&nbsp;</td><td class="">&nbsp;</td><td class="">&nbsp;</td></tr><tr class="fill-row"><td class="">&nbsp;</td><td class="">&nbsp;</td><td class="">&nbsp;</td></tr><tr class="fill-row"><td class="">&nbsp;</td><td class="">&nbsp;</td><td class="">&nbsp;</td></tr><tr class="fill-row"><td class="">&nbsp;</td><td class="">&nbsp;</td><td class="">&nbsp;</td></tr></tbody>
+  </table></div><div class="doc-footer"><span>Confidential — [Your Company Name]</span><span>Generated: ______________</span><span>Page __ of __</span><span>[website]</span></div></div></body></html>

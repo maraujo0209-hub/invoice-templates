@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Award of Excellence — [Your Company Name]</title>
+<style>
+  :root{
+    --bg:#F5F5F4; --surface:#FFFFFF; --primary:#171717; --primary-dark:#000000;
+    --accent:#C9A227; --text:#181818; --muted:#5F5F5D; --border:#E2E0DB; --chip:#F0EEE8; --danger:#B3261E;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:'Helvetica Neue', Arial, sans-serif;font-size:14px;line-height:1.55;}
+  .page{max-width:980px;margin:0 auto;padding:36px 30px 60px;}
+  h1,h2,h3{font-family:'Helvetica Neue', Arial, sans-serif;}
+  .doc-footer{margin-top:40px;padding-top:14px;border-top:1px solid var(--border);display:flex;justify-content:space-between;font-size:10.5px;color:var(--muted);flex-wrap:wrap;gap:6px;}
+  .section{margin-bottom:26px;}
+  .section-heading{font-size:15.5px;font-weight:700;color:var(--primary-dark);border-bottom:2px solid var(--accent);padding-bottom:7px;margin-bottom:14px;font-family:'Helvetica Neue', Arial, sans-serif;}
+  .section-body{font-size:13.5px;color:var(--text);margin-bottom:6px;}
+  table{width:100%;border-collapse:collapse;margin-bottom:8px;}
+  thead th{background:var(--primary);color:#fff;text-align:left;font-size:11px;letter-spacing:.04em;text-transform:uppercase;padding:9px 10px;}
+  thead th.num{text-align:right;}
+  tbody td{padding:9px 10px;border-bottom:1px solid var(--border);font-size:13px;}
+  tbody tr:nth-child(even){background:var(--chip);}
+  td.num{text-align:right;}
+  .fill-row td{height:24px;}
+  .bullets{margin:0;padding-left:20px;}
+  .bullets li{margin-bottom:7px;font-size:13.5px;}
+  .bullets.notes{list-style:none;margin:0;padding:0;}
+  .bullets.notes li{padding-left:20px;position:relative;}
+  .bullets.notes li:before{content:"•";color:var(--accent);font-weight:900;position:absolute;left:0;}
+  .checklist{list-style:none;margin:0;padding:0;}
+  .checklist li{display:flex;gap:10px;align-items:flex-start;margin-bottom:11px;font-size:13.5px;}
+  .checkbox{width:16px;height:16px;border:2px solid var(--primary);border-radius:3px;flex-shrink:0;margin-top:1px;}
+  .disclaimer{font-size:12px;font-style:italic;color:var(--danger);background:var(--chip);border-left:3px solid var(--danger);padding:10px 14px;border-radius:0 6px 6px 0;margin-bottom:24px;}
+  .card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px 18px;}
+  .card-heading{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--primary);margin-bottom:10px;border-bottom:2px solid var(--accent);padding-bottom:6px;display:inline-block;}
+  .card-field-label{font-size:10px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin-bottom:3px;}
+  .card-field-line{border-bottom:1px solid var(--border);min-height:18px;font-size:13.5px;}
+  .sign-row{display:flex;gap:24px;margin-bottom:22px;flex-wrap:wrap;}
+  .sign-block{flex:1;min-width:200px;}
+  .sign-line{border-bottom:2px solid var(--text);height:34px;}
+  .sign-label{font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin-top:6px;}
+  @media print{.page-break{page-break-before:always;} .no-print{display:none;}}
+  @media (max-width:640px){.page{padding:20px 14px 40px;} .kpi-grid,.cards-row,.sign-row{flex-direction:column;}}
+  </style></head>
+<body><div class="page">
+  <div style="border:10px double var(--primary); border-radius:4px; padding:50px 60px; text-align:center; min-height:640px; display:flex; flex-direction:column; justify-content:space-between;">
+    <div>
+      <div style="font-size:11px;letter-spacing:.2em;color:var(--muted);text-transform:uppercase;">[Your Company Name]</div>
+      <div style="width:70px;height:3px;background:var(--accent);margin:16px auto;"></div>
+      <div style="font-size:13px;letter-spacing:.15em;color:var(--accent);text-transform:uppercase;font-weight:700;margin-top:10px;">Recognition</div>
+      <h1 style="font-size:38px;font-weight:800;color:var(--primary-dark);margin:14px 0 6px;font-family:'Helvetica Neue', Arial, sans-serif;">Award of Excellence</h1>
+      <p style="font-size:13.5px;color:var(--muted);font-style:italic;">In recognition of outstanding achievement</p>
+    </div>
+    <div style="margin:30px 0;">
+      <div style="font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:10px;">This certificate is proudly presented to</div>
+      <div style="font-size:30px;font-weight:700;font-family:'Helvetica Neue', Arial, sans-serif;border-bottom:2px solid var(--border);display:inline-block;padding:0 40px 10px;min-width:340px;color:var(--primary-dark);">&nbsp;</div>
+      <p style="max-width:520px;margin:22px auto 0;font-size:14px;color:var(--text);line-height:1.7;">In recognition of exceptional performance, dedication, and achievement, this award is granted with sincere appreciation for outstanding contributions.</p>
+    </div>
+    <div style="display:flex;justify-content:center;gap:70px;align-items:flex-end;">
+      <div style="text-align:center;"><div style="border-bottom:2px solid var(--text);width:180px;height:34px;"></div><div style="font-size:10.5px;text-transform:uppercase;color:var(--muted);margin-top:6px;letter-spacing:.05em;">Presented By</div></div>
+      <div style="width:70px;height:70px;border-radius:50%;border:3px dashed var(--accent);display:flex;align-items:center;justify-content:center;font-size:9px;color:var(--muted);text-transform:uppercase;">Seal</div>
+      <div style="text-align:center;"><div style="border-bottom:2px solid var(--text);width:180px;height:34px;"></div><div style="font-size:10.5px;text-transform:uppercase;color:var(--muted);margin-top:6px;letter-spacing:.05em;">Date</div></div>
+    </div>
+  </div>
+  <div style="margin-top:18px;"><div class="doc-footer"><span>Confidential — [Your Company Name]</span><span>Generated: ______________</span><span>Page __ of __</span><span>[website]</span></div></div></div></body></html>

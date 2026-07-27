@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Job Cost Sheet — [Your Company Name]</title>
+<style>
+  :root{
+    --bg:#FBF6F1; --surface:#FFFFFF; --primary:#C1521A; --primary-dark:#8F3B10;
+    --accent:#FFB020; --text:#241C15; --muted:#7A6C5D; --border:#EDDFCF; --chip:#FCEEDD; --danger:#B3261E;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:'Segoe UI', Arial, sans-serif;font-size:14px;line-height:1.55;}
+  .page{max-width:980px;margin:0 auto;padding:36px 30px 60px;}
+  h1,h2,h3{font-family:'Arial Black', Arial, sans-serif;}
+  .doc-footer{margin-top:40px;padding-top:14px;border-top:1px solid var(--border);display:flex;justify-content:space-between;font-size:10.5px;color:var(--muted);flex-wrap:wrap;gap:6px;}
+  .section{margin-bottom:26px;}
+  .section-heading{font-size:15.5px;font-weight:700;color:var(--primary-dark);border-bottom:2px solid var(--accent);padding-bottom:7px;margin-bottom:14px;font-family:'Arial Black', Arial, sans-serif;}
+  .section-body{font-size:13.5px;color:var(--text);margin-bottom:6px;}
+  table{width:100%;border-collapse:collapse;margin-bottom:8px;}
+  thead th{background:var(--primary);color:#fff;text-align:left;font-size:11px;letter-spacing:.04em;text-transform:uppercase;padding:9px 10px;}
+  thead th.num{text-align:right;}
+  tbody td{padding:9px 10px;border-bottom:1px solid var(--border);font-size:13px;}
+  tbody tr:nth-child(even){background:var(--chip);}
+  td.num{text-align:right;}
+  .fill-row td{height:24px;}
+  .bullets{margin:0;padding-left:20px;}
+  .bullets li{margin-bottom:7px;font-size:13.5px;}
+  .bullets.notes{list-style:none;margin:0;padding:0;}
+  .bullets.notes li{padding-left:20px;position:relative;}
+  .bullets.notes li:before{content:"•";color:var(--accent);font-weight:900;position:absolute;left:0;}
+  .checklist{list-style:none;margin:0;padding:0;}
+  .checklist li{display:flex;gap:10px;align-items:flex-start;margin-bottom:11px;font-size:13.5px;}
+  .checkbox{width:16px;height:16px;border:2px solid var(--primary);border-radius:3px;flex-shrink:0;margin-top:1px;}
+  .disclaimer{font-size:12px;font-style:italic;color:var(--danger);background:var(--chip);border-left:3px solid var(--danger);padding:10px 14px;border-radius:0 6px 6px 0;margin-bottom:24px;}
+  .card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px 18px;}
+  .card-heading{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--primary);margin-bottom:10px;border-bottom:2px solid var(--accent);padding-bottom:6px;display:inline-block;}
+  .card-field-label{font-size:10px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin-bottom:3px;}
+  .card-field-line{border-bottom:1px solid var(--border);min-height:18px;font-size:13.5px;}
+  .sign-row{display:flex;gap:24px;margin-bottom:22px;flex-wrap:wrap;}
+  .sign-block{flex:1;min-width:200px;}
+  .sign-line{border-bottom:2px solid var(--text);height:34px;}
+  .sign-label{font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin-top:6px;}
+  @media print{.page-break{page-break-before:always;} .no-print{display:none;}}
+  @media (max-width:640px){.page{padding:20px 14px 40px;} .kpi-grid,.cards-row,.sign-row{flex-direction:column;}}
+  </style></head>
+<body><div class="page"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:22px;">
+    <div style="display:flex;align-items:center;gap:14px;">
+    <div style="width:56px;height:56px;border:2px dashed var(--border);border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--muted);font-size:9px;font-weight:700;background:var(--chip);flex-shrink:0;">
+      <span>LOGO</span><span style="font-weight:400;font-style:italic;">(insert)</span>
+    </div>
+    <div>
+      <div style="font-weight:700;font-size:16px;color:var(--primary-dark);">[YOUR COMPANY NAME]</div>
+      <div style="font-size:11px;color:var(--muted);">[address] • [phone] • [email] • [website]</div>
+    </div>
+  </div>
+    <div style="text-align:right;font-size:11px;color:var(--muted);">
+      <div>CONSTRUCTION &AMP; TRADES</div>
+      <div style="font-weight:700;color:var(--text);font-size:12.5px;">job_cost_sheet</div>
+      <span style="display:inline-block;margin-top:5px;padding:3px 11px;border-radius:20px;font-size:10px;font-weight:700;text-transform:uppercase;background:var(--chip);border:1px solid var(--border);">Active</span>
+    </div>
+  </div><div class="section"><h1 style="font-size:28px;font-weight:900;color:var(--primary-dark);margin:0;text-transform:uppercase;letter-spacing:.02em;">Job Cost Sheet</h1><p style="font-size:13.5px;color:var(--muted);font-style:italic;margin:4px 0 0;">Cost breakdown for a specific job or project</p><div style="height:5px;background:var(--accent);margin-top:12px;"></div></div><div class="section" style="display:flex;gap:22px;flex-wrap:wrap;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px 18px;">
+      <div><div class="card-field-label">Job Name</div><div style="font-weight:700;">&nbsp;</div></div><div><div class="card-field-label">Job #</div><div style="font-weight:700;">&nbsp;</div></div><div><div class="card-field-label">Customer</div><div style="font-weight:700;">&nbsp;</div></div>
+    </div><div class="section" style="display:flex;gap:16px;flex-wrap:wrap;">
+    <div class="card" style="flex:1;min-width:200px;">
+      <div class="card-heading">Weather Conditions</div>
+      <div style="display:flex;gap:16px;flex-wrap:wrap;">
+        <div><div class="card-field-label">Condition</div><div class="card-field-line">&nbsp;</div></div>
+        <div><div class="card-field-label">Temp (°F)</div><div class="card-field-line">&nbsp;</div></div>
+        <div><div class="card-field-label">Wind</div><div class="card-field-line">&nbsp;</div></div>
+      </div>
+    </div>
+    <div class="card" style="flex:1;min-width:200px;">
+      <div class="card-heading">Crew on Site</div>
+      <div class="card-field-line">&nbsp;</div><div class="card-field-line" style="margin-top:8px;">&nbsp;</div>
+    </div>
+  </div><div class="section">
+    <div class="section-heading">Timeline</div>
+    <div style="position:relative;padding:20px 0;">
+      <div style="position:absolute;top:34px;left:0;right:0;height:3px;background:var(--border);"></div>
+      <div style="display:flex;justify-content:space-between;">
+        <div style="text-align:center;flex:1;position:relative;z-index:1;">
+          <div style="width:16px;height:16px;border-radius:50%;background:var(--accent);border:3px solid var(--surface);margin:0 auto 8px;"></div>
+          <div style="font-size:11.5px;font-weight:700;color:var(--text);">Mobilize</div>
+          <div style="font-size:10.5px;color:var(--muted);">______</div>
+        </div><div style="text-align:center;flex:1;position:relative;z-index:1;">
+          <div style="width:16px;height:16px;border-radius:50%;background:var(--accent);border:3px solid var(--surface);margin:0 auto 8px;"></div>
+          <div style="font-size:11.5px;font-weight:700;color:var(--text);">Rough-In</div>
+          <div style="font-size:10.5px;color:var(--muted);">______</div>
+        </div><div style="text-align:center;flex:1;position:relative;z-index:1;">
+          <div style="width:16px;height:16px;border-radius:50%;background:var(--accent);border:3px solid var(--surface);margin:0 auto 8px;"></div>
+          <div style="font-size:11.5px;font-weight:700;color:var(--text);">Inspection</div>
+          <div style="font-size:10.5px;color:var(--muted);">______</div>
+        </div><div style="text-align:center;flex:1;position:relative;z-index:1;">
+          <div style="width:16px;height:16px;border-radius:50%;background:var(--accent);border:3px solid var(--surface);margin:0 auto 8px;"></div>
+          <div style="font-size:11.5px;font-weight:700;color:var(--text);">Close-out</div>
+          <div style="font-size:10.5px;color:var(--muted);">______</div>
+        </div>
+      </div>
+    </div>
+  </div><div class="section"><div class="section-heading">Safety Observations</div><ul class="checklist"><li><span class="checkbox"></span><span>Site walked for hazards before work began</span></li><li><span class="checkbox"></span><span>PPE compliance confirmed</span></li><li><span class="checkbox"></span><span>No incidents to report</span></li></ul></div><div class="section">
+    <div class="section-heading">Photo Documentation</div>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;">
+      <div style="width:130px;height:100px;border:2px dashed var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:11px;background:var(--chip);">📷 Photo</div><div style="width:130px;height:100px;border:2px dashed var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:11px;background:var(--chip);">📷 Photo</div><div style="width:130px;height:100px;border:2px dashed var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:11px;background:var(--chip);">📷 Photo</div><div style="width:130px;height:100px;border:2px dashed var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:11px;background:var(--chip);">📷 Photo</div>
+    </div>
+  </div><div class="doc-footer"><span>Confidential — [Your Company Name]</span><span>Generated: ______________</span><span>Page __ of __</span><span>[website]</span></div></div></body></html>

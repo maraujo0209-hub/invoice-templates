@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Timesheet — [Your Company Name]</title>
+<title>Warehouse Transfer Form — [Your Company Name]</title>
 <style>
   :root{
     --bg:#FBF6F1; --surface:#FFFFFF; --primary:#C1521A; --primary-dark:#8F3B10;
@@ -96,44 +96,62 @@
       </div>
     </div>
     <div class="doc-id-block">
-      <div>BUSINESS OPERATIONS</div>
-      <div class="doc-id">24 - Timesheet</div>
+      <div>INVENTORY &AMP; RETAIL</div>
+      <div class="doc-id">71 - Warehouse Transfer Form</div>
       <div>v1.0 &nbsp;•&nbsp; Created: ______ &nbsp;•&nbsp; Updated: ______</div>
       <span class="status-badge">Draft</span>
     </div>
   </div>
   <div class="title-block">
-    <h1 class="doc-title">Timesheet</h1>
-    <p class="doc-subtitle">Hours worked for the pay period</p>
+    <h1 class="doc-title">Warehouse Transfer Form</h1>
+    <p class="doc-subtitle">Movement of inventory between locations</p>
     <div class="accent-rule"></div>
   </div>
-  <div class="meta-row">
-    <div class="meta-item">
-      <div class="meta-label">Employee</div>
-      <div class="meta-value">&nbsp;</div>
-    </div>
-    <div class="meta-item">
-      <div class="meta-label">Employer</div>
-      <div class="meta-value">&nbsp;</div>
-    </div>
-    <div class="meta-item">
-      <div class="meta-label">Pay Period</div>
-      <div class="meta-value">&nbsp;</div>
-    </div>
-    <div class="meta-item">
-      <div class="meta-label">Hourly Rate</div>
-      <div class="meta-value">&nbsp;</div>
-    </div>
-    <div class="meta-item">
-      <div class="meta-label">Overtime Threshold</div>
-      <div class="meta-value">40 hrs/week</div>
-    </div></div><div class="section"><table>
-    <thead><tr><th class="">DATE</th><th class="">PROJECT / CLIENT / TASK</th><th class="num">START</th><th class="num">END</th><th class="num">BREAK</th><th class="num">REG. HRS</th><th class="num">OT HRS</th></tr></thead>
-    <tbody><tr class="fill-row"><td class="">&nbsp;</td><td class="">&nbsp;</td><td class="num">&nbsp;</td><td class="num">&nbsp;</td><td class="num">&nbsp;</td><td class="num">&nbsp;</td><td class="num">&nbsp;</td></tr><tr class="fill-row"><td class="">&nbsp;</td><td class="">&nbsp;</td><td class="num">&nbsp;</td><td class="num">&nbsp;</td><td class="num">&nbsp;</td><td class="num">&nbsp;</td><td class="num">&nbsp;</td></tr><tr class="fill-row"><td class="">&nbsp;</td><td class="">&nbsp;</td><td class="num">&nbsp;</td><td class="num">&nbsp;</td><td class="num">&nbsp;</td><td class="num">&nbsp;</td><td class="num">&nbsp;</td></tr><tr class="fill-row"><td class="">&nbsp;</td><td class="">&nbsp;</td><td class="num">&nbsp;</td><td class="num">&nbsp;</td><td class="num">&nbsp;</td><td class="num">&nbsp;</td><td class="num">&nbsp;</td></tr><tr class="fill-row"><td class="">&nbsp;</td><td class="">&nbsp;</td><td class="num">&nbsp;</td><td class="num">&nbsp;</td><td class="num">&nbsp;</td><td class="num">&nbsp;</td><td class="num">&nbsp;</td></tr><tr class="fill-row"><td class="">&nbsp;</td><td class="">&nbsp;</td><td class="num">&nbsp;</td><td class="num">&nbsp;</td><td class="num">&nbsp;</td><td class="num">&nbsp;</td><td class="num">&nbsp;</td></tr><tr class="fill-row"><td class="">&nbsp;</td><td class="">&nbsp;</td><td class="num">&nbsp;</td><td class="num">&nbsp;</td><td class="num">&nbsp;</td><td class="num">&nbsp;</td><td class="num">&nbsp;</td></tr><tr class="fill-row"><td class="">&nbsp;</td><td class="">&nbsp;</td><td class="num">&nbsp;</td><td class="num">&nbsp;</td><td class="num">&nbsp;</td><td class="num">&nbsp;</td><td class="num">&nbsp;</td></tr><tr class="fill-row"><td class="">&nbsp;</td><td class="">&nbsp;</td><td class="num">&nbsp;</td><td class="num">&nbsp;</td><td class="num">&nbsp;</td><td class="num">&nbsp;</td><td class="num">&nbsp;</td></tr></tbody>
-  </table></div><div class="summary-panel">
-    <div class="section-heading">Totals Summary</div>
-    <div class="summary-row"><span class="summary-label">Total Regular Hours</span><span class="summary-value">&nbsp;</span></div><div class="summary-row"><span class="summary-label">Total Overtime Hours</span><span class="summary-value">&nbsp;</span></div><div class="summary-row"><span class="summary-label">Regular Pay</span><span class="summary-value">&nbsp;</span></div><div class="summary-row"><span class="summary-label">Overtime Pay</span><span class="summary-value">&nbsp;</span></div><div class="summary-row grand"><span class="summary-label">Gross Pay</span><span class="summary-value">&nbsp;</span></div>
-  </div><div class="section"><div class="section-heading">Notes</div><ul class="bullets notes"><li>Employee Certification: I certify these hours are accurate. Signature: ______________________</li><li>Supervisor Approval: ______________________     Date: ______________________</li></ul></div><div class="calc-ref"><div class="section-heading">Calculation Reference</div><ul class="bullets notes"><li>Daily Hours = Clock-Out − Clock-In − Unpaid Break</li><li>Regular Hours = Minimum(Total Hours, Regular Threshold)</li><li>Overtime Hours = Maximum(0, Total Hours − Regular Threshold)</li><li>Regular Pay = Regular Hours × Hourly Rate</li><li>Overtime Pay = Overtime Hours × Hourly Rate × Overtime Multiplier</li><li>Gross Pay = Regular Pay + Overtime Pay + Other Earnings</li></ul></div><div class="disclaimer">The overtime threshold above is editable — it should reflect your local labor law rather than always assuming 8 hrs/day or 40 hrs/week.</div>
+  <div class="cards-row">
+    <div class="card">
+      <div class="card-heading">Transfer Details</div>
+      <div style="display:flex;gap:14px;">
+          <div class="card-field" style="flex:1;">
+            <div class="card-field-label">From Location</div>
+            <div class="card-field-line">&nbsp;</div>
+          </div>
+          <div class="card-field" style="flex:1;">
+            <div class="card-field-label">To Location</div>
+            <div class="card-field-line">&nbsp;</div>
+          </div></div><div style="display:flex;gap:14px;">
+          <div class="card-field" style="flex:1;">
+            <div class="card-field-label">Date</div>
+            <div class="card-field-line">&nbsp;</div>
+          </div>
+          <div class="card-field" style="flex:1;">
+            <div class="card-field-label">Transferred By</div>
+            <div class="card-field-line">&nbsp;</div>
+          </div></div>
+    </div></div><div class="cards-row">
+    <div class="card">
+      <div class="card-heading">Items Transferred</div>
+      <div style="display:flex;gap:14px;">
+          <div class="card-field" style="flex:1;">
+            <div class="card-field-label">Item / SKU &amp; Description</div>
+            <div class="card-field-line">&nbsp;</div>
+          </div></div><div style="display:flex;gap:14px;">
+          <div class="card-field" style="flex:1;">
+            <div class="card-field-label">Quantity</div>
+            <div class="card-field-line">&nbsp;</div>
+          </div></div>
+    </div></div><div class="cards-row">
+    <div class="card">
+      <div class="card-heading">Confirmation</div>
+      <div style="display:flex;gap:14px;">
+          <div class="card-field" style="flex:1;">
+            <div class="card-field-label">Received By</div>
+            <div class="card-field-line">&nbsp;</div>
+          </div>
+          <div class="card-field" style="flex:1;">
+            <div class="card-field-label">Date Received</div>
+            <div class="card-field-line">&nbsp;</div>
+          </div></div>
+    </div></div>
   <div class="doc-footer no-print-border">
     <span>Confidential — [Your Company Name]</span>
     <span>Generated: ______________</span>
